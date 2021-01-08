@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
+  - Enemy
+  - Potion
+  - PStaff
+  - Platform
+  - key
+  - GruzMother
   layers:
   - Default
   - TransparentFX
@@ -15,16 +21,16 @@ TagManager:
   - 
   - 
   - Ground
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Bullet
+  - Background
+  - Player
+  - Enemy
+  - Trap
+  - Platform
+  - Bat
+  - BulletGround
+  - Die
+  - Boss
   - 
   - 
   - 
