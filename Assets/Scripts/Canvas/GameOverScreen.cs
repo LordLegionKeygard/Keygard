@@ -7,6 +7,8 @@ public class GameOverScreen : MonoBehaviour
 {
     public static bool GameIsPaused = false;
     public GameObject pauseCanvasUI;
+    public GameObject lvlmusic;
+    public GameObject skillcanvas;
 
     public void RestartHandler()
     {
@@ -18,7 +20,9 @@ public class GameOverScreen : MonoBehaviour
         SceneManager.LoadScene(0);
     }
     void Update()
-    {    
+    {
+        skillcanvas.SetActive(false);
+        lvlmusic.SetActive(false);    
         pauseCanvasUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;

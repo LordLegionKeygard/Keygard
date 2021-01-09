@@ -8,6 +8,7 @@ public class PauseMenu : MonoBehaviour
     public static bool GameIsPaused = false;
 
     public GameObject pauseMenuUI;
+    public GameObject optionsMenuUI;
 
 
     void Update()
@@ -44,6 +45,12 @@ public class PauseMenu : MonoBehaviour
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);
         Time.timeScale = 1f;
+    }
+
+    public void OptionsHandler()
+    {
+        pauseMenuUI.SetActive(false);
+        optionsMenuUI.SetActive(true);
     }
     public void ExitHandler()
     {

@@ -7,7 +7,7 @@ public class Rat : MonoBehaviour
     Animator animator;
     public float walkDistance = 6f;
     public float patrolSpeed = 1f;
-    private float chasingSpeed = 3.4f;
+    private float chasingSpeed = 3.2f;
     public float timeToWait = 3f;
     private float timeToChase = 3f;
     private float minDistancetoPlayer = 1.5f;

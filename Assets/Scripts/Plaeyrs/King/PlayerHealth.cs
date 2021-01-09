@@ -12,7 +12,7 @@ public class PlayerHealth : MonoBehaviour
     public Image[] hearts;
     public Sprite HeartFull;
     public Sprite HeartEmpty;
-    public AudioSource PickUp;   
+    public AudioSource PickUp;  
 
     private void Start()
     {
@@ -22,6 +22,7 @@ public class PlayerHealth : MonoBehaviour
     {       
         health -= damage;
         animator.SetTrigger("takeDamage");
+    
         if (health <= 0)
         {
             Die();
@@ -39,9 +40,10 @@ public class PlayerHealth : MonoBehaviour
         if(health > numOfHearts)
         {
             health = numOfHearts;
-        } 
+        }
+
         for (int i = 0; i < hearts.Length; i++)
-            {
+        {
             if(i < Mathf.RoundToInt(health))
             {
                 hearts[i].sprite = HeartFull;

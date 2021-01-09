@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour {
     public float speed;
     public float jumpForce;
     private float moveInput;
+
     public GameObject PStaff;
     public GameObject Skillj;
     public GameObject Skillk;
@@ -18,8 +19,8 @@ public class PlayerController : MonoBehaviour {
     public GameObject PSkghost3;
     public AudioSource jumpsound;
     public AudioSource PickUpStaff;
-    public AudioSource PickUpScroll;   
-       
+    public AudioSource PickUpScroll; 
+         
     private Rigidbody2D rb;
 
     public bool facingRight = true;
@@ -74,7 +75,7 @@ public class PlayerController : MonoBehaviour {
         }
 
 
-        if (Input.GetKeyDown(KeyCode.Space) && extraJumps > 0)
+        if (Input.GetKeyDown(KeyCode.Space) && extraJumps > 0 || (Input.GetKeyDown(KeyCode.W)) && extraJumps > 0 || (Input.GetKeyDown(KeyCode.UpArrow)) && extraJumps > 0)
         {              
             if (animator) 
             {
@@ -84,12 +85,12 @@ public class PlayerController : MonoBehaviour {
             extraJumps--;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && extraJumps == 0 && isGrounded ==true)
+        if (Input.GetKeyDown(KeyCode.Space) && extraJumps == 0 && isGrounded ==true || (Input.GetKeyDown(KeyCode.W)) && extraJumps == 0 && isGrounded ==true || (Input.GetKeyDown(KeyCode.UpArrow)) && extraJumps == 0 && isGrounded ==true)
         {
             jumpsound.Play();
         }        
        
-        else if (Input.GetKeyDown(KeyCode.Space) && extraJumps == 0 && isGrounded ==true)
+        else if (Input.GetKeyDown(KeyCode.Space) && extraJumps == 0 && isGrounded ==true || (Input.GetKeyDown(KeyCode.W)) && extraJumps == 0 && isGrounded ==true || (Input.GetKeyDown(KeyCode.UpArrow)) && extraJumps == 0 && isGrounded ==true)
         {
             
             rb.velocity = Vector2.up * jumpForce;
@@ -106,7 +107,7 @@ public class PlayerController : MonoBehaviour {
     }   
 
     private void OnTriggerEnter2D(Collider2D other)
-    {       
+    {      
         if(other.gameObject.name == "PoisonStaff")
         {
             PickUpStaff.Play();           
