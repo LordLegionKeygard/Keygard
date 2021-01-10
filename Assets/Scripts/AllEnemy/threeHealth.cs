@@ -2,27 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BatpfHealth : MonoBehaviour
+public class threeHealth : MonoBehaviour
 {
-    public int health = 2;    
+    public int health = 3;    
+    private Animator animator;
 
     private UnityEngine.Object explosion;
-    private Batpf enemy;
+    private SkeletS enemy;
 
     private void Start()
     {
-        enemy = GetComponent<Batpf>();
+        animator = GetComponent<Animator>();
+        enemy = GetComponent<SkeletS>();
 
         explosion = Resources.Load("Explosion1");
     }
     public void TakeDamage(int damage)
     {       
         health -= damage;
+        animator.SetTrigger("takeDamage");
         if (health <= 0)
         {
             Die();
         }
-        if (health == 1)
+        if (health == 2)
             {
                 enemy.StartChasingPlayer();                
             }

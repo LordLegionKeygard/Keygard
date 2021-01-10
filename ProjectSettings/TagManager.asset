@@ -11,6 +11,8 @@ TagManager:
   - Platform
   - key
   - GruzMother
+  - Trap1
+  - Trap2
   layers:
   - Default
   - TransparentFX

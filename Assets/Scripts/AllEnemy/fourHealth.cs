@@ -2,20 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SkeletSHealth : MonoBehaviour
+public class fourHealth : MonoBehaviour
 {
-    public int health = 3;    
+    public int health = 4;    
     private Animator animator;
 
     private UnityEngine.Object explosion;
-    private SkeletS enemy;
+    private Golem enemy;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
-        enemy = GetComponent<SkeletS>();
-
-        explosion = Resources.Load("Explosion1");
+        enemy = GetComponent<Golem>();
+        explosion = Resources.Load("Explosion");
     }
     public void TakeDamage(int damage)
     {       
@@ -25,9 +24,9 @@ public class SkeletSHealth : MonoBehaviour
         {
             Die();
         }
-        if (health == 2)
+        if(health == 3)
             {
-                enemy.StartChasingPlayer();                
+            enemy.StartChasingPlayer();           
             }
     }
 

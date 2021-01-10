@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
 
@@ -9,6 +10,9 @@ public class PlayerController : MonoBehaviour {
     public float speed;
     public float jumpForce;
     private float moveInput;
+
+    public GameObject onehealth;
+    public GameObject twohealth;
 
     public GameObject PStaff;
     public GameObject Skillj;
@@ -22,6 +26,7 @@ public class PlayerController : MonoBehaviour {
     public AudioSource PickUpScroll; 
          
     private Rigidbody2D rb;
+    private GameObject finish;
 
     public bool facingRight = true;
 
@@ -39,6 +44,7 @@ public class PlayerController : MonoBehaviour {
         animator = GetComponent<Animator>();
         extraJumps = extraJumpsValue;
         rb = GetComponent<Rigidbody2D>();
+        finish = GameObject.FindGameObjectWithTag("Finish");
     }
 
 
@@ -75,7 +81,9 @@ public class PlayerController : MonoBehaviour {
         }
 
 
-        if (Input.GetKeyDown(KeyCode.Space) && extraJumps > 0 || (Input.GetKeyDown(KeyCode.W)) && extraJumps > 0 || (Input.GetKeyDown(KeyCode.UpArrow)) && extraJumps > 0)
+        if (Input.GetKeyDown(KeyCode.Space) && extraJumps > 0 || 
+           (Input.GetKeyDown(KeyCode.W)) && extraJumps > 0 || 
+           (Input.GetKeyDown(KeyCode.UpArrow)) && extraJumps > 0)
         {              
             if (animator) 
             {
@@ -85,14 +93,15 @@ public class PlayerController : MonoBehaviour {
             extraJumps--;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && extraJumps == 0 && isGrounded ==true || (Input.GetKeyDown(KeyCode.W)) && extraJumps == 0 && isGrounded ==true || (Input.GetKeyDown(KeyCode.UpArrow)) && extraJumps == 0 && isGrounded ==true)
+        if (Input.GetKeyDown(KeyCode.Space) && extraJumps == 0 && isGrounded ==true || 
+           (Input.GetKeyDown(KeyCode.W)) && extraJumps == 0 && isGrounded ==true || 
+           (Input.GetKeyDown(KeyCode.UpArrow)) && extraJumps == 0 && isGrounded ==true)
         {
             jumpsound.Play();
         }        
        
         else if (Input.GetKeyDown(KeyCode.Space) && extraJumps == 0 && isGrounded ==true || (Input.GetKeyDown(KeyCode.W)) && extraJumps == 0 && isGrounded ==true || (Input.GetKeyDown(KeyCode.UpArrow)) && extraJumps == 0 && isGrounded ==true)
-        {
-            
+        {          
             rb.velocity = Vector2.up * jumpForce;
         }
            
@@ -142,17 +151,47 @@ public class PlayerController : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision. gameObject.CompareTag("Platform"))
+        if (collision.gameObject.CompareTag("Platform"))
         {
             this.transform.parent = collision.transform;
+        }
+        if (collision.gameObject.CompareTag("Finish"))
+        {
+            Scene scene = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(scene.buildIndex + 1);
+        }
+        if (collision.gameObject.CompareTag("Enemy") || 
+            collision.gameObject.CompareTag("Trap1") ||
+            collision.gameObject.CompareTag("GruzMother"))
+        {
+            onehealth.SetActive(true);
+
+            StartCoroutine(ExecuteAfterTime(1));
+            IEnumerator ExecuteAfterTime(float timeInSec)
+            {
+            yield return new WaitForSeconds(timeInSec);
+            onehealth.SetActive(false);
+            }          
+        }
+        if (collision.gameObject.CompareTag("Trap2"))
+            
+        {
+            twohealth.SetActive(true);
+
+            StartCoroutine(ExecuteAfterTime(1));
+            IEnumerator ExecuteAfterTime(float timeInSec)
+            {
+            yield return new WaitForSeconds(timeInSec);
+            twohealth.SetActive(false);
+            }          
         }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision. gameObject.CompareTag("Platform"))
+        if (collision.gameObject.CompareTag("Platform"))
         {
             this.transform.parent = null;
-        }        
+        }      
     }
 }

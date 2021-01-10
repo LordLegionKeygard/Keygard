@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GolemAttack : MonoBehaviour
+public class EnemyAttack : MonoBehaviour
 {
     Animator animator;
     private int damage = 1;
@@ -27,10 +27,6 @@ public class GolemAttack : MonoBehaviour
                 isDamage = true;
                 damageTime = timeToDamage;
             }
-            if(animator)
-            {
-                
-            }
         }
     }
 
@@ -44,6 +40,4 @@ public class GolemAttack : MonoBehaviour
             isDamage = false;
         }
     } 
-        
-
 }

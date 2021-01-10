@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 7621179576153946087}
   - component: {fileID: 153153150}
   - component: {fileID: 153153146}
-  - component: {fileID: 153153147}
   - component: {fileID: 153153148}
   - component: {fileID: 153153149}
+  - component: {fileID: 8842657577373387333}
   m_Layer: 12
   m_Name: SkeletShield
   m_TagString: Enemy
@@ -33,7 +33,7 @@ Transform:
   m_GameObject: {fileID: 8811795519647273027}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 16.184, y: -7.205, z: -6}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.497903, y: 1.606942, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -99,7 +99,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
-  m_Mass: 5.1853037
+  m_Mass: 2.592652
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -166,18 +166,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 3
---- !u!114 &153153147
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8811795519647273027}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6b8757202a014441832ff024dfcdcc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &153153148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -211,3 +199,15 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 2048
+--- !u!114 &8842657577373387333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8811795519647273027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca04cc9c65b508141b072e91c765560c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

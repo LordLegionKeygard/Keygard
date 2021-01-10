@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RatHealth : MonoBehaviour
+public class twoHealth : MonoBehaviour
 {
     public int health = 2;    
     private Animator animator;

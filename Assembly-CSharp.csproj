@@ -55,9 +55,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\AllEnemy\EnemyAttack.cs" />
+     <Compile Include="Assets\Scripts\AllEnemy\fourHealth.cs" />
+     <Compile Include="Assets\Scripts\AllEnemy\threeHealth.cs" />
+     <Compile Include="Assets\Scripts\AllEnemy\twoHealth.cs" />
      <Compile Include="Assets\Scripts\Bat\Bat.cs" />
-     <Compile Include="Assets\Scripts\Bat\BatAttack.cs" />
-     <Compile Include="Assets\Scripts\Bat\BatHealth.cs" />
      <Compile Include="Assets\Scripts\Bat\BatVision.cs" />
      <Compile Include="Assets\Scripts\BatBossKing\GruzMother.cs" />
      <Compile Include="Assets\Scripts\BatBossKing\GruzMother_AttackPlayer.cs" />
@@ -66,8 +68,6 @@
      <Compile Include="Assets\Scripts\BatBossKing\PlayerMove.cs" />
      <Compile Include="Assets\Scripts\BatBossKing\RotateHealthBar.cs" />
      <Compile Include="Assets\Scripts\BatPathFinding\Batpf.cs" />
-     <Compile Include="Assets\Scripts\BatPathFinding\BatpfAttack.cs" />
-     <Compile Include="Assets\Scripts\BatPathFinding\BatpfHealth.cs" />
      <Compile Include="Assets\Scripts\BatPathFinding\EnemyAI.cs" />
      <Compile Include="Assets\Scripts\Canvas\Abilities.cs" />
      <Compile Include="Assets\Scripts\Canvas\gameover.cs" />
@@ -76,10 +76,8 @@
      <Compile Include="Assets\Scripts\Canvas\OptionCanvas.cs" />
      <Compile Include="Assets\Scripts\Canvas\OptionCanvasMenu.cs" />
      <Compile Include="Assets\Scripts\Canvas\PauseMenu.cs" />
-     <Compile Include="Assets\Scripts\Golem\Enemy.cs" />
      <Compile Include="Assets\Scripts\Golem\EnemyVision.cs" />
-     <Compile Include="Assets\Scripts\Golem\GolemAttack.cs" />
-     <Compile Include="Assets\Scripts\Golem\GolemHealth.cs" />
+     <Compile Include="Assets\Scripts\Golem\Golem.cs" />
      <Compile Include="Assets\Scripts\Objects\Door.cs" />
      <Compile Include="Assets\Scripts\Objects\DoorTrigger.cs" />
      <Compile Include="Assets\Scripts\Objects\LScroll.cs" />
@@ -87,21 +85,17 @@
      <Compile Include="Assets\Scripts\Plaeyrs\King\Bullet.cs" />
      <Compile Include="Assets\Scripts\Plaeyrs\King\Bullet1.cs" />
      <Compile Include="Assets\Scripts\Plaeyrs\King\Bullet2.cs" />
-     <Compile Include="Assets\Scripts\Plaeyrs\King\FirePointRotate.cs" />
      <Compile Include="Assets\Scripts\Plaeyrs\King\KeyHold.cs" />
      <Compile Include="Assets\Scripts\Plaeyrs\King\PlayerController.cs" />
      <Compile Include="Assets\Scripts\Plaeyrs\King\PlayerHealth.cs" />
+     <Compile Include="Assets\Scripts\Plaeyrs\King\Rotate.cs" />
      <Compile Include="Assets\Scripts\Plaeyrs\King\Weapon.cs" />
      <Compile Include="Assets\Scripts\Plaeyrs\King\Weapon1.cs" />
      <Compile Include="Assets\Scripts\Plaeyrs\King\Weapon2.cs" />
      <Compile Include="Assets\Scripts\Plaeyrs\King\WeaponSwitch.cs" />
      <Compile Include="Assets\Scripts\Rat\Rat.cs" />
-     <Compile Include="Assets\Scripts\Rat\RatAttack.cs" />
-     <Compile Include="Assets\Scripts\Rat\RatHealth.cs" />
      <Compile Include="Assets\Scripts\Rat\RatVision.cs" />
      <Compile Include="Assets\Scripts\SkeletS\SkeletS.cs" />
-     <Compile Include="Assets\Scripts\SkeletS\SkeletSAttack.cs" />
-     <Compile Include="Assets\Scripts\SkeletS\SkeletSHealth.cs" />
      <Compile Include="Assets\Scripts\SkeletS\SkeletSVision.cs" />
      <Compile Include="Assets\Scripts\Trap\AxeTrap.cs" />
      <Compile Include="Assets\Scripts\Trap\CrystalD.cs" />

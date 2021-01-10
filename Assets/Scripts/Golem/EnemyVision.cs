@@ -10,7 +10,7 @@ public class EnemyVision : MonoBehaviour
     [SerializeField] private float maxDistance;
     [SerializeField] private LayerMask layerMask;
 
-    private Enemy enemy;
+    private Golem enemy;
     private Vector2 origin;
     private Vector2 direction;
 
@@ -18,7 +18,7 @@ public class EnemyVision : MonoBehaviour
 
     private void Start()
     {
-        enemy = GetComponent<Enemy>();
+        enemy = GetComponent<Golem>();
     }
 
     private void Update()

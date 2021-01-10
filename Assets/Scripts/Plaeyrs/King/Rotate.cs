@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class FirePointRotate : MonoBehaviour {
+public class Rotate : MonoBehaviour {
 
   private float moveInput;
   public bool facingRight = true;

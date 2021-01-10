@@ -26,6 +26,8 @@ public class GruzMother : MonoBehaviour
     [SerializeField] LayerMask groundLayer;
     [SerializeField] private float totalHealth = 15f;
     [SerializeField] private Slider healthSlider;
+
+    public GameObject caveentrance;
     private bool isTouchingUp;
     private bool isTouchingDown;
     private bool isTouchingWall;
@@ -235,6 +237,7 @@ public class GruzMother : MonoBehaviour
         InitHealth();        
         if (_health <= 0)
         {
+            caveentrance.SetActive(false);
             Die();
         }
     }
