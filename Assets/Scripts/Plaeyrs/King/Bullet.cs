@@ -21,34 +21,53 @@ public class Bullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D hitInfo)
     {        
-        fourHealth enemyHealth = hitInfo.GetComponent<fourHealth>();       
+        GolemHealth enemyHealth = hitInfo.GetComponent<GolemHealth>();
         if (enemyHealth != null)
         {
             enemyHealth.TakeDamage(damage);
-        } 
- 
-        Debug.Log(hitInfo.name);             
-        Destroy(gameObject);
-               
-        threeHealth skeletHealth = hitInfo.GetComponent<threeHealth>();       
+        }
+           
+        Destroy(gameObject);        
+
+
+        SkeletSHealth skeletHealth = hitInfo.GetComponent<SkeletSHealth>();       
         if (skeletHealth != null)
         {
             skeletHealth.TakeDamage(damage);
         } 
- 
-        Debug.Log(hitInfo.name);             
+            
         Destroy(gameObject);
 
-        twoHealth ratHealth = hitInfo.GetComponent<twoHealth>();       
+        RatHealth ratHealth = hitInfo.GetComponent<RatHealth>();       
         if (ratHealth != null)
         {
             ratHealth.TakeDamage(damage);
-        } 
+        }
+
+        Destroy(gameObject); 
  
         GruzMother gruzeHealth = hitInfo.GetComponent<GruzMother>();       
         if (gruzeHealth != null)
         {
             gruzeHealth.TakeDamage(damage);
         } 
+           
+        Destroy(gameObject);
+
+        BatHealth batHealth = hitInfo.GetComponent<BatHealth>();       
+        if (batHealth != null)
+        {
+            batHealth.TakeDamage(damage);
+        } 
+           
+        Destroy(gameObject);
+
+        BatpfHealth batpfHealth = hitInfo.GetComponent<BatpfHealth>();       
+        if (batpfHealth != null)
+        {
+            batpfHealth.TakeDamage(damage);
+        } 
+           
+        Destroy(gameObject);
     }        
 }
