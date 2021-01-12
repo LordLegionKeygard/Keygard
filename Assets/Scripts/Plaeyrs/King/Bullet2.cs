@@ -7,7 +7,7 @@ public class Bullet2 : MonoBehaviour
     public float speed = 0f;
     public int damage = 1;
     public Rigidbody2D rb;
-    public float TimeToLive = 10f;
+    public float TimeToLive = 1f;
 
 
     // Start is called before the first frame update
@@ -64,6 +64,14 @@ public class Bullet2 : MonoBehaviour
         if (batpfHealth != null)
         {
             batpfHealth.TakeDamage(damage);
+        } 
+           
+        Destroy(gameObject);
+
+        EyeRockHealth eyerockHealth = hitInfo.GetComponent<EyeRockHealth>();       
+        if (eyerockHealth != null)
+        {
+            eyerockHealth.TakeDamage(damage);
         } 
            
         Destroy(gameObject);

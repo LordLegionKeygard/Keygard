@@ -69,5 +69,13 @@ public class Bullet : MonoBehaviour
         } 
            
         Destroy(gameObject);
+
+        EyeRockHealth eyerockHealth = hitInfo.GetComponent<EyeRockHealth>();       
+        if (eyerockHealth != null)
+        {
+            eyerockHealth.TakeDamage(damage);
+        } 
+           
+        Destroy(gameObject);
     }        
 }

@@ -92,7 +92,6 @@ public class Bat : MonoBehaviour
         if(!isWait && !isChasingPlayer)
         {
             Patrol();
-
         }   
     }
     private void Patrol()

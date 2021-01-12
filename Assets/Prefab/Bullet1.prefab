@@ -117,10 +117,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77ec74c38923fc64fb1b3035172e0f64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.5
+  speed: 2
   damage: 1
   rb: {fileID: 6679776882559681814}
-  TimeToLive: 1
+  TimeToLive: 2
 --- !u!61 &5263628596958608096
 BoxCollider2D:
   m_ObjectHideFlags: 0
