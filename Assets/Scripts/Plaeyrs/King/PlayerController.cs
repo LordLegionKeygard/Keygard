@@ -14,13 +14,26 @@ public class PlayerController : MonoBehaviour {
     public GameObject onehealth;
     public GameObject twohealth;
 
+    [Header("FireStaff")]
+    public GameObject FStaff;
+    public GameObject FSkillj;
+    public GameObject FSkillk;
+    public GameObject FSkilll;
+    public GameObject FSkghost1;
+    public GameObject FSkghost2;
+    public GameObject FSkghost3;
+
+
+    [Header("PoisonStaff")]
     public GameObject PStaff;
-    public GameObject Skillj;
-    public GameObject Skillk;
-    public GameObject Skilll;
-    public GameObject PSKghost1;
+    public GameObject PSkillj;
+    public GameObject PSkillk;
+    public GameObject PSkilll;
+    public GameObject PSkghost1;
     public GameObject PSkghost2;
     public GameObject PSkghost3;
+
+    [Header("Music Effect")]
     public AudioSource jumpsound;
     public AudioSource PickUpStaff;
     public AudioSource PickUpScroll; 
@@ -117,25 +130,31 @@ public class PlayerController : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D other)
     {      
-        if(other.gameObject.name == "PoisonStaff")
+        if(other.gameObject.name == "RandomStaff")
         {
             PickUpStaff.Play();           
             Destroy(other.gameObject);
-            var myscript = gameObject.GetComponent<Weapon>();       
-            myscript.enabled = true;
-            PStaff.SetActive(true);
-            Skillk.SetActive(true);
-            PSkghost2.SetActive(true);
+            RandomStatePicker();            
         }
         
         if(other.gameObject.name == "LScroll")
         {
             PickUpScroll.Play();           
             Destroy(other.gameObject);
-            var myscript = gameObject.GetComponent<Weapon1>();       
-            myscript.enabled = true;
-            Skilll.SetActive(true);
-            PSkghost3.SetActive(true);
+            var myscript = gameObject.GetComponent<Weapon1>();
+            var fmyscript = gameObject.GetComponent<FireWeapon1>();
+            if(PStaff.activeInHierarchy)
+            {      
+                myscript.enabled = true;
+                PSkilll.SetActive(true);
+                PSkghost3.SetActive(true);
+            }
+            if(FStaff.activeInHierarchy)
+            {
+                fmyscript.enabled = true;
+                FSkilll.SetActive(true);
+                FSkghost3.SetActive(true);
+            }
         }
 
         if(other.gameObject.name == "JScroll")
@@ -143,9 +162,28 @@ public class PlayerController : MonoBehaviour {
             PickUpScroll.Play();
             Destroy(other.gameObject);
             var myscript = gameObject.GetComponent<Weapon2>();
-            myscript.enabled = true;
-            Skillj.SetActive(true);
-            PSKghost1.SetActive(true);
+            if(PStaff.activeInHierarchy)
+            {           
+                myscript.enabled = true;
+                PSkillj.SetActive(true);
+                PSkghost1.SetActive(true);
+            }
+            if(FStaff.activeInHierarchy)
+            {
+                
+            }
+
+        }
+        if(other.gameObject.CompareTag("BulletEnemy"))
+        {
+            onehealth.SetActive(true);
+            StartCoroutine(ExecuteAfterTime(1));
+            IEnumerator ExecuteAfterTime(float timeInSec)
+            {
+            yield return new WaitForSeconds(timeInSec);
+            onehealth.SetActive(false);
+            }
+
         }
     }
 
@@ -193,5 +231,26 @@ public class PlayerController : MonoBehaviour {
         {
             this.transform.parent = null;
         }      
+    }
+
+    void RandomStatePicker()
+    {
+        int randomState = Random.Range(0, 2);
+        if (randomState == 0)
+        {
+            var myscript = gameObject.GetComponent<Weapon>();       
+            myscript.enabled = true;
+            PStaff.SetActive(true);
+            PSkillk.SetActive(true);
+            PSkghost2.SetActive(true);
+        }
+        else if (randomState == 1)
+        {
+            var myscript = gameObject.GetComponent<FireWeapon>();
+            myscript.enabled = true;
+            FStaff.SetActive(true);
+            FSkillk.SetActive(true);
+            FSkghost2.SetActive(true);            
+        }
     }
 }

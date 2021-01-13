@@ -2,8 +2,6 @@
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <LangVersion>latest</LangVersion>
-    <CscToolPath>C:\Program Files\Unity\Hub\Editor\2019.2.1f1\Editor\Data\Tools\RoslynScripts</CscToolPath>
-    <CscToolExe>unity_csc.bat</CscToolExe>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -88,6 +86,8 @@
      <Compile Include="Assets\Scripts\Plaeyrs\King\Bullet.cs" />
      <Compile Include="Assets\Scripts\Plaeyrs\King\Bullet1.cs" />
      <Compile Include="Assets\Scripts\Plaeyrs\King\Bullet2.cs" />
+     <Compile Include="Assets\Scripts\Plaeyrs\King\FireWeapon.cs" />
+     <Compile Include="Assets\Scripts\Plaeyrs\King\FireWeapon1.cs" />
      <Compile Include="Assets\Scripts\Plaeyrs\King\KeyHold.cs" />
      <Compile Include="Assets\Scripts\Plaeyrs\King\PlayerController.cs" />
      <Compile Include="Assets\Scripts\Plaeyrs\King\PlayerHealth.cs" />
@@ -99,6 +99,11 @@
      <Compile Include="Assets\Scripts\Rat\Rat.cs" />
      <Compile Include="Assets\Scripts\Rat\RatHealth.cs" />
      <Compile Include="Assets\Scripts\Rat\RatVision.cs" />
+     <Compile Include="Assets\Scripts\SkeletRedMage\SkeletRedMage.cs" />
+     <Compile Include="Assets\Scripts\SkeletRedMage\SkeletRedMageVision.cs" />
+     <Compile Include="Assets\Scripts\SkeletRedMage\SkeletRMageBullet.cs" />
+     <Compile Include="Assets\Scripts\SkeletRedMage\SkeletRMageHealth.cs" />
+     <Compile Include="Assets\Scripts\SkeletRedMage\SkeletRMageWeapon.cs" />
      <Compile Include="Assets\Scripts\SkeletS\SkeletS.cs" />
      <Compile Include="Assets\Scripts\SkeletS\SkeletSHealth.cs" />
      <Compile Include="Assets\Scripts\SkeletS\SkeletSVision.cs" />

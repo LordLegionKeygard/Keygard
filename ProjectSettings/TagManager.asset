@@ -13,6 +13,7 @@ TagManager:
   - GruzMother
   - Trap1
   - Trap2
+  - BulletEnemy
   layers:
   - Default
   - TransparentFX
@@ -33,7 +34,7 @@ TagManager:
   - BulletGround
   - Die
   - Boss
-  - 
+  - BulletEnemy
   - 
   - 
   - 

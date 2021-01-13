@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Bullet2 : MonoBehaviour
 {
+    Animator animator;
     public float speed = 0f;
     public int damage = 1;
     public Rigidbody2D rb;
@@ -13,6 +14,7 @@ public class Bullet2 : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
+        animator = GetComponent<Animator>();
         rb.velocity = transform.right * speed;
         Destroy(gameObject, TimeToLive);
     }
@@ -72,6 +74,14 @@ public class Bullet2 : MonoBehaviour
         if (eyerockHealth != null)
         {
             eyerockHealth.TakeDamage(damage);
+        } 
+           
+        Destroy(gameObject);
+
+        SkeletRMageHealth skeletrmagHealth = hitInfo.GetComponent<SkeletRMageHealth>();       
+        if (skeletrmagHealth != null)
+        {
+            skeletrmagHealth.TakeDamage(damage);
         } 
            
         Destroy(gameObject);

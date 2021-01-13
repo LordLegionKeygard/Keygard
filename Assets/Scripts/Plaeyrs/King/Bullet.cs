@@ -77,5 +77,13 @@ public class Bullet : MonoBehaviour
         } 
            
         Destroy(gameObject);
+
+        SkeletRMageHealth skeletrmagHealth = hitInfo.GetComponent<SkeletRMageHealth>();       
+        if (skeletrmagHealth != null)
+        {
+            skeletrmagHealth.TakeDamage(damage);
+        } 
+           
+        Destroy(gameObject);
     }        
 }

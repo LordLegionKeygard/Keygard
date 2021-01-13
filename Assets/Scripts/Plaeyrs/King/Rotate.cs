@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Rotate : MonoBehaviour {
+public class Rotate : MonoBehaviour 
+{
 
   private float moveInput;
   public bool facingRight = true;
