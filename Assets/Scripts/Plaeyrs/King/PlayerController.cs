@@ -14,6 +14,24 @@ public class PlayerController : MonoBehaviour {
     public GameObject onehealth;
     public GameObject twohealth;
 
+    [Header("WindStaff")]
+    public GameObject WStaff;
+    public GameObject WSkillj;
+    public GameObject WSkillk;
+    public GameObject WSkilll;
+    public GameObject WSkghost1;
+    public GameObject WSkghost2;
+    public GameObject WSkghost3;
+
+    [Header("IceStaff")]
+    public GameObject IStaff;
+    public GameObject ISkillj;
+    public GameObject ISkillk;
+    public GameObject ISkilll;
+    public GameObject ISkghost1;
+    public GameObject ISkghost2;
+    public GameObject ISkghost3;
+
     [Header("FireStaff")]
     public GameObject FStaff;
     public GameObject FSkillj;
@@ -143,6 +161,8 @@ public class PlayerController : MonoBehaviour {
             Destroy(other.gameObject);
             var myscript = gameObject.GetComponent<Weapon1>();
             var fmyscript = gameObject.GetComponent<FireWeapon1>();
+            var imyscript = gameObject.GetComponent<IceWeapon1>();
+            var wmyscript = gameObject.GetComponent<WindWeapon1>();
             if(PStaff.activeInHierarchy)
             {      
                 myscript.enabled = true;
@@ -155,24 +175,50 @@ public class PlayerController : MonoBehaviour {
                 FSkilll.SetActive(true);
                 FSkghost3.SetActive(true);
             }
+            if(IStaff.activeInHierarchy)
+            {
+                imyscript.enabled = true;
+                ISkilll.SetActive(true);
+                ISkghost3.SetActive(true);
+            }
+            if(WStaff.activeInHierarchy)
+            {
+                wmyscript.enabled = true;
+                WSkilll.SetActive(true);
+                WSkghost3.SetActive(true);
+            }
         }
 
         if(other.gameObject.name == "JScroll")
         {
-            PickUpScroll.Play();
-            Destroy(other.gameObject);
             var myscript = gameObject.GetComponent<Weapon2>();
+            var fmyscript = gameObject.GetComponent<FireWeapon2>();
+            var imyscript = gameObject.GetComponent<IceWeapon2>();
+            var wmyscript = gameObject.GetComponent<WindWeapon2>();
             if(PStaff.activeInHierarchy)
-            {           
+            {      
                 myscript.enabled = true;
                 PSkillj.SetActive(true);
                 PSkghost1.SetActive(true);
             }
             if(FStaff.activeInHierarchy)
             {
-                
+                fmyscript.enabled = true;
+                FSkillj.SetActive(true);
+                FSkghost1.SetActive(true);
             }
-
+            if(IStaff.activeInHierarchy)
+            {
+                imyscript.enabled = true;
+                ISkillj.SetActive(true);
+                ISkghost1.SetActive(true);
+            }
+            if(WStaff.activeInHierarchy)
+            {
+                wmyscript.enabled = true;
+                WSkillj.SetActive(true);
+                WSkghost1.SetActive(true);
+            }
         }
         if(other.gameObject.CompareTag("BulletEnemy"))
         {
@@ -235,7 +281,7 @@ public class PlayerController : MonoBehaviour {
 
     void RandomStatePicker()
     {
-        int randomState = Random.Range(0, 2);
+        int randomState = Random.Range(0, 4);
         if (randomState == 0)
         {
             var myscript = gameObject.GetComponent<Weapon>();       
@@ -244,13 +290,29 @@ public class PlayerController : MonoBehaviour {
             PSkillk.SetActive(true);
             PSkghost2.SetActive(true);
         }
-        else if (randomState == 1)
+        if (randomState == 1)
         {
             var myscript = gameObject.GetComponent<FireWeapon>();
             myscript.enabled = true;
             FStaff.SetActive(true);
             FSkillk.SetActive(true);
             FSkghost2.SetActive(true);            
+        }
+        if (randomState == 2)
+        {
+            var myscript = gameObject.GetComponent<IceWeapon>();
+            myscript.enabled = true;
+            IStaff.SetActive(true);
+            ISkillk.SetActive(true);
+            ISkghost2.SetActive(true);
+        }
+        else if (randomState == 3)
+        {
+            var myscript = gameObject.GetComponent<WindWeapon>();
+            myscript.enabled = true;
+            WStaff.SetActive(true);
+            WSkillk.SetActive(true);
+            WSkghost2.SetActive(true);            
         }
     }
 }

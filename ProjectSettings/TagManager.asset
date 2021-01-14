@@ -35,9 +35,9 @@ TagManager:
   - Die
   - Boss
   - BulletEnemy
-  - 
-  - 
-  - 
+  - PickUP
+  - Wall
+  - UPColTrap
   - 
   - 
   - 

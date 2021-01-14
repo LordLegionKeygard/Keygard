@@ -88,6 +88,10 @@
      <Compile Include="Assets\Scripts\Plaeyrs\King\Bullet2.cs" />
      <Compile Include="Assets\Scripts\Plaeyrs\King\FireWeapon.cs" />
      <Compile Include="Assets\Scripts\Plaeyrs\King\FireWeapon1.cs" />
+     <Compile Include="Assets\Scripts\Plaeyrs\King\FireWeapon2.cs" />
+     <Compile Include="Assets\Scripts\Plaeyrs\King\IceWeapon.cs" />
+     <Compile Include="Assets\Scripts\Plaeyrs\King\IceWeapon1.cs" />
+     <Compile Include="Assets\Scripts\Plaeyrs\King\IceWeapon2.cs" />
      <Compile Include="Assets\Scripts\Plaeyrs\King\KeyHold.cs" />
      <Compile Include="Assets\Scripts\Plaeyrs\King\PlayerController.cs" />
      <Compile Include="Assets\Scripts\Plaeyrs\King\PlayerHealth.cs" />
@@ -96,6 +100,9 @@
      <Compile Include="Assets\Scripts\Plaeyrs\King\Weapon1.cs" />
      <Compile Include="Assets\Scripts\Plaeyrs\King\Weapon2.cs" />
      <Compile Include="Assets\Scripts\Plaeyrs\King\WeaponSwitch.cs" />
+     <Compile Include="Assets\Scripts\Plaeyrs\King\WindWeapon.cs" />
+     <Compile Include="Assets\Scripts\Plaeyrs\King\WindWeapon1.cs" />
+     <Compile Include="Assets\Scripts\Plaeyrs\King\WindWeapon2.cs" />
      <Compile Include="Assets\Scripts\Rat\Rat.cs" />
      <Compile Include="Assets\Scripts\Rat\RatHealth.cs" />
      <Compile Include="Assets\Scripts\Rat\RatVision.cs" />

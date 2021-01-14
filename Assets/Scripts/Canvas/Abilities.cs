@@ -35,6 +35,36 @@ public class Abilities : MonoBehaviour
     public KeyCode fability2;
     public KeyCode fability3;
 
+    [Header("IceStaff")]
+    public Image iabilityImage1;
+    public Image iabilityImage2;
+    public Image iabilityImage3;
+    public float icooldown1 = 5;
+    public float icooldown2 = 5;
+    public float icooldown3 = 5;
+
+    bool iisCooldown = false;
+    bool iisCooldown2 = false;
+    bool iisCooldown3 = false;
+    public KeyCode iability1;
+    public KeyCode iability2;
+    public KeyCode iability3;
+
+    [Header("WindStaff")]
+    public Image wabilityImage1;
+    public Image wabilityImage2;
+    public Image wabilityImage3;
+    public float wcooldown1 = 5;
+    public float wcooldown2 = 5;
+    public float wcooldown3 = 5;
+
+    bool wisCooldown = false;
+    bool wisCooldown2 = false;
+    bool wisCooldown3 = false;
+    public KeyCode wability1;
+    public KeyCode wability2;
+    public KeyCode wability3;
+
     
     void Start()
     {
@@ -56,6 +86,12 @@ public class Abilities : MonoBehaviour
         FAbility1();
         FAbility2();
         FAbility3();
+        IAbility1();
+        IAbility2();
+        IAbility3();
+        WAbility1();
+        WAbility2();
+        WAbility3();
     }
 
     void Ability1()
@@ -126,7 +162,7 @@ public class Abilities : MonoBehaviour
             fabilityImage1.fillAmount = 1;
         }
 
-        if(isCooldown)
+        if(fisCooldown)
         {
             fabilityImage1.fillAmount -= 1 / fcooldown1 * Time.deltaTime;
 
@@ -174,6 +210,126 @@ public class Abilities : MonoBehaviour
             {
                 fabilityImage3.fillAmount = 0;
                 fisCooldown3 = false;
+            }
+        }
+    }
+
+    void IAbility1()
+    {
+        if(Input.GetKey(iability1) && iisCooldown == false)
+        {
+            iisCooldown = true;
+            iabilityImage1.fillAmount = 1;
+        }
+
+        if(iisCooldown)
+        {
+            iabilityImage1.fillAmount -= 1 / icooldown1 * Time.deltaTime;
+
+            if(iabilityImage1.fillAmount <= 0)
+            {
+                iabilityImage1.fillAmount = 0;
+                iisCooldown = false;
+            }
+        }
+    }
+
+    void IAbility2()
+    {
+        if(Input.GetKey(iability2) && iisCooldown2 == false)
+        {
+            iisCooldown2 = true;
+            iabilityImage2.fillAmount = 1;
+        }
+
+        if(iisCooldown2)
+        {
+            iabilityImage2.fillAmount -= 1 / icooldown2 * Time.deltaTime;
+
+            if(iabilityImage2.fillAmount <= 0)
+            {
+                iabilityImage2.fillAmount = 0;
+                iisCooldown2 = false;
+            }
+        }
+    }
+
+    void IAbility3()
+    {
+        if(Input.GetKey(iability3) && iisCooldown3 == false)
+        {
+            iisCooldown3 = true;
+            iabilityImage3.fillAmount = 1;
+        }
+
+        if(iisCooldown3)
+        {
+            iabilityImage3.fillAmount -= 1 / icooldown3 * Time.deltaTime;
+
+            if(iabilityImage3.fillAmount <= 0)
+            {
+                iabilityImage3.fillAmount = 0;
+                iisCooldown3 = false;
+            }
+        }
+    }
+
+    void WAbility1()
+    {
+        if(Input.GetKey(wability1) && wisCooldown == false)
+        {
+            wisCooldown = true;
+            wabilityImage1.fillAmount = 1;
+        }
+
+        if(wisCooldown)
+        {
+            wabilityImage1.fillAmount -= 1 / wcooldown1 * Time.deltaTime;
+
+            if(wabilityImage1.fillAmount <= 0)
+            {
+                wabilityImage1.fillAmount = 0;
+                wisCooldown = false;
+            }
+        }
+    }
+
+    void WAbility2()
+    {
+        if(Input.GetKey(wability2) && wisCooldown2 == false)
+        {
+            wisCooldown2 = true;
+            wabilityImage2.fillAmount = 1;
+        }
+
+        if(wisCooldown2)
+        {
+            wabilityImage2.fillAmount -= 1 / wcooldown2 * Time.deltaTime;
+
+            if(wabilityImage2.fillAmount <= 0)
+            {
+                wabilityImage2.fillAmount = 0;
+                wisCooldown2 = false;
+            }
+        }
+    }
+
+    void WAbility3()
+    {
+        if(Input.GetKey(wability3) && wisCooldown3 == false)
+        {
+            wisCooldown3 = true;
+            wabilityImage3.fillAmount = 1;
+        }
+
+        if(wisCooldown3)
+        {
+            wabilityImage3.fillAmount -= 1 / wcooldown3 * Time.deltaTime;
+
+            if(wabilityImage3.fillAmount <= 0)
+            {
+                wabilityImage3.fillAmount = 0;
+                wisCooldown3 = false;
             }
         }
     }
