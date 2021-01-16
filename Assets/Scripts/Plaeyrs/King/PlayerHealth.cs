@@ -12,7 +12,7 @@ public class PlayerHealth : MonoBehaviour
     public Image[] hearts;
     public Sprite HeartFull;
     public Sprite HeartEmpty;
-    public AudioSource PickUp;  
+    public AudioSource PickUp;
 
     private void Start()
     {
@@ -77,5 +77,6 @@ public class PlayerHealth : MonoBehaviour
     {
         health += healthValue;
     }
+    
 }
 

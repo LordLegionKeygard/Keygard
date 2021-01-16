@@ -24,7 +24,7 @@ public class GolemHealth : MonoBehaviour
         {
             Die();
         }
-        if(health == 3)
+        if(health == 3 || health == 2 || health == 1)
             {
             enemy.StartChasingPlayer();           
             }

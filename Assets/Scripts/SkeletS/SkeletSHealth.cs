@@ -14,7 +14,6 @@ public class SkeletSHealth : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         enemy = GetComponent<SkeletS>();
-
         explosion = Resources.Load("Explosion1");
     }
     public void TakeDamage(int damage)
@@ -25,7 +24,7 @@ public class SkeletSHealth : MonoBehaviour
         {
             Die();
         }
-        if (health == 2)
+        if (health == 2 || health == 1)
             {
                 enemy.StartChasingPlayer();                
             }

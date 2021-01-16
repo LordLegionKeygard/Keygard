@@ -74,6 +74,13 @@ public class Abilities : MonoBehaviour
         fabilityImage1.fillAmount = 0;
         fabilityImage2.fillAmount = 0;
         fabilityImage3.fillAmount = 0;
+        iabilityImage1.fillAmount = 0;
+        iabilityImage2.fillAmount = 0;
+        iabilityImage3.fillAmount = 0;
+        wabilityImage1.fillAmount = 0;
+        wabilityImage2.fillAmount = 0;
+        wabilityImage3.fillAmount = 0;
+
 
     }
 

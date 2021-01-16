@@ -53,6 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\dontdestroyonload.cs" />
      <Compile Include="Assets\Scripts\AllEnemy\EnemyAttack.cs" />
      <Compile Include="Assets\Scripts\Bat\Bat.cs" />
      <Compile Include="Assets\Scripts\Bat\BatHealth.cs" />
@@ -66,6 +67,10 @@
      <Compile Include="Assets\Scripts\BatPathFinding\Batpf.cs" />
      <Compile Include="Assets\Scripts\BatPathFinding\BatpfHealth.cs" />
      <Compile Include="Assets\Scripts\BatPathFinding\EnemyAI.cs" />
+     <Compile Include="Assets\Scripts\BigMushroom\BigMushroom.cs" />
+     <Compile Include="Assets\Scripts\BigMushroom\BigMushroomBullet.cs" />
+     <Compile Include="Assets\Scripts\BigMushroom\BigMushroomHealth.cs" />
+     <Compile Include="Assets\Scripts\BigMushroom\BigMushroomVision.cs" />
      <Compile Include="Assets\Scripts\Canvas\Abilities.cs" />
      <Compile Include="Assets\Scripts\Canvas\gameover.cs" />
      <Compile Include="Assets\Scripts\Canvas\GameOverScreen.cs" />
@@ -82,6 +87,7 @@
      <Compile Include="Assets\Scripts\Objects\Door.cs" />
      <Compile Include="Assets\Scripts\Objects\DoorTrigger.cs" />
      <Compile Include="Assets\Scripts\Objects\LScroll.cs" />
+     <Compile Include="Assets\Scripts\Objects\Portal.cs" />
      <Compile Include="Assets\Scripts\Objects\Scrolling.cs" />
      <Compile Include="Assets\Scripts\Plaeyrs\King\Bullet.cs" />
      <Compile Include="Assets\Scripts\Plaeyrs\King\Bullet1.cs" />
@@ -93,6 +99,8 @@
      <Compile Include="Assets\Scripts\Plaeyrs\King\IceWeapon1.cs" />
      <Compile Include="Assets\Scripts\Plaeyrs\King\IceWeapon2.cs" />
      <Compile Include="Assets\Scripts\Plaeyrs\King\KeyHold.cs" />
+     <Compile Include="Assets\Scripts\Plaeyrs\King\LevelSystem.cs" />
+     <Compile Include="Assets\Scripts\Plaeyrs\King\LevelUpStats.cs" />
      <Compile Include="Assets\Scripts\Plaeyrs\King\PlayerController.cs" />
      <Compile Include="Assets\Scripts\Plaeyrs\King\PlayerHealth.cs" />
      <Compile Include="Assets\Scripts\Plaeyrs\King\Rotate.cs" />
@@ -124,6 +132,7 @@
      <Compile Include="Assets\Scripts\Trap\FallingPlatformForever.cs" />
      <Compile Include="Assets\Scripts\Trap\MovingPlatform.cs" />
      <Compile Include="Assets\Scripts\Trap\UpDoTrap.cs" />
+     <Compile Include="Assets\SingletonController.cs" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />

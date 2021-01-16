@@ -28,6 +28,9 @@ public class GruzMother : MonoBehaviour
     [SerializeField] private Slider healthSlider;
 
     public GameObject caveentrance;
+    [SerializeField] private AudioSource MainMusic;
+    [SerializeField] private AudioSource BossMusic;
+    [SerializeField] private AudioSource Win;
     private bool isTouchingUp;
     private bool isTouchingDown;
     private bool isTouchingWall;
@@ -74,6 +77,8 @@ public class GruzMother : MonoBehaviour
             attackPlayerSpeed = 8;
             attackMovementSpeed = 25;
             idelMovementSpeed = 3;
+            MainMusic.Stop();
+            BossMusic.Play();
         }
     }
 
@@ -249,6 +254,8 @@ public class GruzMother : MonoBehaviour
 
     private void Die()
     {
+        BossMusic.Stop();
+        Win.Play();
         GameObject explosionRef = (GameObject)Instantiate(explosion);
         explosionRef.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
         

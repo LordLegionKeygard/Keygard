@@ -9,12 +9,14 @@ public class RatHealth : MonoBehaviour
 
     private UnityEngine.Object explosion;
     private Rat enemy;
+    private GameObject player;
+    public float expValue;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
         enemy = GetComponent<Rat>();
-
+        player = GameObject.FindGameObjectWithTag("Player");
         explosion = Resources.Load("Explosion1");
     }
     public void TakeDamage(int damage)
@@ -37,5 +39,7 @@ public class RatHealth : MonoBehaviour
         explosionRef.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
 
         Destroy(gameObject);
+
+        player.GetComponent<LevelUpStats>().SetExperience(expValue);
     }
 }

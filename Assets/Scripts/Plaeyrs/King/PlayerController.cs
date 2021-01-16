@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour {
     [Header("Music Effect")]
     public AudioSource jumpsound;
     public AudioSource PickUpStaff;
-    public AudioSource PickUpScroll; 
+    public AudioSource PickUpScroll;
          
     private Rigidbody2D rb;
     private GameObject finish;
@@ -191,6 +191,8 @@ public class PlayerController : MonoBehaviour {
 
         if(other.gameObject.name == "JScroll")
         {
+            PickUpScroll.Play();           
+            Destroy(other.gameObject);
             var myscript = gameObject.GetComponent<Weapon2>();
             var fmyscript = gameObject.GetComponent<FireWeapon2>();
             var imyscript = gameObject.GetComponent<IceWeapon2>();

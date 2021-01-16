@@ -8,6 +8,7 @@ public class KeyHold : MonoBehaviour
 	public bool hasKey = false;
 	public float key;
 	public GameObject KeyCanvas;
+	public AudioSource soundkey;
 
 	void Start () 
 	{
@@ -15,7 +16,7 @@ public class KeyHold : MonoBehaviour
 	}
 
 	private void OnTriggerEnter2D(Collider2D other)
-    {
+    {		
         if(other.CompareTag("key"))
         {
 			key ++;
@@ -23,6 +24,7 @@ public class KeyHold : MonoBehaviour
 			{			
 				hasKey = true;
 				hold = true;
+				soundkey.Play();
 			}
 			
 

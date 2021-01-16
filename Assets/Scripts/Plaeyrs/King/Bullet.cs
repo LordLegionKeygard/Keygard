@@ -85,5 +85,13 @@ public class Bullet : MonoBehaviour
         } 
            
         Destroy(gameObject);
+
+        BigMushroomHealth bigmushroomHealth = hitInfo.GetComponent<BigMushroomHealth>();       
+        if (bigmushroomHealth != null)
+        {
+            bigmushroomHealth.TakeDamage(damage);
+        } 
+           
+        Destroy(gameObject);
     }        
 }

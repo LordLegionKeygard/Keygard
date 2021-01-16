@@ -9031,6 +9031,33 @@ MonoBehaviour:
   ability1: 106
   ability2: 107
   ability3: 108
+  fabilityImage1: {fileID: 0}
+  fabilityImage2: {fileID: 0}
+  fabilityImage3: {fileID: 0}
+  fcooldown1: 5
+  fcooldown2: 5
+  fcooldown3: 5
+  fability1: 0
+  fability2: 0
+  fability3: 0
+  iabilityImage1: {fileID: 0}
+  iabilityImage2: {fileID: 0}
+  iabilityImage3: {fileID: 0}
+  icooldown1: 5
+  icooldown2: 5
+  icooldown3: 5
+  iability1: 0
+  iability2: 0
+  iability3: 0
+  wabilityImage1: {fileID: 0}
+  wabilityImage2: {fileID: 0}
+  wabilityImage3: {fileID: 0}
+  wcooldown1: 5
+  wcooldown2: 5
+  wcooldown3: 5
+  wability1: 0
+  wability2: 0
+  wability3: 0
 --- !u!1 &1038593080
 GameObject:
   m_ObjectHideFlags: 0
@@ -35823,16 +35850,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 11
       objectReference: {fileID: 0}
-    - target: {fileID: -1040187871888125142, guid: 765b2ec280f7c734aa782bb58e8be3a2,
-        type: 3}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: -1040187871888125142, guid: 765b2ec280f7c734aa782bb58e8be3a2,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6246008147802380412, guid: 765b2ec280f7c734aa782bb58e8be3a2,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -35857,6 +35874,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1040187871888125142, guid: 765b2ec280f7c734aa782bb58e8be3a2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -1040187871888125142, guid: 765b2ec280f7c734aa782bb58e8be3a2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -3874793751550269157, guid: 765b2ec280f7c734aa782bb58e8be3a2,
         type: 3}
@@ -36383,11 +36410,32 @@ MonoBehaviour:
   jumpForce: 11
   onehealth: {fileID: 1284014866}
   twohealth: {fileID: 1564661625}
+  WStaff: {fileID: 0}
+  WSkillj: {fileID: 0}
+  WSkillk: {fileID: 0}
+  WSkilll: {fileID: 0}
+  WSkghost1: {fileID: 0}
+  WSkghost2: {fileID: 0}
+  WSkghost3: {fileID: 0}
+  IStaff: {fileID: 0}
+  ISkillj: {fileID: 0}
+  ISkillk: {fileID: 0}
+  ISkilll: {fileID: 0}
+  ISkghost1: {fileID: 0}
+  ISkghost2: {fileID: 0}
+  ISkghost3: {fileID: 0}
+  FStaff: {fileID: 0}
+  FSkillj: {fileID: 0}
+  FSkillk: {fileID: 0}
+  FSkilll: {fileID: 0}
+  FSkghost1: {fileID: 0}
+  FSkghost2: {fileID: 0}
+  FSkghost3: {fileID: 0}
   PStaff: {fileID: 1688890723}
-  Skillj: {fileID: 1763748235}
-  Skillk: {fileID: 1722306694}
-  Skilll: {fileID: 2102683553}
-  PSKghost1: {fileID: 752473510}
+  PSkillj: {fileID: 0}
+  PSkillk: {fileID: 0}
+  PSkilll: {fileID: 0}
+  PSkghost1: {fileID: 0}
   PSkghost2: {fileID: 1201960187}
   PSkghost3: {fileID: 284768717}
   jumpsound: {fileID: 1940404813}
@@ -36582,7 +36630,7 @@ SpriteRenderer:
   m_Size: {x: 0.44, y: 1.68}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1688890726

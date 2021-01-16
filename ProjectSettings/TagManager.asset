@@ -14,6 +14,9 @@ TagManager:
   - Trap1
   - Trap2
   - BulletEnemy
+  - Portal
+  - Latrop
+  - music
   layers:
   - Default
   - TransparentFX
@@ -38,7 +41,7 @@ TagManager:
   - PickUP
   - Wall
   - UPColTrap
-  - 
+  - Portal
   - 
   - 
   - 
