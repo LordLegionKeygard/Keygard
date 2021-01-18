@@ -317,4 +317,9 @@ public class PlayerController : MonoBehaviour {
             WSkghost2.SetActive(true);            
         }
     }
+
+    void Awake()
+    {
+        DontDestroyOnLoad(transform.gameObject);
+    }
 }
