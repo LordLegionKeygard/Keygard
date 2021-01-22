@@ -147,7 +147,15 @@ public class PlayerController : MonoBehaviour {
     }   
 
     private void OnTriggerEnter2D(Collider2D other)
-    {      
+    {
+        if(other.gameObject.name == "GhostWall1")
+        {
+            Destroy(other.gameObject);
+        }  
+        if(other.gameObject.name == "GhostWall")
+        {
+            Destroy(other.gameObject);
+        }     
         if(other.gameObject.name == "RandomStaff")
         {
             PickUpStaff.Play();           
@@ -316,10 +324,5 @@ public class PlayerController : MonoBehaviour {
             WSkillk.SetActive(true);
             WSkghost2.SetActive(true);            
         }
-    }
-
-    void Awake()
-    {
-        DontDestroyOnLoad(transform.gameObject);
     }
 }

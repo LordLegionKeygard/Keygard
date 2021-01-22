@@ -93,5 +93,21 @@ public class Bullet2 : MonoBehaviour
         } 
            
         Destroy(gameObject);
+
+        SmallRockHealth smallrockHealth = hitInfo.GetComponent<SmallRockHealth>();       
+        if (smallrockHealth != null)
+        {
+            smallrockHealth.TakeDamage(damage);
+        } 
+           
+        Destroy(gameObject);
+
+        AxeDemonHealth axedemonHealth = hitInfo.GetComponent<AxeDemonHealth>();       
+        if (axedemonHealth != null)
+        {
+            axedemonHealth.TakeDamage(damage);
+        } 
+           
+        Destroy(gameObject);
     }    
 }

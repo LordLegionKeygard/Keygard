@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EyeRockHealth : MonoBehaviour
 {
-    public int health = 3;    
+    public int health = 2;    
     private Animator animator;
 
     private UnityEngine.Object explosion;

@@ -10,7 +10,7 @@ public class SkeletRedMage : MonoBehaviour
     private float chasingSpeed = 0f;
     public float timeToWait = 3f;
     private float timeToChase = 3f;
-    private float minDistancetoPlayer = 1.5f;
+    private float minDistancetoPlayer = 0f;
     private float moveInput;
     bool walk = true;
 

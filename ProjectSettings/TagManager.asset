@@ -17,6 +17,8 @@ TagManager:
   - Portal
   - Latrop
   - music
+  - Portal1
+  - Latrop1
   layers:
   - Default
   - TransparentFX
@@ -42,7 +44,7 @@ TagManager:
   - Wall
   - UPColTrap
   - Portal
-  - 
+  - GhostWall
   - 
   - 
   - 

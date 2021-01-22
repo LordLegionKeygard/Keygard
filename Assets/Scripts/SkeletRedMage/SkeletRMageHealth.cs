@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SkeletRMageHealth : MonoBehaviour
 {
-    public int health = 4;    
+    public int health = 3;    
     private Animator animator;
 
     private UnityEngine.Object explosion;
@@ -24,7 +24,7 @@ public class SkeletRMageHealth : MonoBehaviour
         {
             Die();
         }
-        if(health == 3)
+        if(health == 2 || health == 1)
             {
             enemy.StartChasingPlayer();           
             }
