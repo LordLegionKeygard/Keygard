@@ -135,6 +135,7 @@
      <Compile Include="Assets\Scripts\Trap\CrystalTrap.cs" />
      <Compile Include="Assets\Scripts\Trap\CrystalU.cs" />
      <Compile Include="Assets\Scripts\Trap\Die.cs" />
+     <Compile Include="Assets\Scripts\Trap\EarthUpTrap.cs" />
      <Compile Include="Assets\Scripts\Trap\FallingPlatform.cs" />
      <Compile Include="Assets\Scripts\Trap\FallingPlatformFast.cs" />
      <Compile Include="Assets\Scripts\Trap\FallingPlatformForever.cs" />
