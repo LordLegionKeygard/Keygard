@@ -2512,7 +2512,7 @@ PrefabInstance:
         type: 3}
       propertyPath: Win
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1096610057}
     - target: {fileID: 4760540534466315428, guid: 8368b6d0ccad78e49964f027e7e75f15,
         type: 3}
       propertyPath: m_LocalPosition.x

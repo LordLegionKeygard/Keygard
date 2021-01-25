@@ -109,5 +109,13 @@ public class Bullet : MonoBehaviour
         } 
            
         Destroy(gameObject);
+
+        GrindMur grindmurHealth = hitInfo.GetComponent<GrindMur>();       
+        if (grindmurHealth != null)
+        {
+            grindmurHealth.TakeDamage(damage);
+        } 
+           
+        Destroy(gameObject);
     }        
 }

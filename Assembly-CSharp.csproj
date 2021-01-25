@@ -89,6 +89,10 @@
      <Compile Include="Assets\Scripts\Golem\EnemyVision.cs" />
      <Compile Include="Assets\Scripts\Golem\Golem.cs" />
      <Compile Include="Assets\Scripts\Golem\GolemHealth.cs" />
+     <Compile Include="Assets\Scripts\GrindMur\AttackPlayer.cs" />
+     <Compile Include="Assets\Scripts\GrindMur\AttackShoot.cs" />
+     <Compile Include="Assets\Scripts\GrindMur\GrindMur.cs" />
+     <Compile Include="Assets\Scripts\GrindMur\Pick.cs" />
      <Compile Include="Assets\Scripts\Objects\Door.cs" />
      <Compile Include="Assets\Scripts\Objects\DoorTrigger.cs" />
      <Compile Include="Assets\Scripts\Objects\LScroll.cs" />
