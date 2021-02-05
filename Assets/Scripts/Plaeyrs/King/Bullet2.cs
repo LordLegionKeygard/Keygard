@@ -117,5 +117,29 @@ public class Bullet2 : MonoBehaviour
         } 
            
         Destroy(gameObject);
+
+        JesterHealth jesterHealth = hitInfo.GetComponent<JesterHealth>();       
+        if (jesterHealth != null)
+        {
+            jesterHealth.TakeDamage(damage);
+        } 
+           
+        Destroy(gameObject);
+
+        GoblinHealth goblinHealth = hitInfo.GetComponent<GoblinHealth>();       
+        if (goblinHealth != null)
+        {
+            goblinHealth.TakeDamage(damage);
+        } 
+           
+        Destroy(gameObject);
+
+        SmMushroom3lvlHealth smmushroom3Health = hitInfo.GetComponent<SmMushroom3lvlHealth>();       
+        if (smmushroom3Health != null)
+        {
+            smmushroom3Health.TakeDamage(damage);
+        } 
+           
+        Destroy(gameObject);
     }    
 }

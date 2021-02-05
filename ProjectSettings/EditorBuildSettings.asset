@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/2.Labyrinth of Grindmur.unity
     guid: c60d951b086e14a4db153bef96fa3bb1
+  - enabled: 1
+    path: Assets/Scenes/3.Tregan Forest.unity
+    guid: 7a27c9cfa1682084ba916f2115b94877
   m_configObjects: {}

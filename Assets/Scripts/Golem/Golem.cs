@@ -92,7 +92,6 @@ public class Golem : MonoBehaviour
         if(!isWait && !isChasingPlayer)
         {
             Patrol();
-
         }   
     }
     private void Patrol()
@@ -105,7 +104,6 @@ public class Golem : MonoBehaviour
     }
     private void ChasePlayer()
     {
-
         walk = true;        
         float distance = DistanceToPlayer() ;
         if(distance < 0)

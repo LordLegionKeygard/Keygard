@@ -55,8 +55,11 @@
   <ItemGroup>
      <Compile Include="Assets\AudioManager.cs" />
      <Compile Include="Assets\MenuMusic.cs" />
-     <Compile Include="Assets\PortalTwo.cs" />
      <Compile Include="Assets\Scripts\AllEnemy\EnemyAttack.cs" />
+     <Compile Include="Assets\Scripts\Archer3lvl\Archer.cs" />
+     <Compile Include="Assets\Scripts\Archer3lvl\ArcherBullet.cs" />
+     <Compile Include="Assets\Scripts\Archer3lvl\ArcherHealth.cs" />
+     <Compile Include="Assets\Scripts\Archer3lvl\ArcherVision.cs" />
      <Compile Include="Assets\Scripts\AxeDemon\AxeDemon.cs" />
      <Compile Include="Assets\Scripts\AxeDemon\AxeDemonHealth.cs" />
      <Compile Include="Assets\Scripts\AxeDemon\AxeDemonVision.cs" />
@@ -86,6 +89,9 @@
      <Compile Include="Assets\Scripts\EyeRock\EyeRock.cs" />
      <Compile Include="Assets\Scripts\EyeRock\EyeRockAI.cs" />
      <Compile Include="Assets\Scripts\EyeRock\EyeRockHealth.cs" />
+     <Compile Include="Assets\Scripts\Goblin\Goblin.cs" />
+     <Compile Include="Assets\Scripts\Goblin\GoblinHealth.cs" />
+     <Compile Include="Assets\Scripts\Goblin\GoblinVision.cs" />
      <Compile Include="Assets\Scripts\Golem\EnemyVision.cs" />
      <Compile Include="Assets\Scripts\Golem\Golem.cs" />
      <Compile Include="Assets\Scripts\Golem\GolemHealth.cs" />
@@ -93,10 +99,17 @@
      <Compile Include="Assets\Scripts\GrindMur\AttackShoot.cs" />
      <Compile Include="Assets\Scripts\GrindMur\GrindMur.cs" />
      <Compile Include="Assets\Scripts\GrindMur\Pick.cs" />
+     <Compile Include="Assets\Scripts\Jester\Jester.cs" />
+     <Compile Include="Assets\Scripts\Jester\JesterBullet.cs" />
+     <Compile Include="Assets\Scripts\Jester\JesterHealth.cs" />
+     <Compile Include="Assets\Scripts\Jester\JesterVision.cs" />
+     <Compile Include="Assets\Scripts\Objects\Boat.cs" />
+     <Compile Include="Assets\Scripts\Objects\BreakTree.cs" />
      <Compile Include="Assets\Scripts\Objects\Door.cs" />
      <Compile Include="Assets\Scripts\Objects\DoorTrigger.cs" />
      <Compile Include="Assets\Scripts\Objects\LScroll.cs" />
      <Compile Include="Assets\Scripts\Objects\Portal.cs" />
+     <Compile Include="Assets\Scripts\Objects\PortalTwo.cs" />
      <Compile Include="Assets\Scripts\Objects\Scrolling.cs" />
      <Compile Include="Assets\Scripts\Plaeyrs\King\Bullet.cs" />
      <Compile Include="Assets\Scripts\Plaeyrs\King\Bullet1.cs" />
@@ -127,10 +140,12 @@
      <Compile Include="Assets\Scripts\SkeletRedMage\SkeletRedMageVision.cs" />
      <Compile Include="Assets\Scripts\SkeletRedMage\SkeletRMageBullet.cs" />
      <Compile Include="Assets\Scripts\SkeletRedMage\SkeletRMageHealth.cs" />
-     <Compile Include="Assets\Scripts\SkeletRedMage\SkeletRMageWeapon.cs" />
      <Compile Include="Assets\Scripts\SkeletS\SkeletS.cs" />
      <Compile Include="Assets\Scripts\SkeletS\SkeletSHealth.cs" />
      <Compile Include="Assets\Scripts\SkeletS\SkeletSVision.cs" />
+     <Compile Include="Assets\Scripts\SmallMushroom3lvl\SmMushroom3lvl.cs" />
+     <Compile Include="Assets\Scripts\SmallMushroom3lvl\SmMushroom3lvlHealth.cs" />
+     <Compile Include="Assets\Scripts\SmallMushroom3lvl\SmMushroomVision.cs" />
      <Compile Include="Assets\Scripts\SmalRock\SmallRock.cs" />
      <Compile Include="Assets\Scripts\SmalRock\SmallRockHealth.cs" />
      <Compile Include="Assets\Scripts\SmalRock\SmallRockVision.cs" />

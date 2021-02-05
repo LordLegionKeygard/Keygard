@@ -92,7 +92,6 @@ public class Rat : MonoBehaviour
         if(!isWait && !isChasingPlayer)
         {
             Patrol();
-
         }   
     }
     private void Patrol()
