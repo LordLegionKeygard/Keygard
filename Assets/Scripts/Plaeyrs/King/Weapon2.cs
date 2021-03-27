@@ -19,7 +19,6 @@ public class Weapon2 : MonoBehaviour
         animator = GetComponent<Animator>();                
     }
 
-
     void Update()
     {                     
         if(Input.GetButtonDown("Fire3") && Time.time > nextTime)
@@ -37,7 +36,6 @@ public class Weapon2 : MonoBehaviour
     {
         Instantiate(bullet, firePoint.position, firePoint.rotation);
     }
-
 
     void Shoot2()
     {

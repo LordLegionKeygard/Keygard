@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/3.Tregan Forest.unity
     guid: 7a27c9cfa1682084ba916f2115b94877
+  - enabled: 0
+    path: Assets/Scenes/4.Litirite Waterfalls.unity
+    guid: 64389589b8528b340b2e0858f2423bf6
   m_configObjects: {}

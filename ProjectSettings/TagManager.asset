@@ -20,6 +20,10 @@ TagManager:
   - Portal1
   - Latrop1
   - Grindmur
+  - Bromid
+  - QuickSand
+  - Potion1
+  - Potion2
   layers:
   - Default
   - TransparentFX

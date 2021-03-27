@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CrystalTrap : MonoBehaviour
 {
-    private int damage = 2;
+    private int damage = 1;
 
     Rigidbody2D rb;
     // Start is called before the first frame update

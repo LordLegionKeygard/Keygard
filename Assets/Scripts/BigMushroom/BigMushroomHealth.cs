@@ -24,7 +24,7 @@ public class BigMushroomHealth : MonoBehaviour
         {
             Die();
         }
-        if(health == 5)
+        if(health == 5 || health == 4 || health == 3 || health == 2 || health == 1)
             {
             enemy.StartChasingPlayer();           
             }

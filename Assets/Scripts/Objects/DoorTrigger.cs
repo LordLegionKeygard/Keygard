@@ -13,11 +13,6 @@ public class DoorTrigger : MonoBehaviour
 		keyHold = FindObjectOfType<KeyHold>();
 	}
 
-
-	void Update () {
-
-	}
-
 	public void OnTriggerEnter2D(Collider2D col)
 	{
 		if (col.tag == "Player") 
@@ -40,20 +35,14 @@ public class DoorTrigger : MonoBehaviour
 		{
 			keyHold.key = 0;
 		}
-
 	}
-
 
 	public void OnTriggerExit2D(Collider2D col)
 	{
 		if (col.tag == "Player") 
 		{
-
 			door.Close ();
-
 		}
-
 	}
-
 }
 

@@ -141,5 +141,21 @@ public class Bullet : MonoBehaviour
         } 
            
         Destroy(gameObject);
+
+        ArcherHealth archerHealth = hitInfo.GetComponent<ArcherHealth>();       
+        if (archerHealth != null)
+        {
+            archerHealth.TakeDamage(damage);
+        } 
+           
+        Destroy(gameObject);
+
+        Bromid bromidHealth = hitInfo.GetComponent<Bromid>();       
+        if (bromidHealth != null)
+        {
+            bromidHealth.TakeDamage(damage);
+        } 
+           
+        Destroy(gameObject);
     }        
 }

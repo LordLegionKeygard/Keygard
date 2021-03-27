@@ -11,8 +11,13 @@ public class PlayerController : MonoBehaviour {
     public float jumpForce;
     private float moveInput;
 
-    public GameObject onehealth;
-    public GameObject twohealth;
+    public GameObject _platform;
+    public GameObject _triangle;
+    public GameObject _square;
+    public GameObject loadingScreen;
+    public GameObject loading;
+    public GameObject press;
+    public Slider bar; 
 
     [Header("WindStaff")]
     public GameObject WStaff;
@@ -55,6 +60,8 @@ public class PlayerController : MonoBehaviour {
     public AudioSource jumpsound;
     public AudioSource PickUpStaff;
     public AudioSource PickUpScroll;
+    public AudioSource PickUpPotion;
+    public AudioSource Gw;
          
     private Rigidbody2D rb;
     private GameObject finish;
@@ -111,6 +118,17 @@ public class PlayerController : MonoBehaviour {
             extraJumps = extraJumpsValue;
         }
 
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            _platform.SetActive(false);
+
+            StartCoroutine(ExecuteAfterTime(0.5f));
+            IEnumerator ExecuteAfterTime(float timeInSec)
+            {
+            yield return new WaitForSeconds(timeInSec);
+            _platform.SetActive(true);
+            }
+        }
 
         if (Input.GetKeyDown(KeyCode.Space) && extraJumps > 0 || 
            (Input.GetKeyDown(KeyCode.W)) && extraJumps > 0 || 
@@ -148,13 +166,27 @@ public class PlayerController : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if(other.gameObject.name == "Potion2")
+        {
+            PickUpPotion.Play();
+            _square.SetActive(false);
+            Destroy(other.gameObject);
+        }
+        if(other.gameObject.name == "Potion1")
+        {
+            PickUpPotion.Play();
+            _triangle.SetActive(true);
+            Destroy(other.gameObject);
+        } 
         if(other.gameObject.name == "GhostWall1")
         {
             Destroy(other.gameObject);
+            Gw.Play();
         }  
         if(other.gameObject.name == "GhostWall")
         {
             Destroy(other.gameObject);
+            Gw.Play();
         }     
         if(other.gameObject.name == "RandomStaff")
         {
@@ -230,17 +262,6 @@ public class PlayerController : MonoBehaviour {
                 WSkghost1.SetActive(true);
             }
         }
-        if(other.gameObject.CompareTag("BulletEnemy"))
-        {
-            onehealth.SetActive(true);
-            StartCoroutine(ExecuteAfterTime(1));
-            IEnumerator ExecuteAfterTime(float timeInSec)
-            {
-            yield return new WaitForSeconds(timeInSec);
-            onehealth.SetActive(false);
-            }
-
-        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -249,35 +270,39 @@ public class PlayerController : MonoBehaviour {
         {
             this.transform.parent = collision.transform;
         }
+        if (collision.gameObject.CompareTag("QuickSand"))
+        {
+            speed = 1f;
+        }
         if (collision.gameObject.CompareTag("Finish"))
         {
+            loadingScreen.SetActive(true);
+            //SceneManager.LoadScene(1);
+
+            StartCoroutine(LoadAsync());
+        }
+
+        IEnumerator LoadAsync()
+        {
             Scene scene = SceneManager.GetActiveScene();
-            SceneManager.LoadScene(scene.buildIndex + 1);
-        }
-        if (collision.gameObject.CompareTag("Enemy") || 
-            collision.gameObject.CompareTag("Trap1") ||
-            collision.gameObject.CompareTag("GruzMother"))
-        {
-            onehealth.SetActive(true);
+            AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(scene.buildIndex + 1);
 
-            StartCoroutine(ExecuteAfterTime(1));
-            IEnumerator ExecuteAfterTime(float timeInSec)
-            {
-            yield return new WaitForSeconds(timeInSec);
-            onehealth.SetActive(false);
-            }          
-        }
-        if (collision.gameObject.CompareTag("Trap2"))
-            
-        {
-            twohealth.SetActive(true);
+            asyncLoad.allowSceneActivation = false;
 
-            StartCoroutine(ExecuteAfterTime(1));
-            IEnumerator ExecuteAfterTime(float timeInSec)
+            while (!asyncLoad.isDone)
             {
-            yield return new WaitForSeconds(timeInSec);
-            twohealth.SetActive(false);
-            }          
+                bar.value = asyncLoad.progress;
+                if(asyncLoad.progress >= .9f && !asyncLoad.allowSceneActivation)
+                {
+                    loading.SetActive(false);
+                    press.SetActive(true);
+                    if (Input.anyKeyDown)
+                    {
+                        asyncLoad.allowSceneActivation = true;
+                    }
+                }
+                yield return null;
+            }
         }
     }
 
@@ -286,6 +311,10 @@ public class PlayerController : MonoBehaviour {
         if (collision.gameObject.CompareTag("Platform"))
         {
             this.transform.parent = null;
+        }
+        if (collision.gameObject.CompareTag("QuickSand"))
+        {
+            speed = 4f;
         }      
     }
 

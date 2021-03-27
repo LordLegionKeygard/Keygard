@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
+    public GameObject onehealth;
     public GameObject gameOverCanvas;
     private Animator animator;
     public int health = 6;
@@ -22,6 +23,13 @@ public class PlayerHealth : MonoBehaviour
     {       
         health -= damage;
         animator.SetTrigger("takeDamage");
+        onehealth.SetActive(true);
+        StartCoroutine(ExecuteAfterTime(1));
+        IEnumerator ExecuteAfterTime(float timeInSec)
+        {
+        yield return new WaitForSeconds(timeInSec);
+        onehealth.SetActive(false);
+        }
     
         if (health <= 0)
         {
@@ -52,6 +60,7 @@ public class PlayerHealth : MonoBehaviour
             {
                 hearts[i].sprite = HeartEmpty;
             }
+
             if(i < numOfHearts)
             {
                 hearts[i].enabled = true;

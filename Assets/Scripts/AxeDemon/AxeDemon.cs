@@ -92,7 +92,6 @@ public class AxeDemon : MonoBehaviour
         if(!isWait && !isChasingPlayer)
         {
             Patrol();
-
         }   
     }
     private void Patrol()

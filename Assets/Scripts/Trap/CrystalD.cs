@@ -5,7 +5,7 @@ using UnityEngine;
 public class CrystalD : MonoBehaviour
 {
     Animator animator;
-    private int damage = 2;
+    private int damage = 1;
     private float timeToDamage = 1f;
 
     private float damageTime;

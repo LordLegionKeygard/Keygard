@@ -9,6 +9,9 @@ public class JesterHealth : MonoBehaviour
     private UnityEngine.Object explosion;
     private Jester enemy;
 
+    public GameObject Library;
+    public GameObject Entrance;
+
     private void Start()
     {
         enemy = GetComponent<Jester>();
@@ -29,6 +32,9 @@ public class JesterHealth : MonoBehaviour
 
     private void Die()
     {
+        Library.SetActive(false);
+        Entrance.SetActive(true);
+        
         GameObject explosionRef = (GameObject)Instantiate(explosion);
         explosionRef.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
 

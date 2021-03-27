@@ -5,6 +5,7 @@ using UnityEngine;
 public class Portal : MonoBehaviour
 {
     private Transform destination;
+    public AudioSource teleport;
 
     public bool isPortal;
     
@@ -25,6 +26,7 @@ public class Portal : MonoBehaviour
         if (Vector2.Distance(transform.position, other.transform.position) > 1f)
         {
             other.transform.position = new Vector2(destination.position.x, destination.position.y);
+            teleport.Play();
         }
     }
 }

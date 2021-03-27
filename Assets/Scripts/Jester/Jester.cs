@@ -13,7 +13,6 @@ public class Jester : MonoBehaviour
     private float minDistancetoPlayer = 0f;
     private float moveInput;
 
-
     private Rigidbody2D rb;
     private Transform playerTransform;
     private Vector2 leftBoundaryPosition;

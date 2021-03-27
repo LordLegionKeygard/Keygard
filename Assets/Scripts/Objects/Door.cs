@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
-
     Animator animator;
     Collider2D col;
     
@@ -15,12 +14,6 @@ public class Door : MonoBehaviour
         col = GetComponent<Collider2D>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void Open()
     {
         col.enabled = false;
@@ -29,7 +22,6 @@ public class Door : MonoBehaviour
 
     public void Close()
     {        
-        col.enabled = true;
         animator.SetBool("open", false);
     }
 }
