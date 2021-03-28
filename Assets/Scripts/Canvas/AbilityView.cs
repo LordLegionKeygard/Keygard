@@ -15,7 +15,7 @@ public class AbilityView
 			FillImage();
 	}
 
-	private void FillImage()
+	public void FillImage()
 	{
 		Fill.fillAmount = 1f;
 		Fill.DOFillAmount(0f, Cooldown);
