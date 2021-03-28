@@ -54,7 +54,16 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\AudioManager.cs" />
+     <Compile Include="Assets\Cursor.cs" />
+     <Compile Include="Assets\Joystick Pack\Examples\JoystickPlayerExample.cs" />
+     <Compile Include="Assets\Joystick Pack\Examples\JoystickSetterExample.cs" />
+     <Compile Include="Assets\Joystick Pack\Scripts\Base\Joystick.cs" />
+     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\DynamicJoystick.cs" />
+     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
+     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
+     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
      <Compile Include="Assets\MenuMusic.cs" />
+     <Compile Include="Assets\PauseCanvasFalse.cs" />
      <Compile Include="Assets\Scripts\AllEnemy\EnemyAttack.cs" />
      <Compile Include="Assets\Scripts\Archer3lvl\Archer.cs" />
      <Compile Include="Assets\Scripts\Archer3lvl\ArcherBullet.cs" />
@@ -466,6 +475,9 @@
  <Reference Include="Pathfinding.Ionic.Zip.Reduced">
  <HintPath>F:/Unity/Projects/Keygard/Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
  </Reference>
+ <Reference Include="DOTween">
+ <HintPath>F:/Unity/Projects/Keygard/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
+ </Reference>
  <Reference Include="clipper_library">
  <HintPath>F:/Unity/Projects/Keygard/Library/PackageCache/com.unity.cinemachine@2.7.1/Runtime/ThirdParty/clipper_library.dll</HintPath>
  </Reference>
@@ -825,6 +837,10 @@
  </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{A39FDCB7-EC1C-B3E2-8092-EC18AC5CAABD}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
     <ProjectReference Include="AstarPathfindingProject.csproj">
       <Project>{E24A8FE2-FDEF-07DC-A18B-2DD5BC45A6FE}</Project>
       <Name>AstarPathfindingProject</Name>

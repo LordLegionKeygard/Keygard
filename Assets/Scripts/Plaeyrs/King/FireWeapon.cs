@@ -18,6 +18,15 @@ public class FireWeapon : MonoBehaviour
         animator = GetComponent<Animator>();                
     }
 
+    public void Attack()
+    {
+        if(Time.time > nextTime)
+        {
+            nextTime = Time.time + timeRate;
+            Shoot();
+        }
+    }
+
     void Update()
     {              
         if(Input.GetButtonDown("Fire1") && Time.time > nextTime)

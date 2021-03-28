@@ -15,6 +15,7 @@ public class MainMenu : MonoBehaviour
 
     public void StartHandler()
     {
+        UnityEngine.Cursor.visible = false;
         loadingScreen.SetActive(true);
         //SceneManager.LoadScene(1);
 

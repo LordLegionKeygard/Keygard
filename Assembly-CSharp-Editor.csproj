@@ -53,6 +53,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Joystick Pack\Scripts\Editor\DynamicJoystickEditor.cs" />
+     <Compile Include="Assets\Joystick Pack\Scripts\Editor\FloatingJoystickEditor.cs" />
+     <Compile Include="Assets\Joystick Pack\Scripts\Editor\JoystickEditor.cs" />
+     <Compile Include="Assets\Joystick Pack\Scripts\Editor\VariableJoystickEditor.cs" />
      <Compile Include="Assets\yaSingleton\yaSingleton\Editor\SingeltonUpdaterEditor.cs" />
      <Compile Include="Assets\yaSingleton\yaSingleton\Editor\SingletonEditor.cs" />
  <Reference Include="UnityEditor.TestRunner">
@@ -345,6 +349,12 @@
  </Reference>
  <Reference Include="Pathfinding.Ionic.Zip.Reduced">
  <HintPath>F:/Unity/Projects/Keygard/Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween">
+ <HintPath>F:/Unity/Projects/Keygard/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTweenEditor">
+ <HintPath>F:/Unity/Projects/Keygard/Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
  </Reference>
  <Reference Include="NSubstitute">
  <HintPath>F:/Unity/Projects/Keygard/Library/PackageCache/com.unity.2d.common@1.2.0-preview.1/Tests/Editor/Lib/NSubstitute/NSubstitute.dll</HintPath>
@@ -711,6 +721,10 @@
  </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{A39FDCB7-EC1C-B3E2-8092-EC18AC5CAABD}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{5040A66E-7254-294F-5946-29B245F21473}</Project>
       <Name>Assembly-CSharp</Name>

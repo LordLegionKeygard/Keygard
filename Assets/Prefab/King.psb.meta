@@ -24,7 +24,6 @@ ScriptedImporter:
     isReadable: 0
     streamingMipmaps: 1
     streamingMipmapsPriority: 0
-    vTOnly: 0
     nPOTScale: 1
     sRGBTexture: 1
     spriteMode: 2
@@ -43,9 +42,6 @@ ScriptedImporter:
     textureType: 8
     textureShape: 1
     singleChannelComponent: 0
-    flipbookRows: 0
-    flipbookColumns: 0
-    ignorePngGamma: 0
     filterMode: 1
     aniso: 1
     mipBias: 0
@@ -65,7 +61,6 @@ ScriptedImporter:
     maxTextureSizeSet: 0
     compressionQualitySet: 0
     textureFormatSet: 0
-    applyGammaDecoding: 0
   spriteImportData:
   - name: 
     originalName: 
@@ -3553,8 +3548,24 @@ ScriptedImporter:
       order: 0
     dimension: {x: 0, y: 0}
     characterGroups: []
+  boneGOs:
+  - go: {fileID: -5375889981507715400, guid: 765b2ec280f7c734aa782bb58e8be3a2, type: 3}
+    index: 0
+  - go: {fileID: -4170073420655778800, guid: 765b2ec280f7c734aa782bb58e8be3a2, type: 3}
+    index: 1
+  - go: {fileID: 2575780321593444112, guid: 765b2ec280f7c734aa782bb58e8be3a2, type: 3}
+    index: 2
+  - go: {fileID: 4305066618375453348, guid: 765b2ec280f7c734aa782bb58e8be3a2, type: 3}
+    index: 3
+  - go: {fileID: -1108453205639942105, guid: 765b2ec280f7c734aa782bb58e8be3a2, type: 3}
+    index: 4
+  - go: {fileID: 3167867320873984449, guid: 765b2ec280f7c734aa782bb58e8be3a2, type: 3}
+    index: 5
+  - go: {fileID: 4704806718283990532, guid: 765b2ec280f7c734aa782bb58e8be3a2, type: 3}
+    index: 6
+  - go: {fileID: 2186849755130548848, guid: 765b2ec280f7c734aa782bb58e8be3a2, type: 3}
+    index: 7
   generateGOHierarchy: 0
   textureAssetName: King Texture
   prefabAssetName: King Prefab
   spriteLibAssetName: King Sprite Lib
-  secondarySpriteTextures: []

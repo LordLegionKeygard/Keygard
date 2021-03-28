@@ -4,16 +4,15 @@ using UnityEngine;
 
 public class OptionCanvas : MonoBehaviour
 {
-    public static bool GameIsPaused = false;
+    
 
     public GameObject optionsMenuUI;
     public GameObject pauseMenuUI;
-
-
-    
+    public GameObject pauseCanvas;
 
     public void BackHandler()
     {
+        pauseCanvas.SetActive(true);
         pauseMenuUI.SetActive(true);
         optionsMenuUI.SetActive(false);       
     }

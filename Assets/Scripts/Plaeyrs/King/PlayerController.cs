@@ -91,8 +91,8 @@ public class PlayerController : MonoBehaviour {
                 
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, chekRadius, whatIsGround);                  
 
-
         moveInput = Input.GetAxis("Horizontal");
+        
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
         
         if (animator)
@@ -112,7 +112,6 @@ public class PlayerController : MonoBehaviour {
 
     private void Update()
     {
-
         if (isGrounded == true)
         {
             extraJumps = extraJumpsValue;

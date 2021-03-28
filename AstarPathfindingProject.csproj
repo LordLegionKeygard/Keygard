@@ -370,6 +370,12 @@
  <Reference Include="Pathfinding.Ionic.Zip.Reduced">
  <HintPath>F:/Unity/Projects/Keygard/Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
  </Reference>
+ <Reference Include="DOTween">
+ <HintPath>F:/Unity/Projects/Keygard/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTweenEditor">
+ <HintPath>F:/Unity/Projects/Keygard/Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
+ </Reference>
  <Reference Include="NSubstitute">
  <HintPath>F:/Unity/Projects/Keygard/Library/PackageCache/com.unity.2d.common@1.2.0-preview.1/Tests/Editor/Lib/NSubstitute/NSubstitute.dll</HintPath>
  </Reference>
