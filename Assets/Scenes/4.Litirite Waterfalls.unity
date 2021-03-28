@@ -24509,7 +24509,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.7693965, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -24528,7 +24528,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1049066503}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.302666, y: -3.3860004, z: -10.3}
+  m_LocalPosition: {x: 19.286625, y: -3.3860004, z: -10.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2086122380}
@@ -41904,7 +41904,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1626186382}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.302666, y: -3.3860004, z: -10.3}
+  m_LocalPosition: {x: 19.286625, y: -3.3860004, z: -10.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -46078,6 +46078,10 @@ MonoBehaviour:
   _platform: {fileID: 907344575}
   _triangle: {fileID: 0}
   _square: {fileID: 0}
+  loadingScreen: {fileID: 0}
+  loading: {fileID: 0}
+  press: {fileID: 0}
+  bar: {fileID: 0}
   WStaff: {fileID: 2034206998}
   WSkillj: {fileID: 357687701}
   WSkillk: {fileID: 562970501}
