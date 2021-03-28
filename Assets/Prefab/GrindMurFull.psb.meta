@@ -24,6 +24,7 @@ ScriptedImporter:
     isReadable: 0
     streamingMipmaps: 1
     streamingMipmapsPriority: 0
+    vTOnly: 0
     nPOTScale: 1
     sRGBTexture: 1
     spriteMode: 2
@@ -42,6 +43,9 @@ ScriptedImporter:
     textureType: 8
     textureShape: 1
     singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
     filterMode: 1
     aniso: 1
     mipBias: 0
@@ -61,6 +65,7 @@ ScriptedImporter:
     maxTextureSizeSet: 0
     compressionQualitySet: 0
     textureFormatSet: 0
+    applyGammaDecoding: 0
   spriteImportData:
   - name: 
     originalName: 
@@ -9239,46 +9244,8 @@ ScriptedImporter:
       order: 0
     dimension: {x: 0, y: 0}
     characterGroups: []
-  boneGOs:
-  - go: {fileID: -2123378412491791924, guid: 4c8ddd294e6965f458dca930bdf92bab, type: 3}
-    index: 0
-  - go: {fileID: 2942262772849297518, guid: 4c8ddd294e6965f458dca930bdf92bab, type: 3}
-    index: 1
-  - go: {fileID: -4673833226171239395, guid: 4c8ddd294e6965f458dca930bdf92bab, type: 3}
-    index: 2
-  - go: {fileID: -8987608593900417410, guid: 4c8ddd294e6965f458dca930bdf92bab, type: 3}
-    index: 3
-  - go: {fileID: 4874764808044541457, guid: 4c8ddd294e6965f458dca930bdf92bab, type: 3}
-    index: 4
-  - go: {fileID: -2748909767609693395, guid: 4c8ddd294e6965f458dca930bdf92bab, type: 3}
-    index: 5
-  - go: {fileID: 6491468635264134716, guid: 4c8ddd294e6965f458dca930bdf92bab, type: 3}
-    index: 6
-  - go: {fileID: -7694837725396293620, guid: 4c8ddd294e6965f458dca930bdf92bab, type: 3}
-    index: 7
-  - go: {fileID: -4660657080642360168, guid: 4c8ddd294e6965f458dca930bdf92bab, type: 3}
-    index: 8
-  - go: {fileID: 6136813076150416245, guid: 4c8ddd294e6965f458dca930bdf92bab, type: 3}
-    index: 9
-  - go: {fileID: 2729211490546265791, guid: 4c8ddd294e6965f458dca930bdf92bab, type: 3}
-    index: 10
-  - go: {fileID: -2774760782873126375, guid: 4c8ddd294e6965f458dca930bdf92bab, type: 3}
-    index: 11
-  - go: {fileID: -3201343028543980586, guid: 4c8ddd294e6965f458dca930bdf92bab, type: 3}
-    index: 12
-  - go: {fileID: 8038092439525285491, guid: 4c8ddd294e6965f458dca930bdf92bab, type: 3}
-    index: 13
-  - go: {fileID: 6834281425482967026, guid: 4c8ddd294e6965f458dca930bdf92bab, type: 3}
-    index: 14
-  - go: {fileID: -1206901165958084011, guid: 4c8ddd294e6965f458dca930bdf92bab, type: 3}
-    index: 15
-  - go: {fileID: -6051661318954966727, guid: 4c8ddd294e6965f458dca930bdf92bab, type: 3}
-    index: 16
-  - go: {fileID: -3576809175628866478, guid: 4c8ddd294e6965f458dca930bdf92bab, type: 3}
-    index: 17
-  - go: {fileID: 1070646358786287129, guid: 4c8ddd294e6965f458dca930bdf92bab, type: 3}
-    index: 18
   generateGOHierarchy: 0
   textureAssetName: GrindMurFull Texture
   prefabAssetName: GrindMurFull Prefab
   spriteLibAssetName: GrindMurFull Sprite Lib
+  secondarySpriteTextures: []

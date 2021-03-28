@@ -24,6 +24,7 @@ ScriptedImporter:
     isReadable: 0
     streamingMipmaps: 1
     streamingMipmapsPriority: 0
+    vTOnly: 0
     nPOTScale: 1
     sRGBTexture: 1
     spriteMode: 2
@@ -42,6 +43,9 @@ ScriptedImporter:
     textureType: 8
     textureShape: 1
     singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
     filterMode: 1
     aniso: 1
     mipBias: 0
@@ -61,6 +65,7 @@ ScriptedImporter:
     maxTextureSizeSet: 0
     compressionQualitySet: 0
     textureFormatSet: 0
+    applyGammaDecoding: 0
   spriteImportData:
   - name: 
     originalName: 
@@ -361,18 +366,8 @@ ScriptedImporter:
       order: 0
     dimension: {x: 0, y: 0}
     characterGroups: []
-  boneGOs:
-  - go: {fileID: -5688421704918212131, guid: 4426b97cb13a8c74d928312665d54ff2, type: 3}
-    index: 0
-  - go: {fileID: -4465967093417707259, guid: 4426b97cb13a8c74d928312665d54ff2, type: 3}
-    index: 1
-  - go: {fileID: -1923354517896623102, guid: 4426b97cb13a8c74d928312665d54ff2, type: 3}
-    index: 2
-  - go: {fileID: 132082134561644878, guid: 4426b97cb13a8c74d928312665d54ff2, type: 3}
-    index: 3
-  - go: {fileID: 1598254904811937330, guid: 4426b97cb13a8c74d928312665d54ff2, type: 3}
-    index: 4
   generateGOHierarchy: 0
   textureAssetName: Golem Texture
   prefabAssetName: Golem Prefab
   spriteLibAssetName: Golem Sprite Lib
+  secondarySpriteTextures: []
