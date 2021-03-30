@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bat : MonoBehaviour
 {
-    Animator animator;
+    [SerializeField] private Animator animator;
     public float walkDistance = 6f;
     public float patrolSpeed = 1f;
     private float chasingSpeed = 3.7f;
@@ -13,6 +13,8 @@ public class Bat : MonoBehaviour
     private float minDistancetoPlayer = 1.5f;
     private float moveInput;
     bool walk = true;
+
+    [SerializeField] private Transform batModel;
 
     private Rigidbody2D rb;
     private Transform playerTransform;
@@ -173,8 +175,8 @@ public class Bat : MonoBehaviour
     void Flip()
     {
         isFacingRight = !isFacingRight;
-        Vector3 playerScale = transform.localScale;
+        Vector3 playerScale = batModel.localScale;
         playerScale.x *= -1;
-        transform.localScale = playerScale;
+        batModel.localScale = playerScale;
     }    
 }

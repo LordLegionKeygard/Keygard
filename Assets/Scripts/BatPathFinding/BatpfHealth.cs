@@ -1,25 +1,46 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BatpfHealth : MonoBehaviour
-{
-    public int health = 2;    
-    private Animator animator;
-
+{   
     private UnityEngine.Object explosion;
+    public GameObject BAT;
+
+    [Header("Slider")]
+    [SerializeField] private float totalHealth = 2f;
+    [SerializeField] private Slider healthSlider;
+    public GameObject _hiddenSlider;
+    public float _health = 2f;
+
 
     private void Start()
     {
-        animator = GetComponent<Animator>();
+        _health = totalHealth;
         explosion = Resources.Load("Explosion1");
+        healthSlider.value = _health / totalHealth;
     }
     public void TakeDamage(int damage)
     {       
-        health -= damage;
-        if (health <= 0)
+        _health -= damage;
+        InitHealth(); 
+        if (_health <= 0)
         {
             Die();
+        }
+    }
+
+    private void InitHealth()
+    {   StopAllCoroutines();
+        healthSlider.value = _health / totalHealth;
+        _hiddenSlider.SetActive(true);
+
+        StartCoroutine(ExecuteAfterTime(5f));
+        IEnumerator ExecuteAfterTime(float timeInSec)
+        {
+        yield return new WaitForSeconds(timeInSec);
+        _hiddenSlider.SetActive(false);
         }
     }
 
@@ -28,6 +49,6 @@ public class BatpfHealth : MonoBehaviour
         GameObject explosionRef = (GameObject)Instantiate(explosion);
         explosionRef.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
 
-        Destroy(gameObject);
+        Destroy(BAT);
     }
 }

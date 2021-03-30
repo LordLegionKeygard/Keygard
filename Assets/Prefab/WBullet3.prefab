@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1359517062381696175}
   - component: {fileID: 1359517062381696174}
   - component: {fileID: 1359517062381696209}
-  - component: {fileID: 1359517062381696210}
+  - component: {fileID: 1739689567564520062}
   - component: {fileID: -4349949207880954397}
   m_Layer: 16
   m_Name: WBullet3
@@ -151,7 +151,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1359517062381696210
+--- !u!114 &1739689567564520062
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -160,7 +160,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1359517062381696172}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e365f365a5f145409d23f31286d2887, type: 3}
+  m_Script: {fileID: 11500000, guid: 7b88277edd99bb142a8910a6e013d4dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4

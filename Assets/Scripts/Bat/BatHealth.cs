@@ -1,34 +1,54 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BatHealth : MonoBehaviour
-{
-    public int health = 2;    
+{   
     private Animator animator;
 
     private UnityEngine.Object explosion;
-    private Bat enemy;
+    public Bat enemy;
+    public GameObject BAT;
+
+    [Header("Slider")]
+    [SerializeField] private float totalHealth = 2f;
+    [SerializeField] private Slider healthSlider;
+    public GameObject _hiddenSlider;
+    public float _health = 2f;
+
 
     private void Start()
     {
+        _health = totalHealth;
         animator = GetComponent<Animator>();
-        enemy = GetComponent<Bat>();
-
+        enemy = GetComponentInParent<Bat>();
         explosion = Resources.Load("Explosion1");
+        healthSlider.value = _health / totalHealth;
     }
     public void TakeDamage(int damage)
     {       
-        health -= damage;
+        _health -= damage;
+        enemy.StartChasingPlayer();
+        InitHealth(); 
         animator.SetTrigger("takeDamage");
-        if (health <= 0)
+        if (_health <= 0)
         {
             Die();
         }
-        if (health == 1)
-            {
-                enemy.StartChasingPlayer();                
-            }
+    }
+
+    private void InitHealth()
+    {   StopAllCoroutines();
+        healthSlider.value = _health / totalHealth;
+        _hiddenSlider.SetActive(true);
+
+        StartCoroutine(ExecuteAfterTime(5f));
+        IEnumerator ExecuteAfterTime(float timeInSec)
+        {
+        yield return new WaitForSeconds(timeInSec);
+        _hiddenSlider.SetActive(false);
+        }
     }
 
     private void Die()
@@ -36,6 +56,6 @@ public class BatHealth : MonoBehaviour
         GameObject explosionRef = (GameObject)Instantiate(explosion);
         explosionRef.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
 
-        Destroy(gameObject);
+        Destroy(BAT);
     }
 }

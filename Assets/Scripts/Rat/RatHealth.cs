@@ -29,16 +29,14 @@ public class RatHealth : MonoBehaviour
     public void TakeDamage(int damage)
     {       
         _health -= damage;
+        enemy.StartChasingPlayer();
         InitHealth(); 
         animator.SetTrigger("takeDamage");
         if (_health <= 0)
         {
             Die();
         }
-        if (_health == 1)
-            {
-                enemy.StartChasingPlayer();                
-            }
+
     }
 
     private void InitHealth()
@@ -47,7 +45,7 @@ public class RatHealth : MonoBehaviour
         healthSlider.value = _health / totalHealth;
         _hiddenSlider.SetActive(true);
 
-        StartCoroutine(ExecuteAfterTime(3f));
+        StartCoroutine(ExecuteAfterTime(5f));
         IEnumerator ExecuteAfterTime(float timeInSec)
         {
         yield return new WaitForSeconds(timeInSec);

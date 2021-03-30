@@ -28,6 +28,8 @@ public class EnemyAI : MonoBehaviour
     Seeker seeker;
     Rigidbody2D rb;
 
+    [SerializeField] private Transform batPFmodel;
+
     public void Start()
     {
         seeker = GetComponent<Seeker>();
@@ -66,7 +68,7 @@ public class EnemyAI : MonoBehaviour
         }
 
         // See if colliding with anything
-        Vector3 startOffset = transform.position - new Vector3(0f, GetComponent<Collider2D>().bounds.extents.y + jumpCheckOffset);
+        Vector3 startOffset = batPFmodel.position - new Vector3(0f, GetComponentInChildren<Collider2D>().bounds.extents.y + jumpCheckOffset);
         isGrounded = Physics2D.Raycast(startOffset, -Vector3.up, 0.05f);
         
         // Direction Calculation
@@ -97,18 +99,18 @@ public class EnemyAI : MonoBehaviour
         {
             if (rb.velocity.x > 0.05f)
             {
-                transform.localScale = new Vector3(-1f * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+                batPFmodel.localScale = new Vector3(-1f * Mathf.Abs(batPFmodel.localScale.x), batPFmodel.localScale.y, batPFmodel.localScale.z);
             }
             else if (rb.velocity.x < -0.05f)
             {
-                transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+                batPFmodel.localScale = new Vector3(Mathf.Abs(batPFmodel.localScale.x), batPFmodel.localScale.y, batPFmodel.localScale.z);
             }
         }
     }
 
     private bool TargetInDistance()
     {
-        return Vector2.Distance(transform.position, target.transform.position) < activateDistance;
+        return Vector2.Distance(batPFmodel.position, target.transform.position) < activateDistance;
     }
 
     private void OnPathComplete(Path p)

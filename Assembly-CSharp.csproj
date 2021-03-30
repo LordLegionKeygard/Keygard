@@ -2,8 +2,6 @@
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <LangVersion>latest</LangVersion>
-    <CscToolPath>C:\Program Files\Unity\Hub\Editor\2019.2.1f1\Editor\Data\Tools\RoslynScripts</CscToolPath>
-    <CscToolExe>unity_csc.bat</CscToolExe>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -55,8 +53,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\AudioManager.cs" />
-     <Compile Include="Assets\Cursor.cs" />
      <Compile Include="Assets\Joystick Pack\Examples\JoystickPlayerExample.cs" />
      <Compile Include="Assets\Joystick Pack\Examples\JoystickSetterExample.cs" />
      <Compile Include="Assets\Joystick Pack\Scripts\Base\Joystick.cs" />
@@ -64,9 +60,8 @@
      <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
      <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
      <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
-     <Compile Include="Assets\MenuMusic.cs" />
-     <Compile Include="Assets\PauseCanvasFalse.cs" />
      <Compile Include="Assets\Scripts\AllEnemy\EnemyAttack.cs" />
+     <Compile Include="Assets\Scripts\AllEnemy\EnemyVision.cs" />
      <Compile Include="Assets\Scripts\Archer3lvl\Archer.cs" />
      <Compile Include="Assets\Scripts\Archer3lvl\ArcherBullet.cs" />
      <Compile Include="Assets\Scripts\Archer3lvl\ArcherHealth.cs" />
@@ -82,32 +77,36 @@
      <Compile Include="Assets\Scripts\BatBossKing\GruzMother_AttackUpNDown.cs" />
      <Compile Include="Assets\Scripts\BatBossKing\GruzMother_Idel.cs" />
      <Compile Include="Assets\Scripts\BatBossKing\PlayerMove.cs" />
-     <Compile Include="Assets\Scripts\BatPathFinding\Batpf.cs" />
      <Compile Include="Assets\Scripts\BatPathFinding\BatpfHealth.cs" />
      <Compile Include="Assets\Scripts\BatPathFinding\EnemyAI.cs" />
      <Compile Include="Assets\Scripts\BigMushroom\BigMushroom.cs" />
      <Compile Include="Assets\Scripts\BigMushroom\BigMushroomBullet.cs" />
      <Compile Include="Assets\Scripts\BigMushroom\BigMushroomHealth.cs" />
      <Compile Include="Assets\Scripts\BigMushroom\BigMushroomVision.cs" />
+     <Compile Include="Assets\Scripts\BigMushroom\BlueSleepHealth.cs" />
      <Compile Include="Assets\Scripts\Bromid\Appear.cs" />
      <Compile Include="Assets\Scripts\Bromid\Bromid.cs" />
      <Compile Include="Assets\Scripts\Bromid\BromidVision.cs" />
      <Compile Include="Assets\Scripts\Bromid\Shoot.cs" />
      <Compile Include="Assets\Scripts\Canvas\Abilities.cs" />
+     <Compile Include="Assets\Scripts\Canvas\AudioManager.cs" />
+     <Compile Include="Assets\Scripts\Canvas\Cursor.cs" />
      <Compile Include="Assets\Scripts\Canvas\gameover.cs" />
      <Compile Include="Assets\Scripts\Canvas\GameOverScreen.cs" />
      <Compile Include="Assets\Scripts\Canvas\LoadingScreen.cs" />
      <Compile Include="Assets\Scripts\Canvas\MainMenu.cs" />
+     <Compile Include="Assets\Scripts\Canvas\MenuMusic.cs" />
      <Compile Include="Assets\Scripts\Canvas\OptionCanvas.cs" />
      <Compile Include="Assets\Scripts\Canvas\OptionCanvasMenu.cs" />
+     <Compile Include="Assets\Scripts\Canvas\PauseCanvasFalse.cs" />
      <Compile Include="Assets\Scripts\Canvas\PauseMenu.cs" />
+     <Compile Include="Assets\Scripts\Canvas\SoundUpdater.cs" />
      <Compile Include="Assets\Scripts\EyeRock\EyeRock.cs" />
      <Compile Include="Assets\Scripts\EyeRock\EyeRockAI.cs" />
      <Compile Include="Assets\Scripts\EyeRock\EyeRockHealth.cs" />
      <Compile Include="Assets\Scripts\Goblin\Goblin.cs" />
      <Compile Include="Assets\Scripts\Goblin\GoblinHealth.cs" />
      <Compile Include="Assets\Scripts\Goblin\GoblinVision.cs" />
-     <Compile Include="Assets\Scripts\Golem\EnemyVision.cs" />
      <Compile Include="Assets\Scripts\Golem\Golem.cs" />
      <Compile Include="Assets\Scripts\Golem\GolemHealth.cs" />
      <Compile Include="Assets\Scripts\GrindMur\AttackPlayer.cs" />
@@ -128,8 +127,6 @@
      <Compile Include="Assets\Scripts\Objects\PortalTwo.cs" />
      <Compile Include="Assets\Scripts\Objects\Scrolling.cs" />
      <Compile Include="Assets\Scripts\Plaeyrs\King\Bullet.cs" />
-     <Compile Include="Assets\Scripts\Plaeyrs\King\Bullet1.cs" />
-     <Compile Include="Assets\Scripts\Plaeyrs\King\Bullet2.cs" />
      <Compile Include="Assets\Scripts\Plaeyrs\King\FireWeapon.cs" />
      <Compile Include="Assets\Scripts\Plaeyrs\King\FireWeapon1.cs" />
      <Compile Include="Assets\Scripts\Plaeyrs\King\FireWeapon2.cs" />
@@ -137,7 +134,6 @@
      <Compile Include="Assets\Scripts\Plaeyrs\King\IceWeapon1.cs" />
      <Compile Include="Assets\Scripts\Plaeyrs\King\IceWeapon2.cs" />
      <Compile Include="Assets\Scripts\Plaeyrs\King\KeyHold.cs" />
-     <Compile Include="Assets\Scripts\Plaeyrs\King\LevelSystem.cs" />
      <Compile Include="Assets\Scripts\Plaeyrs\King\LevelUpStats.cs" />
      <Compile Include="Assets\Scripts\Plaeyrs\King\PlayerController.cs" />
      <Compile Include="Assets\Scripts\Plaeyrs\King\PlayerHealth.cs" />
@@ -177,7 +173,6 @@
      <Compile Include="Assets\Scripts\Trap\MovingPlatform.cs" />
      <Compile Include="Assets\Scripts\Trap\QuickSand.cs" />
      <Compile Include="Assets\Scripts\Trap\UpDoTrap.cs" />
-     <Compile Include="Assets\SoundUpdater.cs" />
      <Compile Include="Assets\yaSingleton\yaSingleton\Attributes\SingletonAttribute.cs" />
      <Compile Include="Assets\yaSingleton\yaSingleton\BaseSingleton.cs" />
      <Compile Include="Assets\yaSingleton\yaSingleton\Helpers\SingletonInitializer.cs" />

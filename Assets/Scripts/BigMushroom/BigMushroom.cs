@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BigMushroom : MonoBehaviour
 {
-    Animator animator;
+    [SerializeField] private Animator animator;
     public float walkDistance = 6f;
     public float patrolSpeed = 1f;
     private float chasingSpeed = 0f;
@@ -14,6 +14,7 @@ public class BigMushroom : MonoBehaviour
     private float moveInput;
     bool walk = true;
 
+    [SerializeField] private Transform BigModel;
 
     private Rigidbody2D rb;
     private Transform playerTransform;
@@ -49,7 +50,6 @@ public class BigMushroom : MonoBehaviour
 
     private void Start()
     {
-        animator = GetComponent<Animator>();
         playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();        
         rb = GetComponent<Rigidbody2D>();
         leftBoundaryPosition = transform.position;
@@ -188,7 +188,7 @@ public class BigMushroom : MonoBehaviour
     void Flip()
     {
         isFacingRight = !isFacingRight;
-        transform.Rotate(0f, 180f, 0f);
+        BigModel.Rotate(0f, 180f, 0f);
     } 
 
     void Shoot()

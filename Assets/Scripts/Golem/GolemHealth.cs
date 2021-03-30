@@ -29,16 +29,13 @@ public class GolemHealth : MonoBehaviour
     public void TakeDamage(int damage)
     {       
         _health -= damage;
+        enemy.StartChasingPlayer();
         InitHealth(); 
         animator.SetTrigger("takeDamage");
         if (_health <= 0)
         {
             Die();
         }
-        if (_health == 1 || _health == 2 || _health == 3)
-            {
-                enemy.StartChasingPlayer();                
-            }
     }
 
     private void InitHealth()

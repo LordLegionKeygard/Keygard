@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 6679776882559681812}
   - component: {fileID: 6679776882559681815}
   - component: {fileID: 6679776882559681814}
-  - component: {fileID: 5258517929616313639}
   - component: {fileID: 5263628596958608096}
   - component: {fileID: 402985487}
+  - component: {fileID: -1347894467348453224}
   - component: {fileID: 7867352909211096537}
   m_Layer: 9
   m_Name: Bullet1
@@ -106,22 +106,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &5258517929616313639
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6679776882559681808}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77ec74c38923fc64fb1b3035172e0f64, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 2
-  damage: 1
-  rb: {fileID: 6679776882559681814}
-  TimeToLive: 2
 --- !u!61 &5263628596958608096
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -167,6 +151,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-1347894467348453224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6679776882559681808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b88277edd99bb142a8910a6e013d4dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  damage: 1
+  rb: {fileID: 6679776882559681814}
+  TimeToLive: 2
 --- !u!108 &7867352909211096537
 Light:
   m_ObjectHideFlags: 0

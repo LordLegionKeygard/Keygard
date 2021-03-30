@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7910088635830467823}
   - component: {fileID: 8681031644395553561}
   - component: {fileID: 3563774589174836214}
-  - component: {fileID: 8348629024091375896}
+  - component: {fileID: -7052060153826526665}
   - component: {fileID: 5490074468810141048}
   m_Layer: 16
   m_Name: Bullet2
@@ -151,7 +151,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &8348629024091375896
+--- !u!114 &-7052060153826526665
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -160,7 +160,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7910088635830467817}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e365f365a5f145409d23f31286d2887, type: 3}
+  m_Script: {fileID: 11500000, guid: 7b88277edd99bb142a8910a6e013d4dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0

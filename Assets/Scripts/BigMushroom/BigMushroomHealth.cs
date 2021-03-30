@@ -1,33 +1,55 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BigMushroomHealth : MonoBehaviour
 {
-    public int health = 6;    
+    
     private Animator animator;
 
     private UnityEngine.Object explosion;
-    private BigMushroom enemy;
+    public BigMushroom enemy;
+    public GameObject BIG;
+
+    [Header("Slider")]
+    [SerializeField] private float totalHealth = 6f;
+    [SerializeField] private Slider healthSlider;
+    public GameObject _hiddenSlider;
+    public float _health = 6f;
+
 
     private void Start()
     {
+        _health = totalHealth;
         animator = GetComponent<Animator>();
-        enemy = GetComponent<BigMushroom>();
-        explosion = Resources.Load("Explosion");
+        enemy = GetComponentInParent<BigMushroom>();
+        explosion = Resources.Load("Explosion1");
+        healthSlider.value = _health / totalHealth;
     }
     public void TakeDamage(int damage)
     {       
-        health -= damage;
+        _health -= damage;
+        enemy.StartChasingPlayer();
+        InitHealth(); 
         animator.SetTrigger("takeDamage");
-        if (health <= 0)
+        if (_health <= 0)
         {
             Die();
         }
-        if(health == 5 || health == 4 || health == 3 || health == 2 || health == 1)
-            {
-            enemy.StartChasingPlayer();           
-            }
+    }
+
+    private void InitHealth()
+    {   StopAllCoroutines();
+        healthSlider.value = _health / totalHealth;
+        _hiddenSlider.SetActive(true);
+
+        StartCoroutine(ExecuteAfterTime(5f));
+        IEnumerator ExecuteAfterTime(float timeInSec)
+        {
+        yield return new WaitForSeconds(timeInSec);
+        _hiddenSlider.SetActive(false);
+        }
     }
 
     private void Die()
@@ -35,6 +57,6 @@ public class BigMushroomHealth : MonoBehaviour
         GameObject explosionRef = (GameObject)Instantiate(explosion);
         explosionRef.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
 
-        Destroy(gameObject);
+        Destroy(BIG);
     }
 }
