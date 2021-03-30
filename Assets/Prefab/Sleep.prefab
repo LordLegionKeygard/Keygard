@@ -12,10 +12,7 @@ GameObject:
   - component: {fileID: 4577732232285957837}
   - component: {fileID: 6120724250601927838}
   - component: {fileID: 6120724250601927839}
-  - component: {fileID: 6120724250601927826}
   - component: {fileID: 8243382262565882074}
-  - component: {fileID: 8243382262565882075}
-  - component: {fileID: 8243382262565882077}
   - component: {fileID: 2780777299697797845}
   m_Layer: 12
   m_Name: Sleep
@@ -33,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 4577732232285957836}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 655.76, y: 2.094, z: 0.099999905}
-  m_LocalScale: {x: -0.98711807, y: 1.2035996, z: 1}
+  m_LocalScale: {x: -0.9871181, y: 1.2035996, z: 1}
   m_Children:
   - {fileID: 6120724249946460220}
   m_Father: {fileID: 0}
@@ -135,18 +132,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.4777527, y: 3.3280983}
   m_EdgeRadius: 0
---- !u!114 &6120724250601927826
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4577732232285957836}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca04cc9c65b508141b072e91c765560c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &8243382262565882074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,43 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a11b0d69b8db9147bcacec68e44d654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 6
---- !u!114 &8243382262565882075
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4577732232285957836}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58a0768c0c3d46743b4c6989e10a1832, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  walkDistance: 0
-  patrolSpeed: 0
-  timeToWait: 0
-  firePoint: {fileID: 6120724249946460220}
-  bullet: {fileID: 1788334430519535049, guid: 6e6d1ad0e7ea2874baaeae04f3ae6f8c, type: 3}
-  timeRate: 0
---- !u!114 &8243382262565882077
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4577732232285957836}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b80f107c50b53ce4b8e32e9ed11de82b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentHitObject: {fileID: 0}
-  circleRadius: 0.5
-  maxDistance: 10
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 2048
+  health: 4
 --- !u!95 &2780777299697797845
 Animator:
   serializedVersion: 3

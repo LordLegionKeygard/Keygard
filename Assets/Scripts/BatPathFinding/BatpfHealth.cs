@@ -8,13 +8,10 @@ public class BatpfHealth : MonoBehaviour
     private Animator animator;
 
     private UnityEngine.Object explosion;
-    private Batpf enemy;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
-        enemy = GetComponent<Batpf>();
-
         explosion = Resources.Load("Explosion1");
     }
     public void TakeDamage(int damage)
@@ -24,10 +21,6 @@ public class BatpfHealth : MonoBehaviour
         {
             Die();
         }
-        if (health == 1)
-            {
-                enemy.StartChasingPlayer();                
-            }
     }
 
     private void Die()

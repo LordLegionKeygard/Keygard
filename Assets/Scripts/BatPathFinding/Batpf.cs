@@ -132,5 +132,5 @@ public class Batpf : MonoBehaviour
         Vector3 playerScale = transform.localScale;
         playerScale.x *= -1;
         transform.localScale = playerScale;
-    }    
+    }  
 }

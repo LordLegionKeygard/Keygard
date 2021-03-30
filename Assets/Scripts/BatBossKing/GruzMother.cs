@@ -168,14 +168,13 @@ public class GruzMother : MonoBehaviour
         if (!hasPlayerPositon)
         {
             FlipTowardsPlayer();
-             playerPosition = player.position - transform.position;
+            playerPosition = player.position - transform.position;
             playerPosition.Normalize();
             hasPlayerPositon = true;
         }
         if (hasPlayerPositon)
         {
-            enemyRB.velocity = attackPlayerSpeed * playerPosition;
-           
+            enemyRB.velocity = attackPlayerSpeed * playerPosition;          
         }
         
 

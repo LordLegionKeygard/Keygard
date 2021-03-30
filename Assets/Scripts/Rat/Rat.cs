@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Rat : MonoBehaviour
 {
-    Animator animator;
+    [SerializeField] private Animator animator;
     public float walkDistance = 6f;
     public float patrolSpeed = 1f;
     private float chasingSpeed = 3.2f;
@@ -13,6 +13,8 @@ public class Rat : MonoBehaviour
     private float minDistancetoPlayer = 1.5f;
     private float moveInput;
     bool walk = true;
+
+    [SerializeField] private Transform ratModel;
 
     private Rigidbody2D rb;
     private Transform playerTransform;
@@ -42,7 +44,6 @@ public class Rat : MonoBehaviour
 
     private void Start()
     {
-        animator = GetComponent<Animator>();
         playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();        
         rb = GetComponent<Rigidbody2D>();
         leftBoundaryPosition = transform.position;
@@ -173,8 +174,8 @@ public class Rat : MonoBehaviour
     void Flip()
     {
         isFacingRight = !isFacingRight;
-        Vector3 playerScale = transform.localScale;
+        Vector3 playerScale = ratModel.localScale;
         playerScale.x *= -1;
-        transform.localScale = playerScale;
+        ratModel.localScale = playerScale;
     }    
 }

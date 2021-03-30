@@ -1,36 +1,58 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RatHealth : MonoBehaviour
-{
-    public int health = 2;    
+{   
     private Animator animator;
 
     private UnityEngine.Object explosion;
-    private Rat enemy;
-    private GameObject player;
-    public float expValue;
+    public Rat enemy;
+    public GameObject RAT;
+
+    [Header("Slider")]
+    [SerializeField] private float totalHealth = 2f;
+    [SerializeField] private Slider healthSlider;
+    public GameObject _hiddenSlider;
+    public float _health = 2f;
+
 
     private void Start()
     {
+        _health = totalHealth;
         animator = GetComponent<Animator>();
-        enemy = GetComponent<Rat>();
-        player = GameObject.FindGameObjectWithTag("Player");
+        enemy = GetComponentInParent<Rat>();
         explosion = Resources.Load("Explosion1");
+        healthSlider.value = _health / totalHealth;
     }
     public void TakeDamage(int damage)
     {       
-        health -= damage;
+        _health -= damage;
+        InitHealth(); 
         animator.SetTrigger("takeDamage");
-        if (health <= 0)
+        if (_health <= 0)
         {
             Die();
         }
-        if (health == 1)
+        if (_health == 1)
             {
                 enemy.StartChasingPlayer();                
             }
+    }
+
+    private void InitHealth()
+    {
+        StopAllCoroutines();
+        healthSlider.value = _health / totalHealth;
+        _hiddenSlider.SetActive(true);
+
+        StartCoroutine(ExecuteAfterTime(3f));
+        IEnumerator ExecuteAfterTime(float timeInSec)
+        {
+        yield return new WaitForSeconds(timeInSec);
+        _hiddenSlider.SetActive(false);
+        }
     }
 
     private void Die()
@@ -38,8 +60,6 @@ public class RatHealth : MonoBehaviour
         GameObject explosionRef = (GameObject)Instantiate(explosion);
         explosionRef.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
 
-        Destroy(gameObject);
-
-        player.GetComponent<LevelUpStats>().SetExperience(expValue);
+        Destroy(RAT);
     }
 }

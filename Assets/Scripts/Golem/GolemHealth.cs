@@ -1,33 +1,57 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GolemHealth : MonoBehaviour
-{
-    public int health = 4;    
+{    
     private Animator animator;
 
     private UnityEngine.Object explosion;
-    private Golem enemy;
+    public Golem enemy;
+    public GameObject GOLEM;
+
+    [Header("Slider")]
+    [SerializeField] private float totalHealth = 4f;
+    [SerializeField] private Slider healthSlider;
+    public GameObject _hiddenSlider;
+    public float _health = 4f;
+
 
     private void Start()
     {
+        _health = totalHealth;
         animator = GetComponent<Animator>();
-        enemy = GetComponent<Golem>();
-        explosion = Resources.Load("Explosion");
+        enemy = GetComponentInParent<Golem>();
+        explosion = Resources.Load("Explosion1");
+        healthSlider.value = _health / totalHealth;
     }
     public void TakeDamage(int damage)
     {       
-        health -= damage;
+        _health -= damage;
+        InitHealth(); 
         animator.SetTrigger("takeDamage");
-        if (health <= 0)
+        if (_health <= 0)
         {
             Die();
         }
-        if(health == 3 || health == 2 || health == 1)
+        if (_health == 1 || _health == 2 || _health == 3)
             {
-            enemy.StartChasingPlayer();           
+                enemy.StartChasingPlayer();                
             }
+    }
+
+    private void InitHealth()
+    {   StopAllCoroutines();
+        healthSlider.value = _health / totalHealth;
+        _hiddenSlider.SetActive(true);
+
+        StartCoroutine(ExecuteAfterTime(5f));
+        IEnumerator ExecuteAfterTime(float timeInSec)
+        {
+        yield return new WaitForSeconds(timeInSec);
+        _hiddenSlider.SetActive(false);
+        }
     }
 
     private void Die()
@@ -35,6 +59,6 @@ public class GolemHealth : MonoBehaviour
         GameObject explosionRef = (GameObject)Instantiate(explosion);
         explosionRef.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
 
-        Destroy(gameObject);
+        Destroy(GOLEM);
     }
 }
