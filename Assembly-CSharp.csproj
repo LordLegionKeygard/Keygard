@@ -119,9 +119,11 @@
      <Compile Include="Assets\Scripts\Jester\JesterVision.cs" />
      <Compile Include="Assets\Scripts\Objects\Boat.cs" />
      <Compile Include="Assets\Scripts\Objects\BreakTree.cs" />
+     <Compile Include="Assets\Scripts\Objects\Chain.cs" />
      <Compile Include="Assets\Scripts\Objects\DontCloseDoor.cs" />
      <Compile Include="Assets\Scripts\Objects\Door.cs" />
      <Compile Include="Assets\Scripts\Objects\DoorTrigger.cs" />
+     <Compile Include="Assets\Scripts\Objects\Lever.cs" />
      <Compile Include="Assets\Scripts\Objects\LScroll.cs" />
      <Compile Include="Assets\Scripts\Objects\Portal.cs" />
      <Compile Include="Assets\Scripts\Objects\PortalTwo.cs" />

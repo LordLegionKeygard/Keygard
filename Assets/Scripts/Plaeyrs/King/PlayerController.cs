@@ -276,8 +276,6 @@ public class PlayerController : MonoBehaviour {
         if (collision.gameObject.CompareTag("Finish"))
         {
             loadingScreen.SetActive(true);
-            //SceneManager.LoadScene(1);
-
             StartCoroutine(LoadAsync());
         }
 
