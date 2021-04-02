@@ -22,8 +22,7 @@ public class Weapon2 : MonoBehaviour
     void Update()
     {                     
         if(Input.GetButtonDown("Fire3") && Time.time > nextTime)
-        {
-            shoot3.Play();  
+        { 
             animator.SetTrigger("Shoot");                                     
             nextTime = Time.time + timeRate;
             Shoot();
@@ -31,10 +30,23 @@ public class Weapon2 : MonoBehaviour
             Shoot3();
         }
     }
+
+    public void ShootButtonDown()
+    {
+        if(Time.time > nextTime)
+        {  
+            animator.SetTrigger("Shoot");                                     
+            nextTime = Time.time + timeRate;
+            Shoot();
+            Shoot2();
+            Shoot3();
+        }        
+    }
     
     void Shoot()
     {
         Instantiate(bullet, firePoint.position, firePoint.rotation);
+        shoot3.Play(); 
     }
 
     void Shoot2()

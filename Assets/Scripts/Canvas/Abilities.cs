@@ -13,6 +13,8 @@ public class Abilities : MonoBehaviour
     public float cooldown2 = 5;
     public float cooldown3 = 5;
 
+    bool k = false;
+
     bool isCooldown = false;
     bool isCooldown2 = false;
     bool isCooldown3 = false;
@@ -80,8 +82,6 @@ public class Abilities : MonoBehaviour
         wabilityImage1.fillAmount = 0;
         wabilityImage2.fillAmount = 0;
         wabilityImage3.fillAmount = 0;
-
-
     }
 
     // Update is called once per frame
@@ -123,7 +123,7 @@ public class Abilities : MonoBehaviour
 
     void Ability2()
     {
-        if(Input.GetKey(ability2) && isCooldown2 == false)
+        if(Input.GetKey(ability2) && isCooldown == false)
         {
             isCooldown2 = true;
             abilityImage2.fillAmount = 1;
@@ -137,8 +137,10 @@ public class Abilities : MonoBehaviour
             {
                 abilityImage2.fillAmount = 0;
                 isCooldown2 = false;
+                k = false;
             }
         }
+        
     }
 
     void Ability3()

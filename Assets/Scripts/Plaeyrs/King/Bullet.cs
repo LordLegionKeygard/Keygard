@@ -23,40 +23,28 @@ public class Bullet : MonoBehaviour
     {
         Destroy(gameObject);
 
-        GolemHealth enemyHealth = hitInfo.GetComponent<GolemHealth>();
+        EnemyHealth enemyHealth = hitInfo.GetComponent<EnemyHealth>();
         if (enemyHealth != null)
         {
             enemyHealth.TakeDamage(damage);
         }
-                 
-        SkeletSHealth skeletHealth = hitInfo.GetComponent<SkeletSHealth>();       
-        if (skeletHealth != null)
+
+        RangeHealth rangeHealth = hitInfo.GetComponent<RangeHealth>();
+        if (rangeHealth != null)
         {
-            skeletHealth.TakeDamage(damage);
-        } 
-            
-        RatHealth ratHealth = hitInfo.GetComponent<RatHealth>();       
-        if (ratHealth != null)
+            rangeHealth.TakeDamage(damage);
+        }  
+
+        FlyPfHealth flyHealth = hitInfo.GetComponent<FlyPfHealth>();
+        if (flyHealth != null)
         {
-            ratHealth.TakeDamage(damage);
-        }
+            flyHealth.TakeDamage(damage);
+        }         
  
         GruzMother gruzeHealth = hitInfo.GetComponent<GruzMother>();       
         if (gruzeHealth != null)
         {
             gruzeHealth.TakeDamage(damage);
-        } 
-           
-        BatHealth batHealth = hitInfo.GetComponent<BatHealth>();       
-        if (batHealth != null)
-        {
-            batHealth.TakeDamage(damage);
-        } 
-           
-        BatpfHealth batpfHealth = hitInfo.GetComponent<BatpfHealth>();       
-        if (batpfHealth != null)
-        {
-            batpfHealth.TakeDamage(damage);
         } 
 
         EyeRockHealth eyerockHealth = hitInfo.GetComponent<EyeRockHealth>();       
@@ -70,13 +58,7 @@ public class Bullet : MonoBehaviour
         {
             skeletrmagHealth.TakeDamage(damage);
         } 
-           
-        BigMushroomHealth bigmushroomHealth = hitInfo.GetComponent<BigMushroomHealth>();       
-        if (bigmushroomHealth != null)
-        {
-            bigmushroomHealth.TakeDamage(damage);
-        } 
-           
+
         SmallRockHealth smallrockHealth = hitInfo.GetComponent<SmallRockHealth>();       
         if (smallrockHealth != null)
         {

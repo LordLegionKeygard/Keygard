@@ -26,6 +26,7 @@ public class GruzMother : MonoBehaviour
     [SerializeField] LayerMask groundLayer;
     [SerializeField] private float totalHealth = 15f;
     [SerializeField] private Slider healthSlider;
+    public GameObject SLIDER;
 
     public GameObject caveentrance;
     [SerializeField] private AudioSource MainMusic;
@@ -74,6 +75,7 @@ public class GruzMother : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            SLIDER.SetActive(true);
             attackPlayerSpeed = 8;
             attackMovementSpeed = 25;
             idelMovementSpeed = 3;
@@ -257,7 +259,7 @@ public class GruzMother : MonoBehaviour
         Win.Play();
         GameObject explosionRef = (GameObject)Instantiate(explosion);
         explosionRef.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-        
+        SLIDER.SetActive(false);        
         Destroy(gameObject);
     } 
 }

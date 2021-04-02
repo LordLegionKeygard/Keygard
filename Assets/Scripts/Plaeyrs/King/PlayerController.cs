@@ -4,16 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class PlayerController : MonoBehaviour {
+public class PlayerController : MonoBehaviour 
+{
 
     Animator animator;
-    public float speed;
-    public float jumpForce;
-    private float moveInput;
 
-    public GameObject _platform;
     public GameObject _triangle;
-    public GameObject _square;
     public GameObject loadingScreen;
     public GameObject loading;
     public GameObject press;
@@ -57,120 +53,21 @@ public class PlayerController : MonoBehaviour {
     public GameObject PSkghost3;
 
     [Header("Music Effect")]
-    public AudioSource jumpsound;
     public AudioSource PickUpStaff;
     public AudioSource PickUpScroll;
     public AudioSource PickUpPotion;
     public AudioSource Gw;
          
-    private Rigidbody2D rb;
     private GameObject finish;
-
-    public bool facingRight = true;
-
-    private bool isGrounded;
-    public Transform groundCheck;
-    public float chekRadius;
-    public LayerMask whatIsGround; 
-
-
-    private int extraJumps;
-    public int extraJumpsValue;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
-        extraJumps = extraJumpsValue;
-        rb = GetComponent<Rigidbody2D>();
         finish = GameObject.FindGameObjectWithTag("Finish");
     }
-
-
-    private void FixedUpdate()
-    {   
-                
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, chekRadius, whatIsGround);                  
-
-        moveInput = Input.GetAxis("Horizontal");
-        
-        rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
-        
-        if (animator)
-        {
-            animator.SetBool("Walk", Mathf.Abs(moveInput) >= 0.1f);
-        }
-
-        if (facingRight == false && moveInput > 0)
-        {
-            Flip();
-        } 
-        else if (facingRight == true && moveInput < 0)
-        {
-            Flip();
-        }
-    }
-
-    private void Update()
-    {
-        if (isGrounded == true)
-        {
-            extraJumps = extraJumpsValue;
-        }
-
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            _platform.SetActive(false);
-
-            StartCoroutine(ExecuteAfterTime(0.5f));
-            IEnumerator ExecuteAfterTime(float timeInSec)
-            {
-            yield return new WaitForSeconds(timeInSec);
-            _platform.SetActive(true);
-            }
-        }
-
-        if (Input.GetKeyDown(KeyCode.Space) && extraJumps > 0 || 
-           (Input.GetKeyDown(KeyCode.W)) && extraJumps > 0 || 
-           (Input.GetKeyDown(KeyCode.UpArrow)) && extraJumps > 0)
-        {              
-            if (animator) 
-            {
-                animator.SetTrigger("Jump");
-            }
-            rb.velocity = Vector2.up * jumpForce;
-            extraJumps--;
-        }
-
-        if (Input.GetKeyDown(KeyCode.Space) && extraJumps == 0 && isGrounded ==true || 
-           (Input.GetKeyDown(KeyCode.W)) && extraJumps == 0 && isGrounded ==true || 
-           (Input.GetKeyDown(KeyCode.UpArrow)) && extraJumps == 0 && isGrounded ==true)
-        {
-            jumpsound.Play();
-        }        
-       
-        else if (Input.GetKeyDown(KeyCode.Space) && extraJumps == 0 && isGrounded ==true || (Input.GetKeyDown(KeyCode.W)) && extraJumps == 0 && isGrounded ==true || (Input.GetKeyDown(KeyCode.UpArrow)) && extraJumps == 0 && isGrounded ==true)
-        {          
-            rb.velocity = Vector2.up * jumpForce;
-        }
-           
-    }
-
-    void Flip()
-    {
-        facingRight = !facingRight;
-        Vector3 Scaler = transform.localScale;
-        Scaler.x *= -1;
-        transform.localScale = Scaler;
-    }   
-
+  
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.name == "Potion2")
-        {
-            PickUpPotion.Play();
-            _square.SetActive(false);
-            Destroy(other.gameObject);
-        }
         if(other.gameObject.name == "Potion1")
         {
             PickUpPotion.Play();
@@ -269,10 +166,6 @@ public class PlayerController : MonoBehaviour {
         {
             this.transform.parent = collision.transform;
         }
-        if (collision.gameObject.CompareTag("QuickSand"))
-        {
-            speed = 1f;
-        }
         if (collision.gameObject.CompareTag("Finish"))
         {
             loadingScreen.SetActive(true);
@@ -308,11 +201,7 @@ public class PlayerController : MonoBehaviour {
         if (collision.gameObject.CompareTag("Platform"))
         {
             this.transform.parent = null;
-        }
-        if (collision.gameObject.CompareTag("QuickSand"))
-        {
-            speed = 4f;
-        }      
+        }     
     }
 
     void RandomStatePicker()

@@ -21,16 +21,26 @@ public class IceWeapon2 : MonoBehaviour
     void Update()
     {                     
         if(Input.GetButtonDown("Fire3") && Time.time > nextTime)
-        {
-            shoot3.Play();  
+        {  
             animator.SetTrigger("Shoot");                                     
             nextTime = Time.time + timeRate;
             Shoot();
         }
     }
+
+    public void ShootButtonDown()
+    {
+        if(Time.time > nextTime)
+        {  
+            animator.SetTrigger("Shoot");                                     
+            nextTime = Time.time + timeRate;
+            Shoot();
+        }        
+    }
     
     void Shoot()
     {
         Instantiate(bullet, firePoint.position, firePoint.rotation);
+        shoot3.Play();
     }     
 }

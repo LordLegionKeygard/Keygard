@@ -30,8 +30,17 @@ public class FireWeapon : MonoBehaviour
     void Update()
     {              
         if(Input.GetButtonDown("Fire1") && Time.time > nextTime)
-        {
-            shoot.Play();  
+        { 
+            animator.SetTrigger("Shoot");                                     
+            nextTime = Time.time + timeRate;
+            Shoot();
+        }        
+    }
+
+    public void ShootButtonDown()
+    {
+        if(Time.time > nextTime)
+        {  
             animator.SetTrigger("Shoot");                                     
             nextTime = Time.time + timeRate;
             Shoot();
@@ -41,5 +50,6 @@ public class FireWeapon : MonoBehaviour
     void Shoot()
     {
         Instantiate(bullet, firePoint.position, firePoint.rotation);
+        shoot.Play(); 
     }
 }

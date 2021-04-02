@@ -14,7 +14,7 @@ public class PauseMenu : MonoBehaviour
 
     void Update()
     {
-        UnityEngine.Cursor.visible = false;
+        //UnityEngine.Cursor.visible = false;
         if(Input.GetKeyDown(KeyCode.Escape))
         {
             if (GameIsPaused)
