@@ -2,8 +2,6 @@
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <LangVersion>latest</LangVersion>
-    <CscToolPath>C:\Program Files\Unity\Hub\Editor\2019.2.1f1\Editor\Data\Tools\RoslynScripts</CscToolPath>
-    <CscToolExe>unity_csc.bat</CscToolExe>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -94,10 +92,12 @@
      <Compile Include="Assets\Scripts\Canvas\LoadingScreen.cs" />
      <Compile Include="Assets\Scripts\Canvas\MainMenu.cs" />
      <Compile Include="Assets\Scripts\Canvas\MenuMusic.cs" />
+     <Compile Include="Assets\Scripts\Canvas\MobileSoundUpdater.cs" />
      <Compile Include="Assets\Scripts\Canvas\OptionCanvas.cs" />
      <Compile Include="Assets\Scripts\Canvas\OptionCanvasMenu.cs" />
      <Compile Include="Assets\Scripts\Canvas\PauseCanvasFalse.cs" />
      <Compile Include="Assets\Scripts\Canvas\PauseMenu.cs" />
+     <Compile Include="Assets\Scripts\Canvas\ShopCanvas.cs" />
      <Compile Include="Assets\Scripts\Canvas\SoundUpdater.cs" />
      <Compile Include="Assets\Scripts\EyeRock\EyeRock.cs" />
      <Compile Include="Assets\Scripts\EyeRock\EyeRockAI.cs" />

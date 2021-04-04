@@ -24,6 +24,7 @@ TagManager:
   - QuickSand
   - Potion1
   - Potion2
+  - Coin
   layers:
   - Default
   - TransparentFX
@@ -52,7 +53,7 @@ TagManager:
   - GhostWall
   - MobStopper
   - PlatformBoss
-  - 
+  - Coin
   - 
   - 
   - 

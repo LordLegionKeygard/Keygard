@@ -14,22 +14,20 @@ public class PlayerHealth : MonoBehaviour
     public Sprite HeartFull;
     public Sprite HeartEmpty;
     public AudioSource PickUp;
+    private UnityEngine.Object explosion;
 
     private void Start()
     {
+        explosion = Resources.Load("PlayerDamage");
         animator = GetComponent<Animator>();
     }
     public void TakeDamage(int damage)
     {       
         health -= damage;
         animator.SetTrigger("takeDamage");
-        onehealth.SetActive(true);
-        StartCoroutine(ExecuteAfterTime(1));
-        IEnumerator ExecuteAfterTime(float timeInSec)
-        {
-        yield return new WaitForSeconds(timeInSec);
-        onehealth.SetActive(false);
-        }
+
+        GameObject explosionRef = (GameObject)Instantiate(explosion);
+        explosionRef.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
     
         if (health <= 0)
         {

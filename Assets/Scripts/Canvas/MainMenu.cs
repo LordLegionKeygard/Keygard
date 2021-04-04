@@ -7,9 +7,16 @@ using UnityEngine.UI;
 public class MainMenu : MonoBehaviour
 {
     public GameObject optionsUI;
+    public GameObject donateUI;
+    public GameObject shopUI;
     public GameObject loadingScreen;
     public GameObject loading;
     public GameObject press;
+    public GameObject _start;
+    public GameObject _options;
+    public GameObject _exit;
+    public GameObject _shop;
+    public GameObject _coin;
 
     public Slider bar;
 
@@ -48,10 +55,25 @@ public class MainMenu : MonoBehaviour
     public void OptionsHandler()
     {       
         optionsUI.SetActive(true);
+        _start.SetActive(false);
+        _options.SetActive(false);
+        _exit.SetActive(false);
+        _shop.SetActive(false);
+        _coin.SetActive(false);
     }
 
     public void ExitHandler()
     {
         Application.Quit();
+    }
+
+    public void ShopHandler()
+    {
+        shopUI.SetActive(true);
+    }
+
+    public void DonateHandler()
+    {
+        donateUI.SetActive(true);
     }
 }
