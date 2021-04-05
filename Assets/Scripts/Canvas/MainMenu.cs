@@ -12,11 +12,8 @@ public class MainMenu : MonoBehaviour
     public GameObject loadingScreen;
     public GameObject loading;
     public GameObject press;
-    public GameObject _start;
-    public GameObject _options;
-    public GameObject _exit;
-    public GameObject _shop;
-    public GameObject _coin;
+    public GameObject btn;
+
 
     public Slider bar;
 
@@ -55,11 +52,7 @@ public class MainMenu : MonoBehaviour
     public void OptionsHandler()
     {       
         optionsUI.SetActive(true);
-        _start.SetActive(false);
-        _options.SetActive(false);
-        _exit.SetActive(false);
-        _shop.SetActive(false);
-        _coin.SetActive(false);
+        btn.SetActive(false);
     }
 
     public void ExitHandler()
@@ -70,6 +63,7 @@ public class MainMenu : MonoBehaviour
     public void ShopHandler()
     {
         shopUI.SetActive(true);
+        btn.SetActive(false);
     }
 
     public void DonateHandler()

@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
-  damage: 1
+  damage: 8
   rb: {fileID: -1465826781072947221}
   TimeToLive: 0.5
 --- !u!95 &2482375075044287718

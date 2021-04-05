@@ -2,6 +2,8 @@
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <LangVersion>latest</LangVersion>
+    <CscToolPath>C:\Program Files\Unity\Hub\Editor\2019.2.1f1\Editor\Data\Tools\RoslynScripts</CscToolPath>
+    <CscToolExe>unity_csc.bat</CscToolExe>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -53,6 +55,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\AreYouSure.cs" />
+     <Compile Include="Assets\BuyIceStaff.cs" />
+     <Compile Include="Assets\CoinMenu.cs" />
+     <Compile Include="Assets\CoinMove.cs" />
+     <Compile Include="Assets\SaveMenu.cs" />
      <Compile Include="Assets\Scripts\AllEnemy\Enemy.cs" />
      <Compile Include="Assets\Scripts\AllEnemy\EnemyAttack.cs" />
      <Compile Include="Assets\Scripts\AllEnemy\EnemyHealth.cs" />
@@ -165,6 +172,7 @@
      <Compile Include="Assets\Scripts\SmalRock\SmallRock.cs" />
      <Compile Include="Assets\Scripts\SmalRock\SmallRockHealth.cs" />
      <Compile Include="Assets\Scripts\SmalRock\SmallRockVision.cs" />
+     <Compile Include="Assets\Scripts\StaffType.cs" />
      <Compile Include="Assets\Scripts\Trap\AxeTrap.cs" />
      <Compile Include="Assets\Scripts\Trap\CrystalD.cs" />
      <Compile Include="Assets\Scripts\Trap\CrystalTrap.cs" />
@@ -177,6 +185,9 @@
      <Compile Include="Assets\Scripts\Trap\MovingPlatform.cs" />
      <Compile Include="Assets\Scripts\Trap\QuickSand.cs" />
      <Compile Include="Assets\Scripts\Trap\UpDoTrap.cs" />
+     <Compile Include="Assets\SFXProverka.cs" />
+     <Compile Include="Assets\ShopStaffButton.cs" />
+     <Compile Include="Assets\StaffController.cs" />
      <Compile Include="Assets\yaSingleton\yaSingleton\Attributes\SingletonAttribute.cs" />
      <Compile Include="Assets\yaSingleton\yaSingleton\BaseSingleton.cs" />
      <Compile Include="Assets\yaSingleton\yaSingleton\Helpers\SingletonInitializer.cs" />

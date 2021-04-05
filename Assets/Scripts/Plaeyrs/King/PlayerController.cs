@@ -15,14 +15,16 @@ public class PlayerController : MonoBehaviour
     public GameObject press;
     public Slider bar; 
 
-    [Header("WindStaff")]
-    public GameObject WStaff;
-    public GameObject WSkillj;
-    public GameObject WSkillk;
-    public GameObject WSkilll;
-    public GameObject WSkghost1;
-    public GameObject WSkghost2;
-    public GameObject WSkghost3;
+    [Header("PoisonStaff")]
+    public GameObject PStaff;
+    public GameObject PSkillj;
+    public GameObject PSkillk;
+    public GameObject PSkilll;
+    public GameObject PSkghost1;
+    public GameObject PSkghost2;
+    public GameObject PSkghost3;
+    public GameObject PLBtn;
+    public GameObject PJBtn;
 
     [Header("IceStaff")]
     public GameObject IStaff;
@@ -32,6 +34,19 @@ public class PlayerController : MonoBehaviour
     public GameObject ISkghost1;
     public GameObject ISkghost2;
     public GameObject ISkghost3;
+    public GameObject ILBtn;
+    public GameObject IJBtn;
+
+    [Header("WindStaff")]
+    public GameObject WStaff;
+    public GameObject WSkillj;
+    public GameObject WSkillk;
+    public GameObject WSkilll;
+    public GameObject WSkghost1;
+    public GameObject WSkghost2;
+    public GameObject WSkghost3;
+    public GameObject WLBtn;
+    public GameObject WJBtn;
 
     [Header("FireStaff")]
     public GameObject FStaff;
@@ -41,16 +56,8 @@ public class PlayerController : MonoBehaviour
     public GameObject FSkghost1;
     public GameObject FSkghost2;
     public GameObject FSkghost3;
-
-
-    [Header("PoisonStaff")]
-    public GameObject PStaff;
-    public GameObject PSkillj;
-    public GameObject PSkillk;
-    public GameObject PSkilll;
-    public GameObject PSkghost1;
-    public GameObject PSkghost2;
-    public GameObject PSkghost3;
+    public GameObject FLBtn;
+    public GameObject FJBtn;
 
     [Header("Music Effect")]
     public AudioSource PickUpStaff;
@@ -59,15 +66,27 @@ public class PlayerController : MonoBehaviour
     public AudioSource Gw;
          
     private GameObject finish;
+    private int score;
+    [SerializeField] private Text textScore;
 
     private void Start()
     {
+        score = PlayerPrefs.GetInt("coin", score);
+        textScore.text = score.ToString();
         animator = GetComponent<Animator>();
         finish = GameObject.FindGameObjectWithTag("Finish");
     }
   
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if(other.gameObject.CompareTag("Coin"))
+        {
+            score++;
+            PlayerPrefs.SetInt("coin", score);
+            Destroy(other.gameObject);
+            textScore.text = score.ToString();
+
+        }
         if(other.gameObject.name == "Potion1")
         {
             PickUpPotion.Play();
@@ -104,24 +123,28 @@ public class PlayerController : MonoBehaviour
                 myscript.enabled = true;
                 PSkilll.SetActive(true);
                 PSkghost3.SetActive(true);
+                PLBtn.SetActive(true);
             }
             if(FStaff.activeInHierarchy)
             {
                 fmyscript.enabled = true;
                 FSkilll.SetActive(true);
                 FSkghost3.SetActive(true);
+                FLBtn.SetActive(true);                
             }
             if(IStaff.activeInHierarchy)
             {
                 imyscript.enabled = true;
                 ISkilll.SetActive(true);
                 ISkghost3.SetActive(true);
+                ILBtn.SetActive(true);                
             }
             if(WStaff.activeInHierarchy)
             {
                 wmyscript.enabled = true;
                 WSkilll.SetActive(true);
                 WSkghost3.SetActive(true);
+                WLBtn.SetActive(true);
             }
         }
 
@@ -138,24 +161,28 @@ public class PlayerController : MonoBehaviour
                 myscript.enabled = true;
                 PSkillj.SetActive(true);
                 PSkghost1.SetActive(true);
+                PJBtn.SetActive(true);
             }
             if(FStaff.activeInHierarchy)
             {
                 fmyscript.enabled = true;
                 FSkillj.SetActive(true);
                 FSkghost1.SetActive(true);
+                FJBtn.SetActive(true);
             }
             if(IStaff.activeInHierarchy)
             {
                 imyscript.enabled = true;
                 ISkillj.SetActive(true);
                 ISkghost1.SetActive(true);
+                IJBtn.SetActive(true);
             }
             if(WStaff.activeInHierarchy)
             {
                 wmyscript.enabled = true;
                 WSkillj.SetActive(true);
                 WSkghost1.SetActive(true);
+                WJBtn.SetActive(true);
             }
         }
     }

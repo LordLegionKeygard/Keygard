@@ -12,7 +12,7 @@ public class IceWeapon2 : MonoBehaviour
     public float timeRate = 1f;
     public AudioSource shoot3;
 
-    private void Start()
+    private void Awake()
     {
         animator = GetComponent<Animator>();                
     }
