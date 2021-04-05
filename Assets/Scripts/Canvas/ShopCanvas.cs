@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,9 +6,9 @@ using UnityEngine.UI;
 
 public class ShopCanvas : MonoBehaviour
 {
-    [SerializeField] private StaffInfo _defaultStaff;
+    [SerializeField] private StaffType _defaultStaff;
 
-    public StaffInfo currentStaff;
+    private StaffInfo _currentStaff;
 
     [SerializeField] private Button _equip;
 
@@ -37,25 +37,26 @@ public class ShopCanvas : MonoBehaviour
     private void Start()
     {
         Load();
-        currentStaff = currentEquipedStaff;
+        _currentStaff = currentEquipedStaff;
         UpdateView();
         _buy.onClick.AddListener(Buy);
         _equip.onClick.AddListener(Equip);
     }
 
+
     private void Equip()
     {
-        currentEquipedStaff = currentStaff;
+        currentEquipedStaff = _currentStaff;
         UpdateView();
         Save();
     }
 
     private void Buy()
     {
-        if (currentStaff.price <= _coins)
+        if (_currentStaff.price <= _coins)
         {
-            currentStaff.bought = true;
-            _coins -= currentStaff.price;
+            _currentStaff.bought = true;
+            _coins -= _currentStaff.price;
             UpdateView();
             Save();
         }
@@ -64,7 +65,7 @@ public class ShopCanvas : MonoBehaviour
     private void Save()
     {
         SaveCoins();
-        SaveCurrentStaff();
+        SaveEquipedStaff();
         SaveAllStaffs();
         PlayerPrefs.Save();
     }
@@ -76,10 +77,10 @@ public class ShopCanvas : MonoBehaviour
         PlayerPrefs.SetString("AllStaffs", json);
     }
 
-    private void SaveCurrentStaff()
+    private void SaveEquipedStaff()
     {
-        string json = JsonUtility.ToJson(currentStaff);
-        PlayerPrefs.SetString("Staff", json);
+        int indexEquipedStaff = _allStaffs.IndexOf(currentEquipedStaff);
+        PlayerPrefs.SetInt("Staff", indexEquipedStaff);
     }
 
     private void SaveCoins()
@@ -95,7 +96,7 @@ public class ShopCanvas : MonoBehaviour
     private void Load()
     {
         LoadAllStaffs();
-        LoadCurrentStaff();
+        LoadEquipedStaff();
         LoadCoins();
     }
 
@@ -108,23 +109,22 @@ public class ShopCanvas : MonoBehaviour
         _allStaffs = saveData.Staffs;
     }
 
-    private void LoadCurrentStaff()
+    private void LoadEquipedStaff()
     {
-        string defaultStaff = JsonUtility.ToJson(_defaultStaff);
-        string json = PlayerPrefs.GetString("Staff", defaultStaff);
-        JsonUtility.FromJsonOverwrite(json, currentEquipedStaff);
+        int indexEquipedStaff = PlayerPrefs.GetInt("Staff", (int) _defaultStaff);
+        currentEquipedStaff = _allStaffs[indexEquipedStaff];
     }
 
     private void UpdateView()
     {
         _textCoins.text = _coins.ToString();
-        bool canBought = currentStaff.bought ? false : currentStaff.price <= _coins;
+        bool canBought = _currentStaff.bought ? false : _currentStaff.price <= _coins;
         _buy.interactable = canBought;
-        _equip.interactable = currentStaff != currentEquipedStaff && currentStaff.bought;
+        _equip.interactable = _currentStaff != currentEquipedStaff && _currentStaff.bought;
 
         foreach (var staffObject in staffObjects)
         {
-            if (staffObject.staffType == currentStaff.staffType)
+            if (staffObject.staffType == _currentStaff.staffType)
             {
                 staffObject.Activate();
             }
@@ -149,7 +149,7 @@ public class ShopCanvas : MonoBehaviour
 
     public void SetCurrentStaff(StaffType newStaffType)
     {
-        currentStaff = _allStaffs.Find(info => info.staffType == newStaffType);
+        _currentStaff = _allStaffs.Find(info => info.staffType == newStaffType);
         UpdateView();
     }
 
@@ -161,7 +161,7 @@ public class ShopCanvas : MonoBehaviour
 
     private void OnDisable() 
     {
-        Save();        
+        Save();
     }
 }
 
@@ -199,6 +199,6 @@ public class StaffInfo
 [Serializable]
 public class AllStaffSaveData
 {
-    public List<StaffInfo> Staffs;
+    public List<StaffInfo> Staffs = new List<StaffInfo>();
 }
 

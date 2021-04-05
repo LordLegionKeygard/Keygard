@@ -1129,7 +1129,7 @@ GameObject:
   m_Layer: 11
   m_Name: FirePoint7
   m_TagString: Untagged
-  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1195,7 +1195,7 @@ GameObject:
   m_Layer: 11
   m_Name: FirePoint4
   m_TagString: Untagged
-  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1430,7 +1430,7 @@ GameObject:
   m_Layer: 11
   m_Name: FirePoint3
   m_TagString: Untagged
-  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1613,7 +1613,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4216139647191472968}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.195, y: 1.394, z: -6}
+  m_LocalPosition: {x: 1.195, y: 1.16, z: -6}
   m_LocalScale: {x: 1.825, y: 1.4375, z: 1}
   m_Children: []
   m_Father: {fileID: 210904809201327103}
@@ -1667,7 +1667,7 @@ GameObject:
   m_Layer: 11
   m_Name: FirePoint2
   m_TagString: Untagged
-  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1808,7 +1808,7 @@ GameObject:
   m_Layer: 11
   m_Name: FirePoint1
   m_TagString: Untagged
-  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -3040,10 +3040,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ecd553b78034754c9e2838e73f4db88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _defaultStaff:
-    staffType: 0
-    price: 0
-    bought: 1
+  _defaultStaff: 0
   _staffObjects:
   - staffType: 0
     objects:

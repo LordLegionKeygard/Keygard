@@ -5,7 +5,7 @@ using System;
 
 public class StaffController : MonoBehaviour
 {
-    [SerializeField] private StaffInfo _defaultStaff;
+    [SerializeField] private StaffType _defaultStaff;
 
     [SerializeField] private List<StaffObjects> _staffObjects;
     
@@ -21,11 +21,16 @@ public class StaffController : MonoBehaviour
 
     private void Load()
     {
-        string defaultStaff = JsonUtility.ToJson(_defaultStaff);
-        string json = PlayerPrefs.GetString("Staff", defaultStaff);
-        JsonUtility.FromJsonOverwrite(json, currentEquipedStaff);
-        Debug.Log(currentEquipedStaff.staffType);
+        AllStaffSaveData saveData = new AllStaffSaveData();
+        string defaultStaffs = JsonUtility.ToJson(saveData);
+        string json = PlayerPrefs.GetString("AllStaffs", defaultStaffs);
+        JsonUtility.FromJsonOverwrite(json, saveData);
+        var _allStaffs = saveData.Staffs;
+        int indexEquipedStaff = PlayerPrefs.GetInt("Staff", (int) _defaultStaff);
+        currentEquipedStaff = _allStaffs[indexEquipedStaff];
     }
+
+
 
     private void UpdateView()
     {
