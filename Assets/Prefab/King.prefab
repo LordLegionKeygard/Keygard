@@ -100,7 +100,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 9
+  m_SortingOrder: 1
   m_Sprite: {fileID: 8220969903733119642, guid: 765b2ec280f7c734aa782bb58e8be3a2,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -202,7 +202,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 7
+  m_SortingOrder: 1
   m_Sprite: {fileID: -9069696768826499173, guid: 765b2ec280f7c734aa782bb58e8be3a2,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -428,7 +428,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 2759227563927669754, guid: 765b2ec280f7c734aa782bb58e8be3a2,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -510,7 +510,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 1
   m_Sprite: {fileID: 6984014398827719201, guid: 765b2ec280f7c734aa782bb58e8be3a2,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2273,7 +2273,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 1
   m_Sprite: {fileID: 3570038999431414917, guid: 765b2ec280f7c734aa782bb58e8be3a2,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2505,7 +2505,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 8
+  m_SortingOrder: 1
   m_Sprite: {fileID: -3495912262200248858, guid: 765b2ec280f7c734aa782bb58e8be3a2,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2698,7 +2698,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cd0ed7725a120a4d8bb6c7c03be2782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _triangle: {fileID: 0}
   loadingScreen: {fileID: 0}
   loading: {fileID: 0}
   press: {fileID: 0}
@@ -2742,7 +2741,8 @@ MonoBehaviour:
   PickUpStaff: {fileID: 0}
   PickUpScroll: {fileID: 0}
   PickUpPotion: {fileID: 0}
-  Gw: {fileID: 0}
+  Kamnepad: {fileID: 0}
+  Coin: {fileID: 0}
   textScore: {fileID: 0}
 --- !u!114 &4216139646275986068
 MonoBehaviour:
@@ -2782,9 +2782,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2eecfe63e2852e5498cbc945650273e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hold: 0
-  hasKey: 0
-  key: 0
+  hold: 1
+  hasKey: 1
+  key: 1
   KeyCanvas: {fileID: 0}
   soundkey: {fileID: 0}
 --- !u!114 &4216139646275986076
@@ -2794,7 +2794,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7371839240940070765}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6da6e0d81b33358438ad52db978c94ce, type: 3}
   m_Name: 
@@ -2808,7 +2808,7 @@ MonoBehaviour:
   chekRadius: 0.5
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 268435712
   extraJumpsValue: 1
 --- !u!114 &4216139646275986078
 MonoBehaviour:
@@ -2817,7 +2817,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7371839240940070765}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 251d796223b32344b982d6bcd5fd3db9, type: 3}
   m_Name: 
@@ -3148,7 +3148,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 1
   m_Sprite: {fileID: 5317876240424394392, guid: 765b2ec280f7c734aa782bb58e8be3a2,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

@@ -102,7 +102,9 @@ MonoBehaviour:
   animator: {fileID: 5516796698942396626}
   walkDistance: 6
   patrolSpeed: 1
+  chasingSpeed: 3.2
   timeToWait: 3.3
+  minDistancetoPlayer: 1.5
   Model: {fileID: 5516796698942396627}
 --- !u!1 &5516796698168994662
 GameObject:
@@ -367,6 +369,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 2624868422254389488}
   ENEMY: {fileID: 1653274228754841354}
+  coin: {fileID: 1480518432628846482, guid: 0c12ac00d6f8785489481982dc606a7f, type: 3}
   totalHealth: 2
   healthSlider: {fileID: 5516796699178103172}
   _hiddenSlider: {fileID: 5516796698991229228}
@@ -504,7 +507,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}

@@ -112,5 +112,11 @@ public class Bullet : MonoBehaviour
         {
             sleepHealth.TakeDamage(damage);
         }
+
+        Chest chest = hitInfo.GetComponent<Chest>();
+        if (chest != null)
+        {
+            chest.TakeDamage(damage);
+        }
     }        
 }

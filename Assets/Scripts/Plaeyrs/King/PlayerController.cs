@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,8 +8,7 @@ public class PlayerController : MonoBehaviour
 {
 
     Animator animator;
-
-    public GameObject _triangle;
+    
     public GameObject loadingScreen;
     public GameObject loading;
     public GameObject press;
@@ -63,7 +62,8 @@ public class PlayerController : MonoBehaviour
     public AudioSource PickUpStaff;
     public AudioSource PickUpScroll;
     public AudioSource PickUpPotion;
-    public AudioSource Gw;
+    public AudioSource Kamnepad;
+    public AudioSource Coin;
          
     private GameObject finish;
     private int score;
@@ -85,23 +85,18 @@ public class PlayerController : MonoBehaviour
             PlayerPrefs.SetInt("coin", score);
             Destroy(other.gameObject);
             textScore.text = score.ToString();
-
+            Coin.Play();
         }
-        if(other.gameObject.name == "Potion1")
-        {
-            PickUpPotion.Play();
-            _triangle.SetActive(true);
-            Destroy(other.gameObject);
-        } 
+
         if(other.gameObject.name == "GhostWall1")
         {
             Destroy(other.gameObject);
-            Gw.Play();
+            Kamnepad.Play();
         }  
         if(other.gameObject.name == "GhostWall")
         {
             Destroy(other.gameObject);
-            Gw.Play();
+            Kamnepad.Play();
         }     
         if(other.gameObject.name == "RandomStaff")
         {

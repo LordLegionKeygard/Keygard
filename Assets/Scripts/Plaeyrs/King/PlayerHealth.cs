@@ -16,7 +16,7 @@ public class PlayerHealth : MonoBehaviour
     public AudioSource PickUp;
     private UnityEngine.Object explosion;
 
-    private void Start()
+    private void Awake()
     {
         explosion = Resources.Load("PlayerDamage");
         animator = GetComponent<Animator>();
@@ -24,7 +24,6 @@ public class PlayerHealth : MonoBehaviour
     public void TakeDamage(int damage)
     {       
         health -= damage;
-        animator.SetTrigger("takeDamage");
 
         GameObject explosionRef = (GameObject)Instantiate(explosion);
         explosionRef.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);

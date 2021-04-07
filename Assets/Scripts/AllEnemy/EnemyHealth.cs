@@ -11,6 +11,8 @@ public class EnemyHealth : MonoBehaviour
     public Enemy enemy;
     public GameObject ENEMY;
 
+    public GameObject coin;
+
     [Header("Slider")]
     [SerializeField] private float totalHealth = 2f;
     [SerializeField] private Slider healthSlider;
@@ -56,7 +58,12 @@ public class EnemyHealth : MonoBehaviour
     private void Die()
     {
         GameObject explosionRef = (GameObject)Instantiate(explosion);
+
+        GameObject coinRef = (GameObject)Instantiate(coin);        
+
         explosionRef.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+
+        coinRef.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
 
         Destroy(ENEMY);
     }

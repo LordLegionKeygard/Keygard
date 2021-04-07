@@ -29,10 +29,6 @@ public class CrystalU : MonoBehaviour
                 isDamage = true;
                 damageTime = timeToDamage;
             }
-            if(animator)
-            {
-                
-            }
         }
     }
 
