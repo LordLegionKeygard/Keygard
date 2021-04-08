@@ -314,6 +314,7 @@ GameObject:
   - component: {fileID: 2556325013746389284}
   - component: {fileID: 2556325013746389283}
   - component: {fileID: 2556325013746389282}
+  - component: {fileID: 1974461465}
   m_Layer: 12
   m_Name: BigMushroomModel
   m_TagString: Untagged
@@ -448,6 +449,32 @@ MonoBehaviour:
   healthSlider: {fileID: 2556325013427147796}
   _hiddenSlider: {fileID: 2556325013619485302}
   _health: 5
+--- !u!114 &1974461465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2556325013746389280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db5572173af39ad429a67b36ee090fd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LootTable:
+  - name: BronzeCoin
+    item: {fileID: 123732073570350251, guid: ad4011e827a4cb64f93c269fe3ce4b37, type: 3}
+    dropRarity: 40
+  - name: SilverCoin
+    item: {fileID: 5889504676247815488, guid: 1dfb782f24d58dc4591d3b3f5301062e, type: 3}
+    dropRarity: 20
+  - name: GoldCoin
+    item: {fileID: 1480518432628846482, guid: 0c12ac00d6f8785489481982dc606a7f, type: 3}
+    dropRarity: 10
+  - name: Health
+    item: {fileID: 4190660496723595138, guid: e29ba309db29602418ab0cbbfaf5829b, type: 3}
+    dropRarity: 5
+  dropChance: 33
 --- !u!1 &2556325013885824035
 GameObject:
   m_ObjectHideFlags: 0
@@ -633,7 +660,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2556325014225283504}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.4299924, y: -0.6299995, z: 0}
+  m_LocalPosition: {x: -2.4299924, y: -0.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2556325013746389281}

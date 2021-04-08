@@ -53,13 +53,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\AreYouSure.cs" />
-     <Compile Include="Assets\BuyIceStaff.cs" />
-     <Compile Include="Assets\Chest.cs" />
-     <Compile Include="Assets\CoinEnemy.cs" />
-     <Compile Include="Assets\CoinMenu.cs" />
-     <Compile Include="Assets\CoinMove.cs" />
-     <Compile Include="Assets\SaveMenu.cs" />
+     <Compile Include="Assets\EnemyLoot.cs" />
+     <Compile Include="Assets\GrindmurTrigger.cs" />
      <Compile Include="Assets\Scripts\AllEnemy\Enemy.cs" />
      <Compile Include="Assets\Scripts\AllEnemy\EnemyAttack.cs" />
      <Compile Include="Assets\Scripts\AllEnemy\EnemyHealth.cs" />
@@ -75,9 +70,6 @@
      <Compile Include="Assets\Scripts\AxeDemon\AxeDemon.cs" />
      <Compile Include="Assets\Scripts\AxeDemon\AxeDemonHealth.cs" />
      <Compile Include="Assets\Scripts\AxeDemon\AxeDemonVision.cs" />
-     <Compile Include="Assets\Scripts\Bat\Bat.cs" />
-     <Compile Include="Assets\Scripts\Bat\BatHealth.cs" />
-     <Compile Include="Assets\Scripts\Bat\BatVision.cs" />
      <Compile Include="Assets\Scripts\BatBossKing\GruzMother.cs" />
      <Compile Include="Assets\Scripts\BatBossKing\GruzMother_AttackPlayer.cs" />
      <Compile Include="Assets\Scripts\BatBossKing\GruzMother_AttackUpNDown.cs" />
@@ -93,6 +85,8 @@
      <Compile Include="Assets\Scripts\Bromid\Shoot.cs" />
      <Compile Include="Assets\Scripts\Canvas\Abilities.cs" />
      <Compile Include="Assets\Scripts\Canvas\AudioManager.cs" />
+     <Compile Include="Assets\Scripts\Canvas\BuyIceStaff.cs" />
+     <Compile Include="Assets\Scripts\Canvas\CoinMenu.cs" />
      <Compile Include="Assets\Scripts\Canvas\Cursor.cs" />
      <Compile Include="Assets\Scripts\Canvas\gameover.cs" />
      <Compile Include="Assets\Scripts\Canvas\GameOverScreen.cs" />
@@ -104,8 +98,12 @@
      <Compile Include="Assets\Scripts\Canvas\OptionCanvasMenu.cs" />
      <Compile Include="Assets\Scripts\Canvas\PauseCanvasFalse.cs" />
      <Compile Include="Assets\Scripts\Canvas\PauseMenu.cs" />
+     <Compile Include="Assets\Scripts\Canvas\SaveMenu.cs" />
+     <Compile Include="Assets\Scripts\Canvas\SFXProverka.cs" />
      <Compile Include="Assets\Scripts\Canvas\ShopCanvas.cs" />
+     <Compile Include="Assets\Scripts\Canvas\ShopStaffButton.cs" />
      <Compile Include="Assets\Scripts\Canvas\SoundUpdater.cs" />
+     <Compile Include="Assets\Scripts\Canvas\StaffType.cs" />
      <Compile Include="Assets\Scripts\EyeRock\EyeRock.cs" />
      <Compile Include="Assets\Scripts\EyeRock\EyeRockAI.cs" />
      <Compile Include="Assets\Scripts\EyeRock\EyeRockHealth.cs" />
@@ -114,8 +112,6 @@
      <Compile Include="Assets\Scripts\Goblin\Goblin.cs" />
      <Compile Include="Assets\Scripts\Goblin\GoblinHealth.cs" />
      <Compile Include="Assets\Scripts\Goblin\GoblinVision.cs" />
-     <Compile Include="Assets\Scripts\Golem\Golem.cs" />
-     <Compile Include="Assets\Scripts\Golem\GolemHealth.cs" />
      <Compile Include="Assets\Scripts\GrindMur\AttackPlayer.cs" />
      <Compile Include="Assets\Scripts\GrindMur\AttackShoot.cs" />
      <Compile Include="Assets\Scripts\GrindMur\GrindMur.cs" />
@@ -127,6 +123,8 @@
      <Compile Include="Assets\Scripts\Objects\Boat.cs" />
      <Compile Include="Assets\Scripts\Objects\BreakTree.cs" />
      <Compile Include="Assets\Scripts\Objects\Chain.cs" />
+     <Compile Include="Assets\Scripts\Objects\Chest.cs" />
+     <Compile Include="Assets\Scripts\Objects\CoinEnemy.cs" />
      <Compile Include="Assets\Scripts\Objects\DontCloseDoor.cs" />
      <Compile Include="Assets\Scripts\Objects\Door.cs" />
      <Compile Include="Assets\Scripts\Objects\DoorTrigger.cs" />
@@ -156,37 +154,24 @@
      <Compile Include="Assets\Scripts\Plaeyrs\King\WindWeapon.cs" />
      <Compile Include="Assets\Scripts\Plaeyrs\King\WindWeapon1.cs" />
      <Compile Include="Assets\Scripts\Plaeyrs\King\WindWeapon2.cs" />
-     <Compile Include="Assets\Scripts\Rat\Rat.cs" />
-     <Compile Include="Assets\Scripts\Rat\RatHealth.cs" />
-     <Compile Include="Assets\Scripts\Rat\RatVision.cs" />
      <Compile Include="Assets\Scripts\SkeletRedMage\SkeletRedMage.cs" />
      <Compile Include="Assets\Scripts\SkeletRedMage\SkeletRedMageVision.cs" />
      <Compile Include="Assets\Scripts\SkeletRedMage\SkeletRMageBullet.cs" />
      <Compile Include="Assets\Scripts\SkeletRedMage\SkeletRMageHealth.cs" />
-     <Compile Include="Assets\Scripts\SkeletS\SkeletS.cs" />
-     <Compile Include="Assets\Scripts\SkeletS\SkeletSHealth.cs" />
-     <Compile Include="Assets\Scripts\SkeletS\SkeletSVision.cs" />
      <Compile Include="Assets\Scripts\SmallMushroom3lvl\SmMushroom3lvl.cs" />
      <Compile Include="Assets\Scripts\SmallMushroom3lvl\SmMushroom3lvlHealth.cs" />
      <Compile Include="Assets\Scripts\SmallMushroom3lvl\SmMushroomVision.cs" />
      <Compile Include="Assets\Scripts\SmalRock\SmallRock.cs" />
      <Compile Include="Assets\Scripts\SmalRock\SmallRockHealth.cs" />
      <Compile Include="Assets\Scripts\SmalRock\SmallRockVision.cs" />
-     <Compile Include="Assets\Scripts\StaffType.cs" />
-     <Compile Include="Assets\Scripts\Trap\AxeTrap.cs" />
-     <Compile Include="Assets\Scripts\Trap\CrystalD.cs" />
      <Compile Include="Assets\Scripts\Trap\CrystalTrap.cs" />
-     <Compile Include="Assets\Scripts\Trap\CrystalU.cs" />
      <Compile Include="Assets\Scripts\Trap\Die.cs" />
-     <Compile Include="Assets\Scripts\Trap\EarthUpTrap.cs" />
      <Compile Include="Assets\Scripts\Trap\FallingPlatform.cs" />
      <Compile Include="Assets\Scripts\Trap\FallingPlatformFast.cs" />
      <Compile Include="Assets\Scripts\Trap\FallingPlatformForever.cs" />
      <Compile Include="Assets\Scripts\Trap\MovingPlatform.cs" />
      <Compile Include="Assets\Scripts\Trap\QuickSand.cs" />
      <Compile Include="Assets\Scripts\Trap\UpDoTrap.cs" />
-     <Compile Include="Assets\SFXProverka.cs" />
-     <Compile Include="Assets\ShopStaffButton.cs" />
      <Compile Include="Assets\StaffController.cs" />
      <Compile Include="Assets\yaSingleton\yaSingleton\Attributes\SingletonAttribute.cs" />
      <Compile Include="Assets\yaSingleton\yaSingleton\BaseSingleton.cs" />

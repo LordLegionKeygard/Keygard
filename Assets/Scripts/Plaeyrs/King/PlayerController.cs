@@ -61,7 +61,6 @@ public class PlayerController : MonoBehaviour
     [Header("Music Effect")]
     public AudioSource PickUpStaff;
     public AudioSource PickUpScroll;
-    public AudioSource PickUpPotion;
     public AudioSource Kamnepad;
     public AudioSource Coin;
          
@@ -79,9 +78,27 @@ public class PlayerController : MonoBehaviour
   
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.CompareTag("Coin"))
+        if(other.gameObject.CompareTag("BronzeCoin"))
         {
             score++;
+            PlayerPrefs.SetInt("coin", score);
+            Destroy(other.gameObject);
+            textScore.text = score.ToString();
+            Coin.Play();
+        }
+
+        if(other.gameObject.CompareTag("SilverCoin"))
+        {
+            score+= 2;
+            PlayerPrefs.SetInt("coin", score);
+            Destroy(other.gameObject);
+            textScore.text = score.ToString();
+            Coin.Play();
+        }
+
+        if(other.gameObject.CompareTag("GoldCoin"))
+        {
+            score+= 3;
             PlayerPrefs.SetInt("coin", score);
             Destroy(other.gameObject);
             textScore.text = score.ToString();

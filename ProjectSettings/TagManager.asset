@@ -24,7 +24,9 @@ TagManager:
   - QuickSand
   - Potion1
   - Potion2
-  - Coin
+  - GoldCoin
+  - BronzeCoin
+  - SilverCoin
   layers:
   - Default
   - TransparentFX
@@ -55,7 +57,7 @@ TagManager:
   - PlatformBoss
   - Coin
   - Ground1
-  - 
+  - Through
   - 
   - 
   m_SortingLayers:

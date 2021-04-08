@@ -8,6 +8,8 @@ public class Bromid : MonoBehaviour
     [Header("Other")]
     [SerializeField] private float totalHealth = 15f;
     [SerializeField] private Slider healthSlider;
+    public GameObject SLIDER;
+    private EnemyLoot _enemyLoot;
 
     [SerializeField] private AudioSource MainMusic;
     [SerializeField] private AudioSource BossMusic;
@@ -70,6 +72,7 @@ public class Bromid : MonoBehaviour
 
     void Start()
     {
+        _enemyLoot = GetComponent<EnemyLoot>();
         _health = totalHealth;
         animator = GetComponent<Animator>();
         playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();        
@@ -90,6 +93,7 @@ public class Bromid : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            SLIDER.SetActive(true);
             MainMusic.Stop();
             BossMusic.Play();
         }
@@ -288,6 +292,7 @@ public class Bromid : MonoBehaviour
 
     private void Die()
     {
+        _enemyLoot.CalculateLoot();
         BossMusic.Stop();
         Win.Play();
         GameObject explosionRef = (GameObject)Instantiate(explosion);

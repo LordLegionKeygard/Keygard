@@ -13,8 +13,6 @@ public class Abilities : MonoBehaviour
     public float cooldown2 = 5;
     public float cooldown3 = 5;
 
-    bool k = false;
-
     bool isCooldown = false;
     bool isCooldown2 = false;
     bool isCooldown3 = false;
@@ -137,7 +135,6 @@ public class Abilities : MonoBehaviour
             {
                 abilityImage2.fillAmount = 0;
                 isCooldown2 = false;
-                k = false;
             }
         }
         

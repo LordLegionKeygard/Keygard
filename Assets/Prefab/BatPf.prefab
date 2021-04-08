@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 681400597901895132}
   - component: {fileID: 3434420348635637372}
   - component: {fileID: 1945208827083489917}
-  m_Layer: 12
+  - component: {fileID: 8399716168766696464}
+  m_Layer: 15
   m_Name: BatPFModel
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -135,6 +136,32 @@ MonoBehaviour:
   healthSlider: {fileID: 3434420347581905444}
   _hiddenSlider: {fileID: 3434420349133578599}
   _health: 2
+--- !u!114 &8399716168766696464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1945208827083489912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db5572173af39ad429a67b36ee090fd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LootTable:
+  - name: BronzeCoin
+    item: {fileID: 123732073570350251, guid: ad4011e827a4cb64f93c269fe3ce4b37, type: 3}
+    dropRarity: 16
+  - name: SilverCoin
+    item: {fileID: 5889504676247815488, guid: 1dfb782f24d58dc4591d3b3f5301062e, type: 3}
+    dropRarity: 8
+  - name: GoldCoin
+    item: {fileID: 1480518432628846482, guid: 0c12ac00d6f8785489481982dc606a7f, type: 3}
+    dropRarity: 4
+  - name: Health
+    item: {fileID: 4190660496723595138, guid: e29ba309db29602418ab0cbbfaf5829b, type: 3}
+    dropRarity: 5
+  dropChance: 33
 --- !u!1 &3434420347581905442
 GameObject:
   m_ObjectHideFlags: 0
@@ -145,7 +172,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3434420347581905445}
   - component: {fileID: 3434420347581905444}
-  m_Layer: 12
+  m_Layer: 15
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -234,7 +261,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3434420348133036135}
-  m_Layer: 12
+  m_Layer: 15
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -272,7 +299,7 @@ GameObject:
   - component: {fileID: 3434420348383387326}
   - component: {fileID: 3434420348383387328}
   - component: {fileID: 3434420348383387329}
-  m_Layer: 12
+  m_Layer: 15
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -294,7 +321,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -349,7 +376,7 @@ GameObject:
   - component: {fileID: 3434420348740711690}
   - component: {fileID: 3434420348740711693}
   - component: {fileID: 3434420348740711694}
-  m_Layer: 12
+  m_Layer: 15
   m_Name: BatPf
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -467,7 +494,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3434420348883586950}
   - component: {fileID: 3434420348883586953}
-  m_Layer: 12
+  m_Layer: 15
   m_Name: FrameSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -553,7 +580,7 @@ GameObject:
   - component: {fileID: 3434420348959019485}
   - component: {fileID: 3434420348959019487}
   - component: {fileID: 3434420348959019484}
-  m_Layer: 12
+  m_Layer: 15
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -629,7 +656,7 @@ GameObject:
   - component: {fileID: 3434420349133578603}
   - component: {fileID: 3434420349133578600}
   - component: {fileID: 3434420349133578601}
-  m_Layer: 12
+  m_Layer: 15
   m_Name: HealthCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}

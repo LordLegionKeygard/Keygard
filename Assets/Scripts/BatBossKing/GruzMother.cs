@@ -43,6 +43,7 @@ public class GruzMother : MonoBehaviour
     private bool goingUp = true;
     private Rigidbody2D enemyRB;
     private Animator enemyAnim;
+    private EnemyLoot _enemyLoot;
 
     private int damage = 1;
     private float timeToDamage = 2f;
@@ -59,6 +60,7 @@ public class GruzMother : MonoBehaviour
 
     void Start()
     {
+        _enemyLoot = GetComponent<EnemyLoot>();
         _health = totalHealth;
         idelMovementDirection.Normalize();
         attackMovementDirection.Normalize();
@@ -255,6 +257,7 @@ public class GruzMother : MonoBehaviour
 
     private void Die()
     {
+        _enemyLoot.CalculateLoot();
         BossMusic.Stop();
         Win.Play();
         GameObject explosionRef = (GameObject)Instantiate(explosion);

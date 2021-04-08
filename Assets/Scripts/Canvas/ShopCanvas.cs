@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ShopCanvas : MonoBehaviour
 {
@@ -29,6 +30,8 @@ public class ShopCanvas : MonoBehaviour
     [SerializeField] private List<StaffInfo> deafaultStaffInfo;
 
     private int _coins;
+
+    public GameObject AreYouSurePanel;
 
     private StaffInfo currentEquipedStaff = new StaffInfo();
 
@@ -162,6 +165,19 @@ public class ShopCanvas : MonoBehaviour
     private void OnDisable() 
     {
         Save();
+    }
+
+    public void YesHandler()
+    {
+        PlayerPrefs.DeleteAll();
+        PlayerPrefs.Save();
+        Load();        
+        SceneManager.LoadScene(0); 
+    }
+
+    public void NoHandler()
+    {
+        AreYouSurePanel.SetActive(false);
     }
 }
 

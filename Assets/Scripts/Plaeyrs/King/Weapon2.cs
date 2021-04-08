@@ -5,7 +5,6 @@ using UnityEngine;
 public class Weapon2 : MonoBehaviour
 {
     Animator animator;
-    private float time = 1f;
     public Transform firePoint;
     public Transform firePoint1;
     public Transform firePoint2;

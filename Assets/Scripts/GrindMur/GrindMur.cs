@@ -8,8 +8,10 @@ public class GrindMur : MonoBehaviour
     [Header("Other")]
     [SerializeField] private float totalHealth = 15f;
     [SerializeField] private Slider healthSlider;
+    private EnemyLoot _enemyLoot;
+    [SerializeField] private GameObject _trap;
+    [SerializeField] private GameObject _mplatform;
 
-    public GameObject caveentrance;
     [SerializeField] private AudioSource MainMusic;
     [SerializeField] private AudioSource BossMusic;
     [SerializeField] private AudioSource Win;
@@ -45,6 +47,11 @@ public class GrindMur : MonoBehaviour
 
     void Start()
     {
+        _mplatform.SetActive(false);
+        _trap.SetActive(false);
+        MainMusic.Stop();
+        BossMusic.Play();
+        _enemyLoot = GetComponent<EnemyLoot>();
         _health = totalHealth;
         enemyRB = GetComponent<Rigidbody2D>();
         enemyAnim = GetComponent<Animator>();
@@ -55,16 +62,6 @@ public class GrindMur : MonoBehaviour
         InitHealth();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            MainMusic.Stop();
-            BossMusic.Play();
-        }
-    }
-
-    // Update is called once per frame
     void Update()
     {   
         if(!isDamage)
@@ -192,6 +189,7 @@ public class GrindMur : MonoBehaviour
 
     private void Die()
     {
+        _enemyLoot.CalculateLoot();
         BossMusic.Stop();
         Win.Play();
         GameObject explosionRef = (GameObject)Instantiate(explosion);

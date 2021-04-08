@@ -7,11 +7,13 @@ public class EnemyHealth : MonoBehaviour
 {   
     private Animator animator;
 
+    private EnemyLoot _enemyLoot;
+
     private UnityEngine.Object explosion;
     public Enemy enemy;
     public GameObject ENEMY;
 
-    public GameObject coin;
+    //public GameObject coin;
 
     [Header("Slider")]
     [SerializeField] private float totalHealth = 2f;
@@ -22,6 +24,7 @@ public class EnemyHealth : MonoBehaviour
 
     private void Start()
     {
+        _enemyLoot = GetComponent<EnemyLoot>();
         _health = totalHealth;
         animator = GetComponent<Animator>();
         enemy = GetComponentInParent<Enemy>();
@@ -47,7 +50,7 @@ public class EnemyHealth : MonoBehaviour
         healthSlider.value = _health / totalHealth;
         _hiddenSlider.SetActive(true);
 
-        StartCoroutine(ExecuteAfterTime(5f));
+        StartCoroutine(ExecuteAfterTime(15f));
         IEnumerator ExecuteAfterTime(float timeInSec)
         {
         yield return new WaitForSeconds(timeInSec);
@@ -59,11 +62,13 @@ public class EnemyHealth : MonoBehaviour
     {
         GameObject explosionRef = (GameObject)Instantiate(explosion);
 
-        GameObject coinRef = (GameObject)Instantiate(coin);        
+        //GameObject coinRef = (GameObject)Instantiate(coin);        
 
         explosionRef.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
 
-        coinRef.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        //coinRef.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+
+        _enemyLoot.CalculateLoot();
 
         Destroy(ENEMY);
     }

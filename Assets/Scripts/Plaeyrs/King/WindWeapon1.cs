@@ -5,7 +5,6 @@ using UnityEngine;
 public class WindWeapon1 : MonoBehaviour
 {
     Animator animator;
-    private float time = 1f;
     public Transform firePoint1;
     public GameObject bullet1;
     private float nextTime = 0.0f;

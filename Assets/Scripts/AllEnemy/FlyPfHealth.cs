@@ -4,7 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class FlyPfHealth : MonoBehaviour
-{   
+{ 
+    private EnemyLoot _enemyLoot;
+
     private UnityEngine.Object explosion;
     public GameObject ENEMY;
 
@@ -17,6 +19,7 @@ public class FlyPfHealth : MonoBehaviour
 
     private void Start()
     {
+        _enemyLoot = GetComponent<EnemyLoot>();
         _health = totalHealth;
         explosion = Resources.Load("Explosion1");
         healthSlider.value = _health / totalHealth;
@@ -36,7 +39,7 @@ public class FlyPfHealth : MonoBehaviour
         healthSlider.value = _health / totalHealth;
         _hiddenSlider.SetActive(true);
 
-        StartCoroutine(ExecuteAfterTime(5f));
+        StartCoroutine(ExecuteAfterTime(15f));
         IEnumerator ExecuteAfterTime(float timeInSec)
         {
         yield return new WaitForSeconds(timeInSec);
@@ -49,6 +52,8 @@ public class FlyPfHealth : MonoBehaviour
         GameObject explosionRef = (GameObject)Instantiate(explosion);
         explosionRef.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
 
+        _enemyLoot.CalculateLoot();
+        
         Destroy(ENEMY);
     }
 }

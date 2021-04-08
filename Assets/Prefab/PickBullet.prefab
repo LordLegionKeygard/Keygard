@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8134892400953141407}
   - component: {fileID: 7690415682355124996}
   - component: {fileID: 5538579406743543123}
-  m_Layer: 19
+  m_Layer: 29
   m_Name: PickBullet
   m_TagString: BulletEnemy
   m_Icon: {fileID: 0}

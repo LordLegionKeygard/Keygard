@@ -44,7 +44,7 @@ public class RangeHealth : MonoBehaviour
         healthSlider.value = _health / totalHealth;
         _hiddenSlider.SetActive(true);
 
-        StartCoroutine(ExecuteAfterTime(5f));
+        StartCoroutine(ExecuteAfterTime(15f));
         IEnumerator ExecuteAfterTime(float timeInSec)
         {
         yield return new WaitForSeconds(timeInSec);

@@ -526,6 +526,7 @@ MonoBehaviour:
   - staffType: 3
     price: 15
     bought: 0
+  AreYouSurePanel: {fileID: 272751583}
   _defaultCoins: 0
 --- !u!1 &77986011
 GameObject:
@@ -1176,7 +1177,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ad398a3a7bb0b3448f70ed393098619, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textScore: {fileID: 720903103}
 --- !u!114 &166092199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2642,7 +2642,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ad398a3a7bb0b3448f70ed393098619, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textScore: {fileID: 1048487473}
 --- !u!114 &542796832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3004,7 +3003,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ad398a3a7bb0b3448f70ed393098619, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textScore: {fileID: 441608012}
 --- !u!114 &572660046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4150,7 +4148,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ad398a3a7bb0b3448f70ed393098619, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textScore: {fileID: 1177078557}
 --- !u!114 &732854680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6287,7 +6284,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ad398a3a7bb0b3448f70ed393098619, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textScore: {fileID: 1998985133}
 --- !u!114 &1057503285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6407,7 +6403,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 272751587}
+      - m_Target: {fileID: 55807694}
         m_MethodName: YesHandler
         m_Mode: 1
         m_Arguments:
@@ -8948,7 +8944,6 @@ GameObject:
   - component: {fileID: 1870990393}
   - component: {fileID: 1870990395}
   - component: {fileID: 1870990394}
-  - component: {fileID: 1870990396}
   m_Layer: 5
   m_Name: Book
   m_TagString: Untagged
@@ -8995,7 +8990,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 5f8f5ec64f2aab04c92000f8b6ca0974, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5060e1cc95dbc6343af231a6705b574b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9013,25 +9008,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1870990392}
   m_CullTransparentMesh: 0
---- !u!95 &1870990396
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1870990392}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3f7f69fd72099b143a3913db5b379b97, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1898288009
 GameObject:
   m_ObjectHideFlags: 0
@@ -9068,7 +9044,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -7.531, y: 37.59}
+  m_AnchoredPosition: {x: -7.531006, y: 37.589996}
   m_SizeDelta: {x: -9, y: -6.958}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1898288011
@@ -9324,7 +9300,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 272751587}
+      - m_Target: {fileID: 55807694}
         m_MethodName: NoHandler
         m_Mode: 1
         m_Arguments:

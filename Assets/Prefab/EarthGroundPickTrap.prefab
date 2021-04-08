@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7290695507185069026}
   - component: {fileID: 6384328206700774511}
   - component: {fileID: 6699686802727514577}
-  - component: {fileID: 8274780186177248671}
+  - component: {fileID: 7064666399465409511}
   m_Layer: 13
   m_Name: EarthGroundPickTrap
   m_TagString: Trap2
@@ -141,7 +141,7 @@ PolygonCollider2D:
       - {x: 0.09375, y: -0.2890625}
       - {x: 0.1484375, y: 0.6953125}
       - {x: 0.234375, y: 0.953125}
---- !u!114 &8274780186177248671
+--- !u!114 &7064666399465409511
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -150,6 +150,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1588833215852221845}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7359ebd4c192714483eb0986836a1ad, type: 3}
+  m_Script: {fileID: 11500000, guid: ca04cc9c65b508141b072e91c765560c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

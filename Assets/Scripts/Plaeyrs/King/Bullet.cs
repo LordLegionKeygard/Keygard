@@ -9,6 +9,7 @@ public class Bullet : MonoBehaviour
     public int damage = 1;
     public Rigidbody2D rb;
     public float TimeToLive = 0.5f;
+    public float _deathTime;
 
 
     // Start is called before the first frame update
@@ -21,8 +22,6 @@ public class Bullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
-        Destroy(gameObject);
-
         EnemyHealth enemyHealth = hitInfo.GetComponent<EnemyHealth>();
         if (enemyHealth != null)
         {
@@ -118,5 +117,17 @@ public class Bullet : MonoBehaviour
         {
             chest.TakeDamage(damage);
         }
+
+        StartCoroutine(ExecuteAfterTime(_deathTime));
+        IEnumerator ExecuteAfterTime(float timeInSec)
+        {
+        yield return new WaitForSeconds(timeInSec);
+        Die();
+        } 
+    }
+
+    private void Die()
+    {
+        Destroy(gameObject);
     }        
 }
