@@ -44,18 +44,24 @@ public class EnemyHealth : MonoBehaviour
 
     }
 
+    // private void InitHealth()
+    // {
+    //     StopAllCoroutines();
+    //     healthSlider.value = _health / totalHealth;
+    //     _hiddenSlider.SetActive(true);
+
+    //     StartCoroutine(ExecuteAfterTime(15f));
+    //     IEnumerator ExecuteAfterTime(float timeInSec)
+    //     {
+    //     yield return new WaitForSeconds(timeInSec);
+    //     _hiddenSlider.SetActive(false);
+    //     }
+    // }
+
     private void InitHealth()
     {
-        StopAllCoroutines();
         healthSlider.value = _health / totalHealth;
         _hiddenSlider.SetActive(true);
-
-        StartCoroutine(ExecuteAfterTime(15f));
-        IEnumerator ExecuteAfterTime(float timeInSec)
-        {
-        yield return new WaitForSeconds(timeInSec);
-        _hiddenSlider.SetActive(false);
-        }
     }
 
     private void Die()

@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 4517593583715995113}
   m_Layer: 16
   m_Name: IBullet3
-  m_TagString: Untagged
+  m_TagString: PlayerBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

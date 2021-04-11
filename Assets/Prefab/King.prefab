@@ -2740,8 +2740,6 @@ MonoBehaviour:
   FJBtn: {fileID: 0}
   PickUpStaff: {fileID: 0}
   PickUpScroll: {fileID: 0}
-  PickUpPotion: {fileID: 0}
-  Kamnepad: {fileID: 0}
   Coin: {fileID: 0}
   textScore: {fileID: 0}
 --- !u!114 &4216139646275986068
@@ -2756,8 +2754,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b81f2598ff9e0904497f9dfbadafc2d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onehealth: {fileID: 4216139646025444640}
   gameOverCanvas: {fileID: 0}
+  keyCanvas: {fileID: 0}
+  poisonPanel: {fileID: 0}
   health: 6
   numOfHearts: 6
   hearts:
@@ -2822,7 +2821,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 251d796223b32344b982d6bcd5fd3db9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 0
   jumpForce: 11
   normalspeed: 4
   _platform: {fileID: 0}
@@ -3046,25 +3045,25 @@ MonoBehaviour:
     objects:
     - {fileID: 196352193076940260}
     - {fileID: 0}
-    - {fileID: 0}
+    - {fileID: 196352193076940260}
     - {fileID: 0}
   - staffType: 1
     objects:
     - {fileID: 7348507951341968913}
     - {fileID: 0}
-    - {fileID: 0}
+    - {fileID: 7348507951341968913}
     - {fileID: 0}
   - staffType: 2
     objects:
     - {fileID: 290521882357181062}
     - {fileID: 0}
-    - {fileID: 0}
+    - {fileID: 290521882357181062}
     - {fileID: 0}
   - staffType: 3
     objects:
     - {fileID: 7961872989632094622}
     - {fileID: 0}
-    - {fileID: 0}
+    - {fileID: 7961872989632094622}
     - {fileID: 0}
   _staffBehaviours:
   - staffType: 0

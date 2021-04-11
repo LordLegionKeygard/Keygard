@@ -1,33 +1,48 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ArcherHealth : MonoBehaviour
 {
-    public int health = 4;    
     private Animator animator;
+    private EnemyLoot _enemyLoot;  
 
     private UnityEngine.Object explosion;
     private Archer enemy;
+    public GameObject ENEMY;
+
+    [Header("Slider")]
+    [SerializeField] private float totalHealth = 2f;
+    [SerializeField] private Slider healthSlider;
+    public GameObject _hiddenSlider;
+    public float _health = 2f;
 
     private void Start()
     {
+        _enemyLoot = GetComponent<EnemyLoot>();
+        _health = totalHealth;
         animator = GetComponent<Animator>();
-        enemy = GetComponent<Archer>();
-        explosion = Resources.Load("Explosion");
+        enemy = GetComponentInParent<Archer>();
+        explosion = Resources.Load("Explosion1");
+        healthSlider.value = _health / totalHealth;
     }
+    
     public void TakeDamage(int damage)
     {       
-        health -= damage;
-        animator.SetTrigger("takeDamage");
-        if (health <= 0)
+        _health -= damage;
+        enemy.StartChasingPlayer();
+        InitHealth(); 
+        if (_health <= 0)
         {
             Die();
         }
-        if(health == 3 || health == 2 || health == 1)
-            {
-            enemy.StartChasingPlayer();           
-            }
+    }
+
+    private void InitHealth()
+    {
+        healthSlider.value = _health / totalHealth;
+        _hiddenSlider.SetActive(true);
     }
 
     private void Die()
@@ -35,6 +50,8 @@ public class ArcherHealth : MonoBehaviour
         GameObject explosionRef = (GameObject)Instantiate(explosion);
         explosionRef.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
 
-        Destroy(gameObject);
+        _enemyLoot.CalculateLoot();
+
+        Destroy(ENEMY);
     }
 }

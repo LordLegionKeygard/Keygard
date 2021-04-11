@@ -17,7 +17,9 @@ public class ShopCanvas : MonoBehaviour
 
     [SerializeField] private Text _textCoins;
 
-    [SerializeField] private GameObject _startMenu;
+    [SerializeField] private GameObject _allButtons;
+
+    [SerializeField] private GameObject _gameLogo;
 
     [SerializeField] private GameObject _shopCanvas;
 
@@ -159,7 +161,8 @@ public class ShopCanvas : MonoBehaviour
     public void BackHandler()
     {
         _shopCanvas.SetActive(false);
-        _startMenu.SetActive(true);
+        _allButtons.SetActive(true);
+        _gameLogo.SetActive(true);
     }
 
     private void OnDisable() 

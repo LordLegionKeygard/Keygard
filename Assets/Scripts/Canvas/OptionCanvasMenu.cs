@@ -6,12 +6,14 @@ public class OptionCanvasMenu : MonoBehaviour
 {
     public GameObject AreYouSurePanel;
     public GameObject optionsMenuUI; 
-    public GameObject btn;
+    public GameObject _allButtons;
+    public GameObject _gameLogo;
 
     public void BackHandler()
     {
         optionsMenuUI.SetActive(false);
-        btn.SetActive(true);       
+        _allButtons.SetActive(true);
+        _gameLogo.SetActive(true);      
     }
 
     public void  ResetGameHandler()

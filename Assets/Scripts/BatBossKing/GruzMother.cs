@@ -26,7 +26,6 @@ public class GruzMother : MonoBehaviour
     [SerializeField] LayerMask groundLayer;
     [SerializeField] private float totalHealth = 15f;
     [SerializeField] private Slider healthSlider;
-    public GameObject SLIDER;
 
     public GameObject caveentrance;
     [SerializeField] private AudioSource MainMusic;
@@ -60,6 +59,8 @@ public class GruzMother : MonoBehaviour
 
     void Start()
     {
+        MainMusic.Stop();
+        BossMusic.Play();
         _enemyLoot = GetComponent<EnemyLoot>();
         _health = totalHealth;
         idelMovementDirection.Normalize();
@@ -70,23 +71,9 @@ public class GruzMother : MonoBehaviour
         enemy = GetComponent<GruzMother>();
         explosion = Resources.Load("BossExplosion");
         healthSlider.value = _health / totalHealth;
-        InitHealth();
+        InitHealth();   
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            SLIDER.SetActive(true);
-            attackPlayerSpeed = 8;
-            attackMovementSpeed = 25;
-            idelMovementSpeed = 3;
-            MainMusic.Stop();
-            BossMusic.Play();
-        }
-    }
-
-    // Update is called once per frame
     void Update()
     {
         isTouchingUp = Physics2D.OverlapCircle(goundCheckUp.position, groundCheckRadius, groundLayer); 
@@ -261,8 +248,7 @@ public class GruzMother : MonoBehaviour
         BossMusic.Stop();
         Win.Play();
         GameObject explosionRef = (GameObject)Instantiate(explosion);
-        explosionRef.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-        SLIDER.SetActive(false);        
+        explosionRef.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);       
         Destroy(gameObject);
     } 
 }

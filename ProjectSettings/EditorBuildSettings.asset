@@ -9,15 +9,21 @@ EditorBuildSettings:
     path: Assets/Scenes/0.Main Menu.unity
     guid: ea3598faed6c13348990f3e2611120eb
   - enabled: 1
-    path: Assets/Scenes/1.CrystalCave(3).unity
+    path: Assets/Scenes/1.Crystal.unity
+    guid: 82a9633924007e34691d474eb07a67c5
+  - enabled: 1
+    path: Assets/Scenes/2.Crystal.unity
+    guid: 5b8abdbb9b27d7642bcd7491ec644b8c
+  - enabled: 1
+    path: Assets/Scenes/3.Crystal.unity
+    guid: 8fab428384717ae4c83c19721efe0759
+  - enabled: 1
+    path: Assets/Scenes/4.Crystal(Boss).unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 0
-    path: Assets/Scenes/2.Labyrinth of Grindmur.unity
+  - enabled: 1
+    path: Assets/Scenes/8.Labyrinth(Boss).unity
     guid: c60d951b086e14a4db153bef96fa3bb1
-  - enabled: 0
-    path: Assets/Scenes/3.Tregan Forest.unity
+  - enabled: 1
+    path: Assets/Scenes/12.Tregan(Boss).unity
     guid: 7a27c9cfa1682084ba916f2115b94877
-  - enabled: 0
-    path: Assets/Scenes/4.Litirite Waterfalls.unity
-    guid: 64389589b8528b340b2e0858f2423bf6
   m_configObjects: {}

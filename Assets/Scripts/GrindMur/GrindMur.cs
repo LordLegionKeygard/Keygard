@@ -31,7 +31,6 @@ public class GrindMur : MonoBehaviour
     private GrindMur enemy;
     private UnityEngine.Object explosion;
 
-    private float time = 1f;
     public Transform firePoint;
     public Transform firePoint1;
     public Transform firePoint2;
@@ -39,6 +38,7 @@ public class GrindMur : MonoBehaviour
     public Transform firePoint4;
     public Transform firePoint5;
     public Transform firePoint6;
+    public Transform firePoint7;
     public GameObject bullet;
     public GameObject bullet2;
     private float nextTime = 0.0f;
@@ -108,8 +108,6 @@ public class GrindMur : MonoBehaviour
             yield return new WaitForSeconds(timeInSec);
 
             Shoot();
-            Shoot1();
-            Shoot2();
             }           
         }        
     }
@@ -122,10 +120,7 @@ public class GrindMur : MonoBehaviour
             IEnumerator ExecuteAfterTime(float timeInSec)
             {
             yield return new WaitForSeconds(timeInSec);            
-            Shoot3();
-            Shoot4();
-            Shoot5();
-            Shoot6(); 
+            ShootPick();
             }          
         }        
     }
@@ -134,30 +129,16 @@ public class GrindMur : MonoBehaviour
     void Shoot()
     {
         Instantiate(bullet, firePoint.position, firePoint.rotation);
-    }
-    void Shoot1()
-    {
         Instantiate(bullet, firePoint1.position, firePoint1.rotation);
-    }
-    void Shoot2()
-    {
-        Instantiate(bullet, firePoint2.position, firePoint2.rotation);        
+        Instantiate(bullet, firePoint2.position, firePoint2.rotation);
+        Instantiate(bullet, firePoint7.position, firePoint2.rotation);  
     }
 
-    void Shoot3()
+    void ShootPick()
     {
         Instantiate(bullet2, firePoint3.position, firePoint3.rotation);
-    }
-    void Shoot4()
-    {
         Instantiate(bullet2, firePoint4.position, firePoint4.rotation);
-    }
-    void Shoot5()
-    {
         Instantiate(bullet2, firePoint5.position, firePoint5.rotation);        
-    }
-    void Shoot6()
-    {
         Instantiate(bullet2, firePoint6.position, firePoint6.rotation);         
     }
 

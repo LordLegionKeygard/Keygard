@@ -122,5 +122,19 @@ public class KeyBoardController : MonoBehaviour
         {
             speed = 4f;
         }      
-    }  
+    } 
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    { 
+        if (collision.gameObject.CompareTag("PoisonBullet"))
+        {
+            speed = 1f;
+            StartCoroutine(ExecuteAfterTime(1f));
+            IEnumerator ExecuteAfterTime(float timeInSec)
+            {
+            yield return new WaitForSeconds(timeInSec);
+            speed = 4f;
+            }
+        }
+    }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RangeEnemyVision : MonoBehaviour
 {
-    [SerializeField] private GameObject currentHitObject;
+    private GameObject currentHitObject;
 
     [SerializeField] private float circleRadius;
     [SerializeField] private float maxDistance;

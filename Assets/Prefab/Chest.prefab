@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2334873811187767630}
   - component: {fileID: 2334873811187767629}
   - component: {fileID: 2334873811187767617}
+  - component: {fileID: 6937913399751682373}
   m_Layer: 0
   m_Name: Chest
   m_TagString: Untagged
@@ -141,5 +142,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   col: {fileID: 2334873811187767630}
-  coin: {fileID: 123732073570350251, guid: ad4011e827a4cb64f93c269fe3ce4b37, type: 3}
   _health: 1
+--- !u!114 &6937913399751682373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2334873811187767628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db5572173af39ad429a67b36ee090fd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LootTable:
+  - name: Bronze
+    item: {fileID: 123732073570350251, guid: ad4011e827a4cb64f93c269fe3ce4b37, type: 3}
+    dropRarity: 25
+  - name: Silver
+    item: {fileID: 5889504676247815488, guid: 1dfb782f24d58dc4591d3b3f5301062e, type: 3}
+    dropRarity: 25
+  - name: Gold
+    item: {fileID: 1480518432628846482, guid: 0c12ac00d6f8785489481982dc606a7f, type: 3}
+    dropRarity: 25
+  - name: Guardian
+    item: {fileID: 5390881045018806719, guid: a6c02f18b3504bd48bc5e3307d1f65e4, type: 3}
+    dropRarity: 25
+  dropChance: 100

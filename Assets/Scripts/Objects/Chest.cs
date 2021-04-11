@@ -8,7 +8,7 @@ public class Chest : MonoBehaviour
 
     public Collider2D col;
 
-    public GameObject coin;
+    private EnemyLoot _enemyLoot;
 
     [Header("Slider")]
     public float _health = 1f;
@@ -16,6 +16,7 @@ public class Chest : MonoBehaviour
 
     private void Start()
     {
+        _enemyLoot = GetComponent<EnemyLoot>();
         animator = GetComponent<Animator>();
     }
     public void TakeDamage(int damage)
@@ -36,9 +37,7 @@ public class Chest : MonoBehaviour
 
     private void Die()
     {
-        GameObject coinRef = (GameObject)Instantiate(coin);        
-        coinRef.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-
+        _enemyLoot.CalculateLoot();
         col.enabled = false;
     }
 }

@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 1653274228754841354}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 22.625824, y: 0.43548116, z: 0.099999905}
-  m_LocalScale: {x: -1.497903, y: 1.6069424, z: 1}
+  m_LocalScale: {x: -1.5505614, y: 1.5505614, z: 1.5505614}
   m_Children:
   - {fileID: 5516796698942396627}
   - {fileID: 5516796698991229203}
@@ -48,7 +48,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
-  m_Mass: 0.89815044
+  m_Mass: 0.89710444
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 15
@@ -69,8 +69,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 420f2d3d3ef846048ac1dda1a6574813, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHitObject: {fileID: 0}
-  circleRadius: 0.4
+  circleRadius: 0.17
   maxDistance: 15
   layerMask:
     serializedVersion: 2
@@ -100,11 +99,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 5516796698942396626}
-  walkDistance: 6
+  walkDistance: 5
   patrolSpeed: 1
-  chasingSpeed: 3.2
+  chasingSpeed: 3
   timeToWait: 3.3
   minDistancetoPlayer: 1.5
+  minDinstanceToAttack: 4
   Model: {fileID: 5516796698942396627}
 --- !u!1 &5516796698168994662
 GameObject:
@@ -533,7 +533,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}

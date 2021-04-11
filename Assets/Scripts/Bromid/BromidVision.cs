@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BromidVision : MonoBehaviour
 {
-    [SerializeField] private GameObject currentHitObject;
+    private GameObject currentHitObject;
 
     [SerializeField] private float circleRadius;
     [SerializeField] private float maxDistance;
@@ -14,14 +14,11 @@ public class BromidVision : MonoBehaviour
     private Vector2 origin;
     private Vector2 direction;
 
-    Animator animator;
-
     private float currentHitDistance;
 
     private void Start()
     {
-        enemy = GetComponent<Bromid>();
-        animator = GetComponent<Animator>();       
+        enemy = GetComponent<Bromid>();    
     }
 
     private void Update()

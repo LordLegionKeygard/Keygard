@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Archer : MonoBehaviour
 {
-    Animator animator;
+    [SerializeField] private Animator animator;
     public float walkDistance = 6f;
     public float patrolSpeed = 1f;
     private float chasingSpeed = 0f;
@@ -12,6 +12,8 @@ public class Archer : MonoBehaviour
     private float timeToChase = 3f;
     private float minDistancetoPlayer = 0f;
     private float moveInput;
+
+    [SerializeField] private Transform Model;
 
     private Rigidbody2D rb;
     private Transform playerTransform;
@@ -27,7 +29,6 @@ public class Archer : MonoBehaviour
     private float waitTime;
     private float chaseTime;
 
-    private float time = 1f;
     public Transform firePoint;
     public GameObject bullet;
     public GameObject bullet1;
@@ -52,7 +53,6 @@ public class Archer : MonoBehaviour
 
     private void Start()
     {
-        animator = GetComponent<Animator>();
         playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();        
         rb = GetComponent<Rigidbody2D>();
         leftBoundaryPosition = transform.position;
@@ -142,7 +142,7 @@ public class Archer : MonoBehaviour
         {
             nextPoint.x *= -1;
         }
-        rb.MovePosition((Vector2)transform.position + nextPoint);
+        rb.MovePosition((Vector2)Model.position + nextPoint);
     }
     private void ChasePlayer()
     {      
@@ -212,7 +212,7 @@ public class Archer : MonoBehaviour
     void Flip()
     {
         isFacingRight = !isFacingRight;
-        transform.Rotate(0f, 180f, 0f);
+        Model.Rotate(0f, 180f, 0f);
     } 
 
     void Shoot()

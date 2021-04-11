@@ -8,9 +8,7 @@ public class MobileController : MonoBehaviour
     Animator animator;
     public float speed;
     public float jumpForce;
-    private float moveInput;
     public float normalspeed;
-
     public GameObject _platform;
 
     [Header("Music Effect")]
@@ -126,5 +124,13 @@ public class MobileController : MonoBehaviour
         {
             speed = 4f;
         }      
-    }  
+    } 
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    { 
+        if (collision.gameObject.CompareTag("PoisonBullet"))
+        {
+
+        }
+    } 
 }

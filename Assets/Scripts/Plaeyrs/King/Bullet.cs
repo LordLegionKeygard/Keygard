@@ -10,6 +10,7 @@ public class Bullet : MonoBehaviour
     public Rigidbody2D rb;
     public float TimeToLive = 0.5f;
     public float _deathTime;
+    private bool _must;
 
 
     // Start is called before the first frame update
@@ -45,30 +46,6 @@ public class Bullet : MonoBehaviour
         {
             gruzeHealth.TakeDamage(damage);
         } 
-
-        EyeRockHealth eyerockHealth = hitInfo.GetComponent<EyeRockHealth>();       
-        if (eyerockHealth != null)
-        {
-            eyerockHealth.TakeDamage(damage);
-        } 
-           
-        SkeletRMageHealth skeletrmagHealth = hitInfo.GetComponent<SkeletRMageHealth>();       
-        if (skeletrmagHealth != null)
-        {
-            skeletrmagHealth.TakeDamage(damage);
-        } 
-
-        SmallRockHealth smallrockHealth = hitInfo.GetComponent<SmallRockHealth>();       
-        if (smallrockHealth != null)
-        {
-            smallrockHealth.TakeDamage(damage);
-        } 
-           
-        AxeDemonHealth axedemonHealth = hitInfo.GetComponent<AxeDemonHealth>();       
-        if (axedemonHealth != null)
-        {
-            axedemonHealth.TakeDamage(damage);
-        } 
            
         GrindMur grindmurHealth = hitInfo.GetComponent<GrindMur>();       
         if (grindmurHealth != null)
@@ -80,12 +57,6 @@ public class Bullet : MonoBehaviour
         if (jesterHealth != null)
         {
             jesterHealth.TakeDamage(damage);
-        } 
-           
-        GoblinHealth goblinHealth = hitInfo.GetComponent<GoblinHealth>();       
-        if (goblinHealth != null)
-        {
-            goblinHealth.TakeDamage(damage);
         } 
            
         SmMushroom3lvlHealth smmushroom3Health = hitInfo.GetComponent<SmMushroom3lvlHealth>();       
@@ -112,22 +83,32 @@ public class Bullet : MonoBehaviour
             sleepHealth.TakeDamage(damage);
         }
 
-        Chest chest = hitInfo.GetComponent<Chest>();
-        if (chest != null)
+        Chest _chest = hitInfo.GetComponent<Chest>();
+        if (_chest != null)
         {
-            chest.TakeDamage(damage);
+            _chest.TakeDamage(damage);
         }
 
-        StartCoroutine(ExecuteAfterTime(_deathTime));
-        IEnumerator ExecuteAfterTime(float timeInSec)
+        BoxHealth _box = hitInfo.GetComponent<BoxHealth>();
+        if(_box != null)
         {
-        yield return new WaitForSeconds(timeInSec);
-        Die();
-        } 
+            _box.TakeDamage(damage);
+            _must = false;
+        }
+
+        if(_must == true)
+        {
+            StartCoroutine(ExecuteAfterTime(_deathTime));
+            IEnumerator ExecuteAfterTime(float timeInSec)
+            {
+            yield return new WaitForSeconds(timeInSec);
+            Die();
+            } 
+        }
     }
 
     private void Die()
     {
         Destroy(gameObject);
-    }        
+    }         
 }

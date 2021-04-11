@@ -4,13 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class RangeHealth : MonoBehaviour
-{
-    
+{   
     private Animator animator;
+
+    private EnemyLoot _enemyLoot;
 
     private UnityEngine.Object explosion;
     public EnemyRange enemy;
-    public GameObject BIG;
+    public GameObject ENEMY;
 
     [Header("Slider")]
     [SerializeField] private float totalHealth = 6f;
@@ -21,6 +22,7 @@ public class RangeHealth : MonoBehaviour
 
     private void Start()
     {
+        _enemyLoot = GetComponent<EnemyLoot>();
         _health = totalHealth;
         animator = GetComponent<Animator>();
         enemy = GetComponentInParent<EnemyRange>();
@@ -39,17 +41,23 @@ public class RangeHealth : MonoBehaviour
         }
     }
 
+    // private void InitHealth()
+    // {   StopAllCoroutines();
+    //     healthSlider.value = _health / totalHealth;
+    //     _hiddenSlider.SetActive(true);
+
+    //     StartCoroutine(ExecuteAfterTime(15f));
+    //     IEnumerator ExecuteAfterTime(float timeInSec)
+    //     {
+    //     yield return new WaitForSeconds(timeInSec);
+    //     _hiddenSlider.SetActive(false);
+    //     }
+    // }
+
     private void InitHealth()
-    {   StopAllCoroutines();
+    {
         healthSlider.value = _health / totalHealth;
         _hiddenSlider.SetActive(true);
-
-        StartCoroutine(ExecuteAfterTime(15f));
-        IEnumerator ExecuteAfterTime(float timeInSec)
-        {
-        yield return new WaitForSeconds(timeInSec);
-        _hiddenSlider.SetActive(false);
-        }
     }
 
     private void Die()
@@ -57,6 +65,8 @@ public class RangeHealth : MonoBehaviour
         GameObject explosionRef = (GameObject)Instantiate(explosion);
         explosionRef.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
 
-        Destroy(BIG);
+        _enemyLoot.CalculateLoot();
+
+        Destroy(ENEMY);
     }
 }

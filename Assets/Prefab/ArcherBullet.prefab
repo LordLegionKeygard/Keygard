@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2115321333710789720}
   - component: {fileID: 506101161316315075}
   - component: {fileID: 8371143818336294632}
+  - component: {fileID: -1480663474903426651}
   m_Layer: 19
   m_Name: ArcherBullet
   m_TagString: BulletEnemy
@@ -146,3 +147,15 @@ MonoBehaviour:
   damage: 1
   rb: {fileID: 2115321333710789720}
   TimeToLive: 4
+--- !u!114 &-1480663474903426651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1473970015050682234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 759f9fd30ddc4d64380728b8bf6007d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

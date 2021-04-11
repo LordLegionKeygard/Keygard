@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1401358047138392188}
   - component: {fileID: 6603389165481704076}
+  - component: {fileID: 8862125}
   - component: {fileID: 1899720629400042333}
   - component: {fileID: 1792411846}
   - component: {fileID: 2766658163866783377}
-  - component: {fileID: 8862125}
   - component: {fileID: 7818429375372234710}
   m_Layer: 19
   m_Name: SkeletRMageBullet
@@ -85,6 +85,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &8862125
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1401358047138392191}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: eb87cde1259e1db4b88d0d5cd9423f0a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!50 &1899720629400042333
 Rigidbody2D:
   serializedVersion: 4
@@ -148,25 +167,6 @@ MonoBehaviour:
   damage: 1
   rb: {fileID: 1899720629400042333}
   TimeToLive: 2
---- !u!95 &8862125
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1401358047138392191}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: eb87cde1259e1db4b88d0d5cd9423f0a, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!108 &7818429375372234710
 Light:
   m_ObjectHideFlags: 0

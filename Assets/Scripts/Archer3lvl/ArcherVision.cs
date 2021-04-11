@@ -14,14 +14,11 @@ public class ArcherVision : MonoBehaviour
     private Vector2 origin;
     private Vector2 direction;
 
-    Animator animator;
-
     private float currentHitDistance;
 
     private void Start()
     {
-        enemy = GetComponent<Archer>();
-        animator = GetComponent<Animator>();       
+        enemy = GetComponent<Archer>();     
     }
 
     private void Update()

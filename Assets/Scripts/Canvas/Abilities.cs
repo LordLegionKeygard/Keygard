@@ -121,7 +121,7 @@ public class Abilities : MonoBehaviour
 
     void Ability2()
     {
-        if(Input.GetKey(ability2) && isCooldown == false)
+        if(Input.GetKey(ability2) && isCooldown2 == false)
         {
             isCooldown2 = true;
             abilityImage2.fillAmount = 1;

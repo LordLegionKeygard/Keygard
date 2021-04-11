@@ -30,7 +30,6 @@ public class EnemyRange : MonoBehaviour
     private float waitTime;
     private float chaseTime;
 
-    private float time = 1f;
     public Transform firePoint;
     public GameObject bullet;
     private float nextTime = 0.0f;

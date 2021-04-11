@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8526844680729148803}
   m_Layer: 19
   m_Name: BromidBullet
-  m_TagString: BulletEnemy
+  m_TagString: PoisonBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -163,6 +163,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 6
-  damage: 1
+  poisonDamage: 1
   rb: {fileID: 8526844680729148802}
   TimeToLive: 2

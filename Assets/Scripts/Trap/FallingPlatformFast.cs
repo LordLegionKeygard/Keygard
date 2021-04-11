@@ -8,7 +8,6 @@ public class FallingPlatformFast : MonoBehaviour
     Vector3 currentPosition;
     bool moveingBack;   
 
-    // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -19,7 +18,7 @@ public class FallingPlatformFast : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player") && moveingBack == false)
         {
-            Invoke("FallPlatform", 0.001f);
+            Invoke("FallPlatform", 0.1f);
             
         }
     }
@@ -27,7 +26,7 @@ public class FallingPlatformFast : MonoBehaviour
     void FallPlatform()
     {
         rb.isKinematic = false;
-        Invoke("BackPlatform", 5f);
+        Invoke("BackPlatform", 4f);
     }
 
     void BackPlatform()
@@ -41,7 +40,7 @@ public class FallingPlatformFast : MonoBehaviour
     {
         if (moveingBack == true)
         {
-            transform.position = Vector3.MoveTowards(transform.position, currentPosition, 20f * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, currentPosition, 40f * Time.deltaTime);
         }
 
         if (transform.position.y == currentPosition.y && transform.position.z == currentPosition.z)

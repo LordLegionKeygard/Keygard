@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     public GameObject loadingScreen;
     public GameObject loading;
     public GameObject press;
-    public Slider bar; 
+    public Slider bar;
 
     [Header("PoisonStaff")]
     public GameObject PStaff;
@@ -61,7 +61,6 @@ public class PlayerController : MonoBehaviour
     [Header("Music Effect")]
     public AudioSource PickUpStaff;
     public AudioSource PickUpScroll;
-    public AudioSource Kamnepad;
     public AudioSource Coin;
          
     private GameObject finish;
@@ -103,23 +102,6 @@ public class PlayerController : MonoBehaviour
             Destroy(other.gameObject);
             textScore.text = score.ToString();
             Coin.Play();
-        }
-
-        if(other.gameObject.name == "GhostWall1")
-        {
-            Destroy(other.gameObject);
-            Kamnepad.Play();
-        }  
-        if(other.gameObject.name == "GhostWall")
-        {
-            Destroy(other.gameObject);
-            Kamnepad.Play();
-        }     
-        if(other.gameObject.name == "RandomStaff")
-        {
-            PickUpStaff.Play();           
-            Destroy(other.gameObject);
-            RandomStatePicker();            
         }
         
         if(other.gameObject.name == "LScroll")
@@ -243,40 +225,24 @@ public class PlayerController : MonoBehaviour
         }     
     }
 
-    void RandomStatePicker()
-    {
-        int randomState = Random.Range(0, 4);
-        if (randomState == 0)
-        {
-            var myscript = gameObject.GetComponent<Weapon>();       
-            myscript.enabled = true;
-            PStaff.SetActive(true);
-            PSkillk.SetActive(true);
-            PSkghost2.SetActive(true);
-        }
-        if (randomState == 1)
-        {
-            var myscript = gameObject.GetComponent<FireWeapon>();
-            myscript.enabled = true;
-            FStaff.SetActive(true);
-            FSkillk.SetActive(true);
-            FSkghost2.SetActive(true);            
-        }
-        if (randomState == 2)
-        {
-            var myscript = gameObject.GetComponent<IceWeapon>();
-            myscript.enabled = true;
-            IStaff.SetActive(true);
-            ISkillk.SetActive(true);
-            ISkghost2.SetActive(true);
-        }
-        else if (randomState == 3)
-        {
-            var myscript = gameObject.GetComponent<WindWeapon>();
-            myscript.enabled = true;
-            WStaff.SetActive(true);
-            WSkillk.SetActive(true);
-            WSkghost2.SetActive(true);            
-        }
-    }
+    // void RandomStatePicker()
+    // {
+    //     int randomState = Random.Range(0, 4);
+    //     if (randomState == 0)
+    //     {
+
+    //     }
+    //     if (randomState == 1)
+    //     {
+          
+    //     }
+    //     if (randomState == 2)
+    //     {
+
+    //     }
+    //     else if (randomState == 3)
+    //     {
+           
+    //     }
+    // }
 }

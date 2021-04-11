@@ -5,8 +5,9 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public GameObject onehealth;
     public GameObject gameOverCanvas;
+    public GameObject keyCanvas;
+    public GameObject poisonPanel;
     private Animator animator;
     public int health = 6;
     public int numOfHearts;
@@ -15,10 +16,12 @@ public class PlayerHealth : MonoBehaviour
     public Sprite HeartEmpty;
     public AudioSource PickUp;
     private UnityEngine.Object explosion;
+    private UnityEngine.Object poisonExplosion;
 
     private void Awake()
     {
         explosion = Resources.Load("PlayerDamage");
+        poisonExplosion = Resources.Load("PlayerPoisonDamage");
         animator = GetComponent<Animator>();
     }
     public void TakeDamage(int damage)
@@ -34,10 +37,28 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
+    public void TakePoisonDamage(int poisonDamage)
+    {
+        poisonPanel.SetActive(true);
+        GameObject posionExplosionRef = (GameObject)Instantiate(poisonExplosion);
+        posionExplosionRef.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        
+        if(health >=2)
+        {
+            health-= poisonDamage;
+   
+            if (health <= 0)
+            {
+                Die();
+            }
+        }
+    }
+
     private void Die()
     {
-        Destroy(gameObject);
         gameOverCanvas.SetActive(true);
+        keyCanvas.SetActive(false);
+        Destroy(gameObject);      
     }
 
     private void FixedUpdate()

@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class Chain : MonoBehaviour
 {
+    public AudioSource _gateSound;
+
     Animator animator;
+    
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -14,6 +17,7 @@ public class Chain : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            _gateSound.Play();
             animator.SetTrigger("Chain");            
         }
     }

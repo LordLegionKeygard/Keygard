@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 1016087221156746417}
   m_Layer: 9
   m_Name: Bullet
-  m_TagString: Untagged
+  m_TagString: PlayerBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -148,6 +148,7 @@ MonoBehaviour:
   damage: 1
   rb: {fileID: 9087962364753032339}
   TimeToLive: 1
+  _deathTime: 0
 --- !u!95 &-4386888776596310557
 Animator:
   serializedVersion: 3

@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
     public float timeToWait = 3f;
     private float timeToChase = 3f;
     public float minDistancetoPlayer = 1.5f;
+    public float minDinstanceToAttack = 4f;
     private float moveInput;
     bool walk = true;
 
@@ -75,6 +76,14 @@ public class Enemy : MonoBehaviour
     private void FixedUpdate()
     {             
         nextPoint = Vector2.right * walkSpeed * Time.fixedDeltaTime;
+        if(isChasingPlayer && Mathf.Abs(DistanceToPlayer()) > minDinstanceToAttack)
+        {
+            animator.SetTrigger("Walk");
+        }
+        if(isChasingPlayer && Mathf.Abs(DistanceToPlayer()) < minDinstanceToAttack)
+        {
+            animator.SetTrigger("Attack");
+        }
         if(isChasingPlayer && Mathf.Abs(DistanceToPlayer()) < minDistancetoPlayer)
         {
             return;
@@ -87,7 +96,6 @@ public class Enemy : MonoBehaviour
         if(isChasingPlayer)
         {
             ChasePlayer();
-            animator.SetTrigger("Attack");
         }
 
         if(!isWait && !isChasingPlayer)

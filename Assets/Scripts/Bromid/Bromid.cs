@@ -8,7 +8,6 @@ public class Bromid : MonoBehaviour
     [Header("Other")]
     [SerializeField] private float totalHealth = 15f;
     [SerializeField] private Slider healthSlider;
-    public GameObject SLIDER;
     private EnemyLoot _enemyLoot;
 
     [SerializeField] private AudioSource MainMusic;
@@ -36,7 +35,6 @@ public class Bromid : MonoBehaviour
     private float timeToChase = 3f;
     private float minDistancetoPlayer = 1.5f;
     private float moveInput;
-    private float spellSpeed = 0f;
 
     private Rigidbody2D rb;
     private Transform playerTransform;
@@ -52,7 +50,6 @@ public class Bromid : MonoBehaviour
     private float waitTime;
     private float chaseTime;
 
-    private float time = 1f;
     public Transform firePoint;
     public GameObject bullet;
     private float nextTime = 0.0f;
@@ -72,6 +69,8 @@ public class Bromid : MonoBehaviour
 
     void Start()
     {
+        MainMusic.Stop();
+        BossMusic.Play();
         _enemyLoot = GetComponent<EnemyLoot>();
         _health = totalHealth;
         animator = GetComponent<Animator>();
@@ -88,17 +87,6 @@ public class Bromid : MonoBehaviour
         healthSlider.value = _health / totalHealth;
         InitHealth();           
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            SLIDER.SetActive(true);
-            MainMusic.Stop();
-            BossMusic.Play();
-        }
-    }
-
 
     private void Update()
     {

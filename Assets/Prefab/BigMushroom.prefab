@@ -444,11 +444,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 5192533267323606851}
-  BIG: {fileID: 5192533267323606849}
-  totalHealth: 5
+  ENEMY: {fileID: 5192533267323606849}
+  totalHealth: 4
   healthSlider: {fileID: 2556325013427147796}
   _hiddenSlider: {fileID: 2556325013619485302}
-  _health: 5
+  _health: 4
 --- !u!114 &1974461465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -464,13 +464,13 @@ MonoBehaviour:
   LootTable:
   - name: BronzeCoin
     item: {fileID: 123732073570350251, guid: ad4011e827a4cb64f93c269fe3ce4b37, type: 3}
-    dropRarity: 40
+    dropRarity: 32
   - name: SilverCoin
     item: {fileID: 5889504676247815488, guid: 1dfb782f24d58dc4591d3b3f5301062e, type: 3}
-    dropRarity: 20
+    dropRarity: 16
   - name: GoldCoin
     item: {fileID: 1480518432628846482, guid: 0c12ac00d6f8785489481982dc606a7f, type: 3}
-    dropRarity: 10
+    dropRarity: 8
   - name: Health
     item: {fileID: 4190660496723595138, guid: e29ba309db29602418ab0cbbfaf5829b, type: 3}
     dropRarity: 5
@@ -660,7 +660,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2556325014225283504}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.4299924, y: -0.03, z: 0}
+  m_LocalPosition: {x: -1.66, y: -0.27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2556325013746389281}
@@ -699,7 +699,7 @@ GameObject:
   - component: {fileID: 2556325012965772563}
   - component: {fileID: 5192533267323606851}
   - component: {fileID: 5192533267323606850}
-  - component: {fileID: 2556325012965772575}
+  - component: {fileID: 6749768068594764824}
   m_Layer: 12
   m_Name: BigMushroom
   m_TagString: Enemy
@@ -782,7 +782,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 2048
---- !u!114 &2556325012965772575
+--- !u!114 &6749768068594764824
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -791,6 +791,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 5192533267323606849}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca04cc9c65b508141b072e91c765560c, type: 3}
+  m_Script: {fileID: 11500000, guid: b2d6107bc78b87c4295d30df3b58fc1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
