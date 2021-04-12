@@ -385,7 +385,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 2672941370783118683}
-  BIG: {fileID: 2672941370783118684}
+  ENEMY: {fileID: 2672941370783118684}
   totalHealth: 4
   healthSlider: {fileID: 2672941369893985652}
   _hiddenSlider: {fileID: 2672941369731405000}
@@ -416,6 +416,7 @@ MonoBehaviour:
     item: {fileID: 4190660496723595138, guid: e29ba309db29602418ab0cbbfaf5829b, type: 3}
     dropRarity: 5
   dropChance: 33
+  _vectorY: 0
 --- !u!1 &2672941370423294269
 GameObject:
   m_ObjectHideFlags: 0
@@ -626,7 +627,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 538155a3fc1e02842a39a71553ecafaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHitObject: {fileID: 0}
   circleRadius: 0.07
   maxDistance: 10
   layerMask:

@@ -475,6 +475,7 @@ MonoBehaviour:
     item: {fileID: 4190660496723595138, guid: e29ba309db29602418ab0cbbfaf5829b, type: 3}
     dropRarity: 5
   dropChance: 33
+  _vectorY: 0
 --- !u!1 &2556325013885824035
 GameObject:
   m_ObjectHideFlags: 0
@@ -757,7 +758,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 2556325013746389284}
-  walkDistance: 3
+  walkDistance: 6
   patrolSpeed: 1
   timeToWait: 3
   Model: {fileID: 2556325013746389281}
@@ -776,8 +777,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 538155a3fc1e02842a39a71553ecafaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHitObject: {fileID: 0}
-  circleRadius: 1
+  circleRadius: 0.76
   maxDistance: 10
   layerMask:
     serializedVersion: 2

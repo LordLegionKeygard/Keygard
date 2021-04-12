@@ -11,10 +11,10 @@ ScriptedImporter:
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
-    enableMipMap: 1
-    fadeOut: 0
-    borderMipMap: 0
-    mipMapsPreserveCoverage: 0
+    enableMipMap: 0
+    fadeOut: 1
+    borderMipMap: 1
+    mipMapsPreserveCoverage: 1
     alphaTestReferenceValue: 0.5
     mipMapFadeDistanceStart: 1
     mipMapFadeDistanceEnd: 3
@@ -62,18 +62,18 @@ ScriptedImporter:
     compressionQualitySet: 0
     textureFormatSet: 0
   spriteImportData:
-  - name: 
+  - name: King_1
     originalName: 
-    pivot: {x: 0, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 0
       y: 0
-      width: 0
-      height: 0
-    spriteID: 
+      width: 138
+      height: 176
+    spriteID: 05d9ef2a40efb9d41a53eeef2f0bd067
     internalID: 0
     spriteBone: []
     spriteOutline: []
@@ -84,7 +84,249 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: 0, y: 0}
-  mosaicSpriteImportData: []
+  mosaicSpriteImportData:
+  - name: ThornyThorn
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 148
+      width: 40
+      height: 88
+    spriteID: a65025c8b6028af4e8fd82d1b7f167f3
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -20, y: 92}
+  - name: FireStaff
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 328
+      width: 48
+      height: 176
+    spriteID: 760cfe42d6de43e41bb26f34914af21e
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -80, y: 328}
+  - name: PoisonStaff
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 116
+      y: 4
+      width: 52
+      height: 156
+    spriteID: 7b832fca554a8274cb640ee8e5a3616e
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 32, y: 4}
+  - name: IceStaff
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 148
+      width: 52
+      height: 172
+    spriteID: 67f613407c7025441a9f742f215097cf
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -80, y: 148}
+  - name: WindStaff
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 60
+      y: 328
+      width: 48
+      height: 168
+    spriteID: 8e5d06a13f638174da268c2a142915c8
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -24, y: 328}
+  - name: RightFoot
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 312
+      width: 24
+      height: 8
+    spriteID: 6c71615215e0869499ac30d98411d658
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -4, y: 312}
+  - name: LeftHand
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 244
+      width: 28
+      height: 60
+    spriteID: a6ea07c2edb7ec94483caf4954137d45
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 56, y: 204}
+  - name: LeftFoot
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 116
+      y: 208
+      width: 24
+      height: 8
+    spriteID: db04b02b3a4bd9f47867fdbeb230cea1
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 96, y: 208}
+  - name: Head
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 176
+      y: 4
+      width: 64
+      height: 92
+    spriteID: bff9e8e2d2eb34941a02d10413bc4400
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 144, y: -80}
+  - name: RightHandEmpty
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 116
+      y: 168
+      width: 22
+      height: 32
+    spriteID: 68c7e0fc64a79754bba229f700ff45e7
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 32, y: 112}
+  - name: Body
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 104
+      height: 136
+    spriteID: a68bbdd4e5af75f4799814ad81a8fe76
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 4}
   rigSpriteImportData:
   - name: Head
     originalName: 
@@ -3306,7 +3548,7 @@ ScriptedImporter:
     textureCompression: 0
     compressionQuality: 50
     forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
+    crunchedCompression: 1
     allowsAlphaSplitting: 0
     androidETC2FallbackOverride: 0
   mosaicLayers: 1
@@ -3325,7 +3567,84 @@ ScriptedImporter:
   spritePackingTag: 
   resliceFromLayer: 0
   characterMode: 1
-  mosaicPSDLayers: []
+  mosaicPSDLayers:
+  - name: ThornyThorn
+    spriteName: ThornyThorn
+    isGroup: 0
+    parentIndex: -1
+    spriteID: a65025c8b6028af4e8fd82d1b7f167f3
+    layerID: 83
+    mosaicPosition: {x: 64, y: 148}
+  - name: FireStaff
+    spriteName: FireStaff
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 760cfe42d6de43e41bb26f34914af21e
+    layerID: 107
+    mosaicPosition: {x: 4, y: 328}
+  - name: PoisonStaff
+    spriteName: PoisonStaff
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 7b832fca554a8274cb640ee8e5a3616e
+    layerID: 70
+    mosaicPosition: {x: 116, y: 4}
+  - name: IceStaff
+    spriteName: IceStaff
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 67f613407c7025441a9f742f215097cf
+    layerID: 71
+    mosaicPosition: {x: 4, y: 148}
+  - name: WindStaff
+    spriteName: WindStaff
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 8e5d06a13f638174da268c2a142915c8
+    layerID: 95
+    mosaicPosition: {x: 60, y: 328}
+  - name: RightFoot
+    spriteName: RightFoot
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 6c71615215e0869499ac30d98411d658
+    layerID: 18
+    mosaicPosition: {x: 64, y: 312}
+  - name: LeftHand
+    spriteName: LeftHand
+    isGroup: 0
+    parentIndex: -1
+    spriteID: a6ea07c2edb7ec94483caf4954137d45
+    layerID: 17
+    mosaicPosition: {x: 64, y: 244}
+  - name: LeftFoot
+    spriteName: LeftFoot
+    isGroup: 0
+    parentIndex: -1
+    spriteID: db04b02b3a4bd9f47867fdbeb230cea1
+    layerID: 16
+    mosaicPosition: {x: 116, y: 208}
+  - name: Head
+    spriteName: Head
+    isGroup: 0
+    parentIndex: -1
+    spriteID: bff9e8e2d2eb34941a02d10413bc4400
+    layerID: 4
+    mosaicPosition: {x: 176, y: 4}
+  - name: RightHandEmpty
+    spriteName: RightHandEmpty
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 68c7e0fc64a79754bba229f700ff45e7
+    layerID: 47
+    mosaicPosition: {x: 116, y: 168}
+  - name: Body
+    spriteName: Body
+    isGroup: 0
+    parentIndex: -1
+    spriteID: a68bbdd4e5af75f4799814ad81a8fe76
+    layerID: 26
+    mosaicPosition: {x: 4, y: 4}
   rigPSDLayers:
   - name: ThornyThorn
     spriteName: ThornyThorn

@@ -30,6 +30,7 @@ TagManager:
   - GhostWall
   - PoisonBullet
   - PlayerBullet
+  - Wall
   layers:
   - Default
   - TransparentFX

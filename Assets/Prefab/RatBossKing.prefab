@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1327819037061903005}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.02, y: -0.459, z: 0}
+  m_LocalPosition: {x: -0.46, y: -1.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1327819037242521356}
@@ -51,7 +51,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1327819037242521356
 Transform:
   m_ObjectHideFlags: 0
@@ -59,9 +59,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1327819037242521367}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -36365.41, y: -33.795876, z: 153.6313}
-  m_LocalScale: {x: 3.2997587, y: 3.2997587, z: 3.2997587}
+  m_LocalScale: {x: 0.8702366, y: 0.8702366, z: 0.8702366}
   m_Children:
   - {fileID: 5799943651670709341}
   - {fileID: 1327819038398110477}
@@ -108,7 +108,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 3f6754f543c953b408a5333f2455da2a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1ab5931536b3fd548a55991931e368a4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   idelMovementSpeed: 3
   idelMovementDirection: {x: -1, y: 3}
-  attackMovementSpeed: 25
+  attackMovementSpeed: 20
   attackMovementDirection: {x: -1, y: 5}
   attackPlayerSpeed: 8
   player: {fileID: 0}
@@ -204,8 +204,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.12}
-  m_Size: {x: 2.16, y: 1.04}
+  m_Offset: {x: -0.21759859, y: 0.67643607}
+  m_Size: {x: 6.6123447, y: 5.0914135}
   m_Direction: 1
 --- !u!114 &5799943652802697074
 MonoBehaviour:
@@ -224,6 +224,7 @@ MonoBehaviour:
     item: {fileID: 1480518432628846482, guid: 0c12ac00d6f8785489481982dc606a7f, type: 3}
     dropRarity: 100
   dropChance: 100
+  _vectorY: 0
 --- !u!1 &1327819038398110476
 GameObject:
   m_ObjectHideFlags: 0
@@ -248,7 +249,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1327819038398110476}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.02, y: 1.208, z: 0}
+  m_LocalPosition: {x: -0.37, y: 3.33, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1327819037242521356}
@@ -278,7 +279,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1327819038931332852}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.172, y: 0.113, z: 0}
+  m_LocalPosition: {x: -4.03, y: 0.51, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1327819037242521356}

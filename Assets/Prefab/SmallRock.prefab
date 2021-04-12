@@ -87,6 +87,7 @@ MonoBehaviour:
   chasingSpeed: 2
   timeToWait: 3
   minDistancetoPlayer: 1.5
+  minDinstanceToAttack: 4
   Model: {fileID: 6842653034772528646}
 --- !u!114 &5154911598047797391
 MonoBehaviour:
@@ -100,7 +101,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 420f2d3d3ef846048ac1dda1a6574813, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHitObject: {fileID: 0}
   circleRadius: 0.04
   maxDistance: 6
   layerMask:
@@ -565,6 +565,7 @@ MonoBehaviour:
     item: {fileID: 4190660496723595138, guid: e29ba309db29602418ab0cbbfaf5829b, type: 3}
     dropRarity: 5
   dropChance: 33
+  _vectorY: 0
 --- !u!1 &6842653034824557478
 GameObject:
   m_ObjectHideFlags: 0

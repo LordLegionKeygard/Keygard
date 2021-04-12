@@ -9,9 +9,9 @@ public class gameover : MonoBehaviour
     [SerializeField] private AudioSource BossMusic;    
     private void OnEnable()
     {
-        BossMusic.Stop();
-        mainsound.Stop();
         gameov.Play();
+        mainsound.Stop();
+        BossMusic.Stop();
     }
 
     void Update()

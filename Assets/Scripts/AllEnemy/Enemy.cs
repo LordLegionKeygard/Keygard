@@ -84,10 +84,6 @@ public class Enemy : MonoBehaviour
         {
             animator.SetTrigger("Attack");
         }
-        if(isChasingPlayer && Mathf.Abs(DistanceToPlayer()) < minDistancetoPlayer)
-        {
-            return;
-        }
         if(animator)
         {
             animator.SetBool("Walk", walk);

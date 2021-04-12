@@ -80,10 +80,7 @@ public class EnemyRange : MonoBehaviour
     private void FixedUpdate()
     {             
         nextPoint = Vector2.right * walkSpeed * Time.fixedDeltaTime;
-        if(isChasingPlayer && Mathf.Abs(DistanceToPlayer()) < minDistancetoPlayer)
-        {
-            return;
-        }
+
         if(animator)
         {
             animator.SetBool("Walk", walk);
