@@ -8,6 +8,7 @@ public class PlayerHealth : MonoBehaviour
     public GameObject gameOverCanvas;
     public GameObject keyCanvas;
     public GameObject poisonPanel;
+    public GameObject _poisonShield;
     private Animator animator;
     public int health = 6;
     public int numOfHearts;
@@ -24,6 +25,12 @@ public class PlayerHealth : MonoBehaviour
         poisonExplosion = Resources.Load("PlayerPoisonDamage");
         animator = GetComponent<Animator>();
     }
+
+    private void Update()
+    {
+        if(health >=2)
+        _poisonShield.SetActive(false);
+    }
     public void TakeDamage(int damage)
     {       
         health -= damage;
@@ -38,19 +45,17 @@ public class PlayerHealth : MonoBehaviour
     }
 
     public void TakePoisonDamage(int poisonDamage)
-    {
-        poisonPanel.SetActive(true);
-        GameObject posionExplosionRef = (GameObject)Instantiate(poisonExplosion);
-        posionExplosionRef.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-        
+    {        
         if(health >=2)
         {
+            poisonPanel.SetActive(true);
+            GameObject posionExplosionRef = (GameObject)Instantiate(poisonExplosion);
+            posionExplosionRef.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
             health-= poisonDamage;
-   
-            if (health <= 0)
-            {
-                Die();
-            }
+        }
+        if(health == 1)
+        {
+            _poisonShield.SetActive(true);
         }
     }
 

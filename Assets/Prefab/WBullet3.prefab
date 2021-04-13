@@ -167,7 +167,7 @@ MonoBehaviour:
   damage: 8
   rb: {fileID: 1359517062381696175}
   TimeToLive: 2.5
-  _deathTime: 1.5
+  _deathTime: 0
 --- !u!108 &-4349949207880954397
 Light:
   m_ObjectHideFlags: 0

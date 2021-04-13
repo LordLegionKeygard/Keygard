@@ -2,6 +2,8 @@
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <LangVersion>latest</LangVersion>
+    <CscToolPath>C:\Program Files\Unity\Hub\Editor\2019.2.1f1\Editor\Data\Tools\RoslynScripts</CscToolPath>
+    <CscToolExe>unity_csc.bat</CscToolExe>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -111,6 +113,7 @@
      <Compile Include="Assets\Scripts\Canvas\ShopStaffButton.cs" />
      <Compile Include="Assets\Scripts\Canvas\SoundUpdater.cs" />
      <Compile Include="Assets\Scripts\Canvas\StaffType.cs" />
+     <Compile Include="Assets\Scripts\EnemyController.cs" />
      <Compile Include="Assets\Scripts\GrindMur\AttackPlayer.cs" />
      <Compile Include="Assets\Scripts\GrindMur\AttackShoot.cs" />
      <Compile Include="Assets\Scripts\GrindMur\GrindMur.cs" />

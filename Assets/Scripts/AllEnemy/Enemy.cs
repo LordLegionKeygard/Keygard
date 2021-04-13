@@ -71,23 +71,31 @@ public class Enemy : MonoBehaviour
         {
             isWait = true;           
         }
+
+        if(isChasingPlayer && Mathf.Abs(DistanceToPlayer()) > minDinstanceToAttack)
+        {
+            animator.SetTrigger("Walk");
+        }
+
+        if(isChasingPlayer && Mathf.Abs(DistanceToPlayer()) < minDinstanceToAttack)
+        {
+            animator.SetTrigger("Attack");
+        } 
     }
 
     private void FixedUpdate()
     {             
         nextPoint = Vector2.right * walkSpeed * Time.fixedDeltaTime;
-        if(isChasingPlayer && Mathf.Abs(DistanceToPlayer()) > minDinstanceToAttack)
+
+        if(isChasingPlayer &&  Mathf.Abs(DistanceToPlayer()) < minDistancetoPlayer)
         {
-            animator.SetTrigger("Walk");
-        }
-        if(isChasingPlayer && Mathf.Abs(DistanceToPlayer()) < minDinstanceToAttack)
-        {
-            animator.SetTrigger("Attack");
-        }
+            return;
+        }   
+
         if(animator)
         {
             animator.SetBool("Walk", walk);
-        }      
+        }     
    
         if(isChasingPlayer)
         {
@@ -97,8 +105,10 @@ public class Enemy : MonoBehaviour
         if(!isWait && !isChasingPlayer)
         {
             Patrol();
-        }   
+        }
+  
     }
+
     private void Patrol()
     {      
         if(!isFacingRight)
@@ -111,7 +121,7 @@ public class Enemy : MonoBehaviour
     {
 
         walk = true;        
-        float distance = DistanceToPlayer() ;
+        float distance = DistanceToPlayer();
         if(distance < 0)
         {                   
             nextPoint.x *= -1;

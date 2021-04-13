@@ -48,11 +48,11 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 30
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 30
-  m_Material: {fileID: 6200000, guid: bd01aed170062d645af9c7835c4c0482, type: 2}
+  m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -83,10 +83,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 6842653034772528642}
   walkDistance: 6
-  patrolSpeed: 1
-  chasingSpeed: 2
+  patrolSpeed: 3.5
+  chasingSpeed: 4.5
   timeToWait: 3
-  minDistancetoPlayer: 1.5
+  minDistancetoPlayer: 1
   minDinstanceToAttack: 4
   Model: {fileID: 6842653034772528646}
 --- !u!114 &5154911598047797391
@@ -165,7 +165,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 7
   m_TargetDisplay: 0
 --- !u!114 &6842653033297543514
 MonoBehaviour:
@@ -390,7 +390,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 8
   m_Sprite: {fileID: 21300000, guid: 09005cfe0a25a964a9687383cf460310, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

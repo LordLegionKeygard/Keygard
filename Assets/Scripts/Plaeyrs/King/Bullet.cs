@@ -9,7 +9,6 @@ public class Bullet : MonoBehaviour
     public int damage = 1;
     public Rigidbody2D rb;
     public float TimeToLive = 0.5f;
-    public float _deathTime;
 
     private float timeToDamage = 3f;
     private float damageTime;

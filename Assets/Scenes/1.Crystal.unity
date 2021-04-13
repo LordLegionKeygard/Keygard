@@ -5116,7 +5116,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &591229538
 Transform:
   m_ObjectHideFlags: 0
@@ -25535,7 +25535,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 981616023}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.125289, y: 0.33499986, z: -10}
+  m_LocalPosition: {x: 0.4152832, y: 0.33499986, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1134633654}
@@ -26838,11 +26838,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6540443396541165739, guid: 290de72f883a30a49a5e9d6b2130ddc4,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 6540443396541165751, guid: 290de72f883a30a49a5e9d6b2130ddc4,
         type: 3}
       propertyPath: _boxBreak1
@@ -26858,6 +26853,11 @@ PrefabInstance:
       propertyPath: _boxBreak2
       value: 
       objectReference: {fileID: 7167722752069606576}
+    - target: {fileID: 6540443396541165739, guid: 290de72f883a30a49a5e9d6b2130ddc4,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 290de72f883a30a49a5e9d6b2130ddc4, type: 3}
 --- !u!4 &1159493873 stripped
@@ -84108,6 +84108,11 @@ PrefabInstance:
       propertyPath: jumpsound
       value: 
       objectReference: {fileID: 1940404813}
+    - target: {fileID: 4216139646275986078, guid: e9a9015f1bc835440a736ab7872e2135,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4216139646275986079, guid: e9a9015f1bc835440a736ab7872e2135,
         type: 3}
       propertyPath: shoot
@@ -84136,7 +84141,7 @@ PrefabInstance:
     - target: {fileID: 210904809201327103, guid: e9a9015f1bc835440a736ab7872e2135,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.71
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 210904809201327103, guid: e9a9015f1bc835440a736ab7872e2135,
         type: 3}
@@ -84198,6 +84203,11 @@ PrefabInstance:
       propertyPath: jumpsound
       value: 
       objectReference: {fileID: 1940404813}
+    - target: {fileID: 4216139646275986076, guid: e9a9015f1bc835440a736ab7872e2135,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4216139646275986064, guid: e9a9015f1bc835440a736ab7872e2135,
         type: 3}
       propertyPath: loadingScreen
