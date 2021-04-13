@@ -44,7 +44,6 @@ GameObject:
   - component: {fileID: 1327819037242521360}
   - component: {fileID: 1327819037242521357}
   - component: {fileID: 5799943651736115642}
-  - component: {fileID: 5799943652802697074}
   m_Layer: 18
   m_Name: RatBossKing
   m_TagString: GruzMother
@@ -207,24 +206,6 @@ CapsuleCollider2D:
   m_Offset: {x: -0.21759859, y: 0.67643607}
   m_Size: {x: 6.6123447, y: 5.0914135}
   m_Direction: 1
---- !u!114 &5799943652802697074
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1327819037242521367}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db5572173af39ad429a67b36ee090fd7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LootTable:
-  - name: GoldCoin
-    item: {fileID: 1480518432628846482, guid: 0c12ac00d6f8785489481982dc606a7f, type: 3}
-    dropRarity: 100
-  dropChance: 100
-  _vectorY: 0
 --- !u!1 &1327819038398110476
 GameObject:
   m_ObjectHideFlags: 0
@@ -249,7 +230,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1327819038398110476}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.37, y: 3.33, z: 0}
+  m_LocalPosition: {x: -0.37, y: 4.57, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1327819037242521356}
@@ -694,7 +675,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}

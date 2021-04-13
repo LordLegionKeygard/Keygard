@@ -5,6 +5,7 @@ using UnityEngine;
 public class Chain : MonoBehaviour
 {
     public AudioSource _gateSound;
+    private bool _gate = true;
 
     Animator animator;
     
@@ -15,10 +16,11 @@ public class Chain : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") && _gate == true)
         {
             _gateSound.Play();
-            animator.SetTrigger("Chain");            
+            animator.SetTrigger("Chain");
+            _gate = false;         
         }
     }
 }

@@ -53,6 +53,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\LeverTraps.cs" />
+     <Compile Include="Assets\LeverTrapsGravity.cs" />
+     <Compile Include="Assets\MovingPlatform3pos.cs" />
      <Compile Include="Assets\Scripts\AllEnemy\Archer.cs" />
      <Compile Include="Assets\Scripts\AllEnemy\ArcherBullet.cs" />
      <Compile Include="Assets\Scripts\AllEnemy\ArcherHealth.cs" />

@@ -159,7 +159,7 @@ MonoBehaviour:
     item: {fileID: 1480518432628846482, guid: 0c12ac00d6f8785489481982dc606a7f, type: 3}
     dropRarity: 6
   - name: Health
-    item: {fileID: 4190660496723595138, guid: e29ba309db29602418ab0cbbfaf5829b, type: 3}
+    item: {fileID: 848798104406163745, guid: 0bfa53394bb2ccd439c9e40fc2fd50f8, type: 3}
     dropRarity: 5
   dropChance: 33
   _vectorY: 0

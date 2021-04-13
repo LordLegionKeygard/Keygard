@@ -10,11 +10,6 @@ public class KeyHold : MonoBehaviour
 	public GameObject KeyCanvas;
 	public AudioSource soundkey;
 
-	void Start () 
-	{
-		
-	}
-
 	private void OnTriggerEnter2D(Collider2D other)
     {		
         if(other.CompareTag("key"))
@@ -27,7 +22,6 @@ public class KeyHold : MonoBehaviour
 				soundkey.Play();
 			}
 			
-
 			if (key > 1)
 			{
 				key = 1;
@@ -39,13 +33,11 @@ public class KeyHold : MonoBehaviour
 			}
 				  
             Destroy(other.gameObject);
-
 			
 			if (key >= 1)
 			{
 				KeyCanvas.SetActive(true);
-			}
-			
+			}			
         }
     }
 	

@@ -353,7 +353,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: dd2b72bfa28fd32449a05a4785f2cff3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -471,9 +471,10 @@ MonoBehaviour:
     item: {fileID: 1480518432628846482, guid: 0c12ac00d6f8785489481982dc606a7f, type: 3}
     dropRarity: 4
   - name: Health
-    item: {fileID: 4190660496723595138, guid: e29ba309db29602418ab0cbbfaf5829b, type: 3}
+    item: {fileID: 848798104406163745, guid: 0bfa53394bb2ccd439c9e40fc2fd50f8, type: 3}
     dropRarity: 5
   dropChance: 33
+  _vectorY: 0
 --- !u!1 &1399993509310803800
 GameObject:
   m_ObjectHideFlags: 0
@@ -704,11 +705,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1399993509241418947}
-  walkDistance: 6
+  walkDistance: 14
   patrolSpeed: 1
-  chasingSpeed: 3.2
+  chasingSpeed: 2.5
   timeToWait: 3
   minDistancetoPlayer: 1.5
+  minDinstanceToAttack: 4
   Model: {fileID: 1399993509241418974}
 --- !u!114 &1399993509443273203
 MonoBehaviour:
@@ -734,7 +736,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 420f2d3d3ef846048ac1dda1a6574813, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHitObject: {fileID: 0}
   circleRadius: 0.5
   maxDistance: 10
   layerMask:
