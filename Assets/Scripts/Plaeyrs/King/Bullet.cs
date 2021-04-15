@@ -41,66 +41,77 @@ public class Bullet : MonoBehaviour
         if (enemyHealth != null  && isDamage)
         {
             enemyHealth.TakeDamage(damage);
+            isDamage = false;
         }
 
         RangeHealth rangeHealth = hitInfo.GetComponent<RangeHealth>();
         if (rangeHealth != null  && isDamage)
         {
             rangeHealth.TakeDamage(damage);
+            isDamage = false;
         }  
 
         FlyPfHealth flyHealth = hitInfo.GetComponent<FlyPfHealth>();
         if (flyHealth != null  && isDamage)
         {
             flyHealth.TakeDamage(damage);
+            isDamage = false;
         }         
  
         GruzMother gruzeHealth = hitInfo.GetComponent<GruzMother>();       
         if (gruzeHealth != null  && isDamage)
         {
             gruzeHealth.TakeDamage(damage);
+            isDamage = false;
         } 
            
         GrindMur grindmurHealth = hitInfo.GetComponent<GrindMur>();       
         if (grindmurHealth != null  && isDamage)
         {
             grindmurHealth.TakeDamage(damage);
+            isDamage = false;
         } 
            
         JesterHealth jesterHealth = hitInfo.GetComponent<JesterHealth>();       
         if (jesterHealth != null  && isDamage)
         {
             jesterHealth.TakeDamage(damage);
+            isDamage = false;
         } 
            
         SmMushroom3lvlHealth smmushroom3Health = hitInfo.GetComponent<SmMushroom3lvlHealth>();       
         if (smmushroom3Health != null  && isDamage)
         {
             smmushroom3Health.TakeDamage(damage);
+            isDamage = false;
         } 
            
         ArcherHealth archerHealth = hitInfo.GetComponent<ArcherHealth>();       
         if (archerHealth != null  && isDamage)
         {
             archerHealth.TakeDamage(damage);
+            isDamage = false;
         } 
            
         Bromid bromidHealth = hitInfo.GetComponent<Bromid>();       
         if (bromidHealth != null  && isDamage)
         {
             bromidHealth.TakeDamage(damage);
+            isDamage = false;
         } 
 
         BlueSleepHealth sleepHealth = hitInfo.GetComponent<BlueSleepHealth>();
         if (sleepHealth != null  && isDamage)
         {
             sleepHealth.TakeDamage(damage);
+            isDamage = false;
         }
 
         Chest _chest = hitInfo.GetComponent<Chest>();
         if (_chest != null  && isDamage)
         {
             _chest.TakeDamage(damage);
+            isDamage = false;
         }
 
         BoxHealth _box = hitInfo.GetComponent<BoxHealth>();

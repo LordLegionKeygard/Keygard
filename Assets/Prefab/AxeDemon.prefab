@@ -172,7 +172,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 234f080468dd5d7499e6cad88a0e33f0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -736,7 +736,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 420f2d3d3ef846048ac1dda1a6574813, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  circleRadius: 0.18
+  circleRadius: 1.27
   maxDistance: 10
   layerMask:
     serializedVersion: 2

@@ -647,12 +647,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4277c993e3a3c744480f6f1973725494, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalHealth: 30
+  totalHealth: 40
   healthSlider: {fileID: 961669767}
   MainMusic: {fileID: 0}
   BossMusic: {fileID: 0}
   Win: {fileID: 0}
-  health: 30
+  health: 40
   walkDistance: 0
   patrolSpeed: 2
   timeToWait: 3

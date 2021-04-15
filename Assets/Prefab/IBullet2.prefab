@@ -100,7 +100,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -144,11 +144,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b88277edd99bb142a8910a6e013d4dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  speed: 1
   damage: 2
   rb: {fileID: 2975206638405395678}
-  TimeToLive: 0.8
-  _deathTime: 0
+  TimeToLive: 3
 --- !u!95 &2975206638405395673
 Animator:
   serializedVersion: 3

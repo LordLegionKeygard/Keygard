@@ -6,6 +6,7 @@ public class LeverTraps : MonoBehaviour
 {
     public GameObject _leverNewPlatform;
     public GameObject _leverNewPlatform2;
+    public GameObject _upDownPlatformRB;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -13,6 +14,7 @@ public class LeverTraps : MonoBehaviour
         {
             _leverNewPlatform.SetActive(true);
             _leverNewPlatform2.SetActive(true);
+            _upDownPlatformRB.SetActive(false);
         }
     }
 }
