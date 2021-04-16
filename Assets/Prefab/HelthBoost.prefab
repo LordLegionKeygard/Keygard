@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4190660496723595137}
   - component: {fileID: 4190660496723595136}
   - component: {fileID: 4190660496723595139}
-  m_Layer: 0
+  m_Layer: 29
   m_Name: HelthBoost
   m_TagString: Potion
   m_Icon: {fileID: 0}

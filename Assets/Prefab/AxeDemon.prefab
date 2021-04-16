@@ -722,7 +722,7 @@ MonoBehaviour:
   chasingSpeed: 4.5
   timeToWait: 3
   minDistancetoPlayer: 1.5
-  minDinstanceToAttack: 4
+  minDinstanceToAttack: 2
   Model: {fileID: 953733252591006754}
 --- !u!114 &1607977060243951309
 MonoBehaviour:

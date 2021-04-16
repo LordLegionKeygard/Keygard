@@ -115,7 +115,7 @@ public class Bullet : MonoBehaviour
         }
 
         BoxHealth _box = hitInfo.GetComponent<BoxHealth>();
-        if(_box != null  && isDamage)
+        if(_box != null)
         {
             _box.TakeDamage(damage);
         }
