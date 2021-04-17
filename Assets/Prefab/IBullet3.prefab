@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5190500146522594099}
   - component: {fileID: 324934524977853269}
   - component: {fileID: 4517593583715995113}
-  m_Layer: 16
+  m_Layer: 9
   m_Name: IBullet3
   m_TagString: PlayerBullet
   m_Icon: {fileID: 0}
@@ -167,7 +167,6 @@ MonoBehaviour:
   damage: 4
   rb: {fileID: 5190500146522594093}
   TimeToLive: 1.2
-  _deathTime: 0
 --- !u!108 &4517593583715995113
 Light:
   m_ObjectHideFlags: 0

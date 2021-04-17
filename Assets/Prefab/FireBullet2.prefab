@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -5614694076770424059}
   - component: {fileID: 8924181881691501944}
   - component: {fileID: -4188510917022498579}
-  m_Layer: 16
+  m_Layer: 9
   m_Name: FireBullet2
   m_TagString: PlayerBullet
   m_Icon: {fileID: 0}
@@ -148,7 +148,6 @@ MonoBehaviour:
   damage: 16
   rb: {fileID: 8924181881691503237}
   TimeToLive: 0.8
-  _deathTime: 0
 --- !u!95 &8924181881691501944
 Animator:
   serializedVersion: 3
