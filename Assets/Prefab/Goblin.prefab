@@ -47,8 +47,8 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 1
-  m_Mass: 1.1618354
+  m_UseAutoMass: 0
+  m_Mass: 40
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 4
@@ -87,7 +87,7 @@ MonoBehaviour:
   chasingSpeed: 2.7
   timeToWait: 3
   minDistancetoPlayer: 1.5
-  minDinstanceToAttack: 4
+  minDinstanceToAttack: 2
   Model: {fileID: 6162634266600488012}
 --- !u!114 &5425099038566195854
 MonoBehaviour:
@@ -472,8 +472,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.014971007, y: -0.28622782}
-  m_Size: {x: 0.55005795, y: 0.9875438}
+  m_Offset: {x: 0.014971007, y: -0.24614556}
+  m_Size: {x: 0.55005795, y: 1.0692196}
   m_Direction: 0
 --- !u!114 &6162634266600488010
 MonoBehaviour:

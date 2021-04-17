@@ -87,7 +87,7 @@ MonoBehaviour:
   chasingSpeed: 4.5
   timeToWait: 3
   minDistancetoPlayer: 1
-  minDinstanceToAttack: 4
+  minDinstanceToAttack: 3
   Model: {fileID: 6842653034772528646}
 --- !u!114 &5154911598047797391
 MonoBehaviour:
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 420f2d3d3ef846048ac1dda1a6574813, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  circleRadius: 0.04
+  circleRadius: 0.5
   maxDistance: 6
   layerMask:
     serializedVersion: 2
@@ -689,7 +689,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}

@@ -159,6 +159,7 @@ public class EnemyRange : MonoBehaviour
 
         if(chaseTime < 0f)
         {
+            walk = true;
             isChasingPlayer = false;
             chaseTime = timeToChase;
             walkSpeed = patrolSpeed;

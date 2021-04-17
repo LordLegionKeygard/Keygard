@@ -136,7 +136,7 @@ public class Abilities : MonoBehaviour
                 abilityImage2.fillAmount = 0;
                 isCooldown2 = false;
             }
-        }        
+        }
     }
 
     void Ability3()

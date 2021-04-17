@@ -72,11 +72,6 @@ public class Enemy : MonoBehaviour
             isWait = true;           
         }
 
-        if(isChasingPlayer && Mathf.Abs(DistanceToPlayer()) > minDinstanceToAttack)
-        {
-            animator.SetTrigger("Walk");
-        }
-
         if(isChasingPlayer && Mathf.Abs(DistanceToPlayer()) < minDinstanceToAttack)
         {
             animator.SetTrigger("Attack");
