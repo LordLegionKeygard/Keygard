@@ -7889,6 +7889,7 @@ GameObject:
   - component: {fileID: 790061595}
   - component: {fileID: 790061594}
   - component: {fileID: 790061593}
+  - component: {fileID: 790061596}
   m_Layer: 5
   m_Name: BuyCoinsBtn
   m_TagString: Untagged
@@ -8009,6 +8010,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 790061591}
   m_CullTransparentMesh: 0
+--- !u!95 &790061596
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 790061591}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a9c55f5bdc790b0468f9c0853d747a90, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &800551473
 GameObject:
   m_ObjectHideFlags: 0
@@ -17368,6 +17388,7 @@ GameObject:
   - component: {fileID: 1758337331}
   - component: {fileID: 1758337330}
   - component: {fileID: 1758337329}
+  - component: {fileID: 1758337332}
   m_Layer: 5
   m_Name: BackBtn
   m_TagString: Untagged
@@ -17488,6 +17509,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1758337327}
   m_CullTransparentMesh: 0
+--- !u!95 &1758337332
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1758337327}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a9c55f5bdc790b0468f9c0853d747a90, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1760466698
 GameObject:
   m_ObjectHideFlags: 0
@@ -17650,6 +17690,7 @@ GameObject:
   - component: {fileID: 1777671132}
   - component: {fileID: 1777671131}
   - component: {fileID: 1777671130}
+  - component: {fileID: 1777671133}
   m_Layer: 5
   m_Name: RemoveBtn
   m_TagString: Untagged
@@ -17770,6 +17811,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1777671128}
   m_CullTransparentMesh: 0
+--- !u!95 &1777671133
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1777671128}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a9c55f5bdc790b0468f9c0853d747a90, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1787614928
 GameObject:
   m_ObjectHideFlags: 0

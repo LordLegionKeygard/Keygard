@@ -8,7 +8,10 @@ public class KeyBoardController : MonoBehaviour
     Animator animator;
     public float speed;
     public float jumpForce;
+    public float waterJumpForce;
     private float moveInput;
+    private float _normalGravityScale = 2.5f;
+    private bool water = false;
 
     public GameObject _platform;
 
@@ -62,6 +65,10 @@ public class KeyBoardController : MonoBehaviour
 
     private void Update()
     {
+        if(water == false)
+        {
+            rb.gravityScale = 2.5f;
+        }
         if (isGrounded == true)
         {
             extraJumps = extraJumpsValue;
@@ -79,9 +86,9 @@ public class KeyBoardController : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && extraJumps > 0 || 
-           (Input.GetKeyDown(KeyCode.W)) && extraJumps > 0 || 
-           (Input.GetKeyDown(KeyCode.UpArrow)) && extraJumps > 0)
+        if (Input.GetKeyDown(KeyCode.Space) && extraJumps > 0 && water == false || 
+           (Input.GetKeyDown(KeyCode.W)) && extraJumps > 0 && water == false  || 
+           (Input.GetKeyDown(KeyCode.UpArrow)) && extraJumps > 0 && water == false )
         {              
             if (animator) 
             {
@@ -91,13 +98,29 @@ public class KeyBoardController : MonoBehaviour
             extraJumps--;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && extraJumps == 0 && isGrounded ==true || 
-           (Input.GetKeyDown(KeyCode.W)) && extraJumps == 0 && isGrounded ==true || 
-           (Input.GetKeyDown(KeyCode.UpArrow)) && extraJumps == 0 && isGrounded ==true)
+        if (Input.GetKeyDown(KeyCode.Space) && extraJumps == 0 && isGrounded ==true && water == false || 
+           (Input.GetKeyDown(KeyCode.W)) && extraJumps == 0 && isGrounded ==true && water == false || 
+           (Input.GetKeyDown(KeyCode.UpArrow)) && extraJumps == 0 && isGrounded ==true && water == false )
         {
             rb.velocity = Vector2.up * jumpForce;
             jumpsound.Play();
-        }                  
+        }  
+
+        if (Input.GetKeyDown(KeyCode.Space) && extraJumps > 0 && water == true || 
+           (Input.GetKeyDown(KeyCode.W)) && extraJumps > 0 && water == true || 
+           (Input.GetKeyDown(KeyCode.UpArrow)) && extraJumps > 0 && water == true )
+        {              
+            animator.SetTrigger("Jump");
+            rb.gravityScale = -1f;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space) && extraJumps == 0 && isGrounded ==true && water == true || 
+           (Input.GetKeyDown(KeyCode.W)) && extraJumps == 0 && isGrounded ==true && water == true || 
+           (Input.GetKeyDown(KeyCode.UpArrow)) && extraJumps == 0 && isGrounded ==true && water == true )
+        {
+            rb.gravityScale = -1f;
+            jumpsound.Play();
+        }                 
     }
 
     void Flip()
@@ -118,6 +141,7 @@ public class KeyBoardController : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
+
         if (collision.gameObject.CompareTag("QuickSand"))
         {
             speed = 4f;
@@ -135,5 +159,29 @@ public class KeyBoardController : MonoBehaviour
             speed = 4f;
             }
         }
+
+        if (collision.gameObject.CompareTag("Swamp"))
+        { 
+            water = true;  
+            rb.gravityScale = -0.1f;
+        }
+        if (collision.gameObject.CompareTag("Bottom"))
+        {  
+            rb.gravityScale = 0.5f;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Swamp"))
+        {
+            water = false;
+            rb.gravityScale = _normalGravityScale;
+        } 
+
+        if (collision.gameObject.CompareTag("Bottom"))
+        { 
+            rb.gravityScale = 1f;
+        }     
     }
 }
