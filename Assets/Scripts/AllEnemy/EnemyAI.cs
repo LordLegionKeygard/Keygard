@@ -8,6 +8,7 @@ public class EnemyAI : MonoBehaviour
     [Header("Pathfinding")]
     private Transform target;
     public float activateDistance = 50f;
+    public float attackDistance = 10f;
     public float pathUpdateSeconds = 0.5f;
 
     [Header("Physics")]
@@ -22,11 +23,15 @@ public class EnemyAI : MonoBehaviour
     public bool jumpEnabled = true;
     public bool directionLookEnabled = true;
 
+
+    [SerializeField] private Animator animator;
     private Path path;
     private int currentWaypoint = 0;
     RaycastHit2D isGrounded;
     Seeker seeker;
     Rigidbody2D rb;
+    private Transform playerTransform;
+    bool walk = true;
 
     [SerializeField] private Transform model;
 
@@ -39,18 +44,33 @@ public class EnemyAI : MonoBehaviour
         InvokeRepeating("UpdatePath", 0f, pathUpdateSeconds);
     }
 
+    private void Update() 
+    {
+        if(Vector2.Distance(model.position, target.transform.position) < attackDistance)
+        {
+            animator.SetTrigger("Attack");
+        }
+      
+    }
+
     private void FixedUpdate()
     {
         if (TargetInDistance() && followEnabled)
         {
             PathFollow();
         }
+
+        if(animator)
+        {
+            animator.SetBool("Walk", walk);
+        } 
     }
 
     private void UpdatePath()
     {
         if (followEnabled && TargetInDistance() && seeker.IsDone())
         {
+            walk = true;
             seeker.StartPath(rb.position, target.position, OnPathComplete);
         }
     }
@@ -121,5 +141,10 @@ public class EnemyAI : MonoBehaviour
             path = p;
             currentWaypoint = 0;
         }
+    }
+
+    private float DistanceToPlayer()
+    {
+        return playerTransform.position.x - transform.position.x;
     }
 }

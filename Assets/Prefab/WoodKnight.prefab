@@ -82,7 +82,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 5852604800834483057}
-  walkDistance: 4
+  walkDistance: 10
   patrolSpeed: 3.5
   chasingSpeed: 4.5
   timeToWait: 3
@@ -105,7 +105,7 @@ MonoBehaviour:
   maxDistance: 12
   layerMask:
     serializedVersion: 2
-    m_Bits: 2048
+    m_Bits: 2099200
 --- !u!1 &5852604799475560649
 GameObject:
   m_ObjectHideFlags: 0

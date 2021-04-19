@@ -147,7 +147,7 @@ MonoBehaviour:
   speed: 0
   damage: 16
   rb: {fileID: 8924181881691503237}
-  TimeToLive: 0.8
+  TimeToLive: 1.5
 --- !u!95 &8924181881691501944
 Animator:
   serializedVersion: 3

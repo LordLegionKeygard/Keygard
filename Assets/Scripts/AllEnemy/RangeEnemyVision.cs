@@ -41,11 +41,15 @@ public class RangeEnemyVision : MonoBehaviour
         {
             currentHitObject = hit.transform.gameObject;
             currentHitDistance = hit.distance;
+
             if(currentHitObject.CompareTag("Player"))
             {
                 enemy.StartChasingPlayer();                
             }
-        }else {
+        }
+
+        else 
+        {
             currentHitObject = null;
             currentHitDistance = maxDistance;
         }

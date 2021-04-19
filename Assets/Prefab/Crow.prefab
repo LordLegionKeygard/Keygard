@@ -115,6 +115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activateDistance: 40
+  attackDistance: 10
   pathUpdateSeconds: 0.5
   speed: 200
   nextWaypointDistance: 3
@@ -124,6 +125,7 @@ MonoBehaviour:
   followEnabled: 1
   jumpEnabled: 0
   directionLookEnabled: 1
+  animator: {fileID: 3837396340933243209}
   model: {fileID: 2795394516454987503}
 --- !u!114 &1413139088456412462
 MonoBehaviour:
@@ -670,7 +672,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 12
   m_Sprite: {fileID: 21300000, guid: 08be6aaa09e767543bf3790ea6fb3228, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

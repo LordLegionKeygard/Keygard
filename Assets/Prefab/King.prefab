@@ -2882,6 +2882,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   jumpForce: 11
+  waterJumpForce: 0
   _platform: {fileID: 0}
   jumpsound: {fileID: 0}
   facingRight: 1
@@ -3004,7 +3005,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7371839240940070765}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f844558a19b57f041bc2f86a734b0075, type: 3}
   m_Name: 

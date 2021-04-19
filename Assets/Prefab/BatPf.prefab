@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 13
   m_Sprite: {fileID: 21300000, guid: 58e49ce6b5fd2bf46b5c79667d5f4ff3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -462,6 +462,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activateDistance: 40
+  attackDistance: 10
   pathUpdateSeconds: 0.5
   speed: 250
   nextWaypointDistance: 3
@@ -471,6 +472,7 @@ MonoBehaviour:
   followEnabled: 1
   jumpEnabled: 0
   directionLookEnabled: 1
+  animator: {fileID: 681400597901895132}
   model: {fileID: 1945208827083489914}
 --- !u!114 &3434420348740711694
 MonoBehaviour:

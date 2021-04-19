@@ -73,7 +73,7 @@ MonoBehaviour:
   maxDistance: 15
   layerMask:
     serializedVersion: 2
-    m_Bits: 2048
+    m_Bits: 2099200
 --- !u!114 &5516796697893983371
 MonoBehaviour:
   m_ObjectHideFlags: 0

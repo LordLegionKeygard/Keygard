@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class FlyPfHealth : MonoBehaviour
 { 
     private EnemyLoot _enemyLoot;
+    private Animator animator;
 
     private UnityEngine.Object explosion;
     public GameObject ENEMY;
@@ -21,6 +22,7 @@ public class FlyPfHealth : MonoBehaviour
     {
         _enemyLoot = GetComponent<EnemyLoot>();
         _health = totalHealth;
+        animator = GetComponent<Animator>();
         explosion = Resources.Load("Explosion1");
         healthSlider.value = _health / totalHealth;
     }
@@ -28,6 +30,7 @@ public class FlyPfHealth : MonoBehaviour
     {       
         _health -= damage;
         InitHealth(); 
+        animator.SetTrigger("takeDamage");
         if (_health <= 0)
         {
             Die();

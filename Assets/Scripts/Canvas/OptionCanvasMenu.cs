@@ -8,6 +8,7 @@ public class OptionCanvasMenu : MonoBehaviour
     public GameObject optionsMenuUI; 
     public GameObject _allButtons;
     public GameObject _gameLogo;
+    public GameObject _creditPanel;
 
     public void BackHandler()
     {
@@ -19,6 +20,18 @@ public class OptionCanvasMenu : MonoBehaviour
     public void  ResetGameHandler()
     {
         AreYouSurePanel.SetActive(true);
+    }
+
+    public void CreditHandler()
+    {
+        optionsMenuUI.SetActive(false);
+        _creditPanel.SetActive(true);
+    }
+
+    public void BackCreditPanel()
+    {
+        optionsMenuUI.SetActive(true);
+        _creditPanel.SetActive(false);
     }
 }
 
