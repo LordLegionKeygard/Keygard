@@ -8,7 +8,7 @@ public class KeyBoardController : MonoBehaviour
     Animator animator;
     public float speed;
     public float jumpForce;
-    public float waterJumpForce;
+    public float mushroomJumpForce;
     private float moveInput;
     private float _normalGravityScale = 2.5f;
     private bool water = false;
@@ -136,6 +136,16 @@ public class KeyBoardController : MonoBehaviour
         if (collision.gameObject.CompareTag("QuickSand"))
         {
             speed = 1f;
+        }
+
+        if (collision.gameObject.CompareTag("Jump"))
+        {   
+            StartCoroutine(ExecuteAfterTime(0.2f));
+            IEnumerator ExecuteAfterTime(float timeInSec)
+            {
+            yield return new WaitForSeconds(timeInSec);
+            rb.velocity = Vector2.up * mushroomJumpForce;
+            } 
         }
     }
 

@@ -101,6 +101,13 @@ public class Bullet : MonoBehaviour
             isDamage = false;
         }
 
+        SnailHealth snailHealth = hitInfo.GetComponent<SnailHealth>();
+        if (snailHealth != null  && isDamage)
+        {
+            snailHealth.TakeDamage(damage);
+            isDamage = false;
+        }
+
         Chest _chest = hitInfo.GetComponent<Chest>();
         if (_chest != null)
         {

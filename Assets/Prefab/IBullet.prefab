@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 6
-  m_Sprite: {fileID: 21300000, guid: f5c6066d02768564fa5683134a5e3d55, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 42ab066f0fd49a8408ec49034af01adb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -148,7 +148,6 @@ MonoBehaviour:
   damage: 2
   rb: {fileID: 9104965899351823353}
   TimeToLive: 1.5
-  _deathTime: 0
 --- !u!95 &9104965899351823354
 Animator:
   serializedVersion: 3

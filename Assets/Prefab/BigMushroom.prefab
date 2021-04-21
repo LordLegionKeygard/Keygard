@@ -692,7 +692,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 538155a3fc1e02842a39a71553ecafaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  circleRadius: 0.76
+  circleRadius: 0.5
   maxDistance: 10
   layerMask:
     serializedVersion: 2

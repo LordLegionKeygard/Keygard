@@ -168,6 +168,11 @@
      <Compile Include="Assets\Scripts\Shalquoir\GruzMother_AttackUpNDown.cs" />
      <Compile Include="Assets\Scripts\Shalquoir\GruzMother_Idel.cs" />
      <Compile Include="Assets\Scripts\Shalquoir\PlayerMove.cs" />
+     <Compile Include="Assets\SnailBullet.cs" />
+     <Compile Include="Assets\SnailEnemy.cs" />
+     <Compile Include="Assets\SnailHealth.cs" />
+     <Compile Include="Assets\SnailSpawner.cs" />
+     <Compile Include="Assets\SnailVision.cs" />
      <Compile Include="Assets\UrlLink.cs" />
      <Compile Include="Assets\yaSingleton\yaSingleton\Attributes\SingletonAttribute.cs" />
      <Compile Include="Assets\yaSingleton\yaSingleton\BaseSingleton.cs" />

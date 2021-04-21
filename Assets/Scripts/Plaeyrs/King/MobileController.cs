@@ -8,6 +8,7 @@ public class MobileController : MonoBehaviour
     Animator animator;
     public float speed;
     public float jumpForce;
+    public float mushroomJumpForce;
     public float normalspeed;
     private float _normalGravityScale = 2.5f;
     private bool water = false;
@@ -154,5 +155,18 @@ public class MobileController : MonoBehaviour
         { 
             rb.gravityScale = 1f;
         }     
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Jump"))
+        { 
+            StartCoroutine(ExecuteAfterTime(0.2f));
+            IEnumerator ExecuteAfterTime(float timeInSec)
+            {
+            yield return new WaitForSeconds(timeInSec);
+            rb.velocity = Vector2.up * mushroomJumpForce;
+            } 
+        } 
     }
 }
