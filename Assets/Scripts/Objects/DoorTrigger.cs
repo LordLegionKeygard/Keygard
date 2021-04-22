@@ -6,7 +6,6 @@ public class DoorTrigger : MonoBehaviour
 {
     public Door door;
 	KeyHold keyHold;
-	public GameObject keys;
 
 	private void Awake()
 	{
@@ -21,7 +20,6 @@ public class DoorTrigger : MonoBehaviour
 			if (keyHold.key == 1) 
 			{ 
 				door.Open ();
-				Destroy (keys);
 				keyHold.key--;
 			}
 		}
@@ -34,14 +32,6 @@ public class DoorTrigger : MonoBehaviour
 		if(keyHold.key < 0)
 		{
 			keyHold.key = 0;
-		}
-	}
-
-	public void OnTriggerExit2D(Collider2D col)
-	{
-		if (col.tag == "Player") 
-		{
-			door.Close ();
 		}
 	}
 }

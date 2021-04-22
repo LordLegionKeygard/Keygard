@@ -34993,6 +34993,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5516796698942396625, guid: d70ec2204a8843d49b9385e985a795b7,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dd2b72bfa28fd32449a05a4785f2cff3, type: 2}
     - target: {fileID: 3173984188157159738, guid: d70ec2204a8843d49b9385e985a795b7,
         type: 3}
       propertyPath: m_GravityScale
@@ -35003,11 +35008,6 @@ PrefabInstance:
       propertyPath: walkDistance
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 5516796698942396625, guid: d70ec2204a8843d49b9385e985a795b7,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: dd2b72bfa28fd32449a05a4785f2cff3, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d70ec2204a8843d49b9385e985a795b7, type: 3}
 --- !u!4 &1862933888 stripped
@@ -84994,11 +84994,6 @@ PrefabInstance:
       propertyPath: jumpsound
       value: 
       objectReference: {fileID: 1940404813}
-    - target: {fileID: 4216139646275986078, guid: e9a9015f1bc835440a736ab7872e2135,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4216139646275986079, guid: e9a9015f1bc835440a736ab7872e2135,
         type: 3}
       propertyPath: shoot
@@ -85089,11 +85084,6 @@ PrefabInstance:
       propertyPath: jumpsound
       value: 
       objectReference: {fileID: 1940404813}
-    - target: {fileID: 4216139646275986076, guid: e9a9015f1bc835440a736ab7872e2135,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4216139646275986064, guid: e9a9015f1bc835440a736ab7872e2135,
         type: 3}
       propertyPath: loadingScreen
