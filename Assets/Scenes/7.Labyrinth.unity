@@ -4777,6 +4777,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8283729418130487493, guid: 76aad8fe05338364a93cd9f8316d490b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3719364490353323580, guid: 76aad8fe05338364a93cd9f8316d490b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4961,11 +4966,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnButtonUp
-      objectReference: {fileID: 0}
-    - target: {fileID: 8283729418130487493, guid: 76aad8fe05338364a93cd9f8316d490b,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7843275204376656477, guid: 76aad8fe05338364a93cd9f8316d490b,
         type: 3}
@@ -6247,7 +6247,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 1267090970}
-  keys: {fileID: 0}
 --- !u!61 &1071250100
 BoxCollider2D:
   m_ObjectHideFlags: 0

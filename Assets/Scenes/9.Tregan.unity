@@ -12374,7 +12374,7 @@ CompositeCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 512053710}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -13751,7 +13751,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 471465176}
-  keys: {fileID: 0}
 --- !u!61 &578575212
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19653,18 +19652,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0024719238, y: 0.28714508}
+  m_Offset: {x: -0.00051116943, y: 0.28714508}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 3.984375, y: 1}
     newSize: {x: 5.12, y: 1.28}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.0074463, y: 0.42570984}
+  m_Size: {x: 4.0077667, y: 0.42570984}
   m_EdgeRadius: 0
 --- !u!212 &870256585
 SpriteRenderer:
@@ -19704,7 +19703,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a6ca2c298fce36b4b99f2230cf5f73e9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 53da95f85e97f1548bcf65537314c5e8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -96563,7 +96562,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1438564380}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -60.61, y: 3.97, z: 0}
+  m_LocalPosition: {x: -63.39, y: 3.97, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1965539084}
@@ -99804,11 +99803,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3719364490722983231, guid: 76aad8fe05338364a93cd9f8316d490b,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3719364490353323580, guid: 76aad8fe05338364a93cd9f8316d490b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -99992,6 +99986,11 @@ PrefabInstance:
     - target: {fileID: 3719364490103628649, guid: 76aad8fe05338364a93cd9f8316d490b,
         type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3719364490722983231, guid: 76aad8fe05338364a93cd9f8316d490b,
+        type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -100254,7 +100253,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1965539083}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.88, y: -10.710001, z: -0.00039052963}
+  m_LocalPosition: {x: 1.84, y: -10.710001, z: -0.00039052963}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 870256582}
@@ -133752,6 +133751,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4913933756589191533, guid: de69c631e7c1f5347aae373657801842,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4913933756589191533, guid: de69c631e7c1f5347aae373657801842,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7962063838202709361, guid: de69c631e7c1f5347aae373657801842,
         type: 3}
       propertyPath: m_IsActive
@@ -133763,16 +133772,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7962063837990629187, guid: de69c631e7c1f5347aae373657801842,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4913933756589191533, guid: de69c631e7c1f5347aae373657801842,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4913933756589191533, guid: de69c631e7c1f5347aae373657801842,
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

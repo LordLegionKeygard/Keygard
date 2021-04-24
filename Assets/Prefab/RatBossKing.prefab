@@ -170,6 +170,7 @@ MonoBehaviour:
   MainMusic: {fileID: 0}
   BossMusic: {fileID: 0}
   Win: {fileID: 0}
+  _goldcoin: {fileID: 0}
   health: 10
 --- !u!95 &1327819037242521357
 Animator:

@@ -18,7 +18,7 @@ public class ArcherHealth : MonoBehaviour
     public GameObject _hiddenSlider;
     public float _health = 2f;
 
-    private float timeToDamage = 0.2f;
+    private float timeToDamage = 0.1f;
     private float damageTime;
     private bool isDamage = true;
 
