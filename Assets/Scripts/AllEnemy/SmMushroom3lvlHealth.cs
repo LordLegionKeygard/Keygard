@@ -19,13 +19,8 @@ public class SmMushroom3lvlHealth : MonoBehaviour
     public GameObject _hiddenSlider;
     public float _health = 2f;
 
-    private float timeToDamage = 0.1f;
-    private float damageTime;
-    private bool isDamage = true;
-
     private void Start()
     {
-        damageTime = timeToDamage;
         _enemyLoot = GetComponent<EnemyLoot>();
         _health = totalHealth;
         animator = GetComponent<Animator>();
@@ -34,31 +29,14 @@ public class SmMushroom3lvlHealth : MonoBehaviour
         healthSlider.value = _health / totalHealth;
     }
 
-    private void Update()
-    {
-        if(!isDamage)
-        {
-            damageTime -= Time.deltaTime;
-            if(damageTime <= 0f)
-            {
-                isDamage = true;
-                damageTime = timeToDamage;
-            }
-        }
-    }
-
     public void TakeDamage(int damage)
-    {
-        if(isDamage)
-        {      
-            _health -= damage;
-            enemy.StartChasingPlayer();
-            InitHealth();
-            isDamage = false; 
-            if (_health <= 0)
-            {
-                Die();
-            }
+    {    
+        _health -= damage;
+        enemy.StartChasingPlayer();
+        InitHealth();
+        if (_health <= 0)
+        {
+            Die();
         }
     }
 

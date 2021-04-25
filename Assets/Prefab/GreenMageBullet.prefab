@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3151219465821993048}
   - component: {fileID: 3595641274910407336}
   - component: {fileID: 3151219467603446067}
-  - component: {fileID: 2033906621461474032}
+  - component: {fileID: -6691814839972375689}
   - component: {fileID: 5132913350938725923}
   m_Layer: 19
   m_Name: GreenMageBullet
@@ -151,7 +151,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.69935036, y: 0.7865124}
   m_EdgeRadius: 0
---- !u!114 &2033906621461474032
+--- !u!114 &-6691814839972375689
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -160,11 +160,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 4092081908430350730}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9715bfe7f83c0ec4287db8ffbf504506, type: 3}
+  m_Script: {fileID: 11500000, guid: 511b57ed1ef3ef44fad22390c9f8f017, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8
-  poisonDamage: 1
+  damage: 1
   rb: {fileID: 3595641274910407336}
   TimeToLive: 2
 --- !u!108 &5132913350938725923

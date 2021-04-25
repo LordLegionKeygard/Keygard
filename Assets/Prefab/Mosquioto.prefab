@@ -732,10 +732,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ENEMY: {fileID: 677463612909861549}
-  totalHealth: 4
+  totalHealth: 8
   healthSlider: {fileID: 677463614798989760}
   _hiddenSlider: {fileID: 677463613085517699}
-  _health: 4
+  _health: 8
 --- !u!114 &4337410171581530469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -751,13 +751,13 @@ MonoBehaviour:
   LootTable:
   - name: BronzeCoin
     item: {fileID: 123732073570350251, guid: ad4011e827a4cb64f93c269fe3ce4b37, type: 3}
-    dropRarity: 32
+    dropRarity: 56
   - name: SilverCoin
     item: {fileID: 5889504676247815488, guid: 1dfb782f24d58dc4591d3b3f5301062e, type: 3}
-    dropRarity: 16
+    dropRarity: 28
   - name: GoldCoin
     item: {fileID: 1480518432628846482, guid: 0c12ac00d6f8785489481982dc606a7f, type: 3}
-    dropRarity: 8
+    dropRarity: 14
   - name: Health
     item: {fileID: 848798104406163745, guid: 0bfa53394bb2ccd439c9e40fc2fd50f8, type: 3}
     dropRarity: 5

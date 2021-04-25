@@ -74,7 +74,7 @@ public class KeyBoardController : MonoBehaviour
             extraJumps = extraJumpsValue;
         }
 
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.S) && water == false)
         {
             _platform.SetActive(false);
 
@@ -84,6 +84,11 @@ public class KeyBoardController : MonoBehaviour
             yield return new WaitForSeconds(timeInSec);
             _platform.SetActive(true);
             }
+        }
+
+        if (Input.GetKeyDown(KeyCode.S) && water == true)
+        {
+            rb.gravityScale = 1f;            
         }
 
         if (Input.GetKeyDown(KeyCode.Space) && extraJumps > 0 && water == false || 

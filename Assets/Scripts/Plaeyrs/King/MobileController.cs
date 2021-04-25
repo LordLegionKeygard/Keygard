@@ -120,13 +120,21 @@ public class MobileController : MonoBehaviour
 
     public void OnButtonDown()
     {
-        _platform.SetActive(false);
-
-        StartCoroutine(ExecuteAfterTime(0.5f));
-        IEnumerator ExecuteAfterTime(float timeInSec)
+        if(water == false)
         {
-        yield return new WaitForSeconds(timeInSec);
-        _platform.SetActive(true);
+            _platform.SetActive(false);
+
+            StartCoroutine(ExecuteAfterTime(0.5f));
+            IEnumerator ExecuteAfterTime(float timeInSec)
+            {
+            yield return new WaitForSeconds(timeInSec);
+            _platform.SetActive(true);
+            }
+        }
+
+        if(water == true)
+        {
+            rb.gravityScale = 1f;
         }
     }
 

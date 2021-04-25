@@ -123,7 +123,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -312,9 +312,9 @@ GameObject:
   - component: {fileID: 5664222368569894447}
   - component: {fileID: 5664222368569894442}
   - component: {fileID: 5664222368569894443}
-  - component: {fileID: 5664222368569894440}
   - component: {fileID: 5664222368569894441}
   - component: {fileID: 5664222368569894446}
+  - component: {fileID: 67571866}
   m_Layer: 12
   m_Name: SlimeModel
   m_TagString: Untagged
@@ -404,22 +404,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!70 &5664222368569894440
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5664222368569894444}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.02264858, y: -0.105656184}
-  m_Size: {x: 0.57142794, y: 0.3397075}
-  m_Direction: 1
 --- !u!114 &5664222368569894441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -434,10 +418,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 5788424972976011475}
   ENEMY: {fileID: 5788424972976011472}
-  totalHealth: 10
+  totalHealth: 8
   healthSlider: {fileID: 5664222367792970869}
   _hiddenSlider: {fileID: 5664222368431204243}
-  _health: 10
+  _health: 8
 --- !u!114 &5664222368569894446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -453,18 +437,44 @@ MonoBehaviour:
   LootTable:
   - name: BronzeCoin
     item: {fileID: 123732073570350251, guid: ad4011e827a4cb64f93c269fe3ce4b37, type: 3}
-    dropRarity: 72
+    dropRarity: 56
   - name: SilverCoin
     item: {fileID: 5889504676247815488, guid: 1dfb782f24d58dc4591d3b3f5301062e, type: 3}
-    dropRarity: 36
+    dropRarity: 28
   - name: GoldCoin
     item: {fileID: 1480518432628846482, guid: 0c12ac00d6f8785489481982dc606a7f, type: 3}
-    dropRarity: 18
+    dropRarity: 14
   - name: Health
     item: {fileID: 848798104406163745, guid: 0bfa53394bb2ccd439c9e40fc2fd50f8, type: 3}
     dropRarity: 5
   dropChance: 33
   _vectorY: 0
+--- !u!61 &67571866
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5664222368569894444}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.020066679, y: -0.11047408}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.8, y: 0.63}
+    newSize: {x: 1, y: 0.8}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.50168175, y: 0.34923285}
+  m_EdgeRadius: 0
 --- !u!1 &5664222368868787544
 GameObject:
   m_ObjectHideFlags: 0
@@ -673,10 +683,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 40
+  m_Mass: 30
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 4
+  m_GravityScale: 20
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -695,9 +705,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 5664222368569894443}
-  walkDistance: 7
-  patrolSpeed: 1
-  chasingSpeed: 1.7
+  walkDistance: 4
+  patrolSpeed: 2
+  chasingSpeed: 3
   timeToWait: 3
   minDistancetoPlayer: 1
   minDinstanceToAttack: 2

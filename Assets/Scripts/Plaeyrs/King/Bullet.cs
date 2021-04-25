@@ -109,9 +109,10 @@ public class Bullet : MonoBehaviour
         }
 
         Chest _chest = hitInfo.GetComponent<Chest>();
-        if (_chest != null)
+        if (_chest != null && isDamage)
         {
             _chest.TakeDamage(damage);
+            isDamage = false;
         }
 
         BoxHealth _box = hitInfo.GetComponent<BoxHealth>();

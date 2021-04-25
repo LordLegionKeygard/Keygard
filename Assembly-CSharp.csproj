@@ -53,13 +53,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\AllCanvasFalse.cs" />
-     <Compile Include="Assets\DonateCanvas.cs" />
-     <Compile Include="Assets\LeverTraps.cs" />
-     <Compile Include="Assets\LeverTrapsGravity.cs" />
-     <Compile Include="Assets\MovingPlatform3pos.cs" />
-     <Compile Include="Assets\PoisonTrap.cs" />
-     <Compile Include="Assets\Rain.cs" />
      <Compile Include="Assets\Scripts\AllEnemy\Archer.cs" />
      <Compile Include="Assets\Scripts\AllEnemy\ArcherBullet.cs" />
      <Compile Include="Assets\Scripts\AllEnemy\ArcherHealth.cs" />
@@ -92,9 +85,11 @@
      <Compile Include="Assets\Scripts\Bromid\BromidVision.cs" />
      <Compile Include="Assets\Scripts\Bromid\Shoot.cs" />
      <Compile Include="Assets\Scripts\Canvas\Abilities.cs" />
+     <Compile Include="Assets\Scripts\Canvas\AllCanvasFalse.cs" />
      <Compile Include="Assets\Scripts\Canvas\AudioManager.cs" />
      <Compile Include="Assets\Scripts\Canvas\CoinMenu.cs" />
      <Compile Include="Assets\Scripts\Canvas\Cursor.cs" />
+     <Compile Include="Assets\Scripts\Canvas\DonateCanvas.cs" />
      <Compile Include="Assets\Scripts\Canvas\gameover.cs" />
      <Compile Include="Assets\Scripts\Canvas\GameOverScreen.cs" />
      <Compile Include="Assets\Scripts\Canvas\Levels.cs" />
@@ -115,11 +110,12 @@
      <Compile Include="Assets\Scripts\Canvas\ShopStaffButton.cs" />
      <Compile Include="Assets\Scripts\Canvas\SoundUpdater.cs" />
      <Compile Include="Assets\Scripts\Canvas\StaffType.cs" />
-     <Compile Include="Assets\Scripts\EnemyController.cs" />
+     <Compile Include="Assets\Scripts\Canvas\UrlLink.cs" />
      <Compile Include="Assets\Scripts\GrindMur\AttackPlayer.cs" />
      <Compile Include="Assets\Scripts\GrindMur\AttackShoot.cs" />
      <Compile Include="Assets\Scripts\GrindMur\GrindMur.cs" />
      <Compile Include="Assets\Scripts\GrindMur\Pick.cs" />
+     <Compile Include="Assets\Scripts\Objects\BigPlatform.cs" />
      <Compile Include="Assets\Scripts\Objects\Boat.cs" />
      <Compile Include="Assets\Scripts\Objects\BoxHealth.cs" />
      <Compile Include="Assets\Scripts\Objects\BreakTree.cs" />
@@ -131,14 +127,18 @@
      <Compile Include="Assets\Scripts\Objects\DoorTrigger.cs" />
      <Compile Include="Assets\Scripts\Objects\GhostWall.cs" />
      <Compile Include="Assets\Scripts\Objects\Lever.cs" />
+     <Compile Include="Assets\Scripts\Objects\MovingPlatform3pos.cs" />
      <Compile Include="Assets\Scripts\Objects\Portal.cs" />
      <Compile Include="Assets\Scripts\Objects\PortalTwo.cs" />
+     <Compile Include="Assets\Scripts\Objects\Rain.cs" />
      <Compile Include="Assets\Scripts\Objects\Scrolling.cs" />
      <Compile Include="Assets\Scripts\Objects\Trap\CrystalTrap.cs" />
      <Compile Include="Assets\Scripts\Objects\Trap\Die.cs" />
      <Compile Include="Assets\Scripts\Objects\Trap\FallingPlatform.cs" />
      <Compile Include="Assets\Scripts\Objects\Trap\FallingPlatformFast.cs" />
      <Compile Include="Assets\Scripts\Objects\Trap\FallingPlatformForever.cs" />
+     <Compile Include="Assets\Scripts\Objects\Trap\LeverTraps.cs" />
+     <Compile Include="Assets\Scripts\Objects\Trap\LeverTrapsGravity.cs" />
      <Compile Include="Assets\Scripts\Objects\Trap\MovingPlatform.cs" />
      <Compile Include="Assets\Scripts\Objects\Trap\QuickSand.cs" />
      <Compile Include="Assets\Scripts\Objects\Trap\UpDoTrap.cs" />
@@ -169,12 +169,11 @@
      <Compile Include="Assets\Scripts\Shalquoir\GruzMother_AttackUpNDown.cs" />
      <Compile Include="Assets\Scripts\Shalquoir\GruzMother_Idel.cs" />
      <Compile Include="Assets\Scripts\Shalquoir\PlayerMove.cs" />
-     <Compile Include="Assets\SnailBullet.cs" />
-     <Compile Include="Assets\SnailEnemy.cs" />
-     <Compile Include="Assets\SnailHealth.cs" />
-     <Compile Include="Assets\SnailSpawner.cs" />
-     <Compile Include="Assets\SnailVision.cs" />
-     <Compile Include="Assets\UrlLink.cs" />
+     <Compile Include="Assets\Scripts\Snail\SnailBullet.cs" />
+     <Compile Include="Assets\Scripts\Snail\SnailEnemy.cs" />
+     <Compile Include="Assets\Scripts\Snail\SnailHealth.cs" />
+     <Compile Include="Assets\Scripts\Snail\SnailSpawner.cs" />
+     <Compile Include="Assets\Scripts\Snail\SnailVision.cs" />
      <Compile Include="Assets\yaSingleton\yaSingleton\Attributes\SingletonAttribute.cs" />
      <Compile Include="Assets\yaSingleton\yaSingleton\BaseSingleton.cs" />
      <Compile Include="Assets\yaSingleton\yaSingleton\Helpers\SingletonInitializer.cs" />

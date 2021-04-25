@@ -444,7 +444,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -582,7 +582,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6837557172152795971
 Transform:
   m_ObjectHideFlags: 0
@@ -714,14 +714,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39a86aeb4bd82ca46bf5a62593400e6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalHealth: 15
+  totalHealth: 30
   healthSlider: {fileID: 3620722125986244652}
   _trap: {fileID: 0}
   _mplatform: {fileID: 0}
   MainMusic: {fileID: 0}
   BossMusic: {fileID: 0}
   Win: {fileID: 0}
-  health: 15
+  health: 30
   firePoint: {fileID: 621132387}
   firePoint1: {fileID: 514978870}
   firePoint2: {fileID: 1122393134}
@@ -769,6 +769,7 @@ MonoBehaviour:
     item: {fileID: 1480518432628846482, guid: 0c12ac00d6f8785489481982dc606a7f, type: 3}
     dropRarity: 0
   dropChance: 100
+  _vectorY: 0
 --- !u!1 &7715092545949581023
 GameObject:
   m_ObjectHideFlags: 0

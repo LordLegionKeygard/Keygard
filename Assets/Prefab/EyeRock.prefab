@@ -118,7 +118,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.03, y: -0.15}
   serializedVersion: 2
-  m_Radius: 0.54123116
+  m_Radius: 0.65
 --- !u!114 &1012902943418233380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132,10 +132,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ENEMY: {fileID: 4276673480478761332}
-  totalHealth: 3
+  totalHealth: 4
   healthSlider: {fileID: 4276673480069384660}
   _hiddenSlider: {fileID: 4276673479965245487}
-  _health: 3
+  _health: 4
 --- !u!114 &1012902943418233379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,13 +151,13 @@ MonoBehaviour:
   LootTable:
   - name: BronzeCoin
     item: {fileID: 123732073570350251, guid: ad4011e827a4cb64f93c269fe3ce4b37, type: 3}
-    dropRarity: 24
+    dropRarity: 32
   - name: SilverCoin
     item: {fileID: 5889504676247815488, guid: 1dfb782f24d58dc4591d3b3f5301062e, type: 3}
-    dropRarity: 12
+    dropRarity: 16
   - name: GoldCoin
     item: {fileID: 1480518432628846482, guid: 0c12ac00d6f8785489481982dc606a7f, type: 3}
-    dropRarity: 6
+    dropRarity: 8
   - name: Health
     item: {fileID: 848798104406163745, guid: 0bfa53394bb2ccd439c9e40fc2fd50f8, type: 3}
     dropRarity: 5
@@ -526,6 +526,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activateDistance: 15
+  attackDistance: 10
   pathUpdateSeconds: 0.5
   speed: 300
   nextWaypointDistance: 3
@@ -535,6 +536,7 @@ MonoBehaviour:
   followEnabled: 1
   jumpEnabled: 0
   directionLookEnabled: 1
+  animator: {fileID: 0}
   model: {fileID: 1012902943418233376}
 --- !u!114 &4276673480478761334
 MonoBehaviour:
