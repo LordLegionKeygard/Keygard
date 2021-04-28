@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
 public class PlayerHealth : MonoBehaviour
 {
     public GameObject gameOverCanvas;
@@ -25,7 +24,6 @@ public class PlayerHealth : MonoBehaviour
         poisonExplosion = Resources.Load("PlayerPoisonDamage");
         animator = GetComponent<Animator>();
     }
-
     private void Update()
     {
         if(health >=2)
@@ -63,7 +61,7 @@ public class PlayerHealth : MonoBehaviour
     {
         gameOverCanvas.SetActive(true);
         keyCanvas.SetActive(false);
-        Destroy(gameObject);      
+        Destroy(gameObject);
     }
 
     private void FixedUpdate()

@@ -247,6 +247,7 @@ GameObject:
   - component: {fileID: 3899823}
   - component: {fileID: 3899824}
   - component: {fileID: 3899822}
+  - component: {fileID: 3899826}
   - component: {fileID: 3899825}
   m_Layer: 5
   m_Name: Loc I Crystal Cave
@@ -387,6 +388,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3899826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3899820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7afab6c3ec232e4bb92073428f85b74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Button: {fileID: 3899822}
 --- !u!1 &9163948
 GameObject:
   m_ObjectHideFlags: 0
@@ -2244,10 +2258,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d3d4c882e28c7847b31312dff9da6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LevelPerLocation: 4
   _allButtons: {fileID: 1798875627}
   _locationSelectionPanel: {fileID: 1571753762}
   _locationSelectionImage: {fileID: 85248266}
   _gameLogo: {fileID: 712825517}
+  Location: {fileID: 11400000, guid: 733f6fbaf79ae894bbeab3b88188c755, type: 2}
   _crystalLevels: {fileID: 504128996}
   _labyrinthLevels: {fileID: 1416795324}
   _treganLevels: {fileID: 1241375}
@@ -6578,6 +6594,7 @@ MonoBehaviour:
   press: {fileID: 134230159}
   _slider: {fileID: 1229365516}
   _level: 7
+  Button: {fileID: 748303662}
 --- !u!114 &748303662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7250,9 +7267,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 653958716}
-        m_MethodName: BuyCoinsHandler
-        m_Mode: 1
+      - m_Target: {fileID: 1187932508}
+        m_MethodName: BuyConsumable
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -7578,7 +7595,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.052490994, y: 0.074}
   m_AnchorMax: {x: 0.29700002, y: 0.37051234}
-  m_AnchoredPosition: {x: -0.5, y: 0.39990234}
+  m_AnchoredPosition: {x: -0.5, y: 0.39990997}
   m_SizeDelta: {x: 105.714005, y: 72.025}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &852294501
@@ -8217,6 +8234,7 @@ MonoBehaviour:
   press: {fileID: 392303341}
   _slider: {fileID: 99089876}
   _level: 5
+  Button: {fileID: 909060525}
 --- !u!114 &909060525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8366,7 +8384,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.052490994, y: 0.074}
   m_AnchorMax: {x: 0.29700002, y: 0.37051234}
-  m_AnchoredPosition: {x: -0.5, y: 0.39990234}
+  m_AnchoredPosition: {x: -0.5, y: 0.39990997}
   m_SizeDelta: {x: 105.714005, y: 72.025}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &921754279
@@ -8644,6 +8662,7 @@ GameObject:
   - component: {fileID: 936234093}
   - component: {fileID: 936234094}
   - component: {fileID: 936234092}
+  - component: {fileID: 936234096}
   - component: {fileID: 936234095}
   m_Layer: 5
   m_Name: Loc II Labyrinth of Grindmur
@@ -8784,6 +8803,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &936234096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936234090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7afab6c3ec232e4bb92073428f85b74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Button: {fileID: 936234092}
 --- !u!1 &940895953
 GameObject:
   m_ObjectHideFlags: 0
@@ -10396,6 +10428,7 @@ MonoBehaviour:
   press: {fileID: 2105147475}
   _slider: {fileID: 706860128}
   _level: 1
+  Button: {fileID: 1127760320}
 --- !u!95 &1127760324
 Animator:
   serializedVersion: 3
@@ -10472,6 +10505,7 @@ MonoBehaviour:
   press: {fileID: 1315832525}
   _slider: {fileID: 1585277502}
   _level: 9
+  Button: {fileID: 1137621896}
 --- !u!114 &1137621896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10770,6 +10804,7 @@ GameObject:
   - component: {fileID: 1187932507}
   - component: {fileID: 1187932506}
   - component: {fileID: 1187932505}
+  - component: {fileID: 1187932508}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -10842,6 +10877,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1187932508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1187932504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae78515d6bf81914d9b4c94c0631ec18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NC_PRODUCTS:
+  - ad_cancel
+  C_PRODUCTS:
+  - money_add
 --- !u!1 &1196053254
 GameObject:
   m_ObjectHideFlags: 0
@@ -12041,6 +12092,7 @@ MonoBehaviour:
   press: {fileID: 1962581303}
   _slider: {fileID: 1652363180}
   _level: 3
+  Button: {fileID: 1356331121}
 --- !u!95 &1356331125
 Animator:
   serializedVersion: 3
@@ -12812,6 +12864,7 @@ MonoBehaviour:
   press: {fileID: 510318929}
   _slider: {fileID: 878924324}
   _level: 8
+  Button: {fileID: 1445718528}
 --- !u!114 &1445718528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14470,6 +14523,7 @@ MonoBehaviour:
   press: {fileID: 2074447017}
   _slider: {fileID: 1757896314}
   _level: 2
+  Button: {fileID: 1567171433}
 --- !u!95 &1567171437
 Animator:
   serializedVersion: 3
@@ -14546,6 +14600,7 @@ MonoBehaviour:
   press: {fileID: 870705512}
   _slider: {fileID: 501323015}
   _level: 12
+  Button: {fileID: 1570828607}
 --- !u!114 &1570828607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15849,6 +15904,7 @@ MonoBehaviour:
   press: {fileID: 493519423}
   _slider: {fileID: 1484979799}
   _level: 11
+  Button: {fileID: 1743719768}
 --- !u!114 &1743719768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16360,9 +16416,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 653958716}
-        m_MethodName: RemoveAd
-        m_Mode: 1
+      - m_Target: {fileID: 1187932508}
+        m_MethodName: BuyNonConsumable
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -16971,6 +17027,7 @@ MonoBehaviour:
   press: {fileID: 2013271058}
   _slider: {fileID: 1624925154}
   _level: 4
+  Button: {fileID: 1815300088}
 --- !u!95 &1815300092
 Animator:
   serializedVersion: 3
@@ -17590,6 +17647,7 @@ GameObject:
   - component: {fileID: 1900783922}
   - component: {fileID: 1900783923}
   - component: {fileID: 1900783921}
+  - component: {fileID: 1900783925}
   - component: {fileID: 1900783924}
   m_Layer: 5
   m_Name: Loc III Tregan Forest
@@ -17648,7 +17706,7 @@ MonoBehaviour:
     m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 0}
     m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 21300000, guid: ea7630b54aa849e47a2d98505a8f33c2, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -17730,6 +17788,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1900783925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1900783919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7afab6c3ec232e4bb92073428f85b74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Button: {fileID: 1900783921}
 --- !u!1 &1927685957
 GameObject:
   m_ObjectHideFlags: 0
@@ -18221,6 +18292,7 @@ MonoBehaviour:
   press: {fileID: 1115658079}
   _slider: {fileID: 1371526966}
   _level: 6
+  Button: {fileID: 1953628867}
 --- !u!114 &1953628867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19069,6 +19141,7 @@ MonoBehaviour:
   press: {fileID: 1760466698}
   _slider: {fileID: 450337589}
   _level: 10
+  Button: {fileID: 2003193619}
 --- !u!114 &2003193619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19445,7 +19518,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.052490994, y: 0.074}
   m_AnchorMax: {x: 0.29700002, y: 0.37051234}
-  m_AnchoredPosition: {x: -0.5, y: 0.39990234}
+  m_AnchoredPosition: {x: -0.5, y: 0.39990997}
   m_SizeDelta: {x: 105.714005, y: 72.025}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2021201708

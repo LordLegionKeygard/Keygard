@@ -4,17 +4,27 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class LevelSelection: MonoBehaviour
+public class LevelSelection : MonoBehaviour
 {
     [SerializeField] private GameObject loadingScreen;
     [SerializeField] private GameObject loading;
     [SerializeField] private GameObject press;
     [SerializeField] private Slider _slider;
     [SerializeField] private int _level;
+
+    public Button Button;
+    private void Reset()
+    {
+        Button = GetComponent<Button>();
+    }
+
     
     public void LevelHandler()
     {
         loadingScreen.SetActive(true);
+        
+        Location.Instance.CurrentLevelNumber = _level;
+        Location.Instance.Save();
 
         StartCoroutine(LoadAsync());
     }
@@ -28,7 +38,7 @@ public class LevelSelection: MonoBehaviour
         while (!asyncLoad.isDone)
         {
             _slider.value = asyncLoad.progress;
-            if(asyncLoad.progress >= .9f && !asyncLoad.allowSceneActivation)
+            if (asyncLoad.progress >= .9f && !asyncLoad.allowSceneActivation)
             {
                 loading.SetActive(false);
                 press.SetActive(true);
@@ -41,4 +51,6 @@ public class LevelSelection: MonoBehaviour
             yield return null;
         }
     }
+
+
 }

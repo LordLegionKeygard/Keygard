@@ -227,7 +227,7 @@ PlatformEffector2D:
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
-    m_Bits: 134224384
+    m_Bits: 134220288
   m_RotationalOffset: 0
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
@@ -3564,7 +3564,7 @@ PlatformEffector2D:
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
-    m_Bits: 134224384
+    m_Bits: 134220288
   m_RotationalOffset: 0
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
@@ -15527,7 +15527,7 @@ PlatformEffector2D:
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
-    m_Bits: 134224384
+    m_Bits: 134220288
   m_RotationalOffset: 0
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
@@ -31687,7 +31687,7 @@ PlatformEffector2D:
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
-    m_Bits: 134224384
+    m_Bits: 134220288
   m_RotationalOffset: 0
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
@@ -31882,7 +31882,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 1612316818}
-  keys: {fileID: 0}
 --- !u!82 &1050340140 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 7167722751892060039, guid: 986cf13dfd0d02e458d0962d6f9a06d4,
@@ -39395,7 +39394,7 @@ PlatformEffector2D:
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
-    m_Bits: 134224384
+    m_Bits: 134220288
   m_RotationalOffset: 0
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
@@ -40183,7 +40182,7 @@ PlatformEffector2D:
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
-    m_Bits: 134224384
+    m_Bits: 134220288
   m_RotationalOffset: 0
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
@@ -40833,12 +40832,12 @@ PrefabInstance:
     - target: {fileID: 1784410548168452142, guid: f82f58979faca5e46af471d15ff16264,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.8
+      value: 4.58
       objectReference: {fileID: 0}
     - target: {fileID: 1784410548168452142, guid: f82f58979faca5e46af471d15ff16264,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -14.81
+      value: -15.77
       objectReference: {fileID: 0}
     - target: {fileID: 1784410548168452142, guid: f82f58979faca5e46af471d15ff16264,
         type: 3}
@@ -40889,6 +40888,11 @@ PrefabInstance:
         type: 3}
       propertyPath: walkDistance
       value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784410548168452143, guid: f82f58979faca5e46af471d15ff16264,
+        type: 3}
+      propertyPath: circleRadius
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1399993509241418946, guid: f82f58979faca5e46af471d15ff16264,
         type: 3}
@@ -41842,7 +41846,7 @@ PlatformEffector2D:
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
-    m_Bits: 134224384
+    m_Bits: 134220288
   m_RotationalOffset: 0
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
@@ -42335,7 +42339,7 @@ GameObject:
   m_Layer: 0
   m_Name: Cave Entrance to new lvl
   m_TagString: Finish
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -42347,8 +42351,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1798755422}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 270, y: -19.5, z: 0}
-  m_LocalScale: {x: 0.275334, y: 0.25548235, z: 1}
+  m_LocalPosition: {x: 268, y: -21, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1904149924}
   m_RootOrder: 1
@@ -42415,7 +42419,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -7.2063284, y: -6.180963}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -42426,7 +42430,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.4658375, y: 6.8965254}
+  m_Size: {x: 0.5, y: 2}
   m_EdgeRadius: 0
 --- !u!1 &1799555579
 GameObject:
@@ -89964,7 +89968,7 @@ PlatformEffector2D:
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
-    m_Bits: 134224384
+    m_Bits: 134220288
   m_RotationalOffset: 0
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
@@ -97665,7 +97669,7 @@ PlatformEffector2D:
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
-    m_Bits: 134224384
+    m_Bits: 134220288
   m_RotationalOffset: 0
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
@@ -97995,12 +97999,12 @@ PrefabInstance:
     - target: {fileID: 1784410548168452142, guid: f82f58979faca5e46af471d15ff16264,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 299.09
+      value: 299.58
       objectReference: {fileID: 0}
     - target: {fileID: 1784410548168452142, guid: f82f58979faca5e46af471d15ff16264,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.41
+      value: -3.94
       objectReference: {fileID: 0}
     - target: {fileID: 1784410548168452142, guid: f82f58979faca5e46af471d15ff16264,
         type: 3}
@@ -98050,7 +98054,7 @@ PrefabInstance:
     - target: {fileID: 1784410548168452113, guid: f82f58979faca5e46af471d15ff16264,
         type: 3}
       propertyPath: walkDistance
-      value: 16
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f82f58979faca5e46af471d15ff16264, type: 3}
@@ -99382,7 +99386,7 @@ PrefabInstance:
     - target: {fileID: 1653274228754841352, guid: d70ec2204a8843d49b9385e985a795b7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 78.94
+      value: 76.04
       objectReference: {fileID: 0}
     - target: {fileID: 1653274228754841352, guid: d70ec2204a8843d49b9385e985a795b7,
         type: 3}
@@ -99439,6 +99443,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: dd2b72bfa28fd32449a05a4785f2cff3, type: 2}
+    - target: {fileID: 2624868422254389488, guid: d70ec2204a8843d49b9385e985a795b7,
+        type: 3}
+      propertyPath: walkDistance
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2743443493194326421, guid: d70ec2204a8843d49b9385e985a795b7,
         type: 3}
       propertyPath: maxDistance

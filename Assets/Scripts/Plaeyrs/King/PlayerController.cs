@@ -63,7 +63,6 @@ public class PlayerController : MonoBehaviour
     public AudioSource PickUpScroll;
     public AudioSource Coin;
          
-    private GameObject finish;
     private int score;
     [SerializeField] private Text textScore;
 
@@ -72,7 +71,7 @@ public class PlayerController : MonoBehaviour
         score = PlayerPrefs.GetInt("coin", score);
         textScore.text = score.ToString();
         animator = GetComponent<Animator>();
-        finish = GameObject.FindGameObjectWithTag("Finish");
+        Location.Instance.Load();
     }
   
     private void OnTriggerEnter2D(Collider2D other)
@@ -187,16 +186,28 @@ public class PlayerController : MonoBehaviour
         {
             this.transform.parent = collision.transform;
         }
+        
         if (collision.gameObject.CompareTag("Finish"))
         {
             loadingScreen.SetActive(true);
-            StartCoroutine(LoadAsync());
+
+            string message = "Location.Instance.CurrentLevelNumber = " + Location.Instance.CurrentLevelNumber;
+            Debug.Log(message);
+            
+            Location.Instance.Load();
+            
+            Location.Instance.CurrentLevelNumber++;
+            
+            int nextLevel = Location.Instance.CurrentLevelNumber;
+
+            Location.Instance.CheckCurrentLevel();
+
+            StartCoroutine(LoadAsync(nextLevel));
         }
 
-        IEnumerator LoadAsync()
-        {
-            Scene scene = SceneManager.GetActiveScene();
-            AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(scene.buildIndex + 1);
+        IEnumerator LoadAsync(int sceneIndex)
+        {           
+            AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneIndex);
 
             asyncLoad.allowSceneActivation = false;
 
@@ -223,6 +234,13 @@ public class PlayerController : MonoBehaviour
         {
             this.transform.parent = null;
         }     
+    }
+    
+    [ContextMenu("Teleport to Finish")]
+    public void TeleportToFinish()
+    {
+        var finish = GameObject.FindGameObjectWithTag("Finish");
+        transform.position = finish.transform.position;
     }
 
     // void RandomStatePicker()

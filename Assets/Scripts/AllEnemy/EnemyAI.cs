@@ -32,6 +32,7 @@ public class EnemyAI : MonoBehaviour
     Rigidbody2D rb;
     private Transform playerTransform;
     bool walk = true;
+    private  Collider2D boundsCollider;
 
     [SerializeField] private Transform model;
 
@@ -40,17 +41,19 @@ public class EnemyAI : MonoBehaviour
         target = GameObject.Find("King").transform;
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
+        boundsCollider = GetComponentInChildren<Collider2D>();
 
-        InvokeRepeating("UpdatePath", 0f, pathUpdateSeconds);
+        InvokeRepeating(nameof(UpdatePath), 0f, pathUpdateSeconds);
     }
 
     private void Update() 
     {
-        if(Vector2.Distance(model.position, target.transform.position) < attackDistance)
+        if(target == null ) return;
+
+        if(Vector2.Distance(transform.position, target.transform.position) < attackDistance)
         {
             animator.SetTrigger("Attack");
-        }
-      
+        }     
     }
 
     private void FixedUpdate()
@@ -68,6 +71,8 @@ public class EnemyAI : MonoBehaviour
 
     private void UpdatePath()
     {
+        if(target == null) return;
+
         if (followEnabled && TargetInDistance() && seeker.IsDone())
         {
             walk = true;
@@ -89,7 +94,8 @@ public class EnemyAI : MonoBehaviour
         }
 
         // See if colliding with anything
-        Vector3 startOffset = model.position - new Vector3(0f, GetComponentInChildren<Collider2D>().bounds.extents.y + jumpCheckOffset);
+        
+        Vector3 startOffset = model.position - new Vector3(0f, boundsCollider.bounds.extents.y + jumpCheckOffset);
         isGrounded = Physics2D.Raycast(startOffset, -Vector3.up, 0.05f);
         
         // Direction Calculation
@@ -131,7 +137,18 @@ public class EnemyAI : MonoBehaviour
 
     private bool TargetInDistance()
     {
-        return Vector2.Distance(model.position, target.transform.position) < activateDistance;
+        if (target == null)
+        {
+            return false;
+        }
+        else
+        {
+            float distanceToTarget = Vector2.Distance(model.position, target.transform.position);
+
+            bool targetInDistance = distanceToTarget < activateDistance;
+            return targetInDistance;
+        }
+
     }
 
     private void OnPathComplete(Path p)

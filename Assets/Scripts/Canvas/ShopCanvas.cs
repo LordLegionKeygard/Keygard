@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Purchasing;
 
 public class ShopCanvas : MonoBehaviour
 {
@@ -46,6 +47,8 @@ public class ShopCanvas : MonoBehaviour
         UpdateView();
         _buy.onClick.AddListener(Buy);
         _equip.onClick.AddListener(Equip);
+        PurchaseManager.OnPurchaseNonConsumable += PurchaseManager_OnPurchaseNonConsumable; 
+        PurchaseManager.OnPurchaseConsumable += PurchaseManager_OnPurchaseConsumable; 
     }
 
 
@@ -181,6 +184,18 @@ public class ShopCanvas : MonoBehaviour
     public void NoHandler()
     {
         AreYouSurePanel.SetActive(false);
+    }
+
+    private void PurchaseManager_OnPurchaseConsumable(PurchaseEventArgs args)
+    {
+        _coins+= 10;
+        PlayerPrefs.SetInt("coin", _coins);
+        _textCoins.text = _coins.ToString();
+        Save();
+    }
+    private void PurchaseManager_OnPurchaseNonConsumable(PurchaseEventArgs args)
+    {
+        
     }
 }
 
