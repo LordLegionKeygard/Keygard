@@ -26291,7 +26291,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 981616023}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.41528898, y: 0.33500004, z: -10}
+  m_LocalPosition: {x: 0.41300488, y: 0.33500004, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1134633654}
@@ -35384,12 +35384,17 @@ PrefabInstance:
     - target: {fileID: 3173984188157159738, guid: d70ec2204a8843d49b9385e985a795b7,
         type: 3}
       propertyPath: m_GravityScale
-      value: 0
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 2624868422254389488, guid: d70ec2204a8843d49b9385e985a795b7,
         type: 3}
       propertyPath: walkDistance
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2624868422254389488, guid: d70ec2204a8843d49b9385e985a795b7,
+        type: 3}
+      propertyPath: patrolSpeed
+      value: 3.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d70ec2204a8843d49b9385e985a795b7, type: 3}
@@ -85152,6 +85157,31 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 449417230}
+    - target: {fileID: 3719364489714650981, guid: 76aad8fe05338364a93cd9f8316d490b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3719364490103628663, guid: 76aad8fe05338364a93cd9f8316d490b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3719364491136339708, guid: 76aad8fe05338364a93cd9f8316d490b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3719364490103628648, guid: 76aad8fe05338364a93cd9f8316d490b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3719364490103628649, guid: 76aad8fe05338364a93cd9f8316d490b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76aad8fe05338364a93cd9f8316d490b, type: 3}
 --- !u!1 &3719364489356204569 stripped
@@ -85372,6 +85402,11 @@ PrefabInstance:
       propertyPath: jumpsound
       value: 
       objectReference: {fileID: 1940404813}
+    - target: {fileID: 4216139646275986078, guid: e9a9015f1bc835440a736ab7872e2135,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4216139646275986079, guid: e9a9015f1bc835440a736ab7872e2135,
         type: 3}
       propertyPath: shoot
@@ -85462,6 +85497,11 @@ PrefabInstance:
       propertyPath: jumpsound
       value: 
       objectReference: {fileID: 1940404813}
+    - target: {fileID: 4216139646275986076, guid: e9a9015f1bc835440a736ab7872e2135,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4216139646275986064, guid: e9a9015f1bc835440a736ab7872e2135,
         type: 3}
       propertyPath: loadingScreen

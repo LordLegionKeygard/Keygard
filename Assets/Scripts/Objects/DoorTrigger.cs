@@ -7,6 +7,8 @@ public class DoorTrigger : MonoBehaviour
     public Door door;
 	KeyHold keyHold;
 
+	public bool twokey = false;
+
 	private void Awake()
 	{
 		keyHold = FindObjectOfType<KeyHold>();
@@ -14,11 +16,16 @@ public class DoorTrigger : MonoBehaviour
 
 	public void OnTriggerEnter2D(Collider2D col)
 	{
+		if(twokey == true)
+		{
+			return;
+		}
 		if (col.tag == "Player") 
 		{
 
 			if (keyHold.key == 1) 
 			{ 
+				twokey = true;
 				door.Open ();
 				keyHold.key--;
 			}
