@@ -191,16 +191,17 @@ public class PlayerController : MonoBehaviour
         {
             loadingScreen.SetActive(true);
 
-            string message = "Location.Instance.CurrentLevelNumber = " + Location.Instance.CurrentLevelNumber;
-            Debug.Log(message);
-            
             Location.Instance.Load();
+
+            Debug.Log("Location.Instance.CurrentLevelNumber = " + Location.Instance.CurrentLevelNumber);
             
             Location.Instance.CurrentLevelNumber++;
+
+            Location.Instance.CheckCurrentLevel();
             
             int nextLevel = Location.Instance.CurrentLevelNumber;
 
-            Location.Instance.CheckCurrentLevel();
+            
 
             StartCoroutine(LoadAsync(nextLevel));
         }

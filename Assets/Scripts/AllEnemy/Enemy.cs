@@ -114,7 +114,6 @@ public class Enemy : MonoBehaviour
     }
     private void ChasePlayer()
     {
-
         walk = true;        
         float distance = DistanceToPlayer();
         if(distance < 0)

@@ -9,23 +9,23 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject pauseMenuUI;
 
-    void Update()
-    {
+    //void Update()
+    //{
         //UnityEngine.Cursor.visible = false;
-        if(Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (GameIsPaused)
-            {
-                UnityEngine.Cursor.visible = false;
-                Resume();
-            }
-            else
-            {
-                UnityEngine.Cursor.visible = true;
-                Pause();
-            }
-        }
-    }
+        //if(Input.GetKeyDown(KeyCode.Escape))
+       // {
+         //   if (GameIsPaused)
+         //   {
+         //       UnityEngine.Cursor.visible = false;
+          //      Resume();
+         //   }
+         //   else
+          //  {
+         //       UnityEngine.Cursor.visible = true;
+         //       Pause();
+          //  }
+       // }
+  //  }
 
     public void Resume()
     {
@@ -51,6 +51,5 @@ public class PauseMenu : MonoBehaviour
     public void ExitHandler()
     {
         SceneManager.LoadScene(0);
-        Time.timeScale = 1f;
     }
 }

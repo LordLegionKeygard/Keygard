@@ -19,7 +19,7 @@ public class GameOverScreen : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
-    void Update()
+    void Start()
     {
         skillcanvas.SetActive(false);
         lvlmusic.SetActive(false);    

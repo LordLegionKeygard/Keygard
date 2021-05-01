@@ -5,9 +5,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Purchasing;
-
 public class ShopCanvas : MonoBehaviour
 {
+    
     [SerializeField] private StaffType _defaultStaff;
 
     private StaffInfo _currentStaff;
@@ -30,7 +30,7 @@ public class ShopCanvas : MonoBehaviour
 
     private List<StaffInfo> _allStaffs = new List<StaffInfo>();
 
-    [SerializeField] private List<StaffInfo> deafaultStaffInfo;
+    [SerializeField] private List<StaffInfo> _deafaultStaffInfo;
 
     private int _coins;
 
@@ -43,10 +43,14 @@ public class ShopCanvas : MonoBehaviour
     private void Start()
     {
         Load();
+        
         _currentStaff = currentEquipedStaff;
+
         UpdateView();
+        
         _buy.onClick.AddListener(Buy);
         _equip.onClick.AddListener(Equip);
+
         PurchaseManager.OnPurchaseNonConsumable += PurchaseManager_OnPurchaseNonConsumable; 
         PurchaseManager.OnPurchaseConsumable += PurchaseManager_OnPurchaseConsumable; 
     }
@@ -55,6 +59,7 @@ public class ShopCanvas : MonoBehaviour
     private void Equip()
     {
         currentEquipedStaff = _currentStaff;
+
         UpdateView();
         Save();
     }
@@ -75,30 +80,34 @@ public class ShopCanvas : MonoBehaviour
         SaveCoins();
         SaveEquipedStaff();
         SaveAllStaffs();
+
         PlayerPrefs.Save();
     }
 
     private void SaveAllStaffs()
     {
         AllStaffSaveData saveData = new AllStaffSaveData() { Staffs = _allStaffs };
+
         string json = JsonUtility.ToJson(saveData);
-        PlayerPrefs.SetString("AllStaffs", json);
+
+        PlayerPrefs.SetString(PrefsKeys.AllStaffs, json);
     }
 
     private void SaveEquipedStaff()
     {
         int indexEquipedStaff = _allStaffs.IndexOf(currentEquipedStaff);
-        PlayerPrefs.SetInt("Staff", indexEquipedStaff);
+
+        PlayerPrefs.SetInt(PrefsKeys.Staff, indexEquipedStaff);
     }
 
     private void SaveCoins()
     {
-        PlayerPrefs.SetInt("coin", _coins);
+        PlayerPrefs.SetInt(PrefsKeys.Coin, _coins);
     }
 
     private void LoadCoins()
     {
-        _coins = PlayerPrefs.GetInt("coin", _defaultCoins);
+        _coins = PlayerPrefs.GetInt(PrefsKeys.Coin, _defaultCoins);
     }
 
     private void Load()
@@ -110,16 +119,23 @@ public class ShopCanvas : MonoBehaviour
 
     private void LoadAllStaffs()
     {
-        AllStaffSaveData saveData = new AllStaffSaveData() { Staffs = deafaultStaffInfo };
+        AllStaffSaveData saveData = new AllStaffSaveData() { Staffs = _deafaultStaffInfo };
+
         string defaultStaffs = JsonUtility.ToJson(saveData);
-        string json = PlayerPrefs.GetString("AllStaffs", defaultStaffs);
+
+        string json = PlayerPrefs.GetString(PrefsKeys.AllStaffs, defaultStaffs);
+
         JsonUtility.FromJsonOverwrite(json, saveData);
+        
         _allStaffs = saveData.Staffs;
     }
 
     private void LoadEquipedStaff()
     {
-        int indexEquipedStaff = PlayerPrefs.GetInt("Staff", (int) _defaultStaff);
+        int indexEquipedStaff = PlayerPrefs.GetInt(PrefsKeys.Staff, (int) _defaultStaff);
+        Debug.Log("indexEquipedStaff = " + indexEquipedStaff);
+
+        Debug.Log("_allStaffs.Count = " + _allStaffs.Count);
         currentEquipedStaff = _allStaffs[indexEquipedStaff];
     }
 
@@ -189,7 +205,7 @@ public class ShopCanvas : MonoBehaviour
     private void PurchaseManager_OnPurchaseConsumable(PurchaseEventArgs args)
     {
         _coins+= 10;
-        PlayerPrefs.SetInt("coin", _coins);
+        PlayerPrefs.SetInt(PrefsKeys.Coin, _coins);
         _textCoins.text = _coins.ToString();
         Save();
     }

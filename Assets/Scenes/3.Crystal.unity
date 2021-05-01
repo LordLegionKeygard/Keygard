@@ -2198,6 +2198,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1399993509241418946, guid: f82f58979faca5e46af471d15ff16264,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dd2b72bfa28fd32449a05a4785f2cff3, type: 2}
     - target: {fileID: 1399993508474459746, guid: f82f58979faca5e46af471d15ff16264,
         type: 3}
       propertyPath: m_Layer
@@ -2218,11 +2223,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 15
       objectReference: {fileID: 0}
-    - target: {fileID: 1399993509241418946, guid: f82f58979faca5e46af471d15ff16264,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: dd2b72bfa28fd32449a05a4785f2cff3, type: 2}
     - target: {fileID: 1399993509502392744, guid: f82f58979faca5e46af471d15ff16264,
         type: 3}
       propertyPath: m_Layer
@@ -23981,6 +23981,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1399993509241418946, guid: f82f58979faca5e46af471d15ff16264,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dd2b72bfa28fd32449a05a4785f2cff3, type: 2}
     - target: {fileID: 1399993508474459746, guid: f82f58979faca5e46af471d15ff16264,
         type: 3}
       propertyPath: m_Layer
@@ -24001,11 +24006,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 15
       objectReference: {fileID: 0}
-    - target: {fileID: 1399993509241418946, guid: f82f58979faca5e46af471d15ff16264,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: dd2b72bfa28fd32449a05a4785f2cff3, type: 2}
     - target: {fileID: 1399993509502392744, guid: f82f58979faca5e46af471d15ff16264,
         type: 3}
       propertyPath: m_Layer
@@ -63606,6 +63606,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1399993509241418946, guid: f82f58979faca5e46af471d15ff16264,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dd2b72bfa28fd32449a05a4785f2cff3, type: 2}
     - target: {fileID: 1399993508474459746, guid: f82f58979faca5e46af471d15ff16264,
         type: 3}
       propertyPath: m_Layer
@@ -63626,11 +63631,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 15
       objectReference: {fileID: 0}
-    - target: {fileID: 1399993509241418946, guid: f82f58979faca5e46af471d15ff16264,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: dd2b72bfa28fd32449a05a4785f2cff3, type: 2}
     - target: {fileID: 1399993509502392744, guid: f82f58979faca5e46af471d15ff16264,
         type: 3}
       propertyPath: m_Layer
@@ -129864,21 +129864,6 @@ PrefabInstance:
       propertyPath: mainsound
       value: 
       objectReference: {fileID: 1109732174}
-    - target: {fileID: 3719364489714650981, guid: 76aad8fe05338364a93cd9f8316d490b,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3719364490103628663, guid: 76aad8fe05338364a93cd9f8316d490b,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3719364491136339708, guid: 76aad8fe05338364a93cd9f8316d490b,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3719364490309317342, guid: 76aad8fe05338364a93cd9f8316d490b,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -129988,6 +129973,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnButtonUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3719364489714650981, guid: 76aad8fe05338364a93cd9f8316d490b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3719364490103628663, guid: 76aad8fe05338364a93cd9f8316d490b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3719364491136339708, guid: 76aad8fe05338364a93cd9f8316d490b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3719364491136339707, guid: 76aad8fe05338364a93cd9f8316d490b,
         type: 3}

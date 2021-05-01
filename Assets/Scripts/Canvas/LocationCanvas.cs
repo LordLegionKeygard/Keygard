@@ -75,6 +75,7 @@ public class LocationCanvas : MonoBehaviour
 
         for (int levelIndex = 0; levelIndex < Location.AvailableLevels; levelIndex++)
         {
+
             levels[levelIndex].Button.interactable = Location.Levels[levelIndex];
 
             int levelNumber = levelIndex + 1;

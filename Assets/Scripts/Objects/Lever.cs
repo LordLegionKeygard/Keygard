@@ -5,6 +5,7 @@ using UnityEngine;
 public class Lever : MonoBehaviour
 {
     Animator animator;
+    
     void Start()
     {
         animator = GetComponent<Animator>();

@@ -13,13 +13,13 @@ public class Location : ScriptableObject
     private static Location _instance = null;
     public static Location Instance => _instance ?? Resources.Load<Location>("Locations");
     private const string KeyLevels = "Levels";
-    private const string  KeyCurrentLevelNumber = "CurrentLevelNumber";
-    public int LevelsCount = 24;
+    private const string KeyCurrentLevelNumber = "CurrentLevelNumber";
+    public int LevelsCount = 12;
     public int AvailableLevels = 12; //сейчас 12
 
-    public int CurrentLevelNumber {get; set; }
+    public int CurrentLevelNumber { get; set; }
 
-    public List<bool> Levels {get;set;} = null;
+    public List<bool> Levels { get; set; } = null;
 
     public void Load()
     {
@@ -29,7 +29,7 @@ public class Location : ScriptableObject
         Debug.Log(json);
         Levels = JsonConvert.DeserializeObject<List<bool>>(json);
 
-        if(Levels == null || Levels != null && Levels.Count == 0)
+        if (Levels == null || Levels != null && Levels.Count == 0)
         {
             Levels = new bool[LevelsCount].ToList();
 
@@ -44,9 +44,9 @@ public class Location : ScriptableObject
     {
         Debug.Log("<color=blue>--- Save ---</color>");
         string json = JsonConvert.SerializeObject(Levels);
-        
+
         Debug.Log(json);
-        
+
         PlayerPrefs.SetString(KeyLevels, json);
 
         PlayerPrefs.SetInt(KeyCurrentLevelNumber, CurrentLevelNumber);
@@ -55,9 +55,8 @@ public class Location : ScriptableObject
     }
 
     public void CheckCurrentLevel()
-    {       
+    {
         Debug.Log("<color=yellow>--- CheckCurrentLevel ---</color>");
-        Debug.Log(Levels);
 
         int indexLastOpenedLevel = Levels.FindLastIndex(
         (bool levelIsOpened) =>
@@ -67,10 +66,10 @@ public class Location : ScriptableObject
 
         Debug.Log($"indexLastOpenedLevel = {indexLastOpenedLevel}");
 
-        int numberLastOpenedLevel = indexLastOpenedLevel + 1;        
-    
+        int numberLastOpenedLevel = indexLastOpenedLevel + 1;
+
         Debug.Log($"numberLastOpenedLevel = {numberLastOpenedLevel}");
-        
+
         Debug.Log($"CurrentLevelNumber = {CurrentLevelNumber}");
 
         bool isLastOpenedLevel = numberLastOpenedLevel <= CurrentLevelNumber;
@@ -82,10 +81,17 @@ public class Location : ScriptableObject
         Debug.Log($"nextLevelIndex = {nextLevelIndex}");
 
 
-        if (isLastOpenedLevel && numberLastOpenedLevel < AvailableLevels)
+        if (isLastOpenedLevel &&
+            numberLastOpenedLevel < AvailableLevels &&
+            CurrentLevelNumber == numberLastOpenedLevel + 1)
         {
-            Levels[nextLevelIndex] = true;     
-           Save();
+            Levels[nextLevelIndex] = true;
         }
+        else if(CurrentLevelNumber - 1 == AvailableLevels )
+        {
+            CurrentLevelNumber = 0;
+        }
+
+        Save();
     }
 }

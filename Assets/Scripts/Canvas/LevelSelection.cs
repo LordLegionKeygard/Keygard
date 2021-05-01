@@ -46,11 +46,8 @@ public class LevelSelection : MonoBehaviour
                 {
                     asyncLoad.allowSceneActivation = true;
                 }
-
             }
             yield return null;
         }
     }
-
-
 }
