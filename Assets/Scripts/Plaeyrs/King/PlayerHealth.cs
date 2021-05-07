@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class PlayerHealth : MonoBehaviour
 {
+    public MobAdsSimple _mobAdsSimple;
     public GameObject gameOverCanvas;
     public GameObject keyCanvas;
     public GameObject poisonPanel;
@@ -23,6 +24,11 @@ public class PlayerHealth : MonoBehaviour
         explosion = Resources.Load("PlayerDamage");
         poisonExplosion = Resources.Load("PlayerPoisonDamage");
         animator = GetComponent<Animator>();
+    }
+
+    private void Start()
+    {
+        _mobAdsSimple = GetComponent<MobAdsSimple>();
     }
     private void Update()
     {
@@ -59,9 +65,11 @@ public class PlayerHealth : MonoBehaviour
 
     private void Die()
     {
+        _mobAdsSimple.ShowAd();
         gameOverCanvas.SetActive(true);
         keyCanvas.SetActive(false);
         Destroy(gameObject);
+
     }
 
     private void FixedUpdate()

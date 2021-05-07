@@ -2,8 +2,6 @@
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <LangVersion>latest</LangVersion>
-    <CscToolPath>C:\Program Files\Unity\Hub\Editor\2019.2.1f1\Editor\Data\Tools\RoslynScripts</CscToolPath>
-    <CscToolExe>unity_csc.bat</CscToolExe>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -158,6 +156,12 @@
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>F:/Unity/Projects/Keygard/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Purchasing">
+ <HintPath>F:/Unity/Projects/Keygard/Library/ScriptAssemblies/UnityEngine.Purchasing.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Purchasing">
+ <HintPath>F:/Unity/Projects/Keygard/Library/ScriptAssemblies/UnityEditor.Purchasing.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -387,11 +391,20 @@
  <Reference Include="winrt">
  <HintPath>F:/Unity/Projects/Keygard/Assets/Plugins/UnityPurchasing/winrt/winrt.dll</HintPath>
  </Reference>
- <Reference Include="UnityEngine.Advertisements.Editor">
- <HintPath>F:/Unity/Projects/Keygard/Assets/UnityAds/UnityEngine.Advertisements.Editor.dll</HintPath>
+ <Reference Include="Google.IOSResolver_v1.2.165">
+ <HintPath>F:/Unity/Projects/Keygard/Library/PackageCache/com.google.external-dependency-manager@1.2.165/ExternalDependencyManager/Editor/Google.IOSResolver_v1.2.165.dll</HintPath>
  </Reference>
- <Reference Include="UnityEngine.Monetization.Editor">
- <HintPath>F:/Unity/Projects/Keygard/Assets/UnityAds/UnityEngine.Monetization.Editor.dll</HintPath>
+ <Reference Include="Google.JarResolver_v1.2.165">
+ <HintPath>F:/Unity/Projects/Keygard/Library/PackageCache/com.google.external-dependency-manager@1.2.165/ExternalDependencyManager/Editor/Google.JarResolver_v1.2.165.dll</HintPath>
+ </Reference>
+ <Reference Include="Google.PackageManagerResolver_v1.2.165">
+ <HintPath>F:/Unity/Projects/Keygard/Library/PackageCache/com.google.external-dependency-manager@1.2.165/ExternalDependencyManager/Editor/Google.PackageManagerResolver_v1.2.165.dll</HintPath>
+ </Reference>
+ <Reference Include="Google.VersionHandler">
+ <HintPath>F:/Unity/Projects/Keygard/Library/PackageCache/com.google.external-dependency-manager@1.2.165/ExternalDependencyManager/Editor/Google.VersionHandler.dll</HintPath>
+ </Reference>
+ <Reference Include="Google.VersionHandlerImpl_v1.2.165">
+ <HintPath>F:/Unity/Projects/Keygard/Library/PackageCache/com.google.external-dependency-manager@1.2.165/ExternalDependencyManager/Editor/Google.VersionHandlerImpl_v1.2.165.dll</HintPath>
  </Reference>
  <Reference Include="NSubstitute">
  <HintPath>F:/Unity/Projects/Keygard/Library/PackageCache/com.unity.2d.common@1.2.0-preview.1/Tests/Editor/Lib/NSubstitute/NSubstitute.dll</HintPath>
@@ -401,12 +414,6 @@
  </Reference>
  <Reference Include="clipper_library">
  <HintPath>F:/Unity/Projects/Keygard/Library/PackageCache/com.unity.cinemachine@2.7.1/Runtime/ThirdParty/clipper_library.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Purchasing">
- <HintPath>F:/Unity/Projects/Keygard/Library/PackageCache/com.unity.purchasing@2.0.6/UnityEngine.Purchasing.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.Purchasing">
- <HintPath>F:/Unity/Projects/Keygard/Library/PackageCache/com.unity.purchasing@2.0.6/Editor/UnityEditor.Purchasing.dll</HintPath>
  </Reference>
  <Reference Include="nunit.framework">
  <HintPath>F:/Unity/Projects/Keygard/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
@@ -790,6 +797,14 @@
     <ProjectReference Include="AstarPathfindingProjectEditor.csproj">
       <Project>{DB6A7D87-CF33-5B3D-5E84-52FAC36B3348}</Project>
       <Name>AstarPathfindingProjectEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="GoogleMobileAds.csproj">
+      <Project>{0B7748EE-E68C-C72B-AD0E-0B578602D27D}</Project>
+      <Name>GoogleMobileAds</Name>
+    </ProjectReference>
+    <ProjectReference Include="GoogleMobileAds.Editor.csproj">
+      <Project>{1C9F3A50-EB05-2737-964D-23ADCD890777}</Project>
+      <Name>GoogleMobileAds.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

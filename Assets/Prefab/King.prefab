@@ -2648,6 +2648,7 @@ GameObject:
   - component: {fileID: 4216139646275986050}
   - component: {fileID: 4216139646275986051}
   - component: {fileID: 7549526918022701039}
+  - component: {fileID: 8061100531185281292}
   m_Layer: 11
   m_Name: King
   m_TagString: Player
@@ -2835,6 +2836,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b81f2598ff9e0904497f9dfbadafc2d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _mobAdsSimple: {fileID: 8061100531185281292}
   gameOverCanvas: {fileID: 0}
   keyCanvas: {fileID: 0}
   poisonPanel: {fileID: 0}
@@ -2875,7 +2877,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7371839240940070765}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6da6e0d81b33358438ad52db978c94ce, type: 3}
   m_Name: 
@@ -2899,7 +2901,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7371839240940070765}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 251d796223b32344b982d6bcd5fd3db9, type: 3}
   m_Name: 
@@ -3162,6 +3164,18 @@ MonoBehaviour:
   - staffType: 3
     Behaviours:
     - {fileID: 4216139646275986072}
+--- !u!114 &8061100531185281292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7371839240940070765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84f50260869841145968209078d158c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7961872989632094622
 GameObject:
   m_ObjectHideFlags: 0

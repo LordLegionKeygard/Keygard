@@ -4,10 +4,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using UnityEngine.Purchasing;
 public class ShopCanvas : MonoBehaviour
 {
-    
+
     [SerializeField] private StaffType _defaultStaff;
 
     private StaffInfo _currentStaff;
@@ -32,7 +31,7 @@ public class ShopCanvas : MonoBehaviour
 
     [SerializeField] private List<StaffInfo> _deafaultStaffInfo;
 
-    private int _coins;
+    public int _coins;
 
     public GameObject AreYouSurePanel;
 
@@ -43,16 +42,13 @@ public class ShopCanvas : MonoBehaviour
     private void Start()
     {
         Load();
-        
+
         _currentStaff = currentEquipedStaff;
 
         UpdateView();
-        
+
         _buy.onClick.AddListener(Buy);
         _equip.onClick.AddListener(Equip);
-
-        PurchaseManager.OnPurchaseNonConsumable += PurchaseManager_OnPurchaseNonConsumable; 
-        PurchaseManager.OnPurchaseConsumable += PurchaseManager_OnPurchaseConsumable; 
     }
 
 
@@ -126,13 +122,13 @@ public class ShopCanvas : MonoBehaviour
         string json = PlayerPrefs.GetString(PrefsKeys.AllStaffs, defaultStaffs);
 
         JsonUtility.FromJsonOverwrite(json, saveData);
-        
+
         _allStaffs = saveData.Staffs;
     }
 
     private void LoadEquipedStaff()
     {
-        int indexEquipedStaff = PlayerPrefs.GetInt(PrefsKeys.Staff, (int) _defaultStaff);
+        int indexEquipedStaff = PlayerPrefs.GetInt(PrefsKeys.Staff, (int)_defaultStaff);
         Debug.Log("indexEquipedStaff = " + indexEquipedStaff);
 
         Debug.Log("_allStaffs.Count = " + _allStaffs.Count);
@@ -184,7 +180,7 @@ public class ShopCanvas : MonoBehaviour
         _gameLogo.SetActive(true);
     }
 
-    private void OnDisable() 
+    private void OnDisable()
     {
         Save();
     }
@@ -193,8 +189,8 @@ public class ShopCanvas : MonoBehaviour
     {
         PlayerPrefs.DeleteAll();
         PlayerPrefs.Save();
-        Load();        
-        SceneManager.LoadScene(0); 
+        Load();
+        SceneManager.LoadScene(0);
     }
 
     public void NoHandler()
@@ -202,16 +198,11 @@ public class ShopCanvas : MonoBehaviour
         AreYouSurePanel.SetActive(false);
     }
 
-    private void PurchaseManager_OnPurchaseConsumable(PurchaseEventArgs args)
+    public void Purchase()
     {
-        _coins+= 10;
-        PlayerPrefs.SetInt(PrefsKeys.Coin, _coins);
+        _coins += 100;
         _textCoins.text = _coins.ToString();
         Save();
-    }
-    private void PurchaseManager_OnPurchaseNonConsumable(PurchaseEventArgs args)
-    {
-        
     }
 }
 

@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.google.external-dependency-manager": "1.2.165",
     "com.unity.2d.animation": "2.2.1-preview.2",
     "com.unity.2d.ik": "1.2.0-preview.2",
     "com.unity.2d.psdimporter": "1.2.0-preview.4",
@@ -13,7 +14,7 @@
     "com.unity.ide.vscode": "1.0.7",
     "com.unity.mobile.android-logcat": "1.2.1",
     "com.unity.package-manager-ui": "2.2.0",
-    "com.unity.purchasing": "2.0.6",
+    "com.unity.purchasing": "2.2.2",
     "com.unity.shadergraph": "6.9.1",
     "com.unity.test-framework": "1.0.13",
     "com.unity.textmeshpro": "2.0.1",
@@ -50,5 +51,14 @@
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
     "com.unity.modules.xr": "1.0.0"
-  }
+  },
+  "scopedRegistries": [
+    {
+      "name": "Game Package Registry by Google",
+      "url": "https://unityregistry-pa.googleapis.com",
+      "scopes": [
+        "com.google"
+      ]
+    }
+  ]
 }
