@@ -200,7 +200,7 @@ public class ShopCanvas : MonoBehaviour
 
     public void Purchase()
     {
-        _coins += 100;
+        _coins += 200;
         _textCoins.text = _coins.ToString();
         Save();
     }

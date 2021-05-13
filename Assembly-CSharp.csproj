@@ -102,14 +102,12 @@
      <Compile Include="Assets\Scripts\Canvas\LocationCanvas.cs" />
      <Compile Include="Assets\Scripts\Canvas\LocationView.cs" />
      <Compile Include="Assets\Scripts\Canvas\MainMenu.cs" />
-     <Compile Include="Assets\Scripts\Canvas\MenuMusic.cs" />
      <Compile Include="Assets\Scripts\Canvas\MobileSoundUpdater.cs" />
      <Compile Include="Assets\Scripts\Canvas\OptionCanvas.cs" />
      <Compile Include="Assets\Scripts\Canvas\OptionCanvasMenu.cs" />
      <Compile Include="Assets\Scripts\Canvas\PauseMenu.cs" />
      <Compile Include="Assets\Scripts\Canvas\PrefsKeys.cs" />
      <Compile Include="Assets\Scripts\Canvas\PressButton.cs" />
-     <Compile Include="Assets\Scripts\Canvas\PurchaseManager.cs" />
      <Compile Include="Assets\Scripts\Canvas\SaveMenu.cs" />
      <Compile Include="Assets\Scripts\Canvas\SFXProverka.cs" />
      <Compile Include="Assets\Scripts\Canvas\ShopCanvas.cs" />
@@ -123,6 +121,7 @@
      <Compile Include="Assets\Scripts\GrindMur\AttackShoot.cs" />
      <Compile Include="Assets\Scripts\GrindMur\GrindMur.cs" />
      <Compile Include="Assets\Scripts\GrindMur\Pick.cs" />
+     <Compile Include="Assets\Scripts\IAPManager.cs" />
      <Compile Include="Assets\Scripts\MishaEnemy.cs" />
      <Compile Include="Assets\Scripts\Objects\BigPlatform.cs" />
      <Compile Include="Assets\Scripts\Objects\Boat.cs" />
@@ -229,6 +228,12 @@
  <Reference Include="Unity.RenderPipelines.Core.Runtime">
  <HintPath>F:/Unity/Projects/Keygard/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
  </Reference>
+ <Reference Include="UnityEngine.Purchasing">
+ <HintPath>F:/Unity/Projects/Keygard/Library/ScriptAssemblies/UnityEngine.Purchasing.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Purchasing">
+ <HintPath>F:/Unity/Projects/Keygard/Library/ScriptAssemblies/UnityEditor.Purchasing.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>F:/Unity/Projects/Keygard/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
@@ -306,12 +311,6 @@
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>F:/Unity/Projects/Keygard/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Purchasing">
- <HintPath>F:/Unity/Projects/Keygard/Library/ScriptAssemblies/UnityEngine.Purchasing.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.Purchasing">
- <HintPath>F:/Unity/Projects/Keygard/Library/ScriptAssemblies/UnityEditor.Purchasing.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -493,35 +492,35 @@
  <Reference Include="DOTween">
  <HintPath>F:/Unity/Projects/Keygard/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
  </Reference>
+ <Reference Include="clipper_library">
+ <HintPath>F:/Unity/Projects/Keygard/Library/PackageCache/com.unity.cinemachine@2.7.1/Runtime/ThirdParty/clipper_library.dll</HintPath>
+ </Reference>
+ <Reference Include="Security">
+ <HintPath>F:/Unity/Projects/Keygard/Assets/Plugins/UnityPurchasing/Bin/Security/live/Security.dll</HintPath>
+ </Reference>
+ <Reference Include="Stores">
+ <HintPath>F:/Unity/Projects/Keygard/Assets/Plugins/UnityPurchasing/Bin/Stores.dll</HintPath>
+ </Reference>
+ <Reference Include="AppleCore">
+ <HintPath>F:/Unity/Projects/Keygard/Assets/Plugins/UnityPurchasing/Bin/Apple/AppleCore.dll</HintPath>
+ </Reference>
  <Reference Include="Editor">
  <HintPath>F:/Unity/Projects/Keygard/Assets/Plugins/UnityPurchasing/Bin/Editor.dll</HintPath>
  </Reference>
  <Reference Include="Purchasing.Common">
  <HintPath>F:/Unity/Projects/Keygard/Assets/Plugins/UnityPurchasing/Bin/Purchasing.Common.dll</HintPath>
  </Reference>
- <Reference Include="Stores">
- <HintPath>F:/Unity/Projects/Keygard/Assets/Plugins/UnityPurchasing/Bin/Stores.dll</HintPath>
- </Reference>
- <Reference Include="Apple">
- <HintPath>F:/Unity/Projects/Keygard/Assets/Plugins/UnityPurchasing/Bin/Apple/Apple.dll</HintPath>
- </Reference>
- <Reference Include="AppleCore">
- <HintPath>F:/Unity/Projects/Keygard/Assets/Plugins/UnityPurchasing/Bin/Apple/AppleCore.dll</HintPath>
- </Reference>
- <Reference Include="AppleMacos">
- <HintPath>F:/Unity/Projects/Keygard/Assets/Plugins/UnityPurchasing/Bin/Apple/AppleMacos.dll</HintPath>
+ <Reference Include="winrt">
+ <HintPath>F:/Unity/Projects/Keygard/Assets/Plugins/UnityPurchasing/winrt/winrt.dll</HintPath>
  </Reference>
  <Reference Include="FacebookStore">
  <HintPath>F:/Unity/Projects/Keygard/Assets/Plugins/UnityPurchasing/Bin/Facebook/FacebookStore.dll</HintPath>
  </Reference>
- <Reference Include="Security">
- <HintPath>F:/Unity/Projects/Keygard/Assets/Plugins/UnityPurchasing/Bin/Security/live/Security.dll</HintPath>
+ <Reference Include="Apple">
+ <HintPath>F:/Unity/Projects/Keygard/Assets/Plugins/UnityPurchasing/Bin/Apple/Apple.dll</HintPath>
  </Reference>
- <Reference Include="winrt">
- <HintPath>F:/Unity/Projects/Keygard/Assets/Plugins/UnityPurchasing/winrt/winrt.dll</HintPath>
- </Reference>
- <Reference Include="clipper_library">
- <HintPath>F:/Unity/Projects/Keygard/Library/PackageCache/com.unity.cinemachine@2.7.1/Runtime/ThirdParty/clipper_library.dll</HintPath>
+ <Reference Include="AppleMacos">
+ <HintPath>F:/Unity/Projects/Keygard/Assets/Plugins/UnityPurchasing/Bin/Apple/AppleMacos.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>

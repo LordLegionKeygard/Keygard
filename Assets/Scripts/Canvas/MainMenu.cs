@@ -12,7 +12,6 @@ public class MainMenu : MonoBehaviour
     public GameObject _locationsSelectionCanvas;
     public GameObject _gameLogo;
     public GameObject _donateBackground;
-    public Slider bar;
 
     public void StartHandler()
     {

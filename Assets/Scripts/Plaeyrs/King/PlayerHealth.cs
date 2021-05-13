@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
 public class PlayerHealth : MonoBehaviour
 {
     public MobAdsSimple _mobAdsSimple;
@@ -19,6 +20,8 @@ public class PlayerHealth : MonoBehaviour
     private UnityEngine.Object explosion;
     private UnityEngine.Object poisonExplosion;
 
+    private bool ads = true;
+
     private void Awake()
     {
         explosion = Resources.Load("PlayerDamage");
@@ -32,16 +35,16 @@ public class PlayerHealth : MonoBehaviour
     }
     private void Update()
     {
-        if(health >=2)
-        _poisonShield.SetActive(false);
+        if (health >= 2)
+            _poisonShield.SetActive(false);
     }
     public void TakeDamage(int damage)
-    {       
+    {
         health -= damage;
 
         GameObject explosionRef = (GameObject)Instantiate(explosion);
         explosionRef.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-    
+
         if (health <= 0)
         {
             Die();
@@ -49,15 +52,15 @@ public class PlayerHealth : MonoBehaviour
     }
 
     public void TakePoisonDamage(int poisonDamage)
-    {        
-        if(health >=2)
+    {
+        if (health >= 2)
         {
             poisonPanel.SetActive(true);
             GameObject posionExplosionRef = (GameObject)Instantiate(poisonExplosion);
             posionExplosionRef.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-            health-= poisonDamage;
+            health -= poisonDamage;
         }
-        if(health == 1)
+        if (health == 1)
         {
             _poisonShield.SetActive(true);
         }
@@ -65,23 +68,35 @@ public class PlayerHealth : MonoBehaviour
 
     private void Die()
     {
-        _mobAdsSimple.ShowAd();
+        RandomStatePicker();
         gameOverCanvas.SetActive(true);
         keyCanvas.SetActive(false);
         Destroy(gameObject);
+    }
 
+    void RandomStatePicker()
+    {
+        int randomState = Random.Range(0, 2);
+        if (randomState == 0)
+        {
+            _mobAdsSimple.ShowAd();
+        }
+        else if (randomState == 1)
+        {
+
+        }
     }
 
     private void FixedUpdate()
     {
-        if(health > numOfHearts)
+        if (health > numOfHearts)
         {
             health = numOfHearts;
         }
 
         for (int i = 0; i < hearts.Length; i++)
         {
-            if(i < Mathf.RoundToInt(health))
+            if (i < Mathf.RoundToInt(health))
             {
                 hearts[i].sprite = HeartFull;
             }
@@ -90,7 +105,7 @@ public class PlayerHealth : MonoBehaviour
                 hearts[i].sprite = HeartEmpty;
             }
 
-            if(i < numOfHearts)
+            if (i < numOfHearts)
             {
                 hearts[i].enabled = true;
             }
@@ -103,18 +118,18 @@ public class PlayerHealth : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.CompareTag("Potion"))
+        if (other.CompareTag("Potion"))
         {
             PickUp.Play();
             ChangeHealth(1);
             Destroy(other.gameObject);
         }
     }
-    
+
     public void ChangeHealth(int healthValue)
     {
         health += healthValue;
     }
-    
+
 }
 

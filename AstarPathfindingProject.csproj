@@ -373,33 +373,6 @@
  <Reference Include="DOTweenEditor">
  <HintPath>F:/Unity/Projects/Keygard/Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
  </Reference>
- <Reference Include="Editor">
- <HintPath>F:/Unity/Projects/Keygard/Assets/Plugins/UnityPurchasing/Bin/Editor.dll</HintPath>
- </Reference>
- <Reference Include="Purchasing.Common">
- <HintPath>F:/Unity/Projects/Keygard/Assets/Plugins/UnityPurchasing/Bin/Purchasing.Common.dll</HintPath>
- </Reference>
- <Reference Include="Stores">
- <HintPath>F:/Unity/Projects/Keygard/Assets/Plugins/UnityPurchasing/Bin/Stores.dll</HintPath>
- </Reference>
- <Reference Include="Apple">
- <HintPath>F:/Unity/Projects/Keygard/Assets/Plugins/UnityPurchasing/Bin/Apple/Apple.dll</HintPath>
- </Reference>
- <Reference Include="AppleCore">
- <HintPath>F:/Unity/Projects/Keygard/Assets/Plugins/UnityPurchasing/Bin/Apple/AppleCore.dll</HintPath>
- </Reference>
- <Reference Include="AppleMacos">
- <HintPath>F:/Unity/Projects/Keygard/Assets/Plugins/UnityPurchasing/Bin/Apple/AppleMacos.dll</HintPath>
- </Reference>
- <Reference Include="FacebookStore">
- <HintPath>F:/Unity/Projects/Keygard/Assets/Plugins/UnityPurchasing/Bin/Facebook/FacebookStore.dll</HintPath>
- </Reference>
- <Reference Include="Security">
- <HintPath>F:/Unity/Projects/Keygard/Assets/Plugins/UnityPurchasing/Bin/Security/live/Security.dll</HintPath>
- </Reference>
- <Reference Include="winrt">
- <HintPath>F:/Unity/Projects/Keygard/Assets/Plugins/UnityPurchasing/winrt/winrt.dll</HintPath>
- </Reference>
  <Reference Include="Google.IOSResolver_v1.2.165">
  <HintPath>F:/Unity/Projects/Keygard/Library/PackageCache/com.google.external-dependency-manager@1.2.165/ExternalDependencyManager/Editor/Google.IOSResolver_v1.2.165.dll</HintPath>
  </Reference>
@@ -423,6 +396,33 @@
  </Reference>
  <Reference Include="clipper_library">
  <HintPath>F:/Unity/Projects/Keygard/Library/PackageCache/com.unity.cinemachine@2.7.1/Runtime/ThirdParty/clipper_library.dll</HintPath>
+ </Reference>
+ <Reference Include="Security">
+ <HintPath>F:/Unity/Projects/Keygard/Assets/Plugins/UnityPurchasing/Bin/Security/live/Security.dll</HintPath>
+ </Reference>
+ <Reference Include="Stores">
+ <HintPath>F:/Unity/Projects/Keygard/Assets/Plugins/UnityPurchasing/Bin/Stores.dll</HintPath>
+ </Reference>
+ <Reference Include="AppleCore">
+ <HintPath>F:/Unity/Projects/Keygard/Assets/Plugins/UnityPurchasing/Bin/Apple/AppleCore.dll</HintPath>
+ </Reference>
+ <Reference Include="Editor">
+ <HintPath>F:/Unity/Projects/Keygard/Assets/Plugins/UnityPurchasing/Bin/Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Purchasing.Common">
+ <HintPath>F:/Unity/Projects/Keygard/Assets/Plugins/UnityPurchasing/Bin/Purchasing.Common.dll</HintPath>
+ </Reference>
+ <Reference Include="winrt">
+ <HintPath>F:/Unity/Projects/Keygard/Assets/Plugins/UnityPurchasing/winrt/winrt.dll</HintPath>
+ </Reference>
+ <Reference Include="FacebookStore">
+ <HintPath>F:/Unity/Projects/Keygard/Assets/Plugins/UnityPurchasing/Bin/Facebook/FacebookStore.dll</HintPath>
+ </Reference>
+ <Reference Include="Apple">
+ <HintPath>F:/Unity/Projects/Keygard/Assets/Plugins/UnityPurchasing/Bin/Apple/Apple.dll</HintPath>
+ </Reference>
+ <Reference Include="AppleMacos">
+ <HintPath>F:/Unity/Projects/Keygard/Assets/Plugins/UnityPurchasing/Bin/Apple/AppleMacos.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>

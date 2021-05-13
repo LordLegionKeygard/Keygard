@@ -9677,7 +9677,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.9064007, y: -8.935, z: -10}
+  m_LocalPosition: {x: 2.9777784, y: -8.935, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -31370,7 +31370,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 0
-    m_SensorSize: {x: 1.768, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -31882,6 +31882,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 1612316818}
+  twokey: 0
 --- !u!82 &1050340140 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 7167722751892060039, guid: 986cf13dfd0d02e458d0962d6f9a06d4,
@@ -32406,7 +32407,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1109732175}
   - component: {fileID: 1109732174}
-  - component: {fileID: 1109732176}
   m_Layer: 0
   m_Name: '[Music]'
   m_TagString: music
@@ -32426,7 +32426,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 300922287960976558, guid: 40ad51b697194aa4398a49da1fcab943,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: acbbbdc2357fbd54aa4f97da65655180, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
@@ -32525,19 +32525,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1109732176
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1109732173}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc06cac0e812a4c41aa692ebd4c93d76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MainMenu: {fileID: 1109732174}
 --- !u!1 &1134633653
 GameObject:
   m_ObjectHideFlags: 3
@@ -41001,7 +40988,7 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: -3.2316399, y: 1.3170652}
-      - {x: -5.229787, y: 2.3111057}
+      - {x: -5.228265, y: 2.3141499}
       - {x: -5.0096645, y: 1.7729235}
       - {x: -4.0217037, y: 1.255476}
 --- !u!1 &1610525086 stripped
@@ -98382,11 +98369,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: AllCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 3719364490353323579, guid: 76aad8fe05338364a93cd9f8316d490b,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3719364490353323580, guid: 76aad8fe05338364a93cd9f8316d490b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -98447,11 +98429,6 @@ PrefabInstance:
       propertyPath: lvlmusic
       value: 
       objectReference: {fileID: 1109732173}
-    - target: {fileID: 3719364490741340082, guid: 76aad8fe05338364a93cd9f8316d490b,
-        type: 3}
-      propertyPath: BossMusic
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 3719364490741340082, guid: 76aad8fe05338364a93cd9f8316d490b,
         type: 3}
       propertyPath: mainsound
@@ -98537,16 +98514,6 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 449417230}
-    - target: {fileID: 7376684002132421383, guid: 76aad8fe05338364a93cd9f8316d490b,
-        type: 3}
-      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnLeftButtonDown
-      objectReference: {fileID: 0}
-    - target: {fileID: 7376684002132421383, guid: 76aad8fe05338364a93cd9f8316d490b,
-        type: 3}
-      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnButtonUp
-      objectReference: {fileID: 0}
     - target: {fileID: 4830235956808012745, guid: 76aad8fe05338364a93cd9f8316d490b,
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -98554,19 +98521,9 @@ PrefabInstance:
       objectReference: {fileID: 449417230}
     - target: {fileID: 4830235956808012745, guid: 76aad8fe05338364a93cd9f8316d490b,
         type: 3}
-      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnRightButtonDown
-      objectReference: {fileID: 0}
-    - target: {fileID: 4830235956808012745, guid: 76aad8fe05338364a93cd9f8316d490b,
-        type: 3}
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 449417230}
-    - target: {fileID: 4830235956808012745, guid: 76aad8fe05338364a93cd9f8316d490b,
-        type: 3}
-      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnButtonUp
-      objectReference: {fileID: 0}
     - target: {fileID: 3719364489714650981, guid: 76aad8fe05338364a93cd9f8316d490b,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -98581,21 +98538,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3719364491136339707, guid: 76aad8fe05338364a93cd9f8316d490b,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3719364490103628648, guid: 76aad8fe05338364a93cd9f8316d490b,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3719364490103628649, guid: 76aad8fe05338364a93cd9f8316d490b,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76aad8fe05338364a93cd9f8316d490b, type: 3}

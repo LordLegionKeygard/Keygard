@@ -10,7 +10,7 @@ public class MobAdRewarded : MonoBehaviour
     [SerializeField] private Text textScore;
     private int score;
 
-    private const string rewardedUnitId = "ca-app-pub-3940256099942544/5224354917";
+    private const string rewardedUnitId = "ca-app-pub-9652722646808077/8928743776";
 
     private void Start()
     {

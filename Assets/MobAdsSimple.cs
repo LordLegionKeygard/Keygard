@@ -8,7 +8,7 @@ public class MobAdsSimple : MonoBehaviour
     private InterstitialAd interstitialAd;
     private bool shown = true;
 
-    private const string interstitialUnitId = "ca-app-pub-3940256099942544/8691691433";
+    private const string interstitialUnitId = "ca-app-pub-9652722646808077/8734476111";
 
     void OnEnable()
     {

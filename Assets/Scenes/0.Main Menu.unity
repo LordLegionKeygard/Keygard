@@ -743,13 +743,13 @@ MonoBehaviour:
     price: 0
     bought: 1
   - staffType: 1
-    price: 5
+    price: 150
     bought: 0
   - staffType: 2
-    price: 10
+    price: 300
     bought: 0
   - staffType: 3
-    price: 15
+    price: 1000
     bought: 0
   _coins: 0
   AreYouSurePanel: {fileID: 272751583}
@@ -1283,7 +1283,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 116868752}
-  - component: {fileID: 116868751}
   - component: {fileID: 116868750}
   m_Layer: 0
   m_Name: Music
@@ -1304,7 +1303,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 300922287960976558, guid: 40ad51b697194aa4398a49da1fcab943,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 6eea27965b7cdd849a91128074a348e6, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
@@ -1389,19 +1388,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &116868751
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 116868749}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc06cac0e812a4c41aa692ebd4c93d76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MainMenu: {fileID: 116868750}
 --- !u!4 &116868752
 Transform:
   m_ObjectHideFlags: 0
@@ -2713,7 +2699,6 @@ MonoBehaviour:
   _locationsSelectionCanvas: {fileID: 1571753762}
   _gameLogo: {fileID: 712825517}
   _donateBackground: {fileID: 774116467}
-  bar: {fileID: 1624925154}
 --- !u!1 &272751583
 GameObject:
   m_ObjectHideFlags: 0
@@ -6288,7 +6273,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0.43
-  m_Text: 15
+  m_Text: 1000
 --- !u!222 &720903104
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6975,8 +6960,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.38000003, y: 0.46}
   m_AnchorMax: {x: 0.6214827, y: 0.53000003}
-  m_AnchoredPosition: {x: 0.3998747, y: -0.040420532}
-  m_SizeDelta: {x: 89.56, y: 25}
+  m_AnchoredPosition: {x: -0.16000175, y: -0.020210266}
+  m_SizeDelta: {x: 89.68, y: 25.04042}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &790061593
 MonoBehaviour:
@@ -7073,7 +7058,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36a5f511b0d8142cba0aeb92d0b264c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  productId: com.legionswordgames.add_coins
+  productId: com.legionswordgames.add_coinss
   buttonType: 0
   consumePurchase: 1
   onPurchaseComplete:
@@ -7096,7 +7081,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 653958717}
-        m_MethodName: OnPurchaseFailure
+        m_MethodName: PurchaseFailure
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9596,7 +9581,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0.43
-  m_Text: 10
+  m_Text: 300
 --- !u!222 &1048487474
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10398,7 +10383,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0.43
-  m_Text: 5
+  m_Text: 150
 --- !u!222 &1177078558
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10418,7 +10403,6 @@ GameObject:
   - component: {fileID: 1187932507}
   - component: {fileID: 1187932506}
   - component: {fileID: 1187932505}
-  - component: {fileID: 1187932508}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -10491,18 +10475,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1187932508
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1187932504}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dd4a74bec9f8d746af1ba1c8e65fc25, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1196053254
 GameObject:
   m_ObjectHideFlags: 0
@@ -15530,10 +15502,10 @@ RectTransform:
   m_Father: {fileID: 774116468}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.38000003, y: 0.25921366}
-  m_AnchorMax: {x: 0.6214827, y: 0.33}
-  m_AnchoredPosition: {x: 0.39999962, y: 0}
-  m_SizeDelta: {x: 89.56, y: 24.89}
+  m_AnchorMin: {x: 0.38000003, y: 0.2991657}
+  m_AnchorMax: {x: 0.6214827, y: 0.37}
+  m_AnchoredPosition: {x: -0.1250019, y: 0.037498474}
+  m_SizeDelta: {x: 89.75, y: 24.925}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1758337329
 MonoBehaviour:
@@ -15789,7 +15761,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1798875628}
   - component: {fileID: 1798875630}
-  - component: {fileID: 1798875629}
   m_Layer: 5
   m_Name: BtnPanel
   m_TagString: Untagged
@@ -15821,25 +15792,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!95 &1798875629
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1798875627}
-  m_Enabled: 0
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a9c55f5bdc790b0468f9c0853d747a90, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!222 &1798875630
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -27062,7 +27062,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1109732175}
   - component: {fileID: 1109732174}
-  - component: {fileID: 1109732176}
   m_Layer: 0
   m_Name: '[Music]'
   m_TagString: music
@@ -27082,7 +27081,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 300922287960976558, guid: 40ad51b697194aa4398a49da1fcab943,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: acbbbdc2357fbd54aa4f97da65655180, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
@@ -27181,19 +27180,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1109732176
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1109732173}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc06cac0e812a4c41aa692ebd4c93d76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MainMenu: {fileID: 1109732174}
 --- !u!4 &1122302441 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4341193112833545600, guid: 9de367d2cf63f864f8dc9b51f1f778c9,
@@ -35381,11 +35367,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: dd2b72bfa28fd32449a05a4785f2cff3, type: 2}
-    - target: {fileID: 3173984188157159738, guid: d70ec2204a8843d49b9385e985a795b7,
-        type: 3}
-      propertyPath: m_GravityScale
-      value: 30
-      objectReference: {fileID: 0}
     - target: {fileID: 2624868422254389488, guid: d70ec2204a8843d49b9385e985a795b7,
         type: 3}
       propertyPath: walkDistance
@@ -35395,6 +35376,11 @@ PrefabInstance:
         type: 3}
       propertyPath: patrolSpeed
       value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3173984188157159738, guid: d70ec2204a8843d49b9385e985a795b7,
+        type: 3}
+      propertyPath: m_GravityScale
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d70ec2204a8843d49b9385e985a795b7, type: 3}
@@ -85157,6 +85143,21 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 449417230}
+    - target: {fileID: 3719364489714650981, guid: 76aad8fe05338364a93cd9f8316d490b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3719364490103628663, guid: 76aad8fe05338364a93cd9f8316d490b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3719364491136339708, guid: 76aad8fe05338364a93cd9f8316d490b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76aad8fe05338364a93cd9f8316d490b, type: 3}
 --- !u!1 &3719364489356204569 stripped

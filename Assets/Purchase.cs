@@ -1,20 +1,27 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.Purchasing;
-using UnityEngine.UI;
 
 public class Purchase : MonoBehaviour
 {
     public ShopCanvas _shopCanvas; 
 
-    public void OnPurchaseComplete(Product product)
+    public static SynchronizationContext MainThread;
+
+    private void Start() 
     {
-        if (product.definition.id == "com.legionswordgames.add_coins")  _shopCanvas.Purchase();
+        MainThread = SynchronizationContext.Current;        
     }
 
-    public void OnPurchaseFailure(Product product, PurchaseFailureReason reason)
+    public void OnPurchaseComplete(Product product) 
     {
-        Debug.Log("Purchase of " + product.definition.id + "failed because" + reason);
+        MainThread.Post(_ => _shopCanvas.Purchase(), null);                  
+    }
+
+    public void PurchaseFailure(Product product, PurchaseFailureReason reason)
+    {
+        Debug.Log("Failed");
     }
 }

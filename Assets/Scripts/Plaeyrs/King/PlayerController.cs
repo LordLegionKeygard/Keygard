@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour 
 {
-
     Animator animator;
     
     public GameObject loadingScreen;
