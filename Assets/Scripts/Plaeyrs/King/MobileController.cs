@@ -31,7 +31,7 @@ public class MobileController : MonoBehaviour
     private int extraJumps;
     public int extraJumpsValue;
 
-    private void Start()
+    private void Awake()
     {
         speed = 0f;
         animator = GetComponent<Animator>();

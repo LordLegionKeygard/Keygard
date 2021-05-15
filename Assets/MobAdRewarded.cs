@@ -10,12 +10,22 @@ public class MobAdRewarded : MonoBehaviour
     [SerializeField] private Text textScore;
     private int score;
 
+    private bool shown = true;
+
     private const string rewardedUnitId = "ca-app-pub-9652722646808077/8928743776";
 
     private void Start()
     {
         score = PlayerPrefs.GetInt("coin", score);
         textScore.text = score.ToString();
+    }
+
+    void Update()
+    {
+        if (shown == false)
+        {
+            ShowRewardedAd();
+        }
     }
     void OnEnable()
     {
@@ -33,9 +43,11 @@ public class MobAdRewarded : MonoBehaviour
 
     public void ShowRewardedAd()
     {
+        shown = false;
         if (rewardedAd.IsLoaded())
         {
             rewardedAd.Show();
+            shown = true;
         }
     }
 
