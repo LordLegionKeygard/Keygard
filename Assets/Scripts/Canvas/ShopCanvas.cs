@@ -178,10 +178,6 @@ public class ShopCanvas : MonoBehaviour
         _shopCanvas.SetActive(false);
         _allButtons.SetActive(true);
         _gameLogo.SetActive(true);
-    }
-
-    private void OnDisable()
-    {
         Save();
     }
 
@@ -198,9 +194,23 @@ public class ShopCanvas : MonoBehaviour
         AreYouSurePanel.SetActive(false);
     }
 
-    public void Purchase()
+    public void Purchase200()
     {
         _coins += 200;
+        _textCoins.text = _coins.ToString();
+        Save();
+    }
+
+    public void Purchase400()
+    {
+        _coins += 400;
+        _textCoins.text = _coins.ToString();
+        Save();
+    }
+
+    public void Purchase1000()
+    {
+        _coins += 1000;
         _textCoins.text = _coins.ToString();
         Save();
     }

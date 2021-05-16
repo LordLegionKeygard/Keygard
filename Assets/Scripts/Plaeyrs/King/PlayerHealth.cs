@@ -20,8 +20,6 @@ public class PlayerHealth : MonoBehaviour
     private UnityEngine.Object explosion;
     private UnityEngine.Object poisonExplosion;
 
-    private bool ads = true;
-
     private void Awake()
     {
         explosion = Resources.Load("PlayerDamage");

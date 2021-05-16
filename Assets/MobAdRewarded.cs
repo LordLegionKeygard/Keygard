@@ -10,8 +10,6 @@ public class MobAdRewarded : MonoBehaviour
     [SerializeField] private Text textScore;
     private int score;
 
-    private bool shown = true;
-
     private const string rewardedUnitId = "ca-app-pub-9652722646808077/8928743776";
 
     private void Start()
@@ -20,20 +18,13 @@ public class MobAdRewarded : MonoBehaviour
         textScore.text = score.ToString();
     }
 
-    void Update()
-    {
-        if (shown == false)
-        {
-            ShowRewardedAd();
-        }
-    }
     void OnEnable()
     {
-        rewardedAd = new RewardedAd(rewardedUnitId);
+        this.rewardedAd = new RewardedAd(rewardedUnitId);
         AdRequest adRequest = new AdRequest.Builder().Build();
-        rewardedAd.LoadAd(adRequest);
+        this.rewardedAd.LoadAd(adRequest);
 
-        rewardedAd.OnUserEarnedReward += HandleUserEarnedReward;
+        this.rewardedAd.OnUserEarnedReward += HandleUserEarnedReward;       
     }
 
     void OnDisable()
@@ -43,11 +34,11 @@ public class MobAdRewarded : MonoBehaviour
 
     public void ShowRewardedAd()
     {
-        shown = false;
-        if (rewardedAd.IsLoaded())
+        Debug.Log("1");
+        if (this.rewardedAd.IsLoaded())
         {
-            rewardedAd.Show();
-            shown = true;
+            Debug.Log("2");
+            this.rewardedAd.Show();
         }
     }
 
