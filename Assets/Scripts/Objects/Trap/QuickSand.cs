@@ -8,7 +8,6 @@ public class QuickSand : MonoBehaviour
     Vector3 currentPosition;
     bool moveingBack;   
 
-    // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -19,14 +18,21 @@ public class QuickSand : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player") && moveingBack == false)
         {
-            Invoke("FallPlatform", 0.3f);           
+            FallPlatform();           
         }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            BackPlatform();
+        }     
     }
 
     void FallPlatform()
     {
         rb.isKinematic = false;
-        Invoke("BackPlatform", 2f);
     }
 
     void BackPlatform()

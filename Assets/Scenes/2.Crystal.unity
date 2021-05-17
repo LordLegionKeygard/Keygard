@@ -106935,6 +106935,11 @@ PrefabInstance:
       objectReference: {fileID: 449417235}
     - target: {fileID: 3719364490741340082, guid: 76aad8fe05338364a93cd9f8316d490b,
         type: 3}
+      propertyPath: BossMusic
+      value: 
+      objectReference: {fileID: 1109732174}
+    - target: {fileID: 3719364490741340082, guid: 76aad8fe05338364a93cd9f8316d490b,
+        type: 3}
       propertyPath: mainsound
       value: 
       objectReference: {fileID: 1109732174}
