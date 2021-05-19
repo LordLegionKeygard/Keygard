@@ -74,7 +74,7 @@ public class PlayerHealth : MonoBehaviour
 
     void RandomStatePicker()
     {
-        int randomState = Random.Range(0, 1);
+        int randomState = Random.Range(0, 2);
         if (randomState == 0)
         {
             _mobAdsSimple.ShowAd();

@@ -182,8 +182,8 @@ MonoBehaviour:
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 21300000, guid: d75766961d8dfa64e9a790d66396c8ce, type: 3}
-    m_SelectedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 21300000, guid: d75766961d8dfa64e9a790d66396c8ce, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -196,9 +196,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3285492253455175859}
-        m_TargetAssemblyTypeName: MobAdRewarded, Assembly-CSharp
-        m_MethodName: ShowRewardedAd
+      - m_Target: {fileID: 3719364489356204572}
+        m_TargetAssemblyTypeName: MobAdRewarded2, Assembly-CSharp
+        m_MethodName: OnGetMorePointsClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3658,6 +3658,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3719364490353323580}
   - component: {fileID: 3285492253455175859}
+  - component: {fileID: 3719364489356204572}
   m_Layer: 0
   m_Name: AllCanvas
   m_TagString: Untagged
@@ -3691,11 +3692,25 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3719364490353323579}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cc716b95da96cc84f92df3491f0a6a44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textScore: {fileID: 7899317375618615795}
+--- !u!114 &3719364489356204572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3719364490353323579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ba0d61c9b8e2f84caef27341e0053dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BtnReward: {fileID: 6293140678749774431}
   textScore: {fileID: 7899317375618615795}
 --- !u!1 &3719364490484721060
 GameObject:
