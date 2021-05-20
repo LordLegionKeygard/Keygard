@@ -142,7 +142,6 @@ public class Archer : MonoBehaviour
         {
             nextPoint.x *= -1;
         }
-        rb.MovePosition((Vector2)Model.position + nextPoint);
     }
     private void ChasePlayer()
     {      

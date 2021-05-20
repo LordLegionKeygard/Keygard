@@ -39,7 +39,7 @@
      <Compile Include="Assets\Scripts\Snail\SnailEnemy.cs" />
      <Compile Include="Assets\Scripts\Objects\Trap\FallingPlatformFast.cs" />
      <Compile Include="Assets\Scripts\AllEnemy\BlueSleepHealth.cs" />
-     <Compile Include="Assets\MobAdRewarded.cs" />
+     <Compile Include="Assets\yaSingleton\Examples\Scripts\UIManager.cs" />
      <Compile Include="Assets\Scripts\Objects\Trap\MovingPlatform.cs" />
      <Compile Include="Assets\Scripts\AllEnemy\Jester.cs" />
      <Compile Include="Assets\Scripts\AllEnemy\ArcherHealth.cs" />
@@ -76,6 +76,7 @@
      <Compile Include="Assets\Scripts\Objects\Rain.cs" />
      <Compile Include="Assets\Scripts\AllEnemy\EnemyRange.cs" />
      <Compile Include="Assets\Scripts\EnemiesManager.cs" />
+     <Compile Include="Assets\yaSingleton\Examples\Scripts\GameSettings.cs" />
      <Compile Include="Assets\Scripts\Plaeyrs\King\Weapon1.cs" />
      <Compile Include="Assets\Scripts\Plaeyrs\StaffController.cs" />
      <Compile Include="Assets\Scripts\Canvas\OptionCanvas.cs" />
@@ -168,11 +169,11 @@
      <Compile Include="Assets\MobAdsSimple.cs" />
      <Compile Include="Assets\Scripts\AllEnemy\SmMushroom3lvlHealth.cs" />
      <Compile Include="Assets\Scripts\Plaeyrs\King\FireWeapon1.cs" />
+     <Compile Include="Assets\yaSingleton\Examples\Scripts\ButtonController.cs" />
      <Compile Include="Assets\Scripts\Snail\SnailBullet.cs" />
      <Compile Include="Assets\Scripts\MishaEnemy.cs" />
      <Compile Include="Assets\Scripts\AllEnemy\BossTrigger.cs" />
      <Compile Include="Assets\Scripts\Objects\BoxHealth.cs" />
-     <Compile Include="Assets\MobAdRewarded2.cs" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />

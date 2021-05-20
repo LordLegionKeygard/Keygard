@@ -64,9 +64,11 @@ public class PlayerController : MonoBehaviour
          
     private int score;
     [SerializeField] private Text textScore;
+    [SerializeField] private MobAdsSimple _mobAdsSimple;
 
     private void Start()
     {
+        _mobAdsSimple = GetComponent<MobAdsSimple>();
         score = PlayerPrefs.GetInt("coin", score);
         textScore.text = score.ToString();
         animator = GetComponent<Animator>();
@@ -187,7 +189,9 @@ public class PlayerController : MonoBehaviour
         }
         
         if (collision.gameObject.CompareTag("Finish"))
-        {
+        {   
+            _mobAdsSimple.ShowAd();
+            
             loadingScreen.SetActive(true);
 
             Location.Instance.Load();
@@ -199,8 +203,6 @@ public class PlayerController : MonoBehaviour
             Location.Instance.CheckCurrentLevel();
             
             int nextLevel = Location.Instance.CurrentLevelNumber;
-
-            
 
             StartCoroutine(LoadAsync(nextLevel));
         }

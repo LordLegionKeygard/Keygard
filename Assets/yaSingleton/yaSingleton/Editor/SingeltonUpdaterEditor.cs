@@ -3,7 +3,6 @@ using UnityEditor;
 using UnityEngine;
 using yaSingleton.Helpers;
 
-
 namespace yaSingleton.Editor {
     [CustomEditor(typeof(SingletonUpdater), true)]
     public class SingeltonUpdaterEditor : UnityEditor.Editor {
