@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{ef09a5c5-5f37-c5ad-5322-efeed2709ecd}</ProjectGuid>
+    <ProjectGuid>{e28f4ae2-effd-dc07-a18b-2dd5bc45a6fe}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>AstarPathfindingProject</AssemblyName>
@@ -378,37 +378,37 @@
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.8f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="Google.PackageManagerResolver_v1.2.165">
-        <HintPath>F:/Unity/Projects/Keygard2020/Library/PackageCache/com.google.external-dependency-manager@1.2.165/ExternalDependencyManager/Editor/Google.PackageManagerResolver_v1.2.165.dll</HintPath>
+        <HintPath>F:/Unity/Projects/Keygard/Library/PackageCache/com.google.external-dependency-manager@1.2.165/ExternalDependencyManager/Editor/Google.PackageManagerResolver_v1.2.165.dll</HintPath>
     </Reference>
     <Reference Include="Google.VersionHandler">
-        <HintPath>F:/Unity/Projects/Keygard2020/Library/PackageCache/com.google.external-dependency-manager@1.2.165/ExternalDependencyManager/Editor/Google.VersionHandler.dll</HintPath>
+        <HintPath>F:/Unity/Projects/Keygard/Library/PackageCache/com.google.external-dependency-manager@1.2.165/ExternalDependencyManager/Editor/Google.VersionHandler.dll</HintPath>
     </Reference>
     <Reference Include="DOTween">
-        <HintPath>F:/Unity/Projects/Keygard2020/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
+        <HintPath>F:/Unity/Projects/Keygard/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-        <HintPath>F:/Unity/Projects/Keygard2020/Assets/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll</HintPath>
+        <HintPath>F:/Unity/Projects/Keygard/Assets/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Google.JarResolver_v1.2.165">
-        <HintPath>F:/Unity/Projects/Keygard2020/Library/PackageCache/com.google.external-dependency-manager@1.2.165/ExternalDependencyManager/Editor/Google.JarResolver_v1.2.165.dll</HintPath>
+        <HintPath>F:/Unity/Projects/Keygard/Library/PackageCache/com.google.external-dependency-manager@1.2.165/ExternalDependencyManager/Editor/Google.JarResolver_v1.2.165.dll</HintPath>
     </Reference>
     <Reference Include="ICSharpCode.NRefactory">
-        <HintPath>F:/Unity/Projects/Keygard2020/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
+        <HintPath>F:/Unity/Projects/Keygard/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
     </Reference>
     <Reference Include="Pathfinding.Ionic.Zip.Reduced">
-        <HintPath>F:/Unity/Projects/Keygard2020/Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
+        <HintPath>F:/Unity/Projects/Keygard/Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
     </Reference>
     <Reference Include="clipper_library">
-        <HintPath>F:/Unity/Projects/Keygard2020/Library/PackageCache/com.unity.cinemachine@2.7.1/Runtime/ThirdParty/clipper_library.dll</HintPath>
+        <HintPath>F:/Unity/Projects/Keygard/Library/PackageCache/com.unity.cinemachine@2.7.1/Runtime/ThirdParty/clipper_library.dll</HintPath>
     </Reference>
     <Reference Include="DOTweenEditor">
-        <HintPath>F:/Unity/Projects/Keygard2020/Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
+        <HintPath>F:/Unity/Projects/Keygard/Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
     </Reference>
     <Reference Include="Google.IOSResolver_v1.2.165">
-        <HintPath>F:/Unity/Projects/Keygard2020/Library/PackageCache/com.google.external-dependency-manager@1.2.165/ExternalDependencyManager/Editor/Google.IOSResolver_v1.2.165.dll</HintPath>
+        <HintPath>F:/Unity/Projects/Keygard/Library/PackageCache/com.google.external-dependency-manager@1.2.165/ExternalDependencyManager/Editor/Google.IOSResolver_v1.2.165.dll</HintPath>
     </Reference>
     <Reference Include="Google.VersionHandlerImpl_v1.2.165">
-        <HintPath>F:/Unity/Projects/Keygard2020/Library/PackageCache/com.google.external-dependency-manager@1.2.165/ExternalDependencyManager/Editor/Google.VersionHandlerImpl_v1.2.165.dll</HintPath>
+        <HintPath>F:/Unity/Projects/Keygard/Library/PackageCache/com.google.external-dependency-manager@1.2.165/ExternalDependencyManager/Editor/Google.VersionHandlerImpl_v1.2.165.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.8f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -762,10 +762,10 @@
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.8f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XPath.XDocument.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-        <HintPath>F:/Unity/Projects/Keygard2020/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+        <HintPath>F:/Unity/Projects/Keygard/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-        <HintPath>F:/Unity/Projects/Keygard2020/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+        <HintPath>F:/Unity/Projects/Keygard/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

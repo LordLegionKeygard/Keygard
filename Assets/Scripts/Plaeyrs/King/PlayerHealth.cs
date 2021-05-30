@@ -69,7 +69,7 @@ public class PlayerHealth : MonoBehaviour
         RandomStatePicker();
         gameOverCanvas.SetActive(true);
         keyCanvas.SetActive(false);
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 
     void RandomStatePicker()

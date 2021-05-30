@@ -34,7 +34,7 @@ public class Enemy : MonoBehaviour
     public bool IsFacingRight
     {
         get => isFacingRight;
-    }  
+    }
 
     public void StartChasingPlayer()
     {
@@ -45,68 +45,68 @@ public class Enemy : MonoBehaviour
 
     private void Start()
     {
-        playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();        
+        playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         rb = GetComponent<Rigidbody2D>();
         leftBoundaryPosition = transform.position;
         rightBoundaryPosition = leftBoundaryPosition + Vector2.right * walkDistance;
         waitTime = timeToWait;
         chaseTime = timeToChase;
-        walkSpeed = patrolSpeed;   
+        walkSpeed = patrolSpeed;
     }
 
     private void Update()
     {
-        if(isChasingPlayer)
+        if (isChasingPlayer)
         {
             StartChasingTimer();
         }
 
-        if(isWait && !isChasingPlayer)
+        if (isWait && !isChasingPlayer)
         {
-            StartWaitTimer();           
-        }
-        
-
-        if(ShouldWait())
-        {
-            isWait = true;           
+            StartWaitTimer();
         }
 
-        if(isChasingPlayer && Mathf.Abs(DistanceToPlayer()) < minDinstanceToAttack)
+
+        if (ShouldWait())
+        {
+            isWait = true;
+        }
+
+        if (isChasingPlayer && Mathf.Abs(DistanceToPlayer()) < minDinstanceToAttack)
         {
             animator.SetTrigger("Attack");
-        } 
+        }
     }
 
     private void FixedUpdate()
-    {             
+    {
         nextPoint = Vector2.right * walkSpeed * Time.fixedDeltaTime;
 
-        if(isChasingPlayer &&  Mathf.Abs(DistanceToPlayer()) < minDistancetoPlayer)
+        if (isChasingPlayer && Mathf.Abs(DistanceToPlayer()) < minDistancetoPlayer)
         {
             return;
-        }   
+        }
 
-        if(animator)
+        if (animator)
         {
             animator.SetBool("Walk", walk);
-        }     
-   
-        if(isChasingPlayer)
+        }
+
+        if (isChasingPlayer)
         {
             ChasePlayer();
         }
 
-        if(!isWait && !isChasingPlayer)
+        if (!isWait && !isChasingPlayer)
         {
             Patrol();
         }
-  
+
     }
 
     private void Patrol()
-    {      
-        if(!isFacingRight)
+    {
+        if (!isFacingRight)
         {
             nextPoint.x *= -1;
         }
@@ -114,21 +114,21 @@ public class Enemy : MonoBehaviour
     }
     private void ChasePlayer()
     {
-        walk = true;        
+        walk = true;
         float distance = DistanceToPlayer();
-        if(distance < 0)
-        {                   
+        if (distance < 0)
+        {
             nextPoint.x *= -1;
         }
-        if(distance > 0.2f && !isFacingRight)
-        {
-            Flip();            
-        }
-        else if(distance < 0.2f && isFacingRight)
+        if (distance > 0.2f && !isFacingRight)
         {
             Flip();
-        }      
-        
+        }
+        else if (distance < 0.2f && isFacingRight)
+        {
+            Flip();
+        }
+
         rb.MovePosition((Vector2)transform.position + nextPoint);
     }
 
@@ -139,7 +139,7 @@ public class Enemy : MonoBehaviour
 
     private void StartWaitTimer()
     {
-        walk = false;        
+        walk = false;
         waitTime -= Time.deltaTime;
 
         if (waitTime < 0f)
@@ -152,10 +152,10 @@ public class Enemy : MonoBehaviour
     }
 
     private void StartChasingTimer()
-    {        
+    {
         chaseTime -= Time.deltaTime;
 
-        if(chaseTime < 0f)
+        if (chaseTime < 0f)
         {
             isChasingPlayer = false;
             chaseTime = timeToChase;
@@ -171,7 +171,7 @@ public class Enemy : MonoBehaviour
 
         return isOutOfLeftBoundary || isOutOfRightBoundary;
     }
-    
+
 
     private void OnDrawGizmos()
     {
@@ -185,5 +185,5 @@ public class Enemy : MonoBehaviour
         Vector3 playerScale = Model.localScale;
         playerScale.x *= -1;
         Model.localScale = playerScale;
-    }    
+    }
 }

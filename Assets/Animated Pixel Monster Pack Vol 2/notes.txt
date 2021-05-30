@@ -1,0 +1,86 @@
+﻿---UPDATES---
+
+14/01/2017
+- one more attack animation is added for the female naga
+- one more folder added to all monsters ("Individual PNG files")
+
+
+Informations about the Individual PNG files folders:
+-- these folders contain the same images the asset pack already has as spritesheets
+-- in this folder frames are stored as individual files and not as part of a sprite sheet
+-- there is a folder for each sprite sheet which contains all the frames of that sheet as individual png files
+-- the name of the files are the same, with a number on its end (for example naga-female-sheet-black-4.png)
+-- check the animation section below to know which number of files go with which animation (numbers are in [] brackets)
+-- empty frames are deleted, the number at the end of the names of the files are always representing their place in the animation (see animation section below)
+
+---OVERALL NOTES---
+
+This pack contains 3 monsters with 5+5+8 color variations (making it a total of 18 different monsters if you will). The size of the monsters vary, grid of the sprite sheets is 60x60. Original dimensions in idle state are 32x34 for female naga, 36x40 for male naga, 36x27 for reptile.
+
+Each monster and color variation is stored on different sprite sheets (PNG).
+
+Each sprite sheet follows a straightforward 60x60 grid.
+
+For animation reference see the GIF files.
+
+For opening the GAL files use GraphicsGale, it's a free pixel art program. GAL files are attached to make it easier if you want to alter the animations.
+
+---MONSTER ANIMATIONS NOTES---
+list of the animations from up to down
+(spritesheets folders) [individual png files folders]
+1 line = 1 animation
+
+Female Naga sprite sheet (8 color variations):
+- idle (6 frames)
+[0,1,2,3,4,5]
+- walk (7 frames)
+[11,12,13,14,15,16,17]
+- old attack (10 frames)
+[22,23,24,25,26,27,28,29,30,31]
+- piercing attack (11 frames)
+[33,34,35,36,37,38,39,40,41,42,43]
+- getting hit (3 frames)
+[44,45,46]
+- death (11 frames)
+[55,56,57,58,59,60,61,62,63,64,65]
+- death with blood (same 11 frame with blood effect)
+[66,67,68,69,70,71,72,73,74,75,76]
+
+Male Naga sprite sheet (5 color variations):
+- idle (6 frames)
+[0,1,2,3,4,5]
+- walk (7 frames)
+[11,12,13,14,15,16,17]
+- normal attack (8 frames)
+[22,23,24,25,26,27,28,29]
+- slashing attack* (11 frames)
+[33,34,35,36,37,38,39,40,41,42,43]
+- getting hit (3 frames)
+[44,45,46]
+- death (8 frames)
+[55,56,57,58,59,60,61,62]
+- death with blood (same 8 frame with blood effect)
+[66,67,68,69,70,71,72,73]
+
+*You can loop frame 6-7-8 for an endless or longer channeled attack.
+
+Reptile sprite sheet (5 color variations):
+- idle (7 frames)
+[0,1,2,3,4,5,6]
+- walk (9 frames)
+[15,16,17,18,19,20,21,22,23]
+- fast attack (11 frames)
+[30,31,32,33,34,35,36,37,38,39,40]
+- heavy attack (15 frames)
+[45,46,47,48,49,50,51,52,53,54,55,56,57,58,59]
+- getting hit (4 frames)
+[60,61,62,63]
+- death (8 frames)
+[75,76,77,78,79,80,81,82,83]
+- death with blood (same 8 frame with blood effect)
+[90,91,92,93,94,95,96,97,98]
+
+Total: 134 frames (161 with bloody deaths)
+
+---END NOTES---
+In the end, I hope you find the pack useful, and I wish you good luck with your projects! Also, a big thanks for buying my assets! If you have any problems or questions, just e-mail me! iphigenia.pixels@gmail.com

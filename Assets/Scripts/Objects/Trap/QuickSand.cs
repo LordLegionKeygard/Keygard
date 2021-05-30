@@ -6,7 +6,7 @@ public class QuickSand : MonoBehaviour
 {
     Rigidbody2D rb;
     Vector3 currentPosition;
-    bool moveingBack;   
+    bool moveingBack = false;   
 
     void Start()
     {
