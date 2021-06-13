@@ -45,6 +45,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -157,6 +159,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -210,9 +214,10 @@ MonoBehaviour:
   - {fileID: 7794882109491668240}
   - {fileID: 1176218210015512985}
   m_Bounds:
-    m_Center: {x: 0.28719583, y: 0.20473698, z: 0}
-    m_Extent: {x: 0.96289927, y: 0.4052968, z: 0}
+    m_Center: {x: 0.056398198, y: -0.003961563, z: 0}
+    m_Extent: {x: 0.26671806, y: 0.77889585, z: 0}
   m_UseBatching: 1
+  m_AlwaysUpdate: 1
 --- !u!1 &290521882357181062
 GameObject:
   m_ObjectHideFlags: 0
@@ -259,6 +264,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -315,6 +322,7 @@ MonoBehaviour:
     m_Center: {x: 0.22651547, y: 0.17261294, z: 0}
     m_Extent: {x: 1.0387498, y: 0.36982977, z: 0}
   m_UseBatching: 1
+  m_AlwaysUpdate: 1
 --- !u!1 &1146091479959995348
 GameObject:
   m_ObjectHideFlags: 0
@@ -485,6 +493,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -567,6 +577,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -620,9 +632,10 @@ MonoBehaviour:
   - {fileID: 239573310800756594}
   - {fileID: 764218163486230565}
   m_Bounds:
-    m_Center: {x: 0.34282273, y: 0.07429893, z: 0}
-    m_Extent: {x: 0.40305144, y: 0.2486532, z: 0}
+    m_Center: {x: 0.049999952, y: 0.00000047683716, z: 0}
+    m_Extent: {x: 0.14000003, y: 0.3, z: 0}
   m_UseBatching: 1
+  m_AlwaysUpdate: 1
 --- !u!1 &3596714440679245781
 GameObject:
   m_ObjectHideFlags: 0
@@ -669,6 +682,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -725,6 +740,7 @@ MonoBehaviour:
     m_Center: {x: 0.063495785, y: 0.13113368, z: 0}
     m_Extent: {x: 0.52690476, y: 0.313475, z: 0}
   m_UseBatching: 1
+  m_AlwaysUpdate: 1
 --- !u!1 &4216139645965199715
 GameObject:
   m_ObjectHideFlags: 0
@@ -785,11 +801,11 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 6295ec1ff9a51d544a46f9bec34b7011, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -860,11 +876,11 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 6295ec1ff9a51d544a46f9bec34b7011, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -921,6 +937,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1015,6 +1033,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1373,6 +1393,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1481,11 +1503,11 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 6295ec1ff9a51d544a46f9bec34b7011, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -1652,11 +1674,11 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 6295ec1ff9a51d544a46f9bec34b7011, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -1859,11 +1881,11 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 6295ec1ff9a51d544a46f9bec34b7011, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -2132,11 +2154,11 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 6295ec1ff9a51d544a46f9bec34b7011, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -2234,6 +2256,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &4216139647991248204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2330,6 +2353,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2382,9 +2407,10 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 7782735380088114535}
   m_Bounds:
-    m_Center: {x: 0.21211113, y: 0.01902029, z: 0}
-    m_Extent: {x: 0.56885296, y: 0.4026385, z: 0}
+    m_Center: {x: -0.024147272, y: -0.00000047683716, z: 0}
+    m_Extent: {x: 0.32, y: 0.46, z: 0}
   m_UseBatching: 1
+  m_AlwaysUpdate: 1
 --- !u!1 &5341065770825190731
 GameObject:
   m_ObjectHideFlags: 0
@@ -2461,6 +2487,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2513,9 +2541,10 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 2315815803623852126}
   m_Bounds:
-    m_Center: {x: 0.006210558, y: 0.008158378, z: 0}
-    m_Extent: {x: 0.05000014, y: 0.15000008, z: 0}
+    m_Center: {x: 0.04999996, y: 0, z: 0}
+    m_Extent: {x: 0.120000005, y: 0.040000003, z: 0}
   m_UseBatching: 1
+  m_AlwaysUpdate: 1
 --- !u!1 &7348507951341968913
 GameObject:
   m_ObjectHideFlags: 0
@@ -2562,6 +2591,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2618,6 +2649,7 @@ MonoBehaviour:
     m_Center: {x: 0.21115565, y: 0.21372005, z: 0}
     m_Extent: {x: 1.0579498, y: 0.41655034, z: 0}
   m_UseBatching: 1
+  m_AlwaysUpdate: 1
 --- !u!1 &7371839240940070765
 GameObject:
   m_ObjectHideFlags: 0
@@ -2780,7 +2812,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cd0ed7725a120a4d8bb6c7c03be2782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mobAdsSimple: {fileID: 8061100531185281292}
   loadingScreen: {fileID: 0}
   loading: {fileID: 0}
   press: {fileID: 0}
@@ -2825,6 +2856,7 @@ MonoBehaviour:
   PickUpScroll: {fileID: 0}
   Coin: {fileID: 0}
   textScore: {fileID: 0}
+  _mobAdsSimple: {fileID: 8061100531185281292}
 --- !u!114 &8061100531185281292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2895,7 +2927,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6da6e0d81b33358438ad52db978c94ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 5
   jumpForce: 11
   mushroomJumpForce: 25
   _platform: {fileID: 0}
@@ -2922,7 +2954,7 @@ MonoBehaviour:
   speed: 0
   jumpForce: 11
   mushroomJumpForce: 25
-  normalspeed: 4
+  normalspeed: 5
   _platform: {fileID: 0}
   jumpsound: {fileID: 0}
   facingRight: 1
@@ -3223,6 +3255,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3279,6 +3313,7 @@ MonoBehaviour:
     m_Center: {x: 0.18565375, y: 0.19732824, z: 0}
     m_Extent: {x: 1.0898261, y: 0.40072393, z: 0}
   m_UseBatching: 1
+  m_AlwaysUpdate: 1
 --- !u!1 &7973573184025513408
 GameObject:
   m_ObjectHideFlags: 0
@@ -3325,6 +3360,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3377,9 +3414,10 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 7319712310413233336}
   m_Bounds:
-    m_Center: {x: 0.012907069, y: 0.005966544, z: 0}
-    m_Extent: {x: 0.0500001, y: 0.15000008, z: 0}
+    m_Center: {x: 0.04899002, y: -0.00052309036, z: 0}
+    m_Extent: {x: 0.120000005, y: 0.040000003, z: 0}
   m_UseBatching: 1
+  m_AlwaysUpdate: 1
 --- !u!1 &8919493840437050216
 GameObject:
   m_ObjectHideFlags: 0
@@ -3486,6 +3524,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3538,6 +3578,7 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 8123169054086780023}
   m_Bounds:
-    m_Center: {x: 0.3839484, y: -0.057715356, z: 0}
-    m_Extent: {x: 0.85177493, y: 0.652728, z: 0}
+    m_Center: {x: 0.05000019, y: 0, z: 0}
+    m_Extent: {x: 0.52, y: 0.68, z: 0}
   m_UseBatching: 1
+  m_AlwaysUpdate: 1

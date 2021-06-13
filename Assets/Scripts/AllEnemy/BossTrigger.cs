@@ -12,7 +12,11 @@ public class BossTrigger : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             _boss.SetActive(true);
-            _bossBackWall.SetActive(true);
+            if (_bossBackWall != null)
+            {
+                _bossBackWall.SetActive(true);
+            }
+
         }
     }
 }
