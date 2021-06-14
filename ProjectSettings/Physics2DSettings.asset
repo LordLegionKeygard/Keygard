@@ -3,7 +3,7 @@
 --- !u!19 &1
 Physics2DSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 4
+  serializedVersion: 5
   m_Gravity: {x: 0, y: -9.81}
   m_DefaultMaterial: {fileID: 0}
   m_VelocityIterations: 8
@@ -38,7 +38,7 @@ Physics2DSettings:
     m_IslandSolverJointCostScale: 10
     m_IslandSolverBodiesPerJob: 50
     m_IslandSolverContactsPerJob: 50
-  m_AutoSimulation: 1
+  m_SimulationMode: 0
   m_QueriesHitTriggers: 1
   m_QueriesStartInColliders: 1
   m_CallbacksOnDisable: 1
@@ -53,4 +53,4 @@ Physics2DSettings:
   m_ColliderAsleepColor: {r: 0.5686275, g: 0.95686275, b: 0.54509807, a: 0.36078432}
   m_ColliderContactColor: {r: 1, g: 0, b: 1, a: 0.6862745}
   m_ColliderAABBColor: {r: 1, g: 1, b: 0, a: 0.2509804}
-  m_LayerCollisionMatrix: ff7b3481ff7f3c81ff7f3481ffffffffff7f3c81ff7d3c81ffffffffffffffffff5f3c8bdff12c97fe7d3401fffdfefdff6f35d3ff7e3c01ff7f3809c88a2181c8900c00c8080000ff3f3d01fa6b3591ff7d3c81ffff3c81c8080000c8080001ffffbc81c8130008c80a0000c8490012c81a0808c8080000c8180000ff9b3801
+  m_LayerCollisionMatrix: ff7b3481ff7f3c81ff7f3481ffffffffff7f3c81ff7d3c81ffffffffff5f0c97ff5f3c8bdff12c97fe7d3401fffdfefdff6f35d37f7e3c01ff7f3809488a218148900c0048080000ff3f3d01fa6b35917f7d3c817fff3c814808000048080001ffffbc81c8130008c80a000048490012c81a08084808000048180000ff9b3801

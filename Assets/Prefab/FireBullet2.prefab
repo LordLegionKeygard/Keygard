@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -5614694076770424059}
   - component: {fileID: 8924181881691501944}
   - component: {fileID: -4188510917022498579}
-  m_Layer: 9
+  m_Layer: 7
   m_Name: FireBullet2
   m_TagString: PlayerBullet
   m_Icon: {fileID: 0}
@@ -50,6 +50,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -147,7 +149,7 @@ MonoBehaviour:
   speed: 0
   damage: 16
   rb: {fileID: 8924181881691503237}
-  TimeToLive: 1.5
+  TimeToLive: 0.8
 --- !u!95 &8924181881691501944
 Animator:
   serializedVersion: 3
@@ -175,8 +177,9 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8924181881691503238}
   m_Enabled: 1
-  serializedVersion: 9
+  serializedVersion: 10
   m_Type: 2
+  m_Shape: 0
   m_Color: {r: 1, g: 0.06054975, b: 0, a: 1}
   m_Intensity: 1.63
   m_Range: 12
@@ -225,5 +228,6 @@ Light:
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0

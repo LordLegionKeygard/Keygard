@@ -17,7 +17,7 @@ public class MobileController : MonoBehaviour
 
     [Header("Music Effect")]
     public AudioSource jumpsound;
-         
+
     private Rigidbody2D rb;
 
     public bool facingRight = true;
@@ -25,7 +25,7 @@ public class MobileController : MonoBehaviour
     private bool isGrounded;
     public Transform groundCheck;
     public float chekRadius;
-    public LayerMask whatIsGround; 
+    public LayerMask whatIsGround;
 
 
     private int extraJumps;
@@ -41,12 +41,12 @@ public class MobileController : MonoBehaviour
 
 
     private void FixedUpdate()
-    {   
-                
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, chekRadius, whatIsGround);                  
-        
+    {
+
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, chekRadius, whatIsGround);
+
         rb.velocity = new Vector2(speed, rb.velocity.y);
-        
+
         if (speed != 0)
         {
             animator.SetBool("Walk", true);
@@ -56,38 +56,44 @@ public class MobileController : MonoBehaviour
 
     private void Update()
     {
-        if(water == false)
+        if (water == false)
         {
             rb.gravityScale = 2.5f;
         }
         if (isGrounded == true)
         {
+            animator.SetTrigger("Idle");
             extraJumps = extraJumpsValue;
-        }                      
+        }
+        else if (isGrounded == false)
+        {
+            animator.SetBool("Walk", false);
+            animator.SetTrigger("Jump");
+        }
     }
 
     public void OnJumpButtonDown()
     {
-        if(extraJumps > 0 && water == false)
+        if (extraJumps > 0 && water == false)
         {
-        animator.SetTrigger("Jump");           
-        rb.velocity = Vector2.up * jumpForce;
-        extraJumps--;
+            animator.SetTrigger("Jump");
+            rb.velocity = Vector2.up * jumpForce;
+            extraJumps--;
         }
 
-        if(extraJumps == 0 && isGrounded == true && water == false)
+        if (extraJumps == 0 && isGrounded == true && water == false)
         {
             rb.velocity = Vector2.up * jumpForce;
             jumpsound.Play();
         }
 
-        if(extraJumps > 0 && water == true)
+        if (extraJumps > 0 && water == true)
         {
-        animator.SetTrigger("Jump");           
-        rb.gravityScale = -1f;
+            animator.SetTrigger("Jump");
+            rb.gravityScale = -1f;
         }
 
-        if(extraJumps == 0 && isGrounded == true && water == true)
+        if (extraJumps == 0 && isGrounded == true && water == true)
         {
             rb.gravityScale = -1f;
             jumpsound.Play();
@@ -96,7 +102,7 @@ public class MobileController : MonoBehaviour
 
     public void OnLeftButtonDown()
     {
-        if(speed >= 0f)
+        if (speed >= 0f)
         {
             speed = -normalspeed;
             transform.eulerAngles = new Vector3(0, 180, 0);
@@ -105,7 +111,7 @@ public class MobileController : MonoBehaviour
 
     public void OnRightButtonDown()
     {
-        if(speed <= 0f)
+        if (speed <= 0f)
         {
             speed = normalspeed;
             transform.eulerAngles = new Vector3(0, 0, 0);
@@ -120,33 +126,33 @@ public class MobileController : MonoBehaviour
 
     public void OnButtonDown()
     {
-        if(water == false)
+        if (water == false)
         {
             _platform.SetActive(false);
 
             StartCoroutine(ExecuteAfterTime(0.5f));
             IEnumerator ExecuteAfterTime(float timeInSec)
             {
-            yield return new WaitForSeconds(timeInSec);
-            _platform.SetActive(true);
+                yield return new WaitForSeconds(timeInSec);
+                _platform.SetActive(true);
             }
         }
 
-        if(water == true)
+        if (water == true)
         {
             rb.gravityScale = 1f;
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
-    { 
+    {
         if (collision.gameObject.CompareTag("Swamp"))
-        { 
-            water = true;  
+        {
+            water = true;
             rb.gravityScale = -0.1f;
         }
         if (collision.gameObject.CompareTag("Bottom"))
-        {  
+        {
             rb.gravityScale = 0.5f;
         }
     }
@@ -157,24 +163,24 @@ public class MobileController : MonoBehaviour
         {
             water = false;
             rb.gravityScale = _normalGravityScale;
-        } 
+        }
 
         if (collision.gameObject.CompareTag("Bottom"))
-        { 
+        {
             rb.gravityScale = 1f;
-        }     
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Jump"))
-        { 
+        {
             StartCoroutine(ExecuteAfterTime(0.2f));
             IEnumerator ExecuteAfterTime(float timeInSec)
             {
-            yield return new WaitForSeconds(timeInSec);
-            rb.velocity = Vector2.up * mushroomJumpForce;
-            } 
-        } 
+                yield return new WaitForSeconds(timeInSec);
+                rb.velocity = Vector2.up * mushroomJumpForce;
+            }
+        }
     }
 }

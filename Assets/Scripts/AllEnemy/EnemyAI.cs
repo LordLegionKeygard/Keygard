@@ -38,7 +38,7 @@ public class EnemyAI : MonoBehaviour
 
     public void Start()
     {
-        target = GameObject.Find("King").transform;
+        target = GameObject.Find("Ellor").transform;
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
         boundsCollider = GetComponentInChildren<Collider2D>();

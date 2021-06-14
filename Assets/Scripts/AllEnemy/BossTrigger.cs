@@ -16,7 +16,6 @@ public class BossTrigger : MonoBehaviour
             {
                 _bossBackWall.SetActive(true);
             }
-
         }
     }
 }

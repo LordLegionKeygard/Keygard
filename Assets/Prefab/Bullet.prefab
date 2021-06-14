@@ -50,6 +50,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -144,11 +146,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b88277edd99bb142a8910a6e013d4dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 7
   damage: 1
   rb: {fileID: 9087962364753032339}
-  TimeToLive: 1
-  _deathTime: 0
+  TimeToLive: 2
 --- !u!95 &-4386888776596310557
 Animator:
   serializedVersion: 3
@@ -176,8 +177,9 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9087962364753032338}
   m_Enabled: 1
-  serializedVersion: 9
+  serializedVersion: 10
   m_Type: 2
+  m_Shape: 0
   m_Color: {r: 0, g: 0.7058824, b: 0.096111536, a: 1}
   m_Intensity: 1.63
   m_Range: 5.29
@@ -226,5 +228,6 @@ Light:
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0

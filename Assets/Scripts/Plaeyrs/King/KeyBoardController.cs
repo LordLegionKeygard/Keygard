@@ -12,7 +12,7 @@ public class KeyBoardController : MonoBehaviour
     private float moveInput;
     private float _normalGravityScale = 2.5f;
     private bool water = false;
-
+    
     public GameObject _platform;
 
     [Header("Music Effect")]
@@ -22,7 +22,7 @@ public class KeyBoardController : MonoBehaviour
 
     public bool facingRight = true;
 
-    private bool isGrounded;
+    public bool isGrounded;
     public Transform groundCheck;
     public float chekRadius;
     public LayerMask whatIsGround; 
@@ -48,9 +48,18 @@ public class KeyBoardController : MonoBehaviour
         
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
         
-        if (animator)
+        if (isGrounded == true)
         {
             animator.SetBool("Walk", Mathf.Abs(moveInput) >= 0.1f);
+        }
+        if(isGrounded == true)
+        {
+            animator.SetTrigger("Idle");
+        }
+        else if(isGrounded == false)
+        {
+            animator.SetBool("Walk", false);
+            animator.SetTrigger("Jump");
         }
 
         if (facingRight == false && moveInput > 0)
@@ -94,7 +103,7 @@ public class KeyBoardController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && extraJumps > 0 && water == false || 
            (Input.GetKeyDown(KeyCode.W)) && extraJumps > 0 && water == false  || 
            (Input.GetKeyDown(KeyCode.UpArrow)) && extraJumps > 0 && water == false )
-        {              
+        {           
             if (animator) 
             {
                 animator.SetTrigger("Jump");
@@ -114,7 +123,7 @@ public class KeyBoardController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && extraJumps > 0 && water == true || 
            (Input.GetKeyDown(KeyCode.W)) && extraJumps > 0 && water == true || 
            (Input.GetKeyDown(KeyCode.UpArrow)) && extraJumps > 0 && water == true )
-        {              
+        {            
             animator.SetTrigger("Jump");
             rb.gravityScale = -1f;
         }

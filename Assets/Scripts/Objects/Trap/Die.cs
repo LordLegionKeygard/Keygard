@@ -9,20 +9,22 @@ public class Die : MonoBehaviour
     private Transform target;
     public AudioSource _dieTrap;
 
+    private PlayerHealth _playerHealth;
+
     private void Start()
     {
-        target = GameObject.Find("King").transform;
+        target = GameObject.Find("Ellor").transform;
+        _playerHealth = FindObjectOfType<PlayerHealth>();
     }
 
 
     private void OnCollisionEnter2D(Collision2D other)
     {
         PlayerHealth playerHealth = other.gameObject.GetComponent<PlayerHealth>();
+        playerHealth.TakeDamage(damage);
 
-        if (playerHealth != null)
+        if (playerHealth != null && _playerHealth.health >= 1)
         {
-            playerHealth.TakeDamage(damage);
-            
             _dieTrap.Play();
             StartCoroutine(ExecuteAfterTime(0.5f));
             IEnumerator ExecuteAfterTime(float timeInSec)
