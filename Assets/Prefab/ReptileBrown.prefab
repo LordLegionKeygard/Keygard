@@ -135,7 +135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 4600778959891773393}
   ENEMY: {fileID: 4600778959891773394}
-  totalHealth: 16
+  totalHealth: 12
   healthSlider: {fileID: 5099816110558647336}
   _hiddenSlider: {fileID: 5099816112464652510}
   _health: 12

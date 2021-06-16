@@ -39,10 +39,10 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - SeaCreatures
   - Water
   - UI
-  - 
+  - Invisible
   - UltimateBullet
   - Ground
   - Bullet

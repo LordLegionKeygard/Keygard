@@ -421,7 +421,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -492,7 +492,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5544449091038366520}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.07, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5926199386136008134}
@@ -598,10 +598,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 5926199386136008135}
   ENEMY: {fileID: 5926199386136008132}
-  totalHealth: 16
+  totalHealth: 12
   healthSlider: {fileID: 4365855396239235267}
   _hiddenSlider: {fileID: 4365855397221791773}
-  _health: 16
+  _health: 12
 --- !u!114 &5544449091038366522
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -617,13 +617,13 @@ MonoBehaviour:
   LootTable:
   - name: BronzeCoin
     item: {fileID: 123732073570350251, guid: ad4011e827a4cb64f93c269fe3ce4b37, type: 3}
-    dropRarity: 90
+    dropRarity: 88
   - name: SilverCoin
     item: {fileID: 5889504676247815488, guid: 1dfb782f24d58dc4591d3b3f5301062e, type: 3}
-    dropRarity: 60
+    dropRarity: 44
   - name: GoldCoin
     item: {fileID: 1480518432628846482, guid: 0c12ac00d6f8785489481982dc606a7f, type: 3}
-    dropRarity: 30
+    dropRarity: 22
   - name: Health
     item: {fileID: 848798104406163745, guid: 0bfa53394bb2ccd439c9e40fc2fd50f8, type: 3}
     dropRarity: 5
@@ -648,7 +648,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5926199386136008134
 Transform:
   m_ObjectHideFlags: 0
