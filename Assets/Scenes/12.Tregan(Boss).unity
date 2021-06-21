@@ -1375,7 +1375,7 @@ PrefabInstance:
     - target: {fileID: 6540443396541165736, guid: 290de72f883a30a49a5e9d6b2130ddc4,
         type: 3}
       propertyPath: m_RootOrder
-      value: 32
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 6540443396541165736, guid: 290de72f883a30a49a5e9d6b2130ddc4,
         type: 3}
@@ -6132,7 +6132,7 @@ GameObject:
   - component: {fileID: 316128371}
   - component: {fileID: 316128370}
   m_Layer: 0
-  m_Name: HelthBoost (4)
+  m_Name: HealthBoost (4)
   m_TagString: Potion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22211,7 +22211,7 @@ PrefabInstance:
     - target: {fileID: 6540443396541165736, guid: 290de72f883a30a49a5e9d6b2130ddc4,
         type: 3}
       propertyPath: m_RootOrder
-      value: 34
+      value: 33
       objectReference: {fileID: 0}
     - target: {fileID: 6540443396541165736, guid: 290de72f883a30a49a5e9d6b2130ddc4,
         type: 3}
@@ -23674,7 +23674,7 @@ PrefabInstance:
     - target: {fileID: 6540443396541165736, guid: 290de72f883a30a49a5e9d6b2130ddc4,
         type: 3}
       propertyPath: m_RootOrder
-      value: 35
+      value: 34
       objectReference: {fileID: 0}
     - target: {fileID: 6540443396541165736, guid: 290de72f883a30a49a5e9d6b2130ddc4,
         type: 3}
@@ -23784,7 +23784,7 @@ PrefabInstance:
     - target: {fileID: 6540443396541165736, guid: 290de72f883a30a49a5e9d6b2130ddc4,
         type: 3}
       propertyPath: m_RootOrder
-      value: 33
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 6540443396541165736, guid: 290de72f883a30a49a5e9d6b2130ddc4,
         type: 3}
@@ -23928,7 +23928,7 @@ GameObject:
   - component: {fileID: 679202680}
   - component: {fileID: 679202679}
   m_Layer: 0
-  m_Name: HelthBoost
+  m_Name: HealthBoost
   m_TagString: Potion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30355,7 +30355,7 @@ GameObject:
   - component: {fileID: 960343249}
   - component: {fileID: 960343248}
   m_Layer: 0
-  m_Name: HelthBoost (2)
+  m_Name: HealthBoost (2)
   m_TagString: Potion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31422,11 +31422,11 @@ Transform:
   - {fileID: 5793021138780813243}
   - {fileID: 1532104351}
   - {fileID: 527654574}
-  - {fileID: 1329367052}
   - {fileID: 208092526}
   - {fileID: 655507238}
   - {fileID: 498569122}
   - {fileID: 628598172}
+  - {fileID: 1329367052}
   - {fileID: 1787699509}
   - {fileID: 2138059503}
   - {fileID: 1544879791}
@@ -91423,7 +91423,7 @@ PrefabInstance:
     - target: {fileID: 6428082925678298073, guid: d1b8b7b92062bc8499f7ab91254cf99e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 31
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 6428082925678298073, guid: d1b8b7b92062bc8499f7ab91254cf99e,
         type: 3}
@@ -98938,7 +98938,7 @@ PrefabInstance:
     - target: {fileID: 5681043544500939614, guid: 37acf6c0a1c689c438432e60822f6779,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5681043544500939614, guid: 37acf6c0a1c689c438432e60822f6779,
         type: 3}
@@ -99306,7 +99306,7 @@ GameObject:
   - component: {fileID: 1551218033}
   - component: {fileID: 1551218032}
   m_Layer: 0
-  m_Name: HelthBoost (3)
+  m_Name: HealthBoost (3)
   m_TagString: Potion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -106114,7 +106114,7 @@ PrefabInstance:
     - target: {fileID: 6573286861818561791, guid: 3e81cd9935adb374882ae7a6ad5e8185,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.45
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6573286861818561791, guid: 3e81cd9935adb374882ae7a6ad5e8185,
         type: 3}
@@ -109223,7 +109223,7 @@ PrefabInstance:
     - target: {fileID: 7134322856611198429, guid: 4b69004a99f7925469c205a0e4a74060,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7134322856611198429, guid: 4b69004a99f7925469c205a0e4a74060,
         type: 3}

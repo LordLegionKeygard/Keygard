@@ -10,7 +10,7 @@ public class Bullet : MonoBehaviour
     public Rigidbody2D rb;
     public float TimeToLive = 0.5f;
 
-    private float timeToDamage = 3f;
+    private float timeToDamage = 2f;
     private float damageTime;
     private bool isDamage = true;
 
@@ -95,24 +95,21 @@ public class Bullet : MonoBehaviour
         } 
 
         BlueSleepHealth sleepHealth = hitInfo.GetComponent<BlueSleepHealth>();
-        if (sleepHealth != null  && isDamage)
+        if (sleepHealth != null)
         {
             sleepHealth.TakeDamage(damage);
-            isDamage = false;
         }
 
         SnailHealth snailHealth = hitInfo.GetComponent<SnailHealth>();
-        if (snailHealth != null  && isDamage)
+        if (snailHealth != null)
         {
             snailHealth.TakeDamage(damage);
-            isDamage = false;
         }
 
         Chest _chest = hitInfo.GetComponent<Chest>();
-        if (_chest != null && isDamage)
+        if (_chest != null)
         {
             _chest.TakeDamage(damage);
-            isDamage = false;
         }
 
         BoxHealth _box = hitInfo.GetComponent<BoxHealth>();
