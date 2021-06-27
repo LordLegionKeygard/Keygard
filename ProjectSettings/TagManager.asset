@@ -35,6 +35,7 @@ TagManager:
   - Bottom
   - UpSwamp
   - Jump
+  - Puzzle
   layers:
   - Default
   - TransparentFX
