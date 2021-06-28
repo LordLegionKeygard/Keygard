@@ -34,7 +34,6 @@ public class SnailHealth : MonoBehaviour
         _health -= damage;
         enemy.StartChasingPlayer();
         InitHealth();
-        enemy.RandomStatePicker(); 
         if (_health <= 0)
         {
             Die();

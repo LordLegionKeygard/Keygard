@@ -101866,11 +101866,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 112799702}
     m_Modifications:
+    - target: {fileID: 953733252368757348, guid: 44dd37291e664a744bde1236d78e771b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 953733252591006759, guid: 44dd37291e664a744bde1236d78e771b,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: dd2b72bfa28fd32449a05a4785f2cff3, type: 2}
+    - target: {fileID: 953733252656568447, guid: 44dd37291e664a744bde1236d78e771b,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 953733252656568447, guid: 44dd37291e664a744bde1236d78e771b,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1607977060243951308, guid: 44dd37291e664a744bde1236d78e771b,
         type: 3}
       propertyPath: m_Name

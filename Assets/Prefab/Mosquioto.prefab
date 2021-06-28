@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 677463612909861548}
   - component: {fileID: 677463612909861541}
-  - component: {fileID: 677463612909861538}
   - component: {fileID: 677463612909861536}
   - component: {fileID: 677463612909861539}
   - component: {fileID: 677463612909861537}
@@ -30,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 677463612909861549}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 16.23, y: -10.06, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children:
   - {fileID: 4337410171581530464}
   - {fileID: 677463613085517698}
@@ -65,22 +64,6 @@ MonoBehaviour:
   tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   graphMask:
     value: -1
---- !u!58 &677463612909861538
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 677463612909861549}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.01, y: -0.11}
-  serializedVersion: 2
-  m_Radius: 0.8214377
 --- !u!50 &677463612909861536
 Rigidbody2D:
   serializedVersion: 4
@@ -114,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c15d6cd5367330d4187c3ab7d3b1977e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activateDistance: 40
+  activateDistance: 20
   attackDistance: 5
   pathUpdateSeconds: 0.5
   speed: 200

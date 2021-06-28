@@ -38,7 +38,7 @@ public class SnailEnemy : MonoBehaviour
     public bool IsFacingRight
     {
         get => isFacingRight;
-    }  
+    }
 
     public void StartChasingPlayer()
     {
@@ -49,56 +49,57 @@ public class SnailEnemy : MonoBehaviour
 
     private void Start()
     {
-        playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();        
+        playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         rb = GetComponent<Rigidbody2D>();
         leftBoundaryPosition = transform.position;
         rightBoundaryPosition = leftBoundaryPosition + Vector2.right * walkDistance;
         waitTime = timeToWait;
         chaseTime = timeToChase;
-        walkSpeed = patrolSpeed;   
+        walkSpeed = patrolSpeed;
     }
 
     private void Update()
     {
-        if(isChasingPlayer)
+        if (isChasingPlayer)
         {
             StartChasingTimer();
         }
 
-        if(isWait && !isChasingPlayer)
+        if (isWait && !isChasingPlayer)
         {
-            StartWaitTimer();           
+            StartWaitTimer();
         }
-        
 
-        if(ShouldWait())
+
+        if (ShouldWait())
         {
-            isWait = true;           
+            isWait = true;
         }
     }
 
     private void FixedUpdate()
-    {             
+    {
         nextPoint = Vector2.right * walkSpeed * Time.fixedDeltaTime;
 
-        if(animator)
+        if (animator)
         {
             animator.SetBool("Walk", walk);
-        }      
-   
-        if(isChasingPlayer && Time.time > nextTime)
-        {
-            ChasePlayer();
         }
 
-        if(!isWait && !isChasingPlayer)
+        if (isChasingPlayer && Time.time > nextTime)
+        {
+            ChasePlayer();
+            RandomStatePicker();
+        }
+
+        if (!isWait && !isChasingPlayer)
         {
             Patrol();
-        }   
+        }
     }
     private void Patrol()
-    {      
-        if(!isFacingRight)
+    {
+        if (!isFacingRight)
         {
             nextPoint.x *= -1;
         }
@@ -106,21 +107,21 @@ public class SnailEnemy : MonoBehaviour
     }
     private void ChasePlayer()
     {
-        walk = false;       
-        float distance = DistanceToPlayer() ;
-        if(distance < 0)
-        {                   
+        walk = false;
+        float distance = DistanceToPlayer();
+        if (distance < 0)
+        {
             nextPoint.x *= -1;
         }
-        if(distance > 0.2f && !isFacingRight)
-        {
-            Flip();            
-        }
-        else if(distance < 0.2f && isFacingRight)
+        if (distance > 0.2f && !isFacingRight)
         {
             Flip();
-        }      
-        
+        }
+        else if (distance < 0.2f && isFacingRight)
+        {
+            Flip();
+        }
+
         rb.MovePosition((Vector2)transform.position + nextPoint);
     }
 
@@ -132,7 +133,7 @@ public class SnailEnemy : MonoBehaviour
 
     private void StartWaitTimer()
     {
-        walk = false;        
+        walk = false;
         waitTime -= Time.deltaTime;
 
         if (waitTime < 0f)
@@ -146,10 +147,10 @@ public class SnailEnemy : MonoBehaviour
 
     private void StartChasingTimer()
     {
-        walk = false;        
+        walk = false;
         chaseTime -= Time.deltaTime;
 
-        if(chaseTime < 0f)
+        if (chaseTime < 0f)
         {
             walk = true;
             isChasingPlayer = false;
@@ -165,7 +166,7 @@ public class SnailEnemy : MonoBehaviour
 
         return isOutOfLeftBoundary || isOutOfRightBoundary;
     }
-    
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
@@ -176,36 +177,60 @@ public class SnailEnemy : MonoBehaviour
     {
         isFacingRight = !isFacingRight;
         Model.Rotate(0f, 180f, 0f);
-    } 
+    }
 
     void Shoot()
     {
         walk = false;
         Instantiate(bullet, firePoint.position, firePoint.rotation);
-    } 
+    }
 
     void Shoot1()
     {
         walk = false;
-        Instantiate(bullet1, firePoint.position, firePoint.rotation);        
+        Instantiate(bullet1, firePoint.position, firePoint.rotation);
     }
 
     public void RandomStatePicker()
     {
-        int randomState = Random.Range(0, 2);
+        int randomState = Random.Range(0, 3);
         if (randomState == 0)
-        {                                   
+        {
             nextTime = Time.time + timeRate;
-            StartCoroutine(ExecuteAfterTime(0.8f));
-            IEnumerator ExecuteAfterTime(float timeInSec)
+            StartCoroutine(AfterTime(0.8f));
+            IEnumerator AfterTime(float timeInSec)
             {
-            yield return new WaitForSeconds(timeInSec);
-            Shoot();
+                yield return new WaitForSeconds(timeInSec);
+                Shoot();
             }
         }
         if (randomState == 1)
         {
+            nextTime = Time.time + timeRate;
+            StartCoroutine(AfterTime(0.8f));
+            IEnumerator AfterTime(float timeInSec)
+            {
+                yield return new WaitForSeconds(timeInSec);
+                Shoot1();
+            }
+        }
+        if (randomState == 2)
+        {
+            nextTime = Time.time + timeRate;
+            StartCoroutine(AfterTime(2f));
+            IEnumerator AfterTime(float timeInSec)
+            {
+                yield return new WaitForSeconds(timeInSec);
+                Shoot();
+            }
+        }
+        else if (randomState == 3)
+            nextTime = Time.time + timeRate;
+        StartCoroutine(ExecuteAfterTime(2f));
+        IEnumerator ExecuteAfterTime(float timeInSec)
+        {
+            yield return new WaitForSeconds(timeInSec);
             Shoot1();
         }
-    } 
+    }
 }

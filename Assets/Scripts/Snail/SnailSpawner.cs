@@ -13,7 +13,7 @@ public class SnailSpawner : MonoBehaviour
 
     void RandomStatePicker()
     {
-        int randomState = Random.Range(0, 5);
+        int randomState = Random.Range(0, 2);
         if (randomState == 0)
         {                                   
             _snail.SetActive(true);
@@ -22,19 +22,9 @@ public class SnailSpawner : MonoBehaviour
         {
             
         }
-        if (randomState == 2)
-        {
-            
-        }
-        if (randomState == 3)
-        {
-            
-        }
-        if (randomState == 4)
+        else if (randomState == 2)
         {
             
         }
     } 
-
-
 }
